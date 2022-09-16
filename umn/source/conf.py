@@ -73,11 +73,6 @@ html_theme = 'otcdocs'
 # further. For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
-<<<<<<< HEAD
-    'disable_search': True,
-    'site_name': 'Internal Documentation Portal'
-=======
->>>>>>> 733f62d (Update conf.py file)
 }
 
 # The name for this set of Sphinx documents.  If None, it defaults to
