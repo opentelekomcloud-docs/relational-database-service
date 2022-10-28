@@ -90,7 +90,7 @@ html_static_path = ['_static']
 
 # -- Options for PDF output --------------------------------------------------
 latex_documents = [
-('index',
+    ('index',
      'rds-api-ref.tex',
      u'Relational Database Service - API Reference',
      u'OpenTelekomCloud', 'manual'),
