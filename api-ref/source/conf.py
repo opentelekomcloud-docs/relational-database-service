@@ -26,6 +26,7 @@ otcdocs_auto_version = False
 
 project = 'Relational Database Service'
 otcdocs_repo_name = 'opentelekomcloud-docs/relational-database-service'
+# Those variables are required for edit/bug links
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -90,7 +91,7 @@ html_static_path = ['_static']
 
 # -- Options for PDF output --------------------------------------------------
 latex_documents = [
-('index',
+    ('index',
      'rds-api-ref.tex',
      u'Relational Database Service - API Reference',
      u'OpenTelekomCloud', 'manual'),
