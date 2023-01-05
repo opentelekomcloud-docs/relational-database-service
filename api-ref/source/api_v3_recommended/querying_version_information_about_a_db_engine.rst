@@ -10,7 +10,7 @@ Function
 
 This API is used to query the database version information of a specified DB engine.
 
--  Learn how to :ref:`authorize and authenticate <rds_03_0001>` this API before using it.
+-  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
 
 URI
@@ -19,10 +19,6 @@ URI
 -  URI format
 
    GET https://{*Endpoint*}/v3/{*project_id*}/datastores/{*database_name*}
-
--  Example
-
-   https://rds.eu-de.otc.t-systems.com/v3/619d3e78f61b4be68bc5aa0b59edcf7b/datastores/mysql
 
 -  Parameter description
 
@@ -45,7 +41,13 @@ URI
 Request
 -------
 
-None
+-  Request parameters
+
+   None
+
+-  Example
+
+   GET https://rds.eu-de.otc.t-systems.com/v3/619d3e78f61b4be68bc5aa0b59edcf7b/datastores/mysql
 
 Response
 --------
@@ -98,7 +100,13 @@ Response
 Status Code
 -----------
 
-For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
+-  Normal
+
+   200
+
+-  Abnormal
+
+   For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
 
 Error Code
 ----------

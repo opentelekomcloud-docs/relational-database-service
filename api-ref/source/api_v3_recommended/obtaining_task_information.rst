@@ -10,12 +10,13 @@ Function
 
 This API is used to obtain task information of the task center.
 
--  Learn how to :ref:`authorize and authenticate <rds_03_0001>` this API before using it.
+-  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
 
 Constraints
 -----------
 
+-  RDS jobs are asynchronous. After a job is generated, it takes several seconds to query the job ID.
 -  This API is used to query only asynchronous tasks in the task center within one month.
 -  Information of the following asynchronous tasks can be obtained: creating single or primary/standby DB instances, creating read replicas, changing single DB instances to primary/standby instances, switching primary/standby DB instances, scaling up storage space, and binding or unbinding EIPs.
 
@@ -25,10 +26,6 @@ URI
 -  URI format
 
    GET https://{*Endpoint*}/v3/{project_id}/jobs?id={id}
-
--  Example
-
-   https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/jobs?id=a9767ede-fe0f-4888-9003-e843a4c90514
 
 -  Parameter description
 
@@ -47,7 +44,13 @@ URI
 Request
 -------
 
-None
+-  Request parameters
+
+   None
+
+-  Example
+
+   GET https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/jobs?id=a9767ede-fe0f-4888-9003-e843a4c90514
 
 Response
 --------
@@ -367,7 +370,13 @@ Response
 Status Code
 -----------
 
-For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
+-  Normal
+
+   200
+
+-  Abnormal
+
+   For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
 
 Error Code
 ----------

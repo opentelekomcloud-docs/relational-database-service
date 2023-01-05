@@ -10,7 +10,7 @@ Function
 
 This API is used to query the latest 2000 database error logs.
 
--  Learn how to :ref:`authorize and authenticate <rds_03_0001>` this API before using it.
+-  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
 
 URI
@@ -19,10 +19,6 @@ URI
 -  URI format
 
    GET https://{*Endpoint*}/v3/{project_id}/instances/{instance_id}/errorlog?start_date={start_date}&end_date={end_date}
-
--  Example
-
-   https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances/cee5265e1e5845649e354841234567dfin01/errorlog?offset=1&limit=10&start_date=2018-08-06T10:41:14+0800&end_date=2018-08-07T10:41:14+0800&level=ALL
 
 -  Parameter description
 
@@ -66,7 +62,13 @@ URI
 Request
 -------
 
-None
+-  Request parameters
+
+   None
+
+-  Example
+
+   GET https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances/cee5265e1e5845649e354841234567dfin01/errorlog?offset=1&limit=10&start_date=2018-08-06T10:41:14+0800&end_date=2018-08-07T10:41:14+0800&level=ALL
 
 Response
 --------
@@ -121,7 +123,13 @@ Response
 Status Code
 -----------
 
-For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
+-  Normal
+
+   200
+
+-  Abnormal
+
+   For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
 
 Error Code
 ----------

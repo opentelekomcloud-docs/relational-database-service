@@ -10,7 +10,7 @@ Function
 
 This API is used to obtain details about backups.
 
--  Learn how to :ref:`authorize and authenticate <rds_03_0001>` this API before using it.
+-  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
 
 Constraints
@@ -24,10 +24,6 @@ URI
 -  URI format
 
    GET https://{*Endpoint*}/v3/{project_id}/backups?instance_id={instance_id}&backup_id={backup_id}&backup_type={backup_type}&offset={offset}&limit={limit}&begin_time={begin \_time}&end_time={end_time}
-
--  Example
-
-   https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/backups?instance_id=43e4feaab48f11e89039fa163ebaa7e4br01&backup_id=c0c9f155c7b7423a9d30f0175998b63bbr01&backup_type=auto&offset=0&limit=10&begin_time=2018-08-06T10:41:14+0800&end_time=2018-08-16T10:41:14+0800
 
 -  Parameter description
 
@@ -75,7 +71,13 @@ URI
 Request
 -------
 
-None
+-  Request parameters
+
+   None
+
+-  Example
+
+   GET https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/backups?instance_id=43e4feaab48f11e89039fa163ebaa7e4br01&backup_id=c0c9f155c7b7423a9d30f0175998b63bbr01&backup_type=auto&offset=0&limit=10&begin_time=2018-08-06T10:41:14+0800&end_time=2018-08-16T10:41:14+0800
 
 Response
 --------
@@ -186,7 +188,7 @@ Response
               "end_time": "2018-08-06T12:43:14+0800",
               "datastore": {
                   "type": "MySQL",
-                  "version": "5.6"
+                  "version": "8.0"
               },
               "instance_id": "a48e43ff268f4c0e879652d65e63d0fbin01"
           }],
@@ -208,7 +210,7 @@ Response
               "end_time": "2018 - 08 - 06 T12: 43: 14 + 0800",
               "datastore": {
                   "type": "PostgreSQL",
-                  "version": "9.6"
+                  "version": "13"
               },
               "instance_id": "a48e43ff268f4c0e879652d65e63d0fbin03 "
           }],
@@ -230,7 +232,7 @@ Response
               "end_time": "2018-08-06T12:43:14+0800",
               "datastore": {
                   "type": "SQLServer",
-                  "version": "2014_WEB"
+                  "version": "2017_SE"
               },
               "databases": [{
                   "name": "user01"
@@ -249,7 +251,13 @@ Response
 Status Code
 -----------
 
-For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
+-  Normal
+
+   200
+
+-  Abnormal
+
+   For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
 
 Error Code
 ----------

@@ -10,7 +10,7 @@ Function
 
 This API is used to scale up storage space of a DB instance.
 
--  Learn how to :ref:`authorize and authenticate <rds_03_0001>` this API before using it.
+-  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
 
 Constraints
@@ -25,10 +25,6 @@ URI
 -  URI format
 
    POST https://{*Endpoint*}/v3/{project_id}/instances/{instance_id}/action
-
--  Example
-
-   https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances/dsfae23fsfdsae3435in01/action
 
 -  Parameter description
 
@@ -69,6 +65,10 @@ Request
       | size | Yes       | Integer | The minimum start value of each scaling is 10 GB. A DB instance can be scaled up only by a multiple of 10 GB. Value range: 10 GB to 4000 GB |
       +------+-----------+---------+---------------------------------------------------------------------------------------------------------------------------------------------+
 
+-  Example
+
+   POST https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances/dsfae23fsfdsae3435in01/action
+
 -  Request example
 
    .. code-block:: text
@@ -107,7 +107,13 @@ Response
 Status Code
 -----------
 
-For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
+-  Normal
+
+   202
+
+-  Abnormal
+
+   For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
 
 Error Code
 ----------

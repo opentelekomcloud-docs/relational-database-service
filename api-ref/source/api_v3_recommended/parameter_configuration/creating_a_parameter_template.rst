@@ -10,18 +10,13 @@ Function
 
 This API is used to create a parameter template and configure the name, description, DB engine, and parameter values in the parameter template.
 
--  Learn how to :ref:`authorize and authenticate <rds_03_0001>` this API before using it.
+-  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
-
-.. _rds_09_0302__section380114515317:
 
 Constraints
 -----------
 
--  The following DB engines are supported: MySQL, PostgreSQL, and Microsoft SQL Server.
--  For Microsoft SQL Server, only the following editions are supported: Microsoft SQL Server 2014 SE, 2016 SE, and 2016 EE.
-
--  The name of the created parameter template cannot be the same as that of the default or an existing parameter template.
+The name of the created parameter template cannot be the same as that of the default or an existing parameter template.
 
 URI
 ---
@@ -29,10 +24,6 @@ URI
 -  URI format
 
    POST https://{*Endpoint*}/v3/{project_id}/configurations
-
--  Example
-
-   https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/configurations
 
 -  Parameter description
 
@@ -85,20 +76,27 @@ Request
 
    .. table:: **Table 4** datastore field data structure description
 
-      +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+
-      | Name            | Mandatory       | Type            | Description                                                                                                             |
-      +=================+=================+=================+=========================================================================================================================+
-      | type            | Yes             | String          | Specifies the DB engine. Its value can be any of the following and is case-insensitive:                                 |
-      |                 |                 |                 |                                                                                                                         |
-      |                 |                 |                 | -  MySQL                                                                                                                |
-      |                 |                 |                 | -  PostgreSQL                                                                                                           |
-      |                 |                 |                 | -  SQLServer                                                                                                            |
-      +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+
-      | version         | Yes             | String          | Specifies the database version. For details, see :ref:`Constraints <rds_09_0302__section380114515317>`. Example values: |
-      |                 |                 |                 |                                                                                                                         |
-      |                 |                 |                 | -  MySQL: **5.7**                                                                                                       |
-      |                 |                 |                 | -  PostgreSQL: **9.5**                                                                                                  |
-      +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------+
+      +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+
+      | Name            | Mandatory       | Type            | Description                                                                             |
+      +=================+=================+=================+=========================================================================================+
+      | type            | Yes             | String          | Specifies the DB engine. Its value can be any of the following and is case-insensitive: |
+      |                 |                 |                 |                                                                                         |
+      |                 |                 |                 | -  MySQL                                                                                |
+      |                 |                 |                 | -  PostgreSQL                                                                           |
+      |                 |                 |                 | -  SQLServer                                                                            |
+      +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+
+      | version         | Yes             | String          | Specifies the database version.                                                         |
+      |                 |                 |                 |                                                                                         |
+      |                 |                 |                 | Example values:                                                                         |
+      |                 |                 |                 |                                                                                         |
+      |                 |                 |                 | -  MySQL: **8.0**                                                                       |
+      |                 |                 |                 | -  PostgreSQL: **13**                                                                   |
+      |                 |                 |                 | -  SQLServer: **2017_SE**                                                               |
+      +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+
+
+-  Example
+
+   POST https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/configurations
 
 -  Request example
 
@@ -113,7 +111,7 @@ Request
           },
           "datastore": {
               "type": "mysql",
-              "version": "5.6"
+              "version": "8.0"
           }
       }
 
@@ -181,7 +179,13 @@ Response
 Status Code
 -----------
 
-For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
+-  Normal
+
+   200
+
+-  Abnormal
+
+   For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
 
 Error Code
 ----------

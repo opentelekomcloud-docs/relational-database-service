@@ -10,7 +10,7 @@ Function
 
 This API is used to restore data to a new DB instance (v3).
 
--  Learn how to :ref:`authorize and authenticate <rds_03_0001>` this API before using it.
+-  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
 
 Constraints
@@ -19,7 +19,6 @@ Constraints
 -  The DB engine of the original DB instance must be the same as that of the target DB instance. For example, if the original DB instance is running MySQL, the target DB instance must also run MySQL.
 -  All DB engine versions of the original and new DB instances must be consistent.
 -  The total volume size of the new DB instance must be greater than or equal to that of the original DB instance.
--  Currently, Microsoft SQL Server does not support restoring data to a new DB instance.
 
 URI
 ---
@@ -27,10 +26,6 @@ URI
 -  URI format
 
    POST https://{*Endpoint*}/v3/{project_id}/instances
-
--  Example
-
-   https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances
 
 -  Parameter description
 
@@ -56,7 +51,7 @@ Request
       +====================+=================+=================+===========================================================================================================================================================================================================================================+
       | name               | Yes             | String          | Specifies the DB instance name.                                                                                                                                                                                                           |
       |                    |                 |                 |                                                                                                                                                                                                                                           |
-      |                    |                 |                 | The DB instance name of the same type must be unique for the same tenant.                                                                                                                                                                 |
+      |                    |                 |                 | DB instances of the same type can have same names under the same tenant.                                                                                                                                                                  |
       |                    |                 |                 |                                                                                                                                                                                                                                           |
       |                    |                 |                 | The value must be 4 to 64 characters in length and start with a letter. It is case-insensitive and can contain only letters, digits, hyphens (-), and underscores (_).                                                                    |
       +--------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -85,6 +80,8 @@ Request
       |                    |                 |                 | The value cannot be empty and should contain 8 to 32 characters, including uppercase and lowercase letters, digits, and the following special characters: ``~!@#%^*-_=+?``                                                                |
       |                    |                 |                 |                                                                                                                                                                                                                                           |
       |                    |                 |                 | You are advised to enter a strong password to improve security, preventing security risks such as brute force cracking.                                                                                                                   |
+      |                    |                 |                 |                                                                                                                                                                                                                                           |
+      |                    |                 |                 | If provided password will be considered by system as weak, you will receive an error and you should provide stronger password.                                                                                                            |
       +--------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | backup_strategy    | No              | Object          | Specifies the advanced backup policy.                                                                                                                                                                                                     |
       |                    |                 |                 |                                                                                                                                                                                                                                           |
@@ -114,6 +111,11 @@ Request
       |                    |                 |                 | -  Method 1: Log in to VPC console and click the target subnet on the **Subnets** page. You can view the network ID on the displayed page.                                                                                                |
       |                    |                 |                 | -  Method 2: See the "Querying Subnets" section under "APIs" or the "Querying Networks" section under "OpenStack Neutron APIs" in *Virtual Private Cloud API Reference*.                                                                  |
       +--------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | data_vip           | No              | String          | Specifies the floating IP address of a DB instance. To obtain this parameter value, use either of the following methods:                                                                                                                  |
+      |                    |                 |                 |                                                                                                                                                                                                                                           |
+      |                    |                 |                 | -  Method 1: Log in to VPC console and click the target subnet on the **Subnets** page. You can view the subnet CIDR block on the displayed page.                                                                                         |
+      |                    |                 |                 | -  Method 2: See the "Querying Subnets" section under "APIs" in the *Virtual Private Cloud API Reference*.                                                                                                                                |
+      +--------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | security_group_id  | No              | String          | Specifies the security group which the RDS DB instance belongs to. To obtain this parameter value, use either of the following methods:                                                                                                   |
       |                    |                 |                 |                                                                                                                                                                                                                                           |
       |                    |                 |                 | -  Method 1: Log in to VPC console. Choose **Access Control** > **Security Groups** in the navigation pane on the left. On the displayed page, click the target security group. You can view the security group ID on the displayed page. |
@@ -123,30 +125,34 @@ Request
       |                    |                 |                 |                                                                                                                                                                                                                                           |
       |                    |                 |                 | For details, see :ref:`Table 6 <rds_09_0008__table15343138128>`.                                                                                                                                                                          |
       +--------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | collation          | No              | String          | This parameter applies only to Microsoft SQL Server DB instances.                                                                                                                                                                         |
+      |                    |                 |                 |                                                                                                                                                                                                                                           |
+      |                    |                 |                 | Value range: character sets queried in :ref:`Querying the Available SQL Server Character Set <rds_05_0010>`.                                                                                                                              |
+      +--------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _rds_09_0008__table13260175614296:
 
    .. table:: **Table 3** ha field data structure description
 
-      +------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
-      | Name             | Mandatory       | Type            | Description                                                                                                 |
-      +==================+=================+=================+=============================================================================================================+
-      | mode             | Yes             | String          | Specifies the DB instance type. The value is **Ha** (primary/standby DB instances) and is case-insensitive. |
-      +------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
-      | replication_mode | Yes             | String          | Specifies the replication mode for the standby DB instance.                                                 |
-      |                  |                 |                 |                                                                                                             |
-      |                  |                 |                 | The value cannot be empty.                                                                                  |
-      |                  |                 |                 |                                                                                                             |
-      |                  |                 |                 | -  For MySQL, the value is **async** or **semisync**.                                                       |
-      |                  |                 |                 | -  For PostgreSQL, the value is **async** or **sync**.                                                      |
-      |                  |                 |                 | -  For Microsoft SQL Server, the value is **sync**.                                                         |
-      |                  |                 |                 |                                                                                                             |
-      |                  |                 |                 | .. note::                                                                                                   |
-      |                  |                 |                 |                                                                                                             |
-      |                  |                 |                 |    -  **async** indicates the asynchronous replication mode.                                                |
-      |                  |                 |                 |    -  **semisync** indicates the semi-synchronous replication mode.                                         |
-      |                  |                 |                 |    -  **sync** indicates the synchronous replication mode.                                                  |
-      +------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
+      +------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+
+      | Name             | Mandatory       | Type            | Description                                                                                                            |
+      +==================+=================+=================+========================================================================================================================+
+      | mode             | Yes             | String          | Specifies the DB instance type. The value is **Ha** (Primary/Standby or Cluster DB instances) and is case-insensitive. |
+      +------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+
+      | replication_mode | Yes             | String          | Specifies the replication mode for the standby DB instance.                                                            |
+      |                  |                 |                 |                                                                                                                        |
+      |                  |                 |                 | The value cannot be empty.                                                                                             |
+      |                  |                 |                 |                                                                                                                        |
+      |                  |                 |                 | -  For MySQL, the value is **async** or **semisync**.                                                                  |
+      |                  |                 |                 | -  For PostgreSQL, the value is **async** or **sync**.                                                                 |
+      |                  |                 |                 | -  For Microsoft SQL Server, the value is **sync**.                                                                    |
+      |                  |                 |                 |                                                                                                                        |
+      |                  |                 |                 | .. note::                                                                                                              |
+      |                  |                 |                 |                                                                                                                        |
+      |                  |                 |                 |    -  **async** indicates the asynchronous replication mode.                                                           |
+      |                  |                 |                 |    -  **semisync** indicates the semi-synchronous replication mode.                                                    |
+      |                  |                 |                 |    -  **sync** indicates the synchronous replication mode.                                                             |
+      +------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+
 
    .. _rds_09_0008__table0863181193416:
 
@@ -170,6 +176,10 @@ Request
       | keep_days       | No              | Integer         | Specifies the retention days for specific backup files.                                                                                                                                                                                         |
       |                 |                 |                 |                                                                                                                                                                                                                                                 |
       |                 |                 |                 | The value range is from 0 to 732. If this parameter is not specified or set to **0**, the automated backup policy is disabled. To extend the retention period, contact customer service. Automated backups can be retained for up to 2562 days. |
+      |                 |                 |                 |                                                                                                                                                                                                                                                 |
+      |                 |                 |                 | .. note::                                                                                                                                                                                                                                       |
+      |                 |                 |                 |                                                                                                                                                                                                                                                 |
+      |                 |                 |                 |    For SQL Server Primary/Standby and Cluster instance parameter "keep_days" cannot be set to 0.                                                                                                                                                |
       +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _rds_09_0008__table10656503:
@@ -224,6 +234,10 @@ Request
       |                 |                 |                 |    NOTICE:                                                                                                                          |
       |                 |                 |                 |    When **type** is mandatory, **restore_time** is mandatory.                                                                       |
       +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
+
+-  Example
+
+   POST https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances
 
 -  Request example
 
@@ -321,7 +335,7 @@ Response
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | name                  | String                | Indicates the DB instance name.                                                                                                                                                                                                           |
       |                       |                       |                                                                                                                                                                                                                                           |
-      |                       |                       | The DB instance name of the same type must be unique for the same tenant.                                                                                                                                                                 |
+      |                       |                       | DB instances of the same type can have same names under the same tenant.                                                                                                                                                                  |
       |                       |                       |                                                                                                                                                                                                                                           |
       |                       |                       | The value must be 4 to 64 characters in length and start with a letter. It is case-insensitive and can contain only letters, digits, hyphens (-), and underscores (_).                                                                    |
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -355,7 +369,7 @@ Response
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | flavor_ref            | String                | Indicates the specification ID.                                                                                                                                                                                                           |
       |                       |                       |                                                                                                                                                                                                                                           |
-      |                       |                       | For details, see **spec_code** in :ref:`Table 3 <rds_06_0002__table66531170>` in section :ref:`Querying Database Specifications <rds_06_0002>`.                                                                                           |
+      |                       |                       | For details, see **spec_code** in :ref:`Table 3 <rds_06_0002__table1336414511696>` in section :ref:`Querying Database Specifications <rds_06_0002>`.                                                                                      |
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | volume                | Object                | Indicates the volume information.                                                                                                                                                                                                         |
       |                       |                       |                                                                                                                                                                                                                                           |
@@ -379,6 +393,8 @@ Response
       |                       |                       |                                                                                                                                                                                                                                           |
       |                       |                       | -  Method 1: Log in to VPC console. Choose **Access Control** > **Security Groups** in the navigation pane on the left. On the displayed page, click the target security group. You can view the security group ID on the displayed page. |
       |                       |                       | -  Method 2: See the "Querying Security Groups" section in the *Virtual Private Cloud API Reference*.                                                                                                                                     |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | collation             | String                | Indicates the collation for Microsoft SQL Server.                                                                                                                                                                                         |
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _rds_09_0008__table766045720277:
@@ -505,7 +521,13 @@ Response
 Status Code
 -----------
 
-For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
+-  Normal
+
+   200
+
+-  Abnormal
+
+   For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
 
 Error Code
 ----------

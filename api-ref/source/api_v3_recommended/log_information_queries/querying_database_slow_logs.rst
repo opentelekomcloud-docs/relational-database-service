@@ -10,13 +10,8 @@ Function
 
 This API is used to query the latest 2000 database slow query logs.
 
--  Learn how to :ref:`authorize and authenticate <rds_03_0001>` this API before using it.
+-  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
-
-Constraints
------------
-
-Only the MySQL DB instances are supported.
 
 URI
 ---
@@ -24,10 +19,6 @@ URI
 -  URI format
 
    GET https://{*Endpoint*}/v3/{project_id}/instances/{instance_id}/slowlog?start_date={start_date}&end_date={end_date}
-
--  Example
-
-   https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances/cee5265e1e5845649e354841234567dfin01/slowlog?offset=1&limit=10&start_date=2018-08-06T10:41:14+0800&end_date=2018-08-07T10:41:14+0800&type=INSERT
 
 -  Parameter description
 
@@ -66,7 +57,13 @@ URI
 Request
 -------
 
-None
+-  Request parameters
+
+   None
+
+-  Example
+
+   GET https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances/cee5265e1e5845649e354841234567dfin01/slowlog?offset=1&limit=10&start_date=2018-08-06T10:41:14+0800&end_date=2018-08-07T10:41:14+0800&type=INSERT
 
 Response
 --------
@@ -89,31 +86,37 @@ Response
 
    .. table:: **Table 3** slow_log_list field data structure description
 
-      +---------------+--------+-------------------------------------------------------+
-      | Name          | Type   | Description                                           |
-      +===============+========+=======================================================+
-      | count         | String | Indicates the number of executions.                   |
-      +---------------+--------+-------------------------------------------------------+
-      | time          | String | Indicates the execution time.                         |
-      +---------------+--------+-------------------------------------------------------+
-      | lock_time     | String | Indicates the lock wait time.                         |
-      +---------------+--------+-------------------------------------------------------+
-      | rows_sent     | String | Indicates the number of sent rows.                    |
-      +---------------+--------+-------------------------------------------------------+
-      | rows_examined | String | Indicates the number of scanned rows.                 |
-      +---------------+--------+-------------------------------------------------------+
-      | database      | String | Indicates the database which the slow log belongs to. |
-      +---------------+--------+-------------------------------------------------------+
-      | users         | String | Indicates the account.                                |
-      +---------------+--------+-------------------------------------------------------+
-      | query_sample  | String | Indicates the execution syntax.                       |
-      +---------------+--------+-------------------------------------------------------+
-      | type          | String | Indicates the statement type.                         |
-      +---------------+--------+-------------------------------------------------------+
-      | start_time    | String | Indicates the time in the UTC format.                 |
-      +---------------+--------+-------------------------------------------------------+
-      | client_ip     | String | Indicates the IP address.                             |
-      +---------------+--------+-------------------------------------------------------+
+      +-----------------------+-----------------------+-------------------------------------------------------------------------+
+      | Name                  | Type                  | Description                                                             |
+      +=======================+=======================+=========================================================================+
+      | count                 | String                | Indicates the number of executions.                                     |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------+
+      | time                  | String                | Indicates the execution time.                                           |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------+
+      | lock_time             | String                | Indicates the lock wait time.                                           |
+      |                       |                       |                                                                         |
+      |                       |                       | This parameter is not present in the response for PostgreSQL DB engine. |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------+
+      | rows_sent             | String                | Indicates the number of sent rows.                                      |
+      |                       |                       |                                                                         |
+      |                       |                       | This parameter is not present in the response for PostgreSQL DB engine. |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------+
+      | rows_examined         | String                | Indicates the number of scanned rows.                                   |
+      |                       |                       |                                                                         |
+      |                       |                       | This parameter is not present in the response for PostgreSQL DB engine. |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------+
+      | database              | String                | Indicates the database which the slow log belongs to.                   |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------+
+      | users                 | String                | Indicates the account.                                                  |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------+
+      | query_sample          | String                | Indicates the execution syntax.                                         |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------+
+      | type                  | String                | Indicates the statement type.                                           |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------+
+      | start_time            | String                | Indicates the time in the UTC format.                                   |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------+
+      | client_ip             | String                | Indicates the IP address.                                               |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------+
 
 -  Example normal response
 
@@ -145,7 +148,13 @@ Response
 Status Code
 -----------
 
-For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
+-  Normal
+
+   200
+
+-  Abnormal
+
+   For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
 
 Error Code
 ----------

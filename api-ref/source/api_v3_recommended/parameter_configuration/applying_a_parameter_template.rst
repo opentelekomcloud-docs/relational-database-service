@@ -10,14 +10,8 @@ Function
 
 This API is used to apply a parameter template to one or more DB instances.
 
--  Learn how to :ref:`authorize and authenticate <rds_03_0001>` this API before using it.
+-  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
-
-Constraints
------------
-
--  The following DB engines are supported: MySQL, PostgreSQL, and Microsoft SQL Server.
--  For Microsoft SQL Server, only the following editions are supported: Microsoft SQL Server 2014 SE, 2016 SE, and 2016 EE.
 
 URI
 ---
@@ -25,10 +19,6 @@ URI
 -  URI format
 
    PUT https://{*Endpoint*}/v3/{*project_id*}/configurations/{config_id}/apply
-
--  Example
-
-   https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/configurations/463b4b58-d0e8-4e2b-9560-5dea4552fde9/apply
 
 -  Parameter description
 
@@ -56,6 +46,10 @@ Request
       +==============+===========+==================+===========================================+
       | instance_ids | Yes       | Array of strings | Specifies the DB instance ID list object. |
       +--------------+-----------+------------------+-------------------------------------------+
+
+-  Example
+
+   PUT https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/configurations/463b4b58-d0e8-4e2b-9560-5dea4552fde9/apply
 
 -  Request example
 
@@ -87,6 +81,8 @@ Response
       |                       |                       |                                                                                    |
       |                       |                       | -  **true**: Each parameter template is applied to DB instances successfully.      |
       |                       |                       | -  **false**: One or more parameter templates failed to be applied.                |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------+
+      | job_id                | String                | Job ID.                                                                            |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------+
 
    .. _rds_09_0304__table19602151563612:
@@ -129,7 +125,8 @@ Response
               "restart_required": false,
               "success": false
           }],
-          "success": false
+          "success": false,
+              "job_id":"3b5ddc07-a230-46e5-bBc9-6e76526cbb3e"
       }
 
 -  Abnormal response
@@ -139,7 +136,13 @@ Response
 Status Code
 -----------
 
-For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
+-  Normal
+
+   200
+
+-  Abnormal
+
+   For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
 
 Error Code
 ----------

@@ -10,14 +10,11 @@ Function
 
 This API is used to modify a specified parameter template, including the name, description, and values of specified parameters in the parameter template.
 
--  Learn how to :ref:`authorize and authenticate <rds_03_0001>` this API before using it.
+-  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
 
 Constraints
 -----------
-
--  The following DB engines are supported: MySQL, PostgreSQL, and Microsoft SQL Server.
--  For Microsoft SQL Server, only the following editions are supported: Microsoft SQL Server 2014 SE, 2016 SE, and 2016 EE.
 
 -  The modified parameter template name must be different from the name of an existing or a default parameter template. Default parameter templates cannot be modified.
 -  The values of the edited parameters must be within the default value range of the specified database version. For details about the range of parameter values, see the "Modifying Parameters in a Parameter Template" section in the *Relational Database Service User Guide*.
@@ -29,10 +26,6 @@ URI
 -  URI format
 
    PUT https://{*Endpoint*}/v3/{*project_id*}/configurations/{config_id}
-
--  Example
-
-   https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/configurations/463b4b58-d0e8-4e2b-9560-5dea4552fde9
 
 -  Parameter description
 
@@ -83,6 +76,10 @@ Request
       | value | No        | String | Specifies the parameter value. For example, in **"max_connections": "10"**, the value is **10**.                                                                                     |
       +-------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
+-  Example
+
+   PUT https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/configurations/463b4b58-d0e8-4e2b-9560-5dea4552fde9
+
 -  Request example
 
    .. code-block:: text
@@ -110,7 +107,13 @@ Response
 Status Code
 -----------
 
-For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
+-  Normal
+
+   200
+
+-  Abnormal
+
+   For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
 
 Error Code
 ----------

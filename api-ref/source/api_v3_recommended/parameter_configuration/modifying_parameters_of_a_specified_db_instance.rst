@@ -10,16 +10,13 @@ Function
 
 This API is used to modify parameters in the parameter template of a specified DB instance.
 
--  Learn how to :ref:`authorize and authenticate <rds_03_0001>` this API before using it.
+-  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
 
 Constraints
 -----------
 
--  The following DB engines are supported: MySQL, PostgreSQL, and Microsoft SQL Server.
--  For Microsoft SQL Server, only the following editions are supported: Microsoft SQL Server 2014 SE, 2016 SE, and 2016 EE.
-
--  The values of the edited parameters must be within the default value range of the specified database version. For details about the range of parameter values, see the "Modifying Parameters in a Parameter Template" section in the *Relational Database Service User Guide*.
+The values of the edited parameters must be within the default value range of the specified database version. For details about the range of parameter values, see the "Modifying Parameters in a Parameter Template" section in the *Relational Database Service User Guide*.
 
 URI
 ---
@@ -27,10 +24,6 @@ URI
 -  URI format
 
    PUT https://{*Endpoint*}/v3/{project_id}/instances/{instance_id}/configurations
-
--  Example
-
-   https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances/dsfae23fsfdsae3435in01/configurations
 
 -  Parameter description
 
@@ -73,6 +66,10 @@ Request
       | value | Yes       | String | Specifies the parameter value. For example, in **"max_connections": "10"**, the value is **10**.           |
       +-------+-----------+--------+------------------------------------------------------------------------------------------------------------+
 
+-  Example
+
+   PUT https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances/dsfae23fsfdsae3435in01/configurations
+
 -  Request example
 
    .. code-block:: text
@@ -91,21 +88,29 @@ Response
 
    .. table:: **Table 4** Parameter description
 
-      +-----------------------+-----------------------+-----------------------------------------+
-      | Name                  | Type                  | Description                             |
-      +=======================+=======================+=========================================+
-      | restart_required      | Boolean               | Indicates whether a reboot is required. |
-      |                       |                       |                                         |
-      |                       |                       | -  **true**: A reboot is required.      |
-      |                       |                       | -  **false**: A reboot is not required. |
-      +-----------------------+-----------------------+-----------------------------------------+
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Name                  | Type                  | Description                                                                                                                                                 |
+      +=======================+=======================+=============================================================================================================================================================+
+      | restart_required      | Boolean               | Indicates whether a reboot is required.                                                                                                                     |
+      |                       |                       |                                                                                                                                                             |
+      |                       |                       | -  **true**: A reboot is required.                                                                                                                          |
+      |                       |                       | -  **false**: A reboot is not required.                                                                                                                     |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | job_id                | String                | Job ID.                                                                                                                                                     |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | ignored_params        | Set<String>           | List of ignored parameters.                                                                                                                                 |
+      |                       |                       |                                                                                                                                                             |
+      |                       |                       | If a parameter does not exist or is read-only, the parameter cannot be modified and the names of all ignored parameters are returned by **ignored_params**. |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 -  Example normal response
 
    .. code-block:: text
 
       {
-        "restart_required": false
+       "restart_required": false,
+       "job_id" : "e7a7535b-eb9b-45ac-a83a-020dc5016d94",
+       "ignored_params": ["autocommit"]
       }
 
 -  Abnormal Response
@@ -115,7 +120,13 @@ Response
 Status Code
 -----------
 
-For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
+-  Normal
+
+   200
+
+-  Abnormal
+
+   For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
 
 Error Code
 ----------
