@@ -10,7 +10,7 @@ Function
 
 This API is used to obtain the link for downloading a backup file.
 
--  Learn how to :ref:`authorize and authenticate <rds_03_0001>` this API before using it.
+-  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
 
 Constraints
@@ -24,10 +24,6 @@ URI
 -  URI format
 
    GET https://{*Endpoint*}/v3/{project_id}/backup-files?backup_id={backup_id}
-
--  Example
-
-   https://rds.eu-de.otc.t-systems.com/v3/97b026aa9cc4417888c14c84a1ad9860/backup-files?backup_id=c0c9f155c7b7423a9d30f0175998b63bbr01
 
 -  Parameter description
 
@@ -46,7 +42,13 @@ URI
 Request
 -------
 
-None
+-  Request parameters
+
+   None
+
+-  Example
+
+   GET https://rds.eu-de.otc.t-systems.com/v3/97b026aa9cc4417888c14c84a1ad9860/backup-files?backup_id=c0c9f155c7b7423a9d30f0175998b63bbr01
 
 Response
 --------
@@ -80,6 +82,8 @@ Response
       +-------------------+--------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | link_expired_time | String | Indicates the link expiration time. The format is "yyyy-mm-ddThh:mm:ssZ". **T** is the separator between the calendar and the hourly notation of time. **Z** indicates the time zone offset. |
       +-------------------+--------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | database_name     | String | Indicates the name of the database. If the backup file is not a database backup file, null is returned.                                                                                      |
+      +-------------------+--------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 -  Example normal response
 
@@ -104,7 +108,13 @@ Response
 Status Code
 -----------
 
-For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
+-  Normal
+
+   200
+
+-  Abnormal
+
+   For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
 
 Error Code
 ----------

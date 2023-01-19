@@ -10,7 +10,7 @@ Function
 
 This API is used to query DB instances according to search criteria.
 
--  Learn how to :ref:`authorize and authenticate <rds_03_0001>` this API before using it.
+-  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
 
 URI
@@ -19,16 +19,6 @@ URI
 -  URI format
 
    GET https://{*Endpoint*}/v3/{project_id}/instances?id={id}&name={name}&type={type}&datastore_type={datastore_type}&vpc_id={vpc_id}&subnet_id={subnet_id}&offset={offset}&limit={limit}
-
--  Example
-
-   -  Querying all DB instances
-
-      https://rds.eu-de.otc.t-systems.com/v3/97b026aa9cc4417888c14c84a1ad9860/instances
-
-   -  Querying DB instances based on specified conditions
-
-      https://rds.eu-de.otc.t-systems.com/v3/97b026aa9cc4417888c14c84a1ad9860/instances?id=ed7cc6166ec24360a5ed5c5c9c2ed726in01&name=hy&type=Ha&datastore_type=MySQL&vpc_id=19e5d45d-70fd-4a91-87e9-b27e71c9891f&subnet_id=bd51fb45-2dcb-4296-8783-8623bfe89bb7&offset=0&limit=10
 
 -  Parameter description
 
@@ -75,7 +65,19 @@ URI
 Request
 -------
 
-None
+-  Request parameters
+
+   None
+
+-  Example
+
+   -  Querying all DB instances
+
+      GET https://rds.eu-de.otc.t-systems.com/v3/97b026aa9cc4417888c14c84a1ad9860/instances
+
+   -  Querying DB instances based on search criteria
+
+      GET https://rds.eu-de.otc.t-systems.com/v3/97b026aa9cc4417888c14c84a1ad9860/instances?id=ed7cc6166ec24360a5ed5c5c9c2ed726in01&name=hy&type=Ha&datastore_type=MySQL&vpc_id=19e5d45d-70fd-4a91-87e9-b27e71c9891f&subnet_id=bd51fb45-2dcb-4296-8783-8623bfe89bb7&offset=0&limit=10&tags=rds001=001,rds002=002
 
 Response
 --------
@@ -130,6 +132,10 @@ Response
       |                       |                       | If the value is **BACKING UP**, the instance is being backed up.                                                                                                       |
       |                       |                       |                                                                                                                                                                        |
       |                       |                       | If the value is **MODIFYING DATABASE PORT**, the database port is being changed.                                                                                       |
+      |                       |                       |                                                                                                                                                                        |
+      |                       |                       | If the value is **SHUTDOWN**, the DB instance is stopped.                                                                                                              |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | alias                 | String                | Indicates the DB instance alias.                                                                                                                                       |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | private_ips           | List<String>          | Indicates the private IP address list. It is a blank string until an ECS is created.                                                                                   |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -177,6 +183,10 @@ Response
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | security_group_id     | String                | Indicates the security group ID.                                                                                                                                       |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | cpu                   | String                | Indicates the number of CPUs. For example, the value **1** indicates 1 vCPU.                                                                                           |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | mem                   | String                | Indicates the memory size in GB.                                                                                                                                       |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | flavor_ref            | String                | Indicates the specification code.                                                                                                                                      |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | volume                | Object                | Indicates the volume information.                                                                                                                                      |
@@ -201,7 +211,19 @@ Response
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | disk_encryption_id    | String                | Indicates the disk encryption key ID.                                                                                                                                  |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | enterprise_project_id | String                | Indicates the enterprise project ID.                                                                                                                                   |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | time_zone             | String                | Indicates the time zone.                                                                                                                                               |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | charge_info           | Object                | Indicates the billing information, which is pay-per-use.                                                                                                               |
+      |                       |                       |                                                                                                                                                                        |
+      |                       |                       | For details, see :ref:`Table 10 <rds_01_0004__table992615211258>`.                                                                                                     |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | tags                  | Array of objects      | Indicates the tag list. If there is no tag in the list, an empty array is returned.                                                                                    |
+      |                       |                       |                                                                                                                                                                        |
+      |                       |                       | For details, see :ref:`Table 11 <rds_01_0004__table10618123761215>`.                                                                                                   |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | associated_with_ddm   | Boolean               | Indicates whether a DDM instance has been associated.                                                                                                                  |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _rds_01_0004__table7736377269:
@@ -230,12 +252,15 @@ Response
 
    .. table:: **Table 5** datastore field data structure description
 
-      ======= ====== ===============================
-      Name    Type   Description
-      ======= ====== ===============================
-      type    String Indicates the DB engine.
-      version String Indicates the database version.
-      ======= ====== ===============================
+      +------------------+--------+----------------------------------------------------------------------------------------------------------+
+      | Name             | Type   | Description                                                                                              |
+      +==================+========+==========================================================================================================+
+      | type             | String | Indicates the DB engine.                                                                                 |
+      +------------------+--------+----------------------------------------------------------------------------------------------------------+
+      | version          | String | Indicates the database version.                                                                          |
+      +------------------+--------+----------------------------------------------------------------------------------------------------------+
+      | complete_version | String | Indicates the complete version number. This parameter is returned only when the DB engine is PostgreSQL. |
+      +------------------+--------+----------------------------------------------------------------------------------------------------------+
 
    .. _rds_01_0004__table14771167122611:
 
@@ -296,6 +321,29 @@ Response
       |                       |                       | -  **replica_of**: indicates the primary DB instance. |
       |                       |                       | -  **replica**: indicates read replicas.              |
       +-----------------------+-----------------------+-------------------------------------------------------+
+
+   .. _rds_01_0004__table992615211258:
+
+   .. table:: **Table 10** chargeInfo field data structure description
+
+      +-----------------+-----------------+-----------------+----------------------------------------------------------------+
+      | Name            | Mandatory       | Type            | Description                                                    |
+      +=================+=================+=================+================================================================+
+      | charge_mode     | Yes             | String          | Indicates the billing mode.                                    |
+      |                 |                 |                 |                                                                |
+      |                 |                 |                 | The value **postPaid** indicates the pay-per-use billing mode. |
+      +-----------------+-----------------+-----------------+----------------------------------------------------------------+
+
+   .. _rds_01_0004__table10618123761215:
+
+   .. table:: **Table 11** tags field data structure description
+
+      ===== ====== ========================
+      Name  Type   Description
+      ===== ====== ========================
+      key   String Indicates the tag key.
+      value String Indicates the tag value.
+      ===== ====== ========================
 
 -  Example normal response
 
@@ -444,7 +492,13 @@ Response
 Status Code
 -----------
 
-For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
+-  Normal
+
+   200
+
+-  Abnormal
+
+   For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
 
 Error Code
 ----------

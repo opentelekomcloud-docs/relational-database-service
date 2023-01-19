@@ -97,7 +97,7 @@ The API used to `obtain a user token <https://docs.otc.t-systems.com/en-us/api/i
 (Optional) Request Body
 -----------------------
 
-This part is optional. The body of a request is often sent in a structured format (for example, JSON or XML) as specified in the **Content-Type** header field. If the request body contains Chinese characters, these characters must be coded in UTF-8.
+This part is optional. The body of a request is often sent in a structured format (for example, JSON or XML) as specified in the **Content-Type** header field. If the request body contains full-width characters, these characters must be coded in UTF-8.
 
 The request body varies between APIs. Some APIs do not require the request body, such as the APIs requested using the GET and DELETE methods.
 

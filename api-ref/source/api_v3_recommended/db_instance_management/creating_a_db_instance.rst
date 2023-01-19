@@ -10,7 +10,7 @@ Function
 
 This API is used to create a single RDS DB instance, primary/standby DB instances, or a read replica.
 
--  Learn how to :ref:`authorize and authenticate <rds_03_0001>` this API before using it.
+-  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
 
 URI
@@ -19,10 +19,6 @@ URI
 -  URI format
 
    POST https://{*Endpoint*}/v3/{project_id}/instances
-
--  Example
-
-   https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances
 
 -  Parameter description
 
@@ -81,6 +77,8 @@ Request
    |                    |                 |                 | The value cannot be empty and should contain 8 to 32 characters, including uppercase and lowercase letters, digits, and the following special characters: ``~!@#%^*-_=+?``                                                                |
    |                    |                 |                 |                                                                                                                                                                                                                                           |
    |                    |                 |                 | You are advised to enter a strong password to improve security, preventing security risks such as brute force cracking.                                                                                                                   |
+   |                    |                 |                 |                                                                                                                                                                                                                                           |
+   |                    |                 |                 | If provided password will be considered by system as weak, you will receive an error and you should provide stronger password.                                                                                                            |
    +--------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | backup_strategy    | No              | Object          | Specifies the advanced backup policy.                                                                                                                                                                                                     |
    |                    |                 |                 |                                                                                                                                                                                                                                           |
@@ -90,7 +88,7 @@ Request
    +--------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | flavor_ref         | Yes             | String          | Specifies the specification code. The value cannot be empty.                                                                                                                                                                              |
    |                    |                 |                 |                                                                                                                                                                                                                                           |
-   |                    |                 |                 | For details, see **spec_code** in :ref:`Table 3 <rds_06_0002__table66531170>` in section :ref:`Querying Database Specifications <rds_06_0002>`.                                                                                           |
+   |                    |                 |                 | For details, see **spec_code** in :ref:`Table 3 <rds_06_0002__table1336414511696>` in section :ref:`Querying Database Specifications <rds_06_0002>`.                                                                                      |
    +--------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | volume             | Yes             | Object          | Specifies the volume information.                                                                                                                                                                                                         |
    |                    |                 |                 |                                                                                                                                                                                                                                           |
@@ -114,6 +112,11 @@ Request
    |                    |                 |                 | -  Method 1: Log in to VPC console and click the target subnet on the **Subnets** page. You can view the network ID on the displayed page.                                                                                                |
    |                    |                 |                 | -  Method 2: See the "Querying Subnets" section under "APIs" or the "Querying Networks" section under "OpenStack Neutron APIs" in *Virtual Private Cloud API Reference*.                                                                  |
    +--------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | data_vip           | No              | String          | Specifies the private IP address of a DB instance. You can use the following methods to obtain the private IP address:                                                                                                                    |
+   |                    |                 |                 |                                                                                                                                                                                                                                           |
+   |                    |                 |                 | -  Method 1: Log in to VPC console and click the target subnet on the **Subnets** page. You can view the subnet CIDR block on the displayed page.                                                                                         |
+   |                    |                 |                 | -  Method 2: See the "Querying Subnets" section under "APIs" in the *Virtual Private Cloud API Reference*.                                                                                                                                |
+   +--------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | security_group_id  | Yes             | String          | Specifies the security group which the RDS DB instance belongs to. To obtain this parameter value, use either of the following methods:                                                                                                   |
    |                    |                 |                 |                                                                                                                                                                                                                                           |
    |                    |                 |                 | -  Method 1: Log in to VPC console. Choose **Access Control** > **Security Groups** in the navigation pane on the left. On the displayed page, click the target security group. You can view the security group ID on the displayed page. |
@@ -123,15 +126,19 @@ Request
    |                    |                 |                 |                                                                                                                                                                                                                                           |
    |                    |                 |                 | For details, see :ref:`Table 8 <rds_01_0002__table992615211258>`.                                                                                                                                                                         |
    +--------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | collation          | No              | String          | This parameter applies only to Microsoft SQL Server DB instances.                                                                                                                                                                         |
+   |                    |                 |                 |                                                                                                                                                                                                                                           |
+   |                    |                 |                 | Value range: character sets queried in :ref:`Querying the Available SQL Server Character Set <rds_05_0010>`.                                                                                                                              |
+   +--------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-.. table:: **Table 3** Parameter description (Only Microsoft SQL Server 2017 EE supports read replicas and does not support single DB instances.)
+.. table:: **Table 3** Parameter for Replica creation (Only Microsoft SQL Server 2017 EE supports read replicas and does not support single DB instances.)
 
    +--------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Name               | Mandatory       | Type            | Description                                                                                                                                                                |
    +====================+=================+=================+============================================================================================================================================================================+
    | name               | Yes             | String          | Specifies the DB instance name.                                                                                                                                            |
    |                    |                 |                 |                                                                                                                                                                            |
-   |                    |                 |                 | The DB instance name of the same type must be unique for the same tenant.                                                                                                  |
+   |                    |                 |                 | DB instances of the same type can have same names under the same tenant.                                                                                                   |
    |                    |                 |                 |                                                                                                                                                                            |
    |                    |                 |                 | The value must be 4 to 64 characters in length and start with a letter. It is case-sensitive and can contain only letters, digits, hyphens (-), and underscores (_).       |
    +--------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -143,7 +150,7 @@ Request
    +--------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | flavor_ref         | Yes             | String          | Specifies the specification code. The value cannot be empty.                                                                                                               |
    |                    |                 |                 |                                                                                                                                                                            |
-   |                    |                 |                 | For details, see **spec_code** in :ref:`Table 3 <rds_06_0002__table66531170>` in section :ref:`Querying Database Specifications <rds_06_0002>`.                            |
+   |                    |                 |                 | For details, see **spec_code** in :ref:`Table 3 <rds_06_0002__table1336414511696>` in section :ref:`Querying Database Specifications <rds_06_0002>`.                       |
    +--------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | volume             | Yes             | Object          | Specifies the volume information.                                                                                                                                          |
    |                    |                 |                 |                                                                                                                                                                            |
@@ -178,8 +185,8 @@ Request
    | version         | Yes             | String          | Specifies the database version.                                                                                                 |
    |                 |                 |                 |                                                                                                                                 |
    |                 |                 |                 | -  MySQL databases support 5.6, 5.7, and 8.0. Example value: 5.7                                                                |
-   |                 |                 |                 | -  PostgreSQL databases support PostgreSQL 1.0 (Enhanced Edition), 9.5, 9.6, 10, 11, and 12. Example value: 9.6                 |
-   |                 |                 |                 | -  Microsoft SQL Server databases only support 2014 SE, 2016 SE, 2016 EE, 2017 SE, and 2017 EE. Example value: 2014_SE          |
+   |                 |                 |                 | -  PostgreSQL databases support 9.5, 9.6, 10, 11, 12 and 13. Example value: 9.6                                                 |
+   |                 |                 |                 | -  Microsoft SQL Server databases only support 2014 SE, 2016 SE, 2016 EE, 2017 SE and 2017 EE. Example value: 2014_SE           |
    |                 |                 |                 |                                                                                                                                 |
    |                 |                 |                 | For details about supported database versions, see section :ref:`Querying Version Information About a DB Engine <rds_06_0001>`. |
    +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------+
@@ -188,25 +195,25 @@ Request
 
 .. table:: **Table 5** ha field data structure description
 
-   +------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
-   | Name             | Mandatory       | Type            | Description                                                                                                 |
-   +==================+=================+=================+=============================================================================================================+
-   | mode             | Yes             | String          | Specifies the DB instance type. The value is **Ha** (primary/standby DB instances) and is case-insensitive. |
-   +------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
-   | replication_mode | Yes             | String          | Specifies the replication mode for the standby DB instance.                                                 |
-   |                  |                 |                 |                                                                                                             |
-   |                  |                 |                 | Value:                                                                                                      |
-   |                  |                 |                 |                                                                                                             |
-   |                  |                 |                 | -  For MySQL, the value is **async** or **semisync**.                                                       |
-   |                  |                 |                 | -  For PostgreSQL, the value is **async** or **sync**.                                                      |
-   |                  |                 |                 | -  For Microsoft SQL Server, the value is **sync**.                                                         |
-   |                  |                 |                 |                                                                                                             |
-   |                  |                 |                 | .. note::                                                                                                   |
-   |                  |                 |                 |                                                                                                             |
-   |                  |                 |                 |    -  **async** indicates the asynchronous replication mode.                                                |
-   |                  |                 |                 |    -  **semisync** indicates the semi-synchronous replication mode.                                         |
-   |                  |                 |                 |    -  **sync** indicates the synchronous replication mode.                                                  |
-   +------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------+
+   +------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------+
+   | Name             | Mandatory       | Type            | Description                                                                                     |
+   +==================+=================+=================+=================================================================================================+
+   | mode             | Yes             | String          | Specifies the primary/standby or cluster instance type. The value is **Ha** (case-insensitive). |
+   +------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------+
+   | replication_mode | Yes             | String          | Specifies the replication mode for the standby DB instance.                                     |
+   |                  |                 |                 |                                                                                                 |
+   |                  |                 |                 | Value:                                                                                          |
+   |                  |                 |                 |                                                                                                 |
+   |                  |                 |                 | -  For MySQL, the value is **async** or **semisync**.                                           |
+   |                  |                 |                 | -  For PostgreSQL, the value is **async** or **sync**.                                          |
+   |                  |                 |                 | -  For Microsoft SQL Server, the value is **sync**.                                             |
+   |                  |                 |                 |                                                                                                 |
+   |                  |                 |                 | .. note::                                                                                       |
+   |                  |                 |                 |                                                                                                 |
+   |                  |                 |                 |    -  **async** indicates the asynchronous replication mode.                                    |
+   |                  |                 |                 |    -  **semisync** indicates the semi-synchronous replication mode.                             |
+   |                  |                 |                 |    -  **sync** indicates the synchronous replication mode.                                      |
+   +------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------+
 
 .. _rds_01_0002__table0863181193416:
 
@@ -234,7 +241,7 @@ Request
    |                 |                 |                 | .. important::                                                                                                                                                                                                                                  |
    |                 |                 |                 |                                                                                                                                                                                                                                                 |
    |                 |                 |                 |    NOTICE:                                                                                                                                                                                                                                      |
-   |                 |                 |                 |    Primary/standby DB instances of Microsoft SQL Server do not support disabling the automated backup policy.                                                                                                                                   |
+   |                 |                 |                 |    Primary/standby DB instances and Cluster DB instances of Microsoft SQL Server do not support disabling the automated backup policy.                                                                                                          |
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _rds_01_0002__table10656503:
@@ -272,6 +279,10 @@ Request
    |                 |                 |                 | The value **postPaid** indicates the pay-per-use billing mode. |
    +-----------------+-----------------+-----------------+----------------------------------------------------------------+
 
+-  Example
+
+   POST https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances
+
 -  Request example
 
    Creating a single DB instance:
@@ -282,7 +293,7 @@ Request
           "name": "rds-instance-rep2",
           "datastore": {
               "type": "MySQL",
-              "version": "5.6"
+              "version": "8.0"
           },
           "flavor_ref": "rds.mysql.s1.large",
           "volume": {
@@ -315,7 +326,7 @@ Request
           "name": "rds-instance-rep2",
           "datastore": {
               "type": "MySQL",
-              "version": "5.6"
+              "version": "8.0"
           },
           "ha": {
               "mode": "ha",
@@ -417,7 +428,7 @@ Response
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | flavor_ref            | String                | Indicates the specification code. The value cannot be empty.                                                                                                                                                                              |
       |                       |                       |                                                                                                                                                                                                                                           |
-      |                       |                       | For details, see **spec_code** in :ref:`Table 3 <rds_06_0002__table66531170>` in section :ref:`Querying Database Specifications <rds_06_0002>`.                                                                                           |
+      |                       |                       | For details, see **spec_code** in :ref:`Table 3 <rds_06_0002__table1336414511696>` in section :ref:`Querying Database Specifications <rds_06_0002>`.                                                                                      |
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | volume                | Object                | Indicates the volume information.                                                                                                                                                                                                         |
       |                       |                       |                                                                                                                                                                                                                                           |
@@ -445,6 +456,8 @@ Response
       | charge_info           | Object                | Indicates the billing information, which is pay-per-use.                                                                                                                                                                                  |
       |                       |                       |                                                                                                                                                                                                                                           |
       |                       |                       | For details, see :ref:`Table 15 <rds_01_0002__table207147873611>`.                                                                                                                                                                        |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | collation             | String                | Indicates the collation set for Microsoft SQL Server.                                                                                                                                                                                     |
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _rds_01_0002__table766045720277:
@@ -556,9 +569,10 @@ Response
           "instance": {
               "id": "dsfae23fsfdsae3435in01",
               "name": "trove-instance-rep2",
+                      "status": "BUILD",
               "datastore": {
                   "type": "MySQL",
-                  "version": "5.6"
+                  "version": "8.0"
               },
               "flavor_ref": "rds.mysql.s1.large",
               "volume": {
@@ -592,9 +606,10 @@ Response
         "instance":{
                  "id": "dsfae23fsfdsae3435in01",
                  "name": "trove-instance-rep2",
+                 "status": "BUILD",
                  "datastore": {
                    "type": "MySQL",
-                   "version": "5.6"
+                   "version": "8.0"
                   },
                  "ha": {
                    "mode": "ha",
@@ -632,6 +647,11 @@ Response
         "instance":{
                   "id": "dsfae23fsfdsae3435in01",
                   "name": "trove-instance-rep2",
+                  "status": "BUILD",
+                  "datastore": {
+                      "type": "PostgreSQL",
+                      "version": 13
+                   },
                   "flavor_ref": "rds.mysql.s1.large.rr",
                    "volume": {
                      "type": "ULTRAHIGH",
@@ -644,7 +664,10 @@ Response
                  "subnet_id": "0e2eda62-1d42-4d64-a9d1-4e9aa9cd994f",
                  "security_group_id": "2a1f7fc8-3307-42a7-aa6f-42c8b9b8f8c5",
                  "port": "8635",
-                 "configuration_id": "452408-44c5-94be-305145fg"
+                 "configuration_id": "452408-44c5-94be-305145fg",
+                 "charge_info": {
+                     "charge_mode": "postPaid"
+                 }
                },
        "job_id": "dff1d289-4d03-4942-8b9f-463ea07c000d"
 
@@ -657,7 +680,13 @@ Response
 Status Code
 -----------
 
-For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
+-  Normal
+
+   202
+
+-  Abnormal
+
+   For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
 
 Error Code
 ----------

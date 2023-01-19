@@ -10,7 +10,7 @@ Function
 
 This API is used to query the database specifications of a specified DB engine version.
 
--  Learn how to :ref:`authorize and authenticate <rds_03_0001>` this API before using it.
+-  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
 
 URI
@@ -19,10 +19,6 @@ URI
 -  URI format
 
    GET https://{*Endpoint*}/v3/{project_id}/flavors/{database_name}?version_name={version_name}
-
--  Example
-
-   https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/flavors/mysql?version_name=5.7
 
 -  Parameter description
 
@@ -63,7 +59,13 @@ URI
 Request
 -------
 
-None
+-  Request parameters
+
+   None
+
+-  Example
+
+   GET https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/flavors/mysql?version_name=5.7
 
 Response
 --------
@@ -72,44 +74,56 @@ Response
 
    .. table:: **Table 2** Parameter description
 
-      +-----------------------+-----------------------+---------------------------------------------------------------+
-      | Name                  | Type                  | Description                                                   |
-      +=======================+=======================+===============================================================+
-      | flavors               | Array of objects      | Indicates the DB instance specifications information list.    |
-      |                       |                       |                                                               |
-      |                       |                       | For details, see :ref:`Table 3 <rds_06_0002__table66531170>`. |
-      +-----------------------+-----------------------+---------------------------------------------------------------+
+      +-----------------------+-----------------------+--------------------------------------------------------------------+
+      | Name                  | Type                  | Description                                                        |
+      +=======================+=======================+====================================================================+
+      | flavors               | Array of objects      | Indicates the DB instance specifications information list.         |
+      |                       |                       |                                                                    |
+      |                       |                       | For details, see :ref:`Table 3 <rds_06_0002__table1336414511696>`. |
+      +-----------------------+-----------------------+--------------------------------------------------------------------+
 
-   .. _rds_06_0002__table66531170:
+   .. _rds_06_0002__table1336414511696:
 
    .. table:: **Table 3** flavors field data structure description
 
-      +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+
-      | Name                  | Type                  | Description                                                                                                           |
-      +=======================+=======================+=======================================================================================================================+
-      | vcpus                 | String                | Indicates the CPU size. For example, the value **1** indicates 1 vCPU.                                                |
-      +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+
-      | ram                   | Integer               | Indicates the memory size in GB.                                                                                      |
-      +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+
-      | spec_code             | String                | Indicates the resource specification code. Use **rds.mysql.m1.xlarge.rr** as an example.                              |
-      |                       |                       |                                                                                                                       |
-      |                       |                       | -  **rds**: indicates the RDS product.                                                                                |
-      |                       |                       | -  **mysql**: indicates the DB engine.                                                                                |
-      |                       |                       | -  **m1.xlarge**: indicates the high memory performance specifications.                                               |
-      |                       |                       | -  **rr**: indicates the read replica (**.ha** indicates primary/standby DB instances).                               |
-      +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+
-      | instance_mode         | String                | Indicates the DB instance type. Its value can be any of the following:                                                |
-      |                       |                       |                                                                                                                       |
-      |                       |                       | -  **ha**: indicates primary/standby DB instances.                                                                    |
-      |                       |                       | -  **replica**: indicates read replicas.                                                                              |
-      |                       |                       | -  **single**: indicates single DB instances.                                                                         |
-      +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+
-      | az_status             | Map<String, String>   | Indicates the status of the AZ to which the DB instance specifications belong. Its value can be any of the following: |
-      |                       |                       |                                                                                                                       |
-      |                       |                       | -  **normal**: indicates that the AZ is on sale.                                                                      |
-      |                       |                       | -  **unsupported**: indicates that the DB instance specifications are not supported by the AZ.                        |
-      |                       |                       | -  **sellout**: indicates that the DB instance specifications are sold out.                                           |
-      +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------+
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------+
+      | Name                  | Type                  | Description                                                                              |
+      +=======================+=======================+==========================================================================================+
+      | vcpus                 | String                | Indicates the CPU size. For example, the value **1** indicates 1 vCPU.                   |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------+
+      | ram                   | Integer               | Indicates the memory size in GB.                                                         |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------+
+      | id                    | String                | Indicates the specification ID, which is unique.                                         |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------+
+      | spec_code             | String                | Indicates the resource specification code. Use **rds.mysql.m1.xlarge.rr** as an example. |
+      |                       |                       |                                                                                          |
+      |                       |                       | -  **rds**: indicates the RDS product.                                                   |
+      |                       |                       | -  **mysql**: indicates the DB engine.                                                   |
+      |                       |                       | -  **m1.xlarge**: indicates the high memory performance specifications.                  |
+      |                       |                       | -  **rr**: indicates the read replica (**.ha** indicates primary/standby DB instances).  |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------+
+      | version_name          | Array                 | Indicates the database version.                                                          |
+      |                       |                       |                                                                                          |
+      |                       |                       | Example value for MySQL: ["5.6","5.7","8.0"]                                             |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------+
+      | instance_mode         | String                | Indicates the DB instance type. Its value can be any of the following:                   |
+      |                       |                       |                                                                                          |
+      |                       |                       | -  **ha**: indicates primary/standby DB instances.                                       |
+      |                       |                       | -  **replica**: indicates read replicas.                                                 |
+      |                       |                       | -  **single**: indicates single DB instances.                                            |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------+
+      | az_status             | Map<String, String>   | Indicates the specification status in an AZ. Its value can be any of the following:      |
+      |                       |                       |                                                                                          |
+      |                       |                       | -  **normal**: indicates that the specifications in the AZ are available.                |
+      |                       |                       | -  **unsupported**: indicates that the specifications are not supported by the AZ.       |
+      |                       |                       | -  **sellout**: indicates that the specifications in the AZ are sold out.                |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------+
+      | az_desc               | Map<String, String>   | Indicates the description of the AZ to which the specifications belong.                  |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------+
+      | group_type            | String                | Indicates the performance specifications. Its value can be any of the following:         |
+      |                       |                       |                                                                                          |
+      |                       |                       | -  **normal**: general-enhanced                                                          |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------+
 
 -  Example normal response
 
@@ -117,24 +131,40 @@ Response
 
       {
           "flavors": [{
-              "vcpus": "1",
-              "ram": 2,
-              "spec_code": "rds.mysql.c2.medium.ha",
-              "instance_mode": "ha",
-              "az_status": {
-                  "az1": "normal",
-                  "az2": "normal"
+                  "vcpus": "1",
+                  "ram": 2,
+                              "id":"2988b9cc-2aac-3a94-898c-14666702f129",
+                  "spec_code": "rds.mysql.c2.medium.ha",
+                              "version_name": ["5.6","5.7","8.0"],
+                  "instance_mode": "ha",
+                  "az_status": {
+                      "az1": "normal",
+                      "az2": "normal"
+                  },
+                  "az_desc": {
+                      "az1": "az1",
+                      "az2": "az2"
+                  },
+                              "group_type": "normal"
+              },
+              {
+                  "vcpus": "1",
+                  "ram": 2,
+                              "id":"2988b9cc-2aac-3a94-898c-14666702f130",
+                  "spec_code": "rds.mysql.c2.medium.rr",
+                              "version_name": ["5.6","5.7","8.0"],
+                  "instance_mode": "replica",
+                  "az_status": {
+                      "az1": "normal",
+                      "az2": "normal"
+                  },
+                  "az_desc": {
+                      "az1": "az1",
+                      "az2": "az2"
+                  },
+                              "group_type": "normal"
               }
-          }, {
-              "vcpus": "1",
-              "ram": 2,
-              "spec_code": "rds.mysql.c2.medium.rr",
-              "instance_mode": "replica",
-              "az_status": {
-                  "az1": "normal",
-                  "az2": "normal"
-              }
-          }]
+          ]
       }
 
 -  Abnormal response
@@ -144,7 +174,13 @@ Response
 Status Code
 -----------
 
-For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
+-  Normal
+
+   200
+
+-  Abnormal
+
+   For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
 
 Error Code
 ----------

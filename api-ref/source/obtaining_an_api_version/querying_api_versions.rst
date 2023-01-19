@@ -10,7 +10,7 @@ Function
 
 This API is used to query the currently supported RDS API versions.
 
--  Learn how to :ref:`authorize and authenticate <rds_03_0001>` this API before using it.
+-  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
 
 URI
@@ -20,10 +20,6 @@ URI
 
    GET https://{*Endpoint*}/rds/
 
--  Example
-
-   https://rds.eu-de.otc.t-systems.com/rds/
-
 -  Parameter description
 
    None
@@ -31,7 +27,13 @@ URI
 Request
 -------
 
-None
+-  Request parameters
+
+   None
+
+-  Example
+
+   GET https://rds.eu-de.otc.t-systems.com/rds
 
 Response
 --------
@@ -82,13 +84,17 @@ Response
 
    .. table:: **Table 3** links field data structure description (dedicated for OpenStack v1.0)
 
-      +------+--------+------------------------------------------------------------------+
-      | Name | Type   | Description                                                      |
-      +======+========+==================================================================+
-      | href | String | Indicates the API URL and the value is **""**.                   |
-      +------+--------+------------------------------------------------------------------+
-      | rel  | String | Its value is **self**, indicating that **href** is a local link. |
-      +------+--------+------------------------------------------------------------------+
+      +-----------------------+-----------------------+------------------------------------------------------+
+      | Name                  | Type                  | Description                                          |
+      +=======================+=======================+======================================================+
+      | href                  | String                | Indicates the API URL and the value is **""**.       |
+      +-----------------------+-----------------------+------------------------------------------------------+
+      | rel                   | String                | The values are as follows, depending on the version: |
+      |                       |                       |                                                      |
+      |                       |                       | -  V3                                                |
+      |                       |                       | -  V1                                                |
+      |                       |                       | -  V1.0                                              |
+      +-----------------------+-----------------------+------------------------------------------------------+
 
 -  Example normal response
 
@@ -104,7 +110,7 @@ Response
               "id": "v1.0",
               "links": [{
                   "href": "",
-                  "rel": "self"
+                  "rel": "v1.0"
               }],
               "status": "CURRENT",
               "updated": "2017-03-23T17:34:02Z"
@@ -123,7 +129,13 @@ Response
 Status Code
 -----------
 
-For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
+-  Normal
+
+   200
+
+-  Abnormal
+
+   For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
 
 Error Code
 ----------
