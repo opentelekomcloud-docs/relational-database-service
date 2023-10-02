@@ -90,6 +90,6 @@ Scaling up the storage space of a read replica does not affect that of the prima
 
    If the read replica is running the MySQL DB engine, you can view the detailed progress and result of the task on the **Task Center** page. For details, see section :ref:`Task Center <rds_05_0007>`.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image2| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image3| image:: /_static/images/en-us_image_0000001470260157.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image3| image:: /_static/images/en-us_image_0000001191131369.png

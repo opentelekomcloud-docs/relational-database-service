@@ -28,4 +28,4 @@ Downloading a Binlog Backup File
 
 #. After the download is complete, you can view the binlog backups locally.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

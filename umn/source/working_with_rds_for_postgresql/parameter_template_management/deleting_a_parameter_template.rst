@@ -24,4 +24,4 @@ Procedure
 #. On the **Parameter Template Management** page, click **Custom Templates**. Locate the target parameter template to be deleted and choose **More** > **Delete** in the **Operation** column.
 #. In the displayed dialog box, click **Yes**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

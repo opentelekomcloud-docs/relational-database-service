@@ -28,4 +28,4 @@ Procedure
 #. In the displayed dialog box, click **Yes**.
 #. Refresh the DB instance list and view the status of the DB instance. If the status is **Stopped**, the DB instance is stopped successfully.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

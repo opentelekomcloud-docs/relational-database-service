@@ -56,5 +56,5 @@ Method 2
 
    Alternatively, click the target DB instance. On the **Backups & Restorations** page, you can view and manage the manual backups.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image2| image:: /_static/images/en-us_image_0000001470260233.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191211679.png

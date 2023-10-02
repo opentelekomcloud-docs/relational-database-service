@@ -31,9 +31,9 @@ Procedure
 
    -  To identify the target task, you can use the task name and DB instance name/ID or enter the target task name in the search box in the upper right corner.
 
-   -  You can view the progress and status of tasks in a specific period.
+   -  You can view the progress and status of tasks in a specific period. The default period is seven days.
 
-      The retention duration of failed tasks is 7 days, and of completed tasks is 1 days by default. It is controlled by two parameters on background. The retention duration cannot exceed 30 days. To set the retention duration contact O&M personnel.
+      The task list shows tasks that have been executed in the past 30 days.
 
    -  You can view instant tasks in the following statuses:
 
@@ -43,4 +43,4 @@ Procedure
 
    -  View the task creation and completion time.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

@@ -113,5 +113,5 @@ SSL Connection
 
       SSL connection (protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, compression: off)
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image2| image:: /_static/images/en-us_image_0000001470140493.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191131411.png

@@ -28,4 +28,4 @@ Procedure
 
       Changing the maintenance window does not affect the execution time of the scheduled tasks in the original maintenance period.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

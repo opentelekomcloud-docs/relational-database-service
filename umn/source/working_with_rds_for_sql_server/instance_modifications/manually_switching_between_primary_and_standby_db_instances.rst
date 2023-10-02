@@ -44,6 +44,6 @@ Procedure
    -  During the switchover process, the DB instance status is **Switchover in progress**.
    -  In the upper right corner of the DB instance list, click |image3| to refresh the list. After the switchover is successful, the DB instance status will become **Available**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image2| image:: /_static/images/en-us_image_0000001420181450.png
-.. |image3| image:: /_static/images/en-us_image_0000001470140533.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191211577.png
+.. |image3| image:: /_static/images/en-us_image_0000001191131421.png

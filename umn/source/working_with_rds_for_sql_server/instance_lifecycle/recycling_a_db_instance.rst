@@ -42,5 +42,5 @@ You can rebuild the primary DB instances in the recycle bin within the retention
 #. On the **Recycling Management** page, locate the target DB instance to be rebuilt and click **Rebuild** in the **Operation** column.
 #. On the **Rebuild DB Instance** page, configure required information and submit the rebuild task. For details, see :ref:`Restoring from Backup Files to DB Instances <rds_08_0007>`.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image2| image:: /_static/images/en-us_image_0000001470260233.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191211679.png

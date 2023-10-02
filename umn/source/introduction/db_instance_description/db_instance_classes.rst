@@ -57,6 +57,10 @@ General-enhanced and general-enhanced II instance classes provide robust and sta
    |                  |                 |                 | -  PostgreSQL           |
    |                  |                 |                 | -  Microsoft SQL Server |
    +------------------+-----------------+-----------------+-------------------------+
+   |                  | 8               | 128             | Microsoft SQL Server    |
+   +------------------+-----------------+-----------------+-------------------------+
+   |                  | 8               | 256             | Microsoft SQL Server    |
+   +------------------+-----------------+-----------------+-------------------------+
    |                  | 16              | 32              | -  MySQL                |
    |                  |                 |                 | -  PostgreSQL           |
    |                  |                 |                 | -  Microsoft SQL Server |

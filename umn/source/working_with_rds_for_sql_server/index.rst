@@ -6,6 +6,7 @@ Working with RDS for SQL Server
 ===============================
 
 -  :ref:`Data Migration <rds_sqlserver_05_0001_02>`
+-  :ref:`Permissions Management <rds_sqlserver_07_0000>`
 -  :ref:`Instance Lifecycle <rds_sqlserver_05_0000>`
 -  :ref:`Instance Modifications <rds_sqlserver_05_0008>`
 -  :ref:`Read Replicas <rds_sqlserver_11_0001>`
@@ -25,6 +26,7 @@ Working with RDS for SQL Server
    :hidden: 
 
    data_migration/index
+   permissions_management/index
    instance_lifecycle/index
    instance_modifications/index
    read_replicas/index

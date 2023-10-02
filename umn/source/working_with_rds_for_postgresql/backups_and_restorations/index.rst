@@ -11,7 +11,6 @@ Backups and Restorations
 -  :ref:`Downloading a Full Backup File <rds_09_0031>`
 -  :ref:`Downloading an Incremental Backup File <rds_pg_05_0138>`
 -  :ref:`Restoring from Backup Files to RDS for PostgreSQL <rds_09_0030>`
--  :ref:`Restoring from Full Backup Files to a Self-Built PostgreSQL Database <rds_pg_08_0044>`
 -  :ref:`Restoring a DB Instance to a Point in Time <rds_09_0029>`
 -  :ref:`Replicating a Backup <rds_09_0032>`
 -  :ref:`Deleting a Manual Backup <rds_09_0033>`
@@ -26,7 +25,6 @@ Backups and Restorations
    downloading_a_full_backup_file
    downloading_an_incremental_backup_file
    restoring_from_backup_files_to_rds_for_postgresql
-   restoring_from_full_backup_files_to_a_self-built_postgresql_database
    restoring_a_db_instance_to_a_point_in_time
    replicating_a_backup
    deleting_a_manual_backup

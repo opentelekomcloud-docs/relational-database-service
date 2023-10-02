@@ -65,5 +65,5 @@ Unbinding an EIP
 
    To bind an EIP to the DB instance again, see :ref:`Binding an EIP <rds_sqlserver_0025__en-us_topic_0192953725_section3199593620428>`.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image2| image:: /_static/images/en-us_image_0000001470260233.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191211679.png

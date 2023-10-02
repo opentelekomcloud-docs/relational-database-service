@@ -32,7 +32,7 @@ Procedure
 
             .. note::
 
-               For RDS for SQL Server, only 2017 Enterprise Edition supports read replicas.
+               RDS for SQL Server 2019 Enterprise Edition and 2017 Enterprise Edition support read replicas.
 
          c. This process takes 1-5 minutes.
 
@@ -42,8 +42,8 @@ Procedure
 
 #. View the results on the **Basic Information** page.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image2| image:: /_static/images/en-us_image_0000001470260077.png
-.. |image3| image:: /_static/images/en-us_image_0000001420023546.png
-.. |image4| image:: /_static/images/en-us_image_0000001420023658.png
-.. |image5| image:: /_static/images/en-us_image_0000001420340574.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001145051660.png
+.. |image3| image:: /_static/images/en-us_image_0000001191211385.png
+.. |image4| image:: /_static/images/en-us_image_0000001145051802.png
+.. |image5| image:: /_static/images/en-us_image_0000001145051804.png

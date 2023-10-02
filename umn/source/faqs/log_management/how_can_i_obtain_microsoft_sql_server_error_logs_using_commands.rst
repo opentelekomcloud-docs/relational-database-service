@@ -25,7 +25,7 @@ How Can I Obtain Microsoft SQL Server Error Logs Using Commands?
 
    .. _rds_faq_0059__f84f34c123aa54ed78685e291aea78a31:
 
-   .. figure:: /_static/images/en-us_image_0000001469940677.png
+   .. figure:: /_static/images/en-us_image_0000001145051730.png
       :alt: **Figure 1** Example query results
 
       **Figure 1** Example query results

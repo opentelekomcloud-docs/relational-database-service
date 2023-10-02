@@ -75,7 +75,7 @@ Viewing Slow Query Logs
 
    .. _slow_query_log-sqlserver__en-us_topic_0171818656_fig19196129142415:
 
-   .. figure:: /_static/images/en-us_image_0000001469940697.png
+   .. figure:: /_static/images/en-us_image_0000001145211498.png
       :alt: **Figure 1** Slow query log details
 
       **Figure 1** Slow query log details
@@ -119,11 +119,11 @@ Downloading a Log
 
          In the preceding command, *XXX* indicates the local path for storing slow query logs.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image2| image:: /_static/images/en-us_image_0000001470340153.png
-.. |image3| image:: /_static/images/en-us_image_0000001419863730.png
-.. |image4| image:: /_static/images/en-us_image_0000001470140389.png
-.. |image5| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image6| image:: /_static/images/en-us_image_0000001470340005.png
-.. |image7| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image8| image:: /_static/images/en-us_image_0000001420340598.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001145051706.png
+.. |image3| image:: /_static/images/en-us_image_0000001191211533.png
+.. |image4| image:: /_static/images/en-us_image_0000001191131375.png
+.. |image5| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image6| image:: /_static/images/en-us_image_0000001191211405.png
+.. |image7| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image8| image:: /_static/images/en-us_image_0000001145211504.png

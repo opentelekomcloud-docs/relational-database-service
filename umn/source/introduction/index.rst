@@ -11,7 +11,7 @@ Introduction
 -  :ref:`Product Series <rds_01_0009>`
 -  :ref:`DB Instance Description <rds_01_0028>`
 -  :ref:`Typical Applications <rds_01_0024>`
--  :ref:`User Permissions <rds_01_0025>`
+-  :ref:`Permissions Management <rds_01_0017>`
 -  :ref:`Constraints <rds_01_0026>`
 -  :ref:`DB Engine <rds_01_0031>`
 -  :ref:`Related Services <rds_01_0027>`
@@ -26,7 +26,7 @@ Introduction
    product_series/index
    db_instance_description/index
    typical_applications/index
-   user_permissions
+   permissions_management
    constraints/index
    db_engine/index
    related_services

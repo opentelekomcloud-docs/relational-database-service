@@ -28,4 +28,4 @@ Procedure
 #. In the displayed dialog box, click **Yes**.
 #. Refresh the instance list and view the status of the instance. If the status is **Stopped**, the instance is stopped successfully.
 
-.. |image1| image:: /_static/images/en-us_image_0000001420181438.png
+.. |image1| image:: /_static/images/en-us_image_0000001206123004.png
