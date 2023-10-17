@@ -60,7 +60,7 @@ Method 1: Using OBS Browser+
 
    g. After the backup is downloaded, enable OBS Browser+ certificate verification.
 
-#. Restore data locally as required. For details, see :ref:`Restoring from Full Backup Files to a Self-Built PostgreSQL Database <rds_pg_08_0044>`.
+#. Restore data locally as required.
 
 Method 2: Using Current Browser
 -------------------------------
@@ -77,7 +77,7 @@ Method 2: Using Current Browser
 
 #. In the displayed dialog box, select **Use Current Browser** for **Download Method** and click **OK**.
 
-#. Restore data locally as required. For details, see :ref:`Restoring from Full Backup Files to a Self-Built PostgreSQL Database <rds_pg_08_0044>`.
+#. Restore data locally as required.
 
 Method 3: Using Download URL
 ----------------------------
@@ -108,9 +108,9 @@ Method 3: Using Download URL
 
       *DOWNLOAD_URL*: indicates the location of the backup file to be downloaded. If the location contains special characters, escape is required.
 
-#. Restore data locally as required. For details, see :ref:`Restoring from Full Backup Files to a Self-Built PostgreSQL Database <rds_pg_08_0044>`.
+#. Restore data locally as required.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image2| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image3| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image4| image:: /_static/images/en-us_image_0000001420181290.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image3| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image4| image:: /_static/images/en-us_image_0000001191211549.png

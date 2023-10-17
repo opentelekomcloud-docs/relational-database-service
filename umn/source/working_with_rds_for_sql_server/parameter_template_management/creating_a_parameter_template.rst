@@ -19,7 +19,7 @@ When you have already created a parameter template and want to include most of t
 
 The following are the key points you should know when using parameters in a parameter template:
 
--  When you change a dynamic parameter value in a parameter template and save the change, the change takes effect immediately. When you change a static parameter value in a parameter template and save the change, the change will take effect only after you manually reboot the DB instances that the parameter template applies to.
+-  The changes to parameter values in a custom parameter template take effect only after you apply the template to DB instances. For details, see :ref:`Applying a Parameter Template <rds_05_0018>`.
 -  Improper parameter settings may have unintended consequences, including reduced performance and system instability. Exercise caution when modifying database parameters and you need to back up data before modifying parameters in a parameter template. Before applying parameter template changes to a production DB instance, you should try out these changes on a test DB instance.
 
 .. note::
@@ -41,4 +41,4 @@ Procedure
    -  The template name must consist of 1 to 64 characters. It can contain only uppercase letters, lowercase letters, digits, hyphens (-), underscores (_), and periods (.).
    -  The description consists of a maximum of 256 characters and cannot contain carriage return characters or the following special characters: >!<"&'=
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

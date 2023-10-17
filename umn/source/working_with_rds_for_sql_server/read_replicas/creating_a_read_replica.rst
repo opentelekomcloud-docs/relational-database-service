@@ -16,7 +16,7 @@ After a DB instance has been created, you can create read replicas for it.
 
    A maximum of five read replicas can be created for a primary DB instance.
 
-   Only RDS for SQL Server 2017 Enterprise Edition supports read replicas.
+   Only RDS for SQL Server 2019 Enterprise Edition and 2017 Enterprise Edition support read replicas.
 
 Procedure
 ---------
@@ -108,6 +108,6 @@ Follow-up Operations
 
 :ref:`Managing a Read Replica <rds_sqlserver_11_0004>`
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image2| image:: /_static/images/en-us_image_0000001419863674.png
-.. |image3| image:: /_static/images/en-us_image_0000001470260077.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191131343.png
+.. |image3| image:: /_static/images/en-us_image_0000001145051660.png

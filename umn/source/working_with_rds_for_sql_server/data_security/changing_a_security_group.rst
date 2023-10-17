@@ -24,8 +24,8 @@ Procedure
 
 #. Changing the security group takes 1 to 3 minutes. Click |image5| in the upper right corner on the **Basic Information** page to view the results.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image2| image:: /_static/images/en-us_image_0000001420023546.png
-.. |image3| image:: /_static/images/en-us_image_0000001470260141.png
-.. |image4| image:: /_static/images/en-us_image_0000001419863746.png
-.. |image5| image:: /_static/images/en-us_image_0000001420340614.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191211385.png
+.. |image3| image:: /_static/images/en-us_image_0000001191211455.png
+.. |image4| image:: /_static/images/en-us_image_0000001191131297.png
+.. |image5| image:: /_static/images/en-us_image_0000001145051618.png

@@ -44,7 +44,7 @@ Non-SSL Connection
 #. Choose **Connect** > **Database Engine**. In the displayed dialog box, enter login information.
 
 
-   .. figure:: /_static/images/en-us_image_0000001420340506.png
+   .. figure:: /_static/images/en-us_image_0000001191211449.png
       :alt: **Figure 1** Connecting to the server
 
       **Figure 1** Connecting to the server
@@ -83,7 +83,7 @@ SSL Connection
 #. Choose **Connect** > **Database Engine**. In the displayed dialog box, enter login information.
 
 
-   .. figure:: /_static/images/en-us_image_0000001470140289.png
+   .. figure:: /_static/images/en-us_image_0000001145051612.png
       :alt: **Figure 2** Connecting to the server
 
       **Figure 2** Connecting to the server
@@ -100,7 +100,7 @@ SSL Connection
 #. On the **Connection Properties** page, enter related parameters and select **Encrypt connection** to enable SSL encryption. (By default, **Encrypt connection** is not selected. You need to select it manually.)
 
 
-   .. figure:: /_static/images/en-us_image_0000001419863630.jpg
+   .. figure:: /_static/images/en-us_image_0000001145051614.jpg
       :alt: **Figure 3** Connection properties
 
       **Figure 3** Connection properties
@@ -111,4 +111,4 @@ SSL Connection
 
       If the connection fails, ensure that preparations have been correctly made in :ref:`Preparations <rds_03_0007__section367520762117>` and try again.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260029.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211453.png

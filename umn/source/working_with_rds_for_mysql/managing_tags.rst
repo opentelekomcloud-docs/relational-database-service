@@ -23,8 +23,8 @@ Adding a Tag
 #. On the **Instances** page, click the target DB instance.
 #. On the **Tags** page, click **Add Tag**. In the displayed dialog box, enter a tag key and a tag value, and click **OK**.
 
-   -  The tag key must be unique. It can consist of up to 36 characters. Only letters, digits, hyphens (-), underscores (_), and at signs (@) are allowed.
-   -  The tag value (optional) can consist of up to 43 characters. Only letters, digits, hyphens (-), underscores (_), periods (.), and at Signs (@) are allowed.
+   -  The tag key must be unique. It can consist of up to 128 characters. Each tag key allows letters, numbers, spaces, and the following characters: **\_ . : = + - @**. It cannot start or end with a space, or start with **\_sys\_**.
+   -  The tag value (optional) can consist of up to 255 characters. Each tag value allows letters, numbers, spaces, and the following characters: **\_ . : / = + - @**. The tag value can start or end with a space, and it will be truncated.
 
 #. After a tag has been added, you can view and manage it on the **Tags** page.
 
@@ -40,7 +40,7 @@ Editing a Tag
 #. On the **Tags** page, locate the tag to be edited and click **Edit** in the **Operation** column. In the displayed dialog box, change the tag value and click **OK**.
 
    -  Only the tag value can be edited.
-   -  The tag value (optional) can consist of up to 43 characters. Only letters, digits, hyphens (-), underscores (_), periods (.), and at Signs (@) are allowed.
+   -  The tag value (optional) can consist of up to 255 characters. Each tag value allows letters, numbers, spaces, and the following characters: **\_ . : / = + - @**. The tag value can start or end with a space, and it will be truncated.
 
 #. After a tag has been edited, you can view and manage it on the **Tags** page.
 
@@ -54,6 +54,6 @@ Deleting a Tag
 #. On the **Tags** page, locate the tag to be deleted and click **Delete** in the **Operation** column. In the displayed dialog box, click **Yes**.
 #. After a tag has been deleted, it will no longer be displayed on the **Tags** page.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image2| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image3| image:: /_static/images/en-us_image_0000001470260233.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image3| image:: /_static/images/en-us_image_0000001191211679.png

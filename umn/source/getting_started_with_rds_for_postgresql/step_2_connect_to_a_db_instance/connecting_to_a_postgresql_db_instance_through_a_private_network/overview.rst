@@ -12,7 +12,7 @@ Process
 
 .. _rds_02_0010__fig138110377499:
 
-.. figure:: /_static/images/en-us_image_0000001420340718.png
+.. figure:: /_static/images/en-us_image_0000001145051740.png
    :alt: **Figure 1** Connecting to a DB instance through a private network
 
    **Figure 1** Connecting to a DB instance through a private network

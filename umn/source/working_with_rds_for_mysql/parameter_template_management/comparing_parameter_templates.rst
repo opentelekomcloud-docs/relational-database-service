@@ -38,5 +38,5 @@ Comparing Parameter Templates
    -  If their settings are different, the parameter names and values of both parameter templates are displayed.
    -  If their settings are the same, no data is displayed.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image2| image:: /_static/images/en-us_image_0000001470260233.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191211679.png

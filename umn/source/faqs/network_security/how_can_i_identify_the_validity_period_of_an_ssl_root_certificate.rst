@@ -21,4 +21,4 @@ Update the root certificate to the latest version before it expires:
 
       If a certificate is about to expire, replace it with an officially issued certificate to improve system security.
 
-.. |image1| image:: /_static/images/en-us_image_0000001469940669.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211539.png

@@ -122,6 +122,8 @@ For more information about function differences among Microsoft SQL Server 2016 
 
 For more information about function differences among Microsoft SQL Server 2017 official editions, see `official documents <https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017>`__.
 
+For more information about function differences among Microsoft SQL Server 2019 official editions, see `official documents <https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2019?view=sql-server-2017>`__.
+
 .. _rds_01_0018__table38343542181154:
 
 .. table:: **Table 4** Differences of Microsoft SQL Server editions

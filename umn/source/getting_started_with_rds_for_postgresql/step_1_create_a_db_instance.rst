@@ -188,4 +188,4 @@ Procedure
 
       For details, see :ref:`Changing a Database Port <rds_pg_change_database_port>`.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

@@ -95,6 +95,6 @@ Method 2: Using Download URL
 
 #. Follow the instructions provided in :ref:`Restoring from Backup Files to a Self-Built SQL Server Database <rds_05_0044>` to restore data locally as required.
 
-.. |image1| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image2| image:: /_static/images/en-us_image_0000001470260233.png
-.. |image3| image:: /_static/images/en-us_image_0000001419863754.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image3| image:: /_static/images/en-us_image_0000001145211388.png

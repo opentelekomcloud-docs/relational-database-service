@@ -7,7 +7,7 @@ Working with RDS for PostgreSQL
 
 -  :ref:`Data Migration <rds_pg_05_0001_02>`
 -  :ref:`Parameter Tuning <rds_pg_10_0000>`
--  :ref:`PostgreSQL Enhanced Edition <rds_04_0001>`
+-  :ref:`Permissions Management <rds_pg_07_0000>`
 -  :ref:`Instance Lifecycle <rds_pg_05_0000>`
 -  :ref:`Instance Modifications <rds_pg_05_0001>`
 -  :ref:`Read Replicas <rds_pg_11_0001>`
@@ -29,7 +29,7 @@ Working with RDS for PostgreSQL
 
    data_migration/index
    parameter_tuning/index
-   postgresql_enhanced_edition/index
+   permissions_management/index
    instance_lifecycle/index
    instance_modifications/index
    read_replicas/index
