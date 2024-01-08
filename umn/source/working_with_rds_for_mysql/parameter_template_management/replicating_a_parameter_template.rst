@@ -34,4 +34,4 @@ Procedure
 
    After the parameter template is replicated, a new template is generated in the list on the **Parameter Template Management** page.
 
-.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image1| image:: /_static/images/en-us_image_0000001744574182.png

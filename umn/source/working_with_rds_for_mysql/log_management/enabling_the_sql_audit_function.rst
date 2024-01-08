@@ -53,8 +53,8 @@ Procedure
 
    -  If you do not select the check box "I acknowledge that after audit log is disabled, all audit logs are deleted.", the audit logs will be retained.
 
-.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
-.. |image2| image:: /_static/images/en-us_image_0000001191131431.png
-.. |image3| image:: /_static/images/en-us_image_0000001191211583.png
-.. |image4| image:: /_static/images/en-us_image_0000001191211593.png
-.. |image5| image:: /_static/images/en-us_image_0000001191211585.png
+.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image2| image:: /_static/images/en-us_image_0000001744574386.png
+.. |image3| image:: /_static/images/en-us_image_0000001744733550.png
+.. |image4| image:: /_static/images/en-us_image_0000001744574382.png
+.. |image5| image:: /_static/images/en-us_image_0000001791533253.png

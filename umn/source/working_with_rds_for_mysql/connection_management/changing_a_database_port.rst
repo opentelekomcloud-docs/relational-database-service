@@ -47,8 +47,8 @@ Procedure
 
 #. View the results on the **Basic Information** page.
 
-.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
-.. |image2| image:: /_static/images/en-us_image_0000001145051660.png
-.. |image3| image:: /_static/images/en-us_image_0000001191211385.png
-.. |image4| image:: /_static/images/en-us_image_0000001145211348.png
-.. |image5| image:: /_static/images/en-us_image_0000001191131441.png
+.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image2| image:: /_static/images/en-us_image_0000001744573902.png
+.. |image3| image:: /_static/images/en-us_image_0000001791613121.png
+.. |image4| image:: /_static/images/en-us_image_0000001744574018.png
+.. |image5| image:: /_static/images/en-us_image_0000001744733714.png

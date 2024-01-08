@@ -32,4 +32,4 @@ Procedure
 #. Set the number of proxy nodes and click **Next**.
 #. Confirm the settings and click **Submit**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image1| image:: /_static/images/en-us_image_0000001744574182.png

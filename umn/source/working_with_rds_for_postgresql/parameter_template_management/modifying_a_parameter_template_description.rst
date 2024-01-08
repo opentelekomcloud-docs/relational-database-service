@@ -26,7 +26,7 @@ Procedure
    -  The description consists of a maximum of 256 characters and cannot contain the following special characters: >!<"&'=
    -  After the modification is successful, you can view the new description in the **Description** column of the parameter template list.
 
-.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
-.. |image2| image:: /_static/images/en-us_image_0000001191211385.png
-.. |image3| image:: /_static/images/en-us_image_0000001145211348.png
-.. |image4| image:: /_static/images/en-us_image_0000001191211383.png
+.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image2| image:: /_static/images/en-us_image_0000001791613121.png
+.. |image3| image:: /_static/images/en-us_image_0000001744574018.png
+.. |image4| image:: /_static/images/en-us_image_0000001791532897.png
