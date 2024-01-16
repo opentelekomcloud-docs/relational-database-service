@@ -52,6 +52,6 @@ Deleting a Tag
 #. On the **Tags** page, locate the tag to be deleted and click **Delete** in the **Operation** column. In the displayed dialog box, click **Yes**.
 #. After a tag has been deleted, it will no longer be displayed on the **Tags** page.
 
-.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
-.. |image2| image:: /_static/images/en-us_image_0000001191211679.png
-.. |image3| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image2| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image3| image:: /_static/images/en-us_image_0000001744574182.png
