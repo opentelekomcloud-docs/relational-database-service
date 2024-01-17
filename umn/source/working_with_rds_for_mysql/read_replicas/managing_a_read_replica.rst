@@ -30,8 +30,8 @@ Deleting a Read Replica
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 #. In the DB instance list, click |image5| in front of a DB instance, locate the read replica to be deleted, and choose **More** > **Delete** in the **Operation** column.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
-.. |image2| image:: /_static/images/en-us_image_0000001744573902.png
-.. |image3| image:: /_static/images/en-us_image_0000001744574182.png
-.. |image4| image:: /_static/images/en-us_image_0000001744574182.png
-.. |image5| image:: /_static/images/en-us_image_0000001744733470.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001145051660.png
+.. |image3| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image4| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image5| image:: /_static/images/en-us_image_0000001191131423.png

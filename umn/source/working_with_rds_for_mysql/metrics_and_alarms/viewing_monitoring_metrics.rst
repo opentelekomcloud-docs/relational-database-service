@@ -44,4 +44,4 @@ Procedure
 
    Cloud Eye can monitor performance metrics from the last 1 hour, 3 hours, 12 hours, 1 day, 30 days, and 7 days.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

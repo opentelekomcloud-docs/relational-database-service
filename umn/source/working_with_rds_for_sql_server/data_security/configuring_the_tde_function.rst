@@ -16,10 +16,12 @@ Currently, the TDE function supports single and primary/standby DB instances of 
    +-----------------------------------+-----------------------------------+
    | DB Instance Type                  | Editions Support for TDE          |
    +===================================+===================================+
-   | Primary/Standby (1/1)             | -  2017 SE                        |
+   | Primary/Standby (1/1)             | -  2016 EE                        |
+   |                                   | -  2017 SE                        |
    |                                   | -  2019 SE                        |
    +-----------------------------------+-----------------------------------+
-   | Single DB instances               | -  2017 SE                        |
+   | Single DB instances               | -  2016 EE                        |
+   |                                   | -  2017 SE                        |
    |                                   | -  2019 SE                        |
    +-----------------------------------+-----------------------------------+
    | Cluster                           | -  2017 EE                        |
@@ -92,7 +94,7 @@ Configuring Database-Level TDE
       **exec master.dbo.rds_tde db1, 1**
 
 
-      .. figure:: /_static/images/en-us_image_0000001744574134.png
+      .. figure:: /_static/images/en-us_image_0000001145211414.png
          :alt: **Figure 1** Enabling TDE
 
          **Figure 1** Enabling TDE
@@ -102,7 +104,7 @@ Configuring Database-Level TDE
       **exec master.dbo.rds_tde db1, 0**
 
 
-      .. figure:: /_static/images/en-us_image_0000001791533013.png
+      .. figure:: /_static/images/en-us_image_0000001145211412.png
          :alt: **Figure 2** Disabling TDE
 
          **Figure 2** Disabling TDE
@@ -112,13 +114,13 @@ Configuring Database-Level TDE
       **exec master.dbo.rds_tde db1, -1**
 
 
-      .. figure:: /_static/images/en-us_image_0000001744573312.png
+      .. figure:: /_static/images/en-us_image_0000001191211443.png
          :alt: **Figure 3** Querying the TDE status (Enabled)
 
          **Figure 3** Querying the TDE status (Enabled)
 
 
-      .. figure:: /_static/images/en-us_image_0000001744574126.png
+      .. figure:: /_static/images/en-us_image_0000001191131291.png
          :alt: **Figure 4** Querying the TDE status (Disabled)
 
          **Figure 4** Querying the TDE status (Disabled)
@@ -128,10 +130,10 @@ Configuring Database-Level TDE
       **exec master.dbo.rds_tde null, -1**
 
 
-      .. figure:: /_static/images/en-us_image_0000001791613237.png
+      .. figure:: /_static/images/en-us_image_0000001145051606.png
          :alt: **Figure 5** Querying the TDE status of all databases
 
          **Figure 5** Querying the TDE status of all databases
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
-.. |image2| image:: /_static/images/en-us_image_0000001744574122.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191211447.png

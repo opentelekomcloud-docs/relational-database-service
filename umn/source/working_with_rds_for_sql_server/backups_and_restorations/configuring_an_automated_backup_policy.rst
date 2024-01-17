@@ -2,8 +2,8 @@
 
 .. _rds_11_0031:
 
-Configuring an Intra-Region Backup Policy
-=========================================
+Configuring an Automated Backup Policy
+======================================
 
 Scenarios
 ---------
@@ -25,21 +25,12 @@ Modifying an Automated Backup Policy
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 #. On the **Instances** page, click the target DB instance.
-#. On the **Backups & Restorations** page, click **Intra-Region Backup Policies**. On the displayed page, you can view the existing backup policy. If you want to modify the policy, adjust the values of the following parameters:
+#. On the **Backups & Restorations** page, click **Modify Backup Policy**.
 
-   -  **Retention Period**: How many days your automated full backups and incremental backups can be retained. The retention period is from 1 to 732 days and the default value is **7**.
-
-      -  Extending the retention period improves data reliability.
-      -  Reducing the retention period takes effect for existing backups. Any backups (except manual backups) that have expired will be automatically deleted. Exercise caution when performing this operation.
-
-   -  **Time Window**: A one-hour period the backup will be scheduled for each day, such as 01:00-02:00 or 12:00-13:00. The backup time window indicates when the backup starts. The backup duration depends on the data volume of your instance.
-
-      .. note::
-
-         To minimize the potential impact on services, set the time window to off-peak hours. The backup time is in UTC format. The backup time segment changes with the time zone during the switch between the DST and standard time.
-
-   -  **Backup Cycle**: Daily backups are selected by default, but you can change it. At least one day must be selected.
+   -  **Retention Period** refers to the number of days that your automated backups can be retained. Increasing the retention period will improve data reliability.
+   -  If you shorten the retention period, the new backup policy takes effect for all backup files. The backup files that have expired will be deleted.
+   -  The backup retention period indicates the number of days you want automated full and incremental backups of your DB instance to be retained. It ranges from 1-732 days. The backup time window is one hour. You are advised to select an off-peak time window for automated backups. By default, each day of the week is selected for **Backup Cycle** and you can change it. At least one day must be selected.
 
 #. Click **OK**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

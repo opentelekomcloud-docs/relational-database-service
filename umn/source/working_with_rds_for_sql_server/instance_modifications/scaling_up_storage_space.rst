@@ -54,4 +54,4 @@ Procedure
 
    Scaling up storage space takes 3-5 minutes. During this time, the status of the DB instance on the **Instances** page will be **Scaling up**. Click the DB instance and view the utilization on the displayed **Basic Information** page to verify that the scale-up is successful.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

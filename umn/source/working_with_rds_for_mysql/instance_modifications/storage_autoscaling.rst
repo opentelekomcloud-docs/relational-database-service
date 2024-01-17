@@ -50,5 +50,5 @@ Procedure
 
 #. Click **OK**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
-.. |image2| image:: /_static/images/en-us_image_0000001791613473.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001520982189.png

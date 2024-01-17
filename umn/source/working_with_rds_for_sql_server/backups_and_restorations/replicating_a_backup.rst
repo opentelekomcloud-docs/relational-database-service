@@ -42,4 +42,4 @@ Procedure
 
 #. After the new backup has been created, you can view and manage it on the **Backup Management** page.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

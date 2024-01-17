@@ -10,7 +10,7 @@ RDS supports DB instance backups and restorations to ensure data reliability.
 Automated Backups
 -----------------
 
-Automated backups are created during the backup period of your DB instances. RDS saves automated backups based on the retention period you specified. If necessary, you can restore to any point in time during your backup retention period. For details, see :ref:`Configuring an Intra-Region Backup Policy <rds_11_0031>`.
+Automated backups are created during the backup period of your DB instances. RDS saves automated backups based on the retention period you specified. If necessary, you can restore to any point in time during your backup retention period. For details, see :ref:`Configuring an Automated Backup Policy <rds_11_0031>`.
 
 Manual Backups
 --------------
