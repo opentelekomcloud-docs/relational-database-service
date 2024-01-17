@@ -11,7 +11,7 @@ Flowchart
 ---------
 
 
-.. figure:: /_static/images/en-us_image_0000001791532837.png
+.. figure:: /_static/images/en-us_image_0000001191131447.png
    :alt: **Figure 1** Flowchart
 
    **Figure 1** Flowchart

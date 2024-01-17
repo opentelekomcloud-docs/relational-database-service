@@ -43,4 +43,4 @@ Procedure
 
    For details about key fields in the trace structure, see sections "Trace Structure" and "Trace Examples" in the *Cloud Trace Service User Guide*.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744733634.png
+.. |image1| image:: /_static/images/en-us_image_0000001145051826.png

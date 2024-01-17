@@ -14,7 +14,7 @@ An error shown in :ref:`Figure 1 <rds_faq_0094__fig162510431417>` is reported on
 
 .. _rds_faq_0094__fig162510431417:
 
-.. figure:: /_static/images/en-us_image_0000001791613045.png
+.. figure:: /_static/images/en-us_image_0000001145211492.png
    :alt: **Figure 1** Error information
 
    **Figure 1** Error information

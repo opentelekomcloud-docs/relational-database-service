@@ -15,7 +15,7 @@ Procedure
 #. Run **show last route** to view the routing result of the previous SQL statement.
 
 
-   .. figure:: /_static/images/en-us_image_0000001744574450.png
+   .. figure:: /_static/images/en-us_image_0000001533364489.png
       :alt: **Figure 1** Query result
 
       **Figure 1** Query result

@@ -30,7 +30,7 @@ An RDS DB instance can be connected through a private network or a public networ
 
 .. _rds_04_0060__en-us_topic_0193421516_fig6120201385414:
 
-.. figure:: /_static/images/en-us_image_0000001791533177.png
+.. figure:: /_static/images/en-us_image_0000001145211356.png
    :alt: **Figure 1** DB instance connection
 
    **Figure 1** DB instance connection

@@ -187,4 +187,4 @@ Procedure
 
       For details, see :ref:`Changing a Database Port <rds_sqlserver_change_database_port>`.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

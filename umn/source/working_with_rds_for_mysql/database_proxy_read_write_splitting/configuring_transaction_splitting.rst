@@ -40,5 +40,5 @@ Contact customer service to disable or enable transaction splitting at any time 
 #. On the displayed page, click |image2| next to **Transaction Splitting**.
 #. In the displayed dialog box, click **OK**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
-.. |image2| image:: /_static/images/en-us_image_0000001744733534.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001533364453.png

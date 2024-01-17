@@ -35,4 +35,4 @@ Solution
 #. Download an SQL Server Management Studio installation package and install it on an ECS.
 #. Connect to the RDS DB instance through an ECS.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

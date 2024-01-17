@@ -23,4 +23,4 @@ For example:
 
    You can import data using mysqldump. For operation details, see :ref:`Migrating Data to RDS for MySQL Using mysqldump <rds_migration_mysql>`.
 
-#. You can create PostgreSQL plugins by referring to :ref:`Installing and Uninstalling a Plugin Using SQL Commands <rds_09_0043>`.
+#. You can create PostgreSQL plugins by referring to :ref:`Creating or Deleting a Plugin <rds_09_0043>`.

@@ -19,7 +19,6 @@ Working with RDS for SQL Server
 -  :ref:`Interconnection with CTS <rds_sqlserver_01_0000>`
 -  :ref:`Log Management <rds_sqlserver_log>`
 -  :ref:`Task Center <rds_sqlserver_05_0007>`
--  :ref:`Usage of Stored Procedures <rds_09_0001>`
 -  :ref:`Managing Tags <rds_sqlserver_tag>`
 
 .. toctree::
@@ -40,5 +39,4 @@ Working with RDS for SQL Server
    interconnection_with_cts/index
    log_management/index
    task_center/index
-   usage_of_stored_procedures/index
    managing_tags

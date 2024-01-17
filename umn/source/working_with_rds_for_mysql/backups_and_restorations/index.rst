@@ -6,7 +6,7 @@ Backups and Restorations
 ========================
 
 -  :ref:`Working with Backups <en-us_topic_backup_restore>`
--  :ref:`Configuring an Intra-Region Backup Policy <rds_08_0004>`
+-  :ref:`Configuring an Automated Backup Policy <rds_08_0004>`
 -  :ref:`Creating a Manual Backup <rds_08_0005>`
 -  :ref:`Downloading a Backup File <rds_08_0006>`
 -  :ref:`Downloading a Binlog Backup File <rds_03_0100>`
@@ -21,7 +21,7 @@ Backups and Restorations
    :hidden: 
 
    working_with_backups
-   configuring_an_intra-region_backup_policy
+   configuring_an_automated_backup_policy
    creating_a_manual_backup
    downloading_a_backup_file
    downloading_a_binlog_backup_file

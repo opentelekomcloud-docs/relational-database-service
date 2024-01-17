@@ -5,14 +5,12 @@
 Plugin Management
 =================
 
--  :ref:`Installing and Uninstalling a Plugin Using SQL Commands <rds_09_0043>`
+-  :ref:`Creating or Deleting a Plugin <rds_09_0043>`
 -  :ref:`Supported Plugins <rds_09_0045>`
--  :ref:`Using pgvector <rds_09_0062>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   installing_and_uninstalling_a_plugin_using_sql_commands
+   creating_or_deleting_a_plugin
    supported_plugins
-   using_pgvector
