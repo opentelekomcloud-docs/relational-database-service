@@ -47,7 +47,7 @@ Using MySQL-Front to Connect to a DB Instance
 #. In the displayed dialog box, click **New**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001145211482.png
+   .. figure:: /_static/images/en-us_image_0000001744573974.png
       :alt: **Figure 1** Connection management
 
       **Figure 1** Connection management
@@ -58,7 +58,7 @@ Using MySQL-Front to Connect to a DB Instance
 
    .. _rds_02_0047__fig4664143131112:
 
-   .. figure:: /_static/images/en-us_image_0000001191131361.png
+   .. figure:: /_static/images/en-us_image_0000001744573144.png
       :alt: **Figure 2** Adding an account
 
       **Figure 2** Adding an account
@@ -87,7 +87,7 @@ Using MySQL-Front to Connect to a DB Instance
 #. In the displayed window, select the connection that you have created in :ref:`3 <rds_02_0047__li194201396457>` and click **Open**. If the connection information is correct, the DB instance is successfully connected.
 
 
-   .. figure:: /_static/images/en-us_image_0000001191131363.png
+   .. figure:: /_static/images/en-us_image_0000001791532857.png
       :alt: **Figure 3** Opening a session
 
       **Figure 3** Opening a session
@@ -149,5 +149,5 @@ SSL Connection
 
       If the connection fails, see :ref:`What Should I Do If an ECS Cannot Connect to an RDS DB Instance Through a Private Network? <rds_faq_0020>`
 
-.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
-.. |image2| image:: /_static/images/en-us_image_0000001191131359.png
+.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image2| image:: /_static/images/en-us_image_0000001791613089.png

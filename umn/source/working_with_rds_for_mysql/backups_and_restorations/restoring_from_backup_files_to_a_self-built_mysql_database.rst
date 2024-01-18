@@ -121,7 +121,7 @@ Procedure
    **show databases**
 
 
-   .. figure:: /_static/images/en-us_image_0000001426447917.png
+   .. figure:: /_static/images/en-us_image_0000001744733654.png
       :alt: **Figure 1** Viewing the restoration result
 
       **Figure 1** Viewing the restoration result

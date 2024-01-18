@@ -118,8 +118,6 @@ This section describes function differences between single and primary/standby D
 
 :ref:`Table 4 <rds_01_0018__table38343542181154>` lists the major differences of the official Microsoft SQL Server editions.
 
-For more information about function differences among Microsoft SQL Server 2016 official editions, see `official documents <https://docs.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2017>`__.
-
 For more information about function differences among Microsoft SQL Server 2017 official editions, see `official documents <https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017>`__.
 
 For more information about function differences among Microsoft SQL Server 2019 official editions, see `official documents <https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2019?view=sql-server-2017>`__.
@@ -128,28 +126,26 @@ For more information about function differences among Microsoft SQL Server 2019 
 
 .. table:: **Table 4** Differences of Microsoft SQL Server editions
 
-   +---------------------------------------------+----------------------------------------------+--------------------+
-   | Function Item                               | Standard Edition                             | Enterprise Edition |
-   +=============================================+==============================================+====================+
-   | High availability                           | Mirror HA                                    | Mirror HA          |
-   +---------------------------------------------+----------------------------------------------+--------------------+
-   | Data compression                            | Supported                                    | Supported          |
-   +---------------------------------------------+----------------------------------------------+--------------------+
-   | SQL Profiler                                | Supported                                    | Supported          |
-   +---------------------------------------------+----------------------------------------------+--------------------+
-   | Column index                                | Supported                                    | Supported          |
-   +---------------------------------------------+----------------------------------------------+--------------------+
-   | Table/index partitioning                    | Supported only by Microsoft SQL Server 2014. | Supported          |
-   +---------------------------------------------+----------------------------------------------+--------------------+
-   | Change Data Capture (CDC)                   | Not supported                                | Supported          |
-   +---------------------------------------------+----------------------------------------------+--------------------+
-   | Online DDL                                  | Not supported                                | Supported          |
-   +---------------------------------------------+----------------------------------------------+--------------------+
-   | Parallel searches                           | Not supported                                | Supported          |
-   +---------------------------------------------+----------------------------------------------+--------------------+
-   | Adjustment of partitioned table parallelism | Not supported                                | Supported          |
-   +---------------------------------------------+----------------------------------------------+--------------------+
-   | TDE                                         | Not supported                                | Supported          |
-   +---------------------------------------------+----------------------------------------------+--------------------+
-   | Advanced R integration                      | Not supported                                | Supported          |
-   +---------------------------------------------+----------------------------------------------+--------------------+
+   +---------------------------------------------+------------------+--------------------+
+   | Function Item                               | Standard Edition | Enterprise Edition |
+   +=============================================+==================+====================+
+   | High availability                           | Mirror HA        | Mirror HA          |
+   +---------------------------------------------+------------------+--------------------+
+   | Data compression                            | Supported        | Supported          |
+   +---------------------------------------------+------------------+--------------------+
+   | SQL Profiler                                | Supported        | Supported          |
+   +---------------------------------------------+------------------+--------------------+
+   | Column index                                | Supported        | Supported          |
+   +---------------------------------------------+------------------+--------------------+
+   | Change Data Capture (CDC)                   | Not supported    | Supported          |
+   +---------------------------------------------+------------------+--------------------+
+   | Online DDL                                  | Not supported    | Supported          |
+   +---------------------------------------------+------------------+--------------------+
+   | Parallel searches                           | Not supported    | Supported          |
+   +---------------------------------------------+------------------+--------------------+
+   | Adjustment of partitioned table parallelism | Not supported    | Supported          |
+   +---------------------------------------------+------------------+--------------------+
+   | TDE                                         | Not supported    | Supported          |
+   +---------------------------------------------+------------------+--------------------+
+   | Advanced R integration                      | Not supported    | Supported          |
+   +---------------------------------------------+------------------+--------------------+

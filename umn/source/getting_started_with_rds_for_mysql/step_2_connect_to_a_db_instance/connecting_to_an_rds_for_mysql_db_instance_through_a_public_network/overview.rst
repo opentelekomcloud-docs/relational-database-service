@@ -12,7 +12,7 @@ Process
 
 .. _rds_02_0099__fig138110377499:
 
-.. figure:: /_static/images/en-us_image_0000001145051736.png
+.. figure:: /_static/images/en-us_image_0000001791613497.png
    :alt: **Figure 1** Connecting to a DB instance through a public network
 
    **Figure 1** Connecting to a DB instance through a public network
