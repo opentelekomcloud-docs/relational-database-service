@@ -28,7 +28,7 @@ Exporting Information About Selected DB Instances
 #. On the **Instances** page, filter DB instances by DB engine, DB instance name, DB instance ID, DB instance tag, and floating IP address, or select the DB instances to be exported, and click |image4| in the upper right corner of the page. In the displayed dialog box, select the items to be exported and click **Export**.
 #. Find a .csv file locally after the export task is completed.
 
-.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
-.. |image2| image:: /_static/images/en-us_image_0000001145051738.png
-.. |image3| image:: /_static/images/en-us_image_0000001191211679.png
-.. |image4| image:: /_static/images/en-us_image_0000001191131415.png
+.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image2| image:: /_static/images/en-us_image_0000001744573970.png
+.. |image3| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image4| image:: /_static/images/en-us_image_0000001791532849.png

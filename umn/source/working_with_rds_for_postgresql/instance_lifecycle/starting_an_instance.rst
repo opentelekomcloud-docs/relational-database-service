@@ -26,4 +26,4 @@ Procedure
 #. In the displayed dialog box, click **Yes**.
 #. Refresh the instance list and view the status of the instance. If the status is **Available**, the instance is started successfully.
 
-.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image1| image:: /_static/images/en-us_image_0000001744574182.png

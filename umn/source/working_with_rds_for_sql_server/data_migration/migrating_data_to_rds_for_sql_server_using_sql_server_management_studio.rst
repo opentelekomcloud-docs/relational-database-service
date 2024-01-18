@@ -149,7 +149,7 @@ This section describes how to use an ECS or a device that can access RDS to conn
       select * from sys.databases;
 
 
-   .. figure:: /_static/images/en-us_image_0000001145211626.png
+   .. figure:: /_static/images/en-us_image_0000001791533129.png
       :alt: **Figure 1** Data import result
 
       **Figure 1** Data import result

@@ -39,4 +39,4 @@ You can change the floating IP address of an existing DB instance.
 
    In the in-use IP address list, the IP addresses whose statuses are **To be used** are occupied and cannot be used.
 
-.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
