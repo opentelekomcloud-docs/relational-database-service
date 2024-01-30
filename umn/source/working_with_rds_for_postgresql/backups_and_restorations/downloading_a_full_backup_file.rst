@@ -110,7 +110,7 @@ Method 3: Using Download URL
 
 #. Restore data locally as required.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
-.. |image2| image:: /_static/images/en-us_image_0000001744574182.png
-.. |image3| image:: /_static/images/en-us_image_0000001744574182.png
-.. |image4| image:: /_static/images/en-us_image_0000001744574514.png
+.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image2| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image3| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image4| image:: /_static/images/en-us_image_0000001786933901.png

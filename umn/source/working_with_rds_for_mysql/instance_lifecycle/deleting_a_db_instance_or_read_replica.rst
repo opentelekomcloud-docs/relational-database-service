@@ -44,6 +44,6 @@ Deleting a Read Replica
 #. In the displayed dialog box, click **Yes**.
 #. Refresh the DB instance list later to check that the deletion is successful.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
-.. |image2| image:: /_static/images/en-us_image_0000001744574182.png
-.. |image3| image:: /_static/images/en-us_image_0000001791613429.png
+.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image2| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image3| image:: /_static/images/en-us_image_0000001786934157.png

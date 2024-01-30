@@ -46,5 +46,5 @@ Viewing Change History of a Parameter Template
 
    You can view the parameter name, original parameter value, new parameter value, modification status, and modification time.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
-.. |image2| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image2| image:: /_static/images/en-us_image_0000001786854381.png

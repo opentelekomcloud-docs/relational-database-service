@@ -22,4 +22,4 @@ Procedure
       -  If the database proxy is disabled, read/write splitting is also disabled and services using the read/write splitting address are interrupted. You need to switch your applications to the instance address.
       -  After read/write splitting is disabled, read replicas are still be billed. You can release them if they are not required for your workloads anymore.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image1| image:: /_static/images/en-us_image_0000001786854381.png

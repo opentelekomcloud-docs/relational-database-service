@@ -41,4 +41,4 @@ You can change the read/write splitting address for DB instances with read/write
 
    In-use IP addresses cannot be used as read/write splitting addresses.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image1| image:: /_static/images/en-us_image_0000001786854381.png

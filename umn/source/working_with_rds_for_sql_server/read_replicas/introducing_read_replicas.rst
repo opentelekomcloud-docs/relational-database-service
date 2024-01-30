@@ -8,7 +8,7 @@ Introducing Read Replicas
 Introduction
 ------------
 
-Only RDS for SQL Server 2019 Enterprise Edition and 2017 Enterprise Edition support read replicas.
+Only RDS for SQL Server 2022 Enterprise Edition, 2019 Enterprise Edition and 2017 Enterprise Edition support read replicas.
 
 In read-intensive scenarios, a single DB instance may be unable to handle the read pressure and service performance may be affected. To expand the DB instance read ability to offload read pressure on the database, you can create one or more read replicas in a region. These read replicas can process a large number of read requests and increase application throughput. You need to separately configure connection addresses of the primary DB instance and each read replica on your applications so that all read requests can be sent to read replicas and write requests to the primary DB instance.
 

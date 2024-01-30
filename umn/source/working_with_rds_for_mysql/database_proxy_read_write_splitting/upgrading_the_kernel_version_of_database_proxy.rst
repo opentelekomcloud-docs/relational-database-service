@@ -31,4 +31,4 @@ Procedure
 #. On the **Database Proxy** page, in the **Proxy Instance Information** area, click **Upgrade** in the **Version** field.
 #. In the displayed dialog box, select a scheduled time and click **OK**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image1| image:: /_static/images/en-us_image_0000001786854381.png

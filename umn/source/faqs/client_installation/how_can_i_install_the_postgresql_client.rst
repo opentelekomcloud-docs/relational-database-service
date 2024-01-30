@@ -27,7 +27,7 @@ Procedure
       sudo yum install -y postgresql12-server
 
 
-   .. figure:: /_static/images/en-us_image_0000001791613481.png
+   .. figure:: /_static/images/en-us_image_0000001786854313.png
       :alt: **Figure 1** Installing a client
 
       **Figure 1** Installing a client
@@ -37,13 +37,13 @@ Procedure
    -  Select an OS architecture that is consistent with that of the ECS.
 
 
-   .. figure:: /_static/images/en-us_image_0000001744733538.png
+   .. figure:: /_static/images/en-us_image_0000001739815088.png
       :alt: **Figure 2** Installing the RPM package
 
       **Figure 2** Installing the RPM package
 
 
-   .. figure:: /_static/images/en-us_image_0000001744733542.png
+   .. figure:: /_static/images/en-us_image_0000001786934093.png
       :alt: **Figure 3** Client installed
 
       **Figure 3** Client installed
@@ -51,7 +51,7 @@ Procedure
 #. Connect to the RDS for PostgreSQL instance.
 
 
-   .. figure:: /_static/images/en-us_image_0000001791613489.png
+   .. figure:: /_static/images/en-us_image_0000001786854309.png
       :alt: **Figure 4** Connection successful
 
       **Figure 4** Connection successful

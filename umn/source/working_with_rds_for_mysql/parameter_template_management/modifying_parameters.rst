@@ -80,5 +80,5 @@ Modifying Instance Parameters
 
    After parameters are modified, you can click **Change History** to view parameter modification details.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
-.. |image2| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image2| image:: /_static/images/en-us_image_0000001786854381.png
