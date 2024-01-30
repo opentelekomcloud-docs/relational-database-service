@@ -54,7 +54,7 @@ Using MySQL-Front to Connect to a DB Instance
 #. In the displayed dialog box, click **New**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001791613641.png
+   .. figure:: /_static/images/en-us_image_0000001739814908.png
       :alt: **Figure 1** Connection management
 
       **Figure 1** Connection management
@@ -63,7 +63,7 @@ Using MySQL-Front to Connect to a DB Instance
 
    .. _en-us_topic_connect_instance__en-us_topic_0154555358_fig4664143131112:
 
-   .. figure:: /_static/images/en-us_image_0000001791533409.png
+   .. figure:: /_static/images/en-us_image_0000001786933929.png
       :alt: **Figure 2** Adding an account
 
       **Figure 2** Adding an account
@@ -90,7 +90,7 @@ Using MySQL-Front to Connect to a DB Instance
 
    .. _en-us_topic_connect_instance__en-us_topic_0154555358_fig3870144665113:
 
-   .. figure:: /_static/images/en-us_image_0000001744733698.png
+   .. figure:: /_static/images/en-us_image_0000001739814896.png
       :alt: **Figure 3** Opening a session
 
       **Figure 3** Opening a session
@@ -152,5 +152,5 @@ Using SSL to Connect to a DB Instance
 
       If the connection fails, ensure that preparations have been correctly made in :ref:`Prerequisites <en-us_topic_connect_instance__en-us_topic_0154555358_en-us_topic_0153118658_section367520762117>` and try again.
 
-.. |image1| image:: /_static/images/en-us_image_0000001791533053.png
-.. |image2| image:: /_static/images/en-us_image_0000001744574522.png
+.. |image1| image:: /_static/images/en-us_image_0000001786853909.png
+.. |image2| image:: /_static/images/en-us_image_0000001739974060.png

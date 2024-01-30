@@ -16,4 +16,4 @@ To use test_decoding, set **wal_level** to **logical**.
 #. In the navigation pane on the left, choose **Parameters**. On the **Parameters** tab page, locate **wal_level** and change its value to **logical**.
 #. Click **Save**. In the displayed dialog box, click **Yes**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image1| image:: /_static/images/en-us_image_0000001786854381.png

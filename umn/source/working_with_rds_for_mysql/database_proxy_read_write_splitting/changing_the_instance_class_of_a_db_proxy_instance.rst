@@ -44,4 +44,4 @@ Procedure
 
    Changing the DB proxy instance class takes 13-15 minutes. During this period, the status of the primary DB instance on the **Instances** page is **Changing proxy instance class**. After a few minutes, view the proxy instance class on the **Database Proxy** page to check that the change is successful.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image1| image:: /_static/images/en-us_image_0000001786854381.png

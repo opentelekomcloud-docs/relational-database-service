@@ -39,4 +39,4 @@ You can change the floating IP address of an existing DB instance.
 
    An in-use IP address cannot be used as the new floating IP address of the DB instance.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image1| image:: /_static/images/en-us_image_0000001786854381.png

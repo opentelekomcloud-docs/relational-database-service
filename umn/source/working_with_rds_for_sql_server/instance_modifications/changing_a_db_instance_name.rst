@@ -30,8 +30,8 @@ Procedure
 
 #. View the results on the **Basic Information** page.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
-.. |image2| image:: /_static/images/en-us_image_0000001791613121.png
-.. |image3| image:: /_static/images/en-us_image_0000001791613121.png
-.. |image4| image:: /_static/images/en-us_image_0000001744573364.png
-.. |image5| image:: /_static/images/en-us_image_0000001744573356.png
+.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image2| image:: /_static/images/en-us_image_0000001739973860.png
+.. |image3| image:: /_static/images/en-us_image_0000001739973860.png
+.. |image4| image:: /_static/images/en-us_image_0000001786854373.png
+.. |image5| image:: /_static/images/en-us_image_0000001786854377.png

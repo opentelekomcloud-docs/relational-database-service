@@ -7,6 +7,7 @@ Parameter Template Management
 
 -  :ref:`Creating a Parameter Template <en-us_topic_parameter_group>`
 -  :ref:`Modifying Parameters <rds_configuration>`
+-  :ref:`Importing a Parameter Template <rds_08_0043>`
 -  :ref:`Exporting a Parameter Template <rds_08_0042>`
 -  :ref:`Comparing Parameter Templates <rds_08_0012>`
 -  :ref:`Viewing Parameter Change History <rds_05_0099>`
@@ -23,6 +24,7 @@ Parameter Template Management
 
    creating_a_parameter_template
    modifying_parameters
+   importing_a_parameter_template
    exporting_a_parameter_template
    comparing_parameter_templates
    viewing_parameter_change_history

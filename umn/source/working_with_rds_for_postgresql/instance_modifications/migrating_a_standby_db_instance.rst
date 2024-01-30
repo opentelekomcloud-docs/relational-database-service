@@ -28,5 +28,5 @@ Procedure
    -  In the upper right corner of the DB instance list, click |image2| to refresh the list. After the migration is complete, the DB instance status will become **Available**.
    -  In the **DB Information** area on the **Basic Information** page, you can view the AZ hosting the standby DB instance.
 
-.. |image1| image:: /_static/images/en-us_image_0000001791533169.png
-.. |image2| image:: /_static/images/en-us_image_0000001744574286.png
+.. |image1| image:: /_static/images/en-us_image_0000001786933961.png
+.. |image2| image:: /_static/images/en-us_image_0000001739814940.png

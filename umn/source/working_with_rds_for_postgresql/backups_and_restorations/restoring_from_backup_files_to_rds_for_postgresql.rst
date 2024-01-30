@@ -71,4 +71,4 @@ Procedure
 
       After the restoration is complete, a full backup will be automatically triggered.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image1| image:: /_static/images/en-us_image_0000001786854381.png

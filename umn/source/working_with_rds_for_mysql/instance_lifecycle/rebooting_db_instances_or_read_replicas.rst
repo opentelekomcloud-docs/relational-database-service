@@ -36,5 +36,5 @@ Procedure
 
 #. Refresh the DB instance list and view the status of the DB instance. If its status is **Available**, it has rebooted successfully.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
-.. |image2| image:: /_static/images/en-us_image_0000001744574146.png
+.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image2| image:: /_static/images/en-us_image_0000001786854005.png

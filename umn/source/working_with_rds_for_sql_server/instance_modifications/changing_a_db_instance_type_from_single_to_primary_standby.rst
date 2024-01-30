@@ -31,6 +31,6 @@ Procedure
    -  The DB instance is in the **Changing type to primary/standby** status. You can view the progress on the **Task Center** page. For details, see :ref:`Task Center <rds_sqlserver_05_0007>`.
    -  In the upper right corner of the DB instance list, click |image3| to refresh the list. After the DB instance type is changed to primary/standby, the instance status will change to **Available** and the instance type will change to **Primary/Standby**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
-.. |image2| image:: /_static/images/en-us_image_0000001791533289.png
-.. |image3| image:: /_static/images/en-us_image_0000001744574402.png
+.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image2| image:: /_static/images/en-us_image_0000001786854289.png
+.. |image3| image:: /_static/images/en-us_image_0000001739974208.png

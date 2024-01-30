@@ -66,6 +66,6 @@ Configuring Routing Policy in Single-Proxy Mode
 
 #. Click **OK**. On the **Database Proxy** page, view the result. You can select the instances for load balancing as required.
 
-.. |image1| image:: /_static/images/en-us_image_0000001744574182.png
-.. |image2| image:: /_static/images/en-us_image_0000001744574054.png
-.. |image3| image:: /_static/images/en-us_image_0000001744574182.png
+.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image2| image:: /_static/images/en-us_image_0000001739973836.png
+.. |image3| image:: /_static/images/en-us_image_0000001786854381.png

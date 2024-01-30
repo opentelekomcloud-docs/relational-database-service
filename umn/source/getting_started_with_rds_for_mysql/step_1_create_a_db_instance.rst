@@ -196,4 +196,4 @@ Procedure
 
       For details, see section :ref:`Changing a Database Port <rds_change_database_port>`.
 
-.. |image1| image:: /_static/images/en-us_image_0000001791533053.png
+.. |image1| image:: /_static/images/en-us_image_0000001786853909.png
