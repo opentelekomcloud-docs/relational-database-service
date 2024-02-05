@@ -158,23 +158,23 @@ Request
 
    .. table:: **Table 5** datastore field data structure description
 
-      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+
-      | Name            | Mandatory       | Type            | Description                                                                                                          |
-      +=================+=================+=================+======================================================================================================================+
-      | type            | Yes             | String          | Specifies the DB engine. Currently, the following DB engines are supported:                                          |
-      |                 |                 |                 |                                                                                                                      |
-      |                 |                 |                 | -  MySQL                                                                                                             |
-      |                 |                 |                 | -  PostgreSQL                                                                                                        |
-      |                 |                 |                 | -  SQLServer                                                                                                         |
-      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+
-      | version         | Yes             | String          | Specifies the database version.                                                                                      |
-      |                 |                 |                 |                                                                                                                      |
-      |                 |                 |                 | -  MySQL databases support 5.6, 5.7 and 8.0. Example value: 5.7                                                      |
-      |                 |                 |                 | -  PostgreSQL databases support 9.5, 9.6, 10, 11, 12 and 13. Example value: 9.6                                      |
-      |                 |                 |                 | -  Microsoft SQL Server databases support 2014 SE, 2016 SE, 2016 EE, 2017 SE and 2017 EE. Example value: 2016 SE     |
-      |                 |                 |                 |                                                                                                                      |
-      |                 |                 |                 | For details about supported database versions, see section :ref:`Database Version Queries <en-us_topic_0032347782>`. |
-      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+
+      +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------+
+      | Name            | Mandatory       | Type            | Description                                                                                                               |
+      +=================+=================+=================+===========================================================================================================================+
+      | type            | Yes             | String          | Specifies the DB engine. Currently, the following DB engines are supported:                                               |
+      |                 |                 |                 |                                                                                                                           |
+      |                 |                 |                 | -  MySQL                                                                                                                  |
+      |                 |                 |                 | -  PostgreSQL                                                                                                             |
+      |                 |                 |                 | -  SQLServer                                                                                                              |
+      +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------+
+      | version         | Yes             | String          | Specifies the database version.                                                                                           |
+      |                 |                 |                 |                                                                                                                           |
+      |                 |                 |                 | -  MySQL databases support 5.6, 5.7 and 8.0. Example value: 5.7                                                           |
+      |                 |                 |                 | -  PostgreSQL databases support 9.5, 9.6, 10, 11, 12, 13, and 14. Example value: 9.6                                      |
+      |                 |                 |                 | -  Microsoft SQL Server databases support 2017_SE, 2017_EE, 2019_SE, 2019_EE, 2022_SE and 2022_EE. Example value: 2017_SE |
+      |                 |                 |                 |                                                                                                                           |
+      |                 |                 |                 | For details about supported database versions, see section :ref:`Database Version Queries <en-us_topic_0032347782>`.      |
+      +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------+
 
    .. _en-us_topic_0032347785__table10656503:
 

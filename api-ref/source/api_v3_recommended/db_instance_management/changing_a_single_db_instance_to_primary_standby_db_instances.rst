@@ -104,7 +104,7 @@ Status Code
 
 -  Normal
 
-   200
+   202
 
 -  Abnormal
 

@@ -16,7 +16,7 @@ This API is used to obtain the link for downloading an audit log.
 Constraints
 -----------
 
-This API is supported for MySQL only.
+This API is available only to RDS for MySQL.
 
 URI
 ---
