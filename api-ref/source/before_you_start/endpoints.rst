@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001173907707.html
+:original_name: en-us_topic_0000001786811857.html
 
-.. _en-us_topic_0000001173907707:
+.. _en-us_topic_0000001786811857:
 
 Endpoints
 =========

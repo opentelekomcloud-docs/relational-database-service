@@ -5,7 +5,7 @@
 DB Instance Specifications
 ==========================
 
-For details about single DB instance specifications, see :ref:`Table 1 <rds_10_0004__ted9b9d433c8a4c52884e199e17f94479>`. The specifications vary according to actual situations.
+For details about single DB instance specifications, see :ref:`Table 1 <rds_10_0004__table1629815381417>`. The specifications vary according to actual situations.
 
 For primary/standby DB instances and read replicas, the specifications are displayed based on the following rules:
 
@@ -15,9 +15,9 @@ For primary/standby DB instances and read replicas, the specifications are displ
 Constraints
 -----------
 
-Only DB instances running Microsoft SQL Server 2017 EE support the creation of read replicas. Microsoft SQL Server 2017 EE does not support the creation of single DB instances.
+For Microsoft SQL Server, Only 2022_EE, 2019_EE and 2017_EE support the creation of read replicas and do not support the creation of single DB instances.
 
-.. _rds_10_0004__ted9b9d433c8a4c52884e199e17f94479:
+.. _rds_10_0004__table1629815381417:
 
 .. table:: **Table 1** Single DB instance specifications
 

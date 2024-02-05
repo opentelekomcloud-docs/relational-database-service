@@ -16,7 +16,7 @@ This API is used to query the policy for SQL audit logs.
 Constraints
 -----------
 
-This API is supported for MySQL only.
+This API is available only to RDS for MySQL.
 
 URI
 ---

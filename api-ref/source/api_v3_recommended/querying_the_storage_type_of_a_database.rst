@@ -38,6 +38,10 @@ URI
       |                       |                       | -  SQLServer                                                                                                                                                           |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | version_name          | Yes                   | Specifies the database version. For details about how to obtain the database version, see section :ref:`Querying Version Information About a DB Engine <rds_06_0001>`. |
+      |                       |                       |                                                                                                                                                                        |
+      |                       |                       | -  MySQL databases support 5.6, 5.7, and 8.0.                                                                                                                          |
+      |                       |                       | -  PostgreSQL databases support 9.5, 9.6, 10, 11, 12, 13, and 14.                                                                                                      |
+      |                       |                       | -  Microsoft SQL Server databases only support 2017_SE, 2017_EE, 2019_SE, 2019_EE, 2022_SE and 2022_EE.                                                                |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Request
@@ -84,7 +88,7 @@ Response
       | name                       | String                | Indicates the storage type. Its value can be any of the following:                  |
       |                            |                       |                                                                                     |
       |                            |                       | -  **COMMON**: SATA storage.                                                        |
-      |                            |                       | -  **ULTRAHIGH**: SSD storage.                                                      |
+      |                            |                       | -  **ULTRAHIGH**: ultra-high I/O storage.                                           |
       +----------------------------+-----------------------+-------------------------------------------------------------------------------------+
       | az_status                  | Map<String, String>   | Indicates the specification status in an AZ. Its value can be any of the following: |
       |                            |                       |                                                                                     |
@@ -95,9 +99,6 @@ Response
       | support_compute_group_type | List<String>          | Indicates the performance specifications. Its value can be any of the following:    |
       |                            |                       |                                                                                     |
       |                            |                       | -  **normal**: general-enhanced                                                     |
-      |                            |                       | -  **normal2**: general-enhanced II                                                 |
-      |                            |                       | -  **armFlavors**: Kunpeng general-enhanced                                         |
-      |                            |                       | -  **highPerformancePrivilegeEdition**: Ultra-high I/O (advanced)                   |
       +----------------------------+-----------------------+-------------------------------------------------------------------------------------+
 
    .. _rds_04_0002__table1513533533518:

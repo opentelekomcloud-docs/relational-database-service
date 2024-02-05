@@ -18,6 +18,16 @@ Constraints
 
 The name of the created parameter template cannot be the same as that of the default or an existing parameter template.
 
+-  When you create a PostgreSQL parameter template, the following specification parameters do not take effect and are invisible to you after the parameter template is created. Applying a created parameter template to a DB instance will not change the original values of the following specification parameters for the DB instance. To change such parameter values, you can log in to the RDS console, click the DB instance name, and choose **Parameters** from the navigation pane.
+
+   -  **shared_buffers**
+   -  **max_connections**
+   -  **max_prepared_transactions**
+   -  **effective_cache_size**
+   -  **maintenance_work_mem**
+   -  **max_wal_size**
+   -  **work_mem**
+
 URI
 ---
 
@@ -90,8 +100,8 @@ Request
       |                 |                 |                 | Example values:                                                                         |
       |                 |                 |                 |                                                                                         |
       |                 |                 |                 | -  MySQL: **8.0**                                                                       |
-      |                 |                 |                 | -  PostgreSQL: **13**                                                                   |
-      |                 |                 |                 | -  SQLServer: **2017_SE**                                                               |
+      |                 |                 |                 | -  PostgreSQL: **14**                                                                   |
+      |                 |                 |                 | -  SQLServer: **2019_SE**                                                               |
       +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+
 
 -  Example

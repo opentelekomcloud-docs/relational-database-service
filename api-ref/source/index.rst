@@ -12,5 +12,6 @@ Relational Database Service - API Reference
    api_v3_recommended/index
    api_v1_to_be_discarded/index
    openstack_trove_api_v1.0_to_be_discarded/index
+   permissions_policies_and_supported_actions/index
    appendix/index
    change_history
