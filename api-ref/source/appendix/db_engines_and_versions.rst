@@ -20,8 +20,7 @@ For new applications, you are advised to use the latest major version of the DB 
    |                      | -  5.7          | -  5.7          |                 |
    |                      | -  5.6          | -  5.6          |                 |
    +----------------------+-----------------+-----------------+-----------------+
-   | PostgreSQL           | -  15           | -  15           | Not supported   |
-   |                      | -  14           | -  14           |                 |
+   | PostgreSQL           | -  14           | -  14           | Not supported   |
    |                      | -  13           | -  13           |                 |
    |                      | -  12           | -  12           |                 |
    |                      | -  11           | -  11           |                 |
