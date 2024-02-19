@@ -26,7 +26,7 @@ Run the following command to update statistics on a specified database:
 
 **EXEC rdsadmin.dbo.rds_updatestats** '*@DBname'* ;
 
-The ***@DBname'*** parameter indicates the name of the database whose statistics are to be updated.
+The **'@DBname'** parameter indicates the name of the database whose statistics are to be updated.
 
 Example:
 

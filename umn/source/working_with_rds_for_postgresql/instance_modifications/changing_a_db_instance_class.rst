@@ -10,8 +10,6 @@ Scenarios
 
 You can change the instance class (CPU or memory) of a DB instance as required. If the status of a DB instance changes from **Changing instance class** to **Available**, the change is successful.
 
-.. _rds_pg_scale_rds__section17604457192012:
-
 Constraints
 -----------
 
