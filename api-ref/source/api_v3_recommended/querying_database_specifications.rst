@@ -105,7 +105,7 @@ Response
       | version_name          | Array                 | Indicates the database version.                                                                         |
       |                       |                       |                                                                                                         |
       |                       |                       | -  MySQL databases support 5.6, 5.7, and 8.0.                                                           |
-      |                       |                       | -  PostgreSQL databases support 9.5, 9.6, 10, 11, 12, 13, and 14.                                       |
+      |                       |                       | -  PostgreSQL databases support 9.5, 9.6, 10, 11, 12, 13, 14, and 15.                                   |
       |                       |                       | -  Microsoft SQL Server databases only support 2017_SE, 2017_EE, 2019_SE, 2019_EE, 2022_SE and 2022_EE. |
       |                       |                       |                                                                                                         |
       |                       |                       | Example value for MySQL: ["5.6","5.7","8.0"]                                                            |
