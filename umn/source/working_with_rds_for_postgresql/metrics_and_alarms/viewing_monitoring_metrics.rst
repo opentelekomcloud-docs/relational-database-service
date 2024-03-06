@@ -36,9 +36,9 @@ Procedure
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. On the **Instances** page, locate the target DB instance and click **View Metric** in the **Operation** column to go to the Cloud Eye console.
+#. On the **Instances** page, locate the target DB instance and click **View Metrics** in the **Operation** column to go to the Cloud Eye console.
 
-   Alternatively, click the target DB instance. On the displayed page, click **View Metric** in the upper right corner of the page to go to the Cloud Eye console.
+   Alternatively, click the target DB instance. On the displayed page, click **View Metrics** in the upper right corner of the page to go to the Cloud Eye console.
 
 #. On the Cloud Eye console, view monitoring metrics of the primary DB instance.
 
