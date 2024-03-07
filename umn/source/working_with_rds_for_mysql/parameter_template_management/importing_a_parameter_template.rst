@@ -28,7 +28,7 @@ Procedure
 
 #. On the **Parameter Templates** page, click **Import Parameter Template**.
 
-#. In the displayed dialog box, click **Select File**, import the target parameter list (containing parameter names, values, and description), and click **OK**.
+#. In the displayed dialog box, select a DB engine version, enter a new parameter template name, click **Select File**, select the target parameter list (containing parameter names, values, and description), and click **OK**.
 
    Only one file (CSV format) can be imported at a time. The file size cannot exceed 50 KB.
 

@@ -35,7 +35,7 @@ Method 1
 
       Keep this password secure. The system cannot retrieve it.
 
-   The new password must consist of 8 to 32 characters and contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters (``~!@#%^*-_=+?``). Enter a strong password and periodically change it for security reasons.
+   The new password must consist of 8 to 32 characters and contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters (``~!@#$%^*-_=+?,``). Enter a strong password and periodically change it for security reasons.
 
    If provided password will be considered by system as weak, you will receive an error and you should provide stronger password.
 
@@ -61,7 +61,7 @@ Method 2
 
       Keep this password secure. The system cannot retrieve it.
 
-   The new password must consist of 8 to 32 characters and contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters (``~!@#%^*-_=+?``). Enter a strong password and periodically change it for security reasons.
+   The new password must consist of 8 to 32 characters and contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters (``~!@#$%^*-_=+?,``). Enter a strong password and periodically change it for security reasons.
 
    If provided password will be considered by system as weak, you will receive an error and you should provide stronger password.
 
