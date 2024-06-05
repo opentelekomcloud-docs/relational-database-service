@@ -27,4 +27,4 @@ Procedure
 
 #. After the download is complete, you can view the incremental backups locally.
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

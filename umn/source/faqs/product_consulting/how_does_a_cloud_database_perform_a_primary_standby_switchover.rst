@@ -42,6 +42,6 @@ Also called a planned handover. When a DB instance is running properly, you can 
    -  During the switchover process, the DB instance status is **Switchover in progress**.
    -  In the upper right corner of the DB instance list, click |image3| to refresh the list. After the switchover is complete, the DB instance status will become **Available**
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
-.. |image2| image:: /_static/images/en-us_image_0000001739814964.png
-.. |image3| image:: /_static/images/en-us_image_0000001786854193.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191131307.png
+.. |image3| image:: /_static/images/en-us_image_0000001145051626.png

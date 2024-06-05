@@ -92,7 +92,7 @@ Configuring Database-Level TDE
       **exec master.dbo.rds_tde db1, 1**
 
 
-      .. figure:: /_static/images/en-us_image_0000001786933821.png
+      .. figure:: /_static/images/en-us_image_0000001145211414.png
          :alt: **Figure 1** Enabling TDE
 
          **Figure 1** Enabling TDE
@@ -102,7 +102,7 @@ Configuring Database-Level TDE
       **exec master.dbo.rds_tde db1, 0**
 
 
-      .. figure:: /_static/images/en-us_image_0000001786933813.png
+      .. figure:: /_static/images/en-us_image_0000001145211412.png
          :alt: **Figure 2** Disabling TDE
 
          **Figure 2** Disabling TDE
@@ -112,13 +112,13 @@ Configuring Database-Level TDE
       **exec master.dbo.rds_tde db1, -1**
 
 
-      .. figure:: /_static/images/en-us_image_0000001739814780.png
+      .. figure:: /_static/images/en-us_image_0000001191211443.png
          :alt: **Figure 3** Querying the TDE status (Enabled)
 
          **Figure 3** Querying the TDE status (Enabled)
 
 
-      .. figure:: /_static/images/en-us_image_0000001739814772.png
+      .. figure:: /_static/images/en-us_image_0000001191131291.png
          :alt: **Figure 4** Querying the TDE status (Disabled)
 
          **Figure 4** Querying the TDE status (Disabled)
@@ -128,10 +128,10 @@ Configuring Database-Level TDE
       **exec master.dbo.rds_tde null, -1**
 
 
-      .. figure:: /_static/images/en-us_image_0000001739973944.png
+      .. figure:: /_static/images/en-us_image_0000001145051606.png
          :alt: **Figure 5** Querying the TDE status of all databases
 
          **Figure 5** Querying the TDE status of all databases
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
-.. |image2| image:: /_static/images/en-us_image_0000001786854025.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191211447.png

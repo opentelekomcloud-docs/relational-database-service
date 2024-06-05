@@ -5,6 +5,7 @@
 Working with RDS for SQL Server
 ===============================
 
+-  :ref:`Suggestions on Using RDS for SQL Server <rds_mssql_10_0000>`
 -  :ref:`Data Migration <rds_sqlserver_05_0001_02>`
 -  :ref:`Permissions Management <rds_sqlserver_07_0000>`
 -  :ref:`Instance Lifecycle <rds_sqlserver_05_0000>`
@@ -26,6 +27,7 @@ Working with RDS for SQL Server
    :maxdepth: 1
    :hidden: 
 
+   suggestions_on_using_rds_for_sql_server
    data_migration/index
    permissions_management/index
    instance_lifecycle/index

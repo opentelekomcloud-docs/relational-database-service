@@ -21,7 +21,7 @@ Constraints
 -----------
 
 -  The storage space can be scaled up automatically only when your instance status is **Available** or **Storage full**.
--  Storage autoscaling for RDS for MySQL DB instances is supported only for common I/O and ultra-high I/O storage types.
+-  Storage autoscaling for RDS for MySQL DB instances is supported only for cloud SSD and extreme SSD storage types.
 -  The maximum allowed storage is 4,000 GB.
 -  For primary/standby DB instances, autoscaling the storage for the primary DB instance will also autoscale the storage for the standby DB instance.
 -  Storage autoscaling is unavailable when the DB instance is in any of the following statuses: changing instance class, upgrading a minor version, migrating the standby DB instance, and rebooting.
@@ -50,5 +50,5 @@ Procedure
 
 #. Click **OK**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
-.. |image2| image:: /_static/images/en-us_image_0000001786933657.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001520982189.png

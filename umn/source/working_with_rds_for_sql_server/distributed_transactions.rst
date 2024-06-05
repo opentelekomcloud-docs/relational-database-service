@@ -75,7 +75,7 @@ Configuring MSDTC on a Remote Server
 
    .. _rds_sqlserver_01_0001__fig569033416215:
 
-   .. figure:: /_static/images/en-us_image_0000001739814584.png
+   .. figure:: /_static/images/en-us_image_0000001145051556.png
       :alt: **Figure 1** Local DTC properties
 
       **Figure 1** Local DTC properties
@@ -97,8 +97,8 @@ Deleting Hosts
 
 #. In the displayed dialog box, click **Yes**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
-.. |image2| image:: /_static/images/en-us_image_0000001786853833.png
-.. |image3| image:: /_static/images/en-us_image_0000001786854381.png
-.. |image4| image:: /_static/images/en-us_image_0000001786854381.png
-.. |image5| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191211405.png
+.. |image3| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image4| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image5| image:: /_static/images/en-us_image_0000001191211679.png

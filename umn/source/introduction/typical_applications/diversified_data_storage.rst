@@ -8,7 +8,7 @@ Diversified Data Storage
 RDS supports diverse storage extension through Distributed Cache Service (DCS) for Memcached, DCS for Redis, and OBS.
 
 
-.. figure:: /_static/images/en-us_image_0000001786854341.png
+.. figure:: /_static/images/en-us_image_0000001191211525.png
    :alt: **Figure 1** Diversified data storage
 
    **Figure 1** Diversified data storage

@@ -108,6 +108,6 @@ Follow-up Operations
 
 :ref:`Managing a Read Replica <rds_pg_11_0004>`
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
-.. |image2| image:: /_static/images/en-us_image_0000001739814760.png
-.. |image3| image:: /_static/images/en-us_image_0000001786853997.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191131343.png
+.. |image3| image:: /_static/images/en-us_image_0000001145051660.png

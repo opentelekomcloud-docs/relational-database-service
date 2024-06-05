@@ -27,7 +27,7 @@ Procedure
 #. The following figure shows the SQL audit log content. For field descriptions, see :ref:`Table 1 <rds_download_sql_auditing_log__table718571813550>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000001739974336.png
+   .. figure:: /_static/images/en-us_image_0000001145051772.png
       :alt: **Figure 1** MySQL audit logs
 
       **Figure 1** MySQL audit logs
@@ -64,4 +64,4 @@ Procedure
       | default_db        | Default database on which SQL statements are executed.                                                                                            |
       +-------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

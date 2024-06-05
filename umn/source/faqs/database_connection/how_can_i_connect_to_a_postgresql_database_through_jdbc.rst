@@ -160,4 +160,4 @@ Connection Without the SSL Certificate
           }
       }
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854365.png
+.. |image1| image:: /_static/images/en-us_image_0000001191131453.png

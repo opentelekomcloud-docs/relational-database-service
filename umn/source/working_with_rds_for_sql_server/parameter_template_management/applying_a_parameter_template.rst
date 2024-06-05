@@ -30,4 +30,4 @@ Procedure
 
    After the parameter template is successfully applied, you can view the application records by referring to section :ref:`Viewing Application Records of a Parameter Template <rds_sqlserver_05_0098>`.
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

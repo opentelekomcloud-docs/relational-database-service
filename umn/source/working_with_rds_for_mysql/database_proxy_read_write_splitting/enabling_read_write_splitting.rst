@@ -74,4 +74,4 @@ Enabling a Single Proxy
 
    The read/write splitting address and the floating IP address of the DB instance are in the same VPC and subnet and are independent from each other.
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

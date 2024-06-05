@@ -25,4 +25,4 @@ Procedure
 
    You can view the name or ID of the DB instance that the parameter template applies to, as well as the application status, application time, and failure cause (if failed).
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

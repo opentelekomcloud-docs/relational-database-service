@@ -19,7 +19,7 @@ For more information, see `official pgvector documentation <https://github.com/p
 Supported Versions
 ------------------
 
-This plugin is available to the latest minor versions of RDS for PostgreSQL 12, 13, and 14. You can run the following SQL statement to check whether your DB instance supports this plugin:
+This plugin is available to the latest minor versions of RDS for PostgreSQL 12 and later versions. You can run the following SQL statement to check whether your DB instance supports this plugin:
 
 .. code-block:: text
 
@@ -44,7 +44,7 @@ Plugin Installation and Uninstallation
 
       SELECT control_extension ('drop', 'vector');
 
-For more information, see :ref:`Installing and Uninstalling a Plugin Using SQL Commands <rds_09_0043>`.
+For more information, see :ref:`Installing and Uninstalling a Plugin on the RDS Console <rds_09_0070>` and :ref:`Installing and Uninstalling a Plugin Using SQL Commands <rds_09_0043>`.
 
 Basic Usage
 -----------

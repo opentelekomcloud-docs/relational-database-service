@@ -36,4 +36,4 @@ After the database statistics are updated, the system displays the following inf
 
 |image1|
 
-.. |image1| image:: /_static/images/en-us_image_0000001739814720.png
+.. |image1| image:: /_static/images/en-us_image_0000001145051616.png

@@ -32,5 +32,5 @@ Viewing Log Details
    -  You can click |image2| in the upper right corner to view error logs generated in different time segments.
    -  If the description of a log is truncated, locate the log and move your pointer over the description in the **Description** column to view details.
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
-.. |image2| image:: /_static/images/en-us_image_0000001739973828.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001145211382.png

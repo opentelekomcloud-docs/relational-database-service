@@ -25,7 +25,7 @@ Process Flow
 
 .. _rds_pg_07_0002__rds_07_0002_en-us_topic_0172661625_fig15451536531:
 
-.. figure:: /_static/images/en-us_image_0000001739973896.png
+.. figure:: /_static/images/en-us_image_0192954081.png
    :alt: **Figure 1** Process for granting RDS permissions
 
    **Figure 1** Process for granting RDS permissions
