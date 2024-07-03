@@ -12,7 +12,7 @@ Appendix
 -  :ref:`Obtaining a Project ID <rds_03_0002>`
 -  :ref:`Replication Mode Table <en-us_topic_0032488243>`
 -  :ref:`RDS Monitoring Metrics Description <en-us_topic_0041314720>`
--  :ref:`DB Instance Specifications <rds_10_0004>`
+-  :ref:`DB Instance Classes <rds_10_0004>`
 
 .. toctree::
    :maxdepth: 1
@@ -25,4 +25,4 @@ Appendix
    obtaining_a_project_id
    replication_mode_table
    rds_monitoring_metrics_description
-   db_instance_specifications
+   db_instance_classes

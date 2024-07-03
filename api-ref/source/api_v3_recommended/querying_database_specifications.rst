@@ -48,12 +48,12 @@ URI
       |                       |                       |                                                                                                                                                                                                                                                                    |
       |                       |                       | The format of the specification code is: {*spec code*}{*instance mode*}.                                                                                                                                                                                           |
       |                       |                       |                                                                                                                                                                                                                                                                    |
-      |                       |                       | -  *spec code* can be obtained from :ref:`Table 1 <rds_10_0004__table1629815381417>`.                                                                                                                                                                              |
+      |                       |                       | -  *spec code* can be obtained from :ref:`DB Instance Classes <rds_10_0004>`.                                                                                                                                                                                      |
       |                       |                       | -  *instance mode* can be any of the following:                                                                                                                                                                                                                    |
       |                       |                       |                                                                                                                                                                                                                                                                    |
-      |                       |                       |    -  For single DB instances, the value is **null**. Example spe_code: rds.mysql.s1.xlarge                                                                                                                                                                        |
-      |                       |                       |    -  For primary/standby DB instances, the value is **.ha**. Example spe_code: rds.mysql.s1.xlarge.ha                                                                                                                                                             |
-      |                       |                       |    -  For read replicas, the value is **.rr**. Example spe_code: rds.mysql.s1.xlarge.rr                                                                                                                                                                            |
+      |                       |                       |    -  For single DB instances, the value is **null**. Example spe_code: rds.mysql.n1.xlarge                                                                                                                                                                        |
+      |                       |                       |    -  For primary/standby DB instances, the value is **.ha**. Example spe_code: rds.mysql.n1.xlarge.ha                                                                                                                                                             |
+      |                       |                       |    -  For read replicas, the value is **.rr**. Example spe_code: rds.mysql.n1.xlarge.rr                                                                                                                                                                            |
       +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Request
@@ -95,17 +95,17 @@ Response
       +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
       | id                    | String                | Indicates the specification ID, which is unique.                                                        |
       +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
-      | spec_code             | String                | Indicates the resource specification code. Use **rds.mysql.m1.xlarge.rr** as an example.                |
+      | spec_code             | String                | Indicates the resource specification code. Use **rds.mysql.n1.xlarge.rr** as an example.                |
       |                       |                       |                                                                                                         |
       |                       |                       | -  **rds**: indicates the RDS product.                                                                  |
       |                       |                       | -  **mysql**: indicates the DB engine.                                                                  |
-      |                       |                       | -  **m1.xlarge**: indicates the high memory performance specifications.                                 |
+      |                       |                       | -  **n1.xlarge**: indicates the high memory performance specifications.                                 |
       |                       |                       | -  **rr**: indicates the read replica (**.ha** indicates primary/standby DB instances).                 |
       +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
       | version_name          | Array                 | Indicates the database version.                                                                         |
       |                       |                       |                                                                                                         |
       |                       |                       | -  MySQL databases support 5.6, 5.7, and 8.0.                                                           |
-      |                       |                       | -  PostgreSQL databases support 9.5, 9.6, 10, 11, 12, 13, 14, and 15.                                   |
+      |                       |                       | -  PostgreSQL databases support 9.5, 9.6, 10, 11, 12, 13, 14 and 15.                                    |
       |                       |                       | -  Microsoft SQL Server databases only support 2017_SE, 2017_EE, 2019_SE, 2019_EE, 2022_SE and 2022_EE. |
       |                       |                       |                                                                                                         |
       |                       |                       | Example value for MySQL: ["5.6","5.7","8.0"]                                                            |
@@ -127,6 +127,8 @@ Response
       | group_type            | String                | Indicates the performance specifications. Its value can be any of the following:                        |
       |                       |                       |                                                                                                         |
       |                       |                       | -  **normal**: general-enhanced                                                                         |
+      |                       |                       | -  **general**: general-purpose                                                                         |
+      |                       |                       | -  **dedicated**                                                                                        |
       +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
 
 -  Example normal response
@@ -138,7 +140,7 @@ Response
                   "vcpus": "1",
                   "ram": 2,
                               "id":"2988b9cc-2aac-3a94-898c-14666702f129",
-                  "spec_code": "rds.mysql.c2.medium.ha",
+                  "spec_code": "rds.mysql.n1.large.ha",
                               "version_name": ["5.6","5.7","8.0"],
                   "instance_mode": "ha",
                   "az_status": {
@@ -155,7 +157,7 @@ Response
                   "vcpus": "1",
                   "ram": 2,
                               "id":"2988b9cc-2aac-3a94-898c-14666702f130",
-                  "spec_code": "rds.mysql.c2.medium.rr",
+                  "spec_code": "rds.mysql.n1.large.rr",
                               "version_name": ["5.6","5.7","8.0"],
                   "instance_mode": "replica",
                   "az_status": {

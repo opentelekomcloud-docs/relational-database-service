@@ -35,8 +35,6 @@ URI
 Request
 -------
 
-.. _rds_01_0002__table11236435:
-
 .. table:: **Table 2** Parameter description (creating single and primary/standby DB instances)
 
    +--------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -258,24 +256,31 @@ Request
 
 .. table:: **Table 7** volume field data structure description
 
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
-   | Name            | Mandatory       | Type            | Description                                                                                                                 |
-   +=================+=================+=================+=============================================================================================================================+
-   | type            | Yes             | String          | Specifies the volume type.                                                                                                  |
-   |                 |                 |                 |                                                                                                                             |
-   |                 |                 |                 | Its value can be any of the following and is case-sensitive:                                                                |
-   |                 |                 |                 |                                                                                                                             |
-   |                 |                 |                 | -  **COMMON**: SATA storage.                                                                                                |
-   |                 |                 |                 | -  **ULTRAHIGH**: ultra-high I/O storage.                                                                                   |
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
-   | size            | Yes             | Integer         | Specifies the volume size.                                                                                                  |
-   |                 |                 |                 |                                                                                                                             |
-   |                 |                 |                 | Its value must be a multiple of 10 and the value range is from 40 GB to 4000 GB.                                            |
-   |                 |                 |                 |                                                                                                                             |
-   |                 |                 |                 | .. note::                                                                                                                   |
-   |                 |                 |                 |                                                                                                                             |
-   |                 |                 |                 |    For read replicas, this parameter is invalid. The volume size is the same as that of the primary DB instance by default. |
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Name            | Mandatory       | Type            | Description                                                                                                                                                                            |
+   +=================+=================+=================+========================================================================================================================================================================================+
+   | type            | Yes             | String          | Specifies the volume type.                                                                                                                                                             |
+   |                 |                 |                 |                                                                                                                                                                                        |
+   |                 |                 |                 | Its value can be any of the following and is case-sensitive:                                                                                                                           |
+   |                 |                 |                 |                                                                                                                                                                                        |
+   |                 |                 |                 | -  **COMMON**: SATA storage.                                                                                                                                                           |
+   |                 |                 |                 | -  **ULTRAHIGH**: ultra-high I/O storage.                                                                                                                                              |
+   |                 |                 |                 | -  **CLOUDSSD**: cloud SSD storage.                                                                                                                                                    |
+   |                 |                 |                 | -  **ESSD**: extreme SSD storage.                                                                                                                                                      |
+   |                 |                 |                 |                                                                                                                                                                                        |
+   |                 |                 |                 | .. note::                                                                                                                                                                              |
+   |                 |                 |                 |                                                                                                                                                                                        |
+   |                 |                 |                 |    -  The MySQL and PostgreSQL DB engines support the following volume types: **CLOUDSSD** and **ESSD**. **ESSD** is not supported for Single instance types for MySQL and PostgreSQL. |
+   |                 |                 |                 |    -  The SQL Server engine supports the following volume types: **COMMON**, **ULTRAHIGH**, and **ESSD**.                                                                              |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | size            | Yes             | Integer         | Specifies the volume size.                                                                                                                                                             |
+   |                 |                 |                 |                                                                                                                                                                                        |
+   |                 |                 |                 | Its value must be a multiple of 10 and the value range is from 40 GB to 4000 GB.                                                                                                       |
+   |                 |                 |                 |                                                                                                                                                                                        |
+   |                 |                 |                 | .. note::                                                                                                                                                                              |
+   |                 |                 |                 |                                                                                                                                                                                        |
+   |                 |                 |                 |    For read replicas, this parameter is invalid. The volume size is the same as that of the primary DB instance by default.                                                            |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _rds_01_0002__table992615211258:
 
@@ -324,7 +329,7 @@ Request
               "type": "MySQL",
               "version": "8.0"
           },
-          "flavor_ref": "rds.mysql.s1.large",
+          "flavor_ref": "rds.mysql.n1.large",
           "volume": {
               "type": "ULTRAHIGH",
               "size": 100
@@ -364,7 +369,7 @@ Request
               "mode": "ha",
               "replication_mode": "semisync"
           },
-          "flavor_ref": "rds.mysql.s1.large.ha",
+          "flavor_ref": "rds.mysql.n1.large.ha",
           "volume": {
               "type": "ULTRAHIGH",
               "size": 100
@@ -394,7 +399,7 @@ Request
       {
           "name": "rds-instance-rep2",
           "replica_of_id": "afdsad-fds-fdsagin01",
-          "flavor_ref": "rds.mysql.s1.large.rr",
+          "flavor_ref": "rds.mysql.n1.large.rr",
           "volume": {
               "type": "ULTRAHIGH",
               "size": 100
@@ -575,6 +580,8 @@ Response
       |                       |                       |                                                                               |
       |                       |                       | -  **COMMON**: SATA storage.                                                  |
       |                       |                       | -  **ULTRAHIGH**: ultra-high I/O storage.                                     |
+      |                       |                       | -  **CLOUDSSD**: cloud SSD storage.                                           |
+      |                       |                       | -  **ESSD**: extreme SSD storage.                                             |
       +-----------------------+-----------------------+-------------------------------------------------------------------------------+
       | size                  | Integer               | Indicates the volume size.                                                    |
       |                       |                       |                                                                               |
@@ -606,7 +613,7 @@ Response
                   "type": "MySQL",
                   "version": "8.0"
               },
-              "flavor_ref": "rds.mysql.s1.large",
+              "flavor_ref": "rds.mysql.n1.large",
               "volume": {
                   "type": "ULTRAHIGH",
                   "size": 100
@@ -647,7 +654,7 @@ Response
                    "mode": "ha",
                    "replication_mode": "semisync"
                  },
-                 "flavor_ref": "rds.mysql.s1.large.ha",
+                 "flavor_ref": "rds.mysql.n1.large.ha",
                  "volume": {
                      "type": "ULTRAHIGH",
                      "size": 100
@@ -684,7 +691,7 @@ Response
                       "type": "PostgreSQL",
                       "version": 13
                    },
-                  "flavor_ref": "rds.mysql.s1.large.rr",
+                  "flavor_ref": "rds.mysql.n1.large.rr",
                    "volume": {
                      "type": "ULTRAHIGH",
                      "size": 100
