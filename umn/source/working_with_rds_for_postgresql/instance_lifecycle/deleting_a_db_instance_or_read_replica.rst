@@ -31,6 +31,11 @@ Deleting a DB Instance
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 #. On the **Instances** page, locate the primary DB instance to be deleted and click **More** > **Delete** in the **Operation** column.
 #. In the displayed dialog box, click **Yes**.
+
+   .. important::
+
+      If it is associated with a DDM instance, you will be redirected to the DDM console. Disassociate your instance from the DDM instance. Then go back to the RDS console, refresh the instance list, and delete the instance again.
+
 #. Refresh the DB instance list later to confirm that the deletion was successful.
 
 Deleting a Read Replica
