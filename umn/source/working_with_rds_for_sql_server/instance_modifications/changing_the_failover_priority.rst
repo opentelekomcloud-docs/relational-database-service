@@ -23,4 +23,4 @@ Procedure
 #. In the **DB Information** area on the displayed **Basic Information** page, click **Change** in the **Failover Priority** field. In the displayed dialog box, select a priority and click **OK**.
 #. View the results on the **Basic Information** page.
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

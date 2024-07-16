@@ -21,7 +21,7 @@ DB instances are classified into the following types.
    | Read replica     | Uses a single-node architecture (without a standby node).                                                        |
    +------------------+------------------------------------------------------------------------------------------------------------------+
 
-RDS for SQL Server 2019 Enterprise Edition and 2017 Enterprise Edition support read replicas.
+RDS for SQL Server 2022 EE, 2019 EE and 2017 EE support read replicas.
 
 You can use RDS to create and manage DB instances running various DB engines.
 

@@ -41,4 +41,4 @@ Procedure
 
       After you change a MySQL instance class, the values of the following parameters will also be changed accordingly: **back_log**, **innodb_buffer_pool_size**, **innodb_log_buffer_size**, **innodb_log_files_in_group**, **max_connections**, **innodb_page_cleaners**, **innodb_buffer_pool_instances**, **threadpool_size**, and **slave_parallel_workers**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

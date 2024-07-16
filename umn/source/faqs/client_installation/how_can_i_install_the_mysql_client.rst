@@ -15,7 +15,7 @@ Procedure
    Find the `link <http://dev.mysql.com/downloads/file/?id=463159>`__ to the required version on the download page. MySQL-client-5.6.31-1.el6.x86_64.rpm is used as an example in the following figure.
 
 
-   .. figure:: /_static/images/en-us_image_0000001786933573.png
+   .. figure:: /_static/images/en-us_image_0000001191131295.png
       :alt: **Figure 1** Procedure
 
       **Figure 1** Procedure

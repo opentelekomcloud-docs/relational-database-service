@@ -21,6 +21,7 @@ Working with RDS for PostgreSQL
 -  :ref:`Interconnection with CTS <rds_09_0042>`
 -  :ref:`Log Management <rds_08_001>`
 -  :ref:`Task Center <rds_pg_05_0007>`
+-  :ref:`Major Version Upgrade <rds_09_0048>`
 -  :ref:`Managing Tags <rds_pg_tag>`
 
 .. toctree::
@@ -43,4 +44,5 @@ Working with RDS for PostgreSQL
    interconnection_with_cts/index
    log_management/index
    task_center/index
+   major_version_upgrade/index
    managing_tags

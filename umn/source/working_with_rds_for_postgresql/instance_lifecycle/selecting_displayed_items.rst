@@ -24,5 +24,5 @@ Procedure
 
    -  In a single project, you can select up to 9 items: DB instance name/ID, DB instance type, DB engine version, status, floating IP address, creation time, database port, storage type, and operation.
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
-.. |image2| image:: /_static/images/en-us_image_0000001786854269.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001145051752.png

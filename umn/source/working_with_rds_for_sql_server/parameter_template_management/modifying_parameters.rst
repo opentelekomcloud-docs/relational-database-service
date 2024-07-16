@@ -90,5 +90,5 @@ Modifying Instance Parameters
 
    After parameters are modified, you can view parameter change history by referring to section :ref:`Viewing Parameter Change History <rds_sqlserver_05_0099>`.
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
-.. |image2| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191211679.png

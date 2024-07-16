@@ -38,7 +38,7 @@ Procedure
    In the displayed login window, choose **Servers** > **Create** > **Server**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001786934013.png
+   .. figure:: /_static/images/en-us_image_0000001191211507.png
       :alt: **Figure 1** Creation
 
       **Figure 1** Creation
@@ -46,13 +46,13 @@ Procedure
 #. On the **General** page, specify **Name**. On the **Connection** page, specify information about the DB instance to be connected. Then, click **Save**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001786854229.png
+   .. figure:: /_static/images/en-us_image_0000001145211472.png
       :alt: **Figure 2** General page
 
       **Figure 2** General page
 
 
-   .. figure:: /_static/images/en-us_image_0000001786854225.png
+   .. figure:: /_static/images/en-us_image_0000001145211470.png
       :alt: **Figure 3** Connection page
 
       **Figure 3** Connection page

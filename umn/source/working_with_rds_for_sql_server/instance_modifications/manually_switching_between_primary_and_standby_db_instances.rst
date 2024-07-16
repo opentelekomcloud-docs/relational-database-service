@@ -15,6 +15,10 @@ Constraints
 
 -  A DB instance is running properly.
 -  The replication between the primary and standby instances is normal.
+-  Set the recovery model of your database to FULL instead of SIMPLE.
+
+   -  In the SIMPLE recovery model, no incremental backup is performed for the database, so the database cannot be restored to a specified time point.
+   -  For primary/standby or cluster instances, if the recovery model is set to SIMPLE, no replication relationship will be established for the instances. As a result, a primary/standby switchover or instance class change cannot be performed.
 
 Procedure
 ---------
@@ -44,6 +48,6 @@ Procedure
    -  During the switchover process, the DB instance status is **Switchover in progress**.
    -  In the upper right corner of the DB instance list, click |image3| to refresh the list. After the switchover is successful, the DB instance status will become **Available**.
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
-.. |image2| image:: /_static/images/en-us_image_0000001786934097.png
-.. |image3| image:: /_static/images/en-us_image_0000001739815084.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191211577.png
+.. |image3| image:: /_static/images/en-us_image_0000001191131421.png

@@ -69,5 +69,5 @@ Viewing a Scheduled Task
       -  To be executed
       -  To be authorized
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
-.. |image2| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001191211679.png

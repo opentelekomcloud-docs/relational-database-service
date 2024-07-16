@@ -70,8 +70,8 @@ Procedure
       +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Storage Type                      | Determines the DB instance read/write speed. The higher the maximum throughput is, the higher the DB instance read/write speed can be.                                                                 |
       |                                   |                                                                                                                                                                                                        |
-      |                                   | -  **Common I/O**: uses the SATA disk type, with a maximum throughput of 90 MB/s.                                                                                                                      |
-      |                                   | -  **Ultra-high I/O**: uses the SSD disk type that supports a maximum throughput of 350 MB/s.                                                                                                          |
+      |                                   | -  **Cloud SSD**: cloud drives used to decouple storage from compute. The maximum throughput is 350 MB/s.                                                                                              |
+      |                                   | -  **Extreme SSD**: uses 25GE network and RDMA technologies to provide you with up to 1,000 MB/s throughput per disk and sub-millisecond latency.                                                      |
       +-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Storage Space (GB)                | Contains the file system overhead required for inode, reserved block, and database operation. Storage space can range in size from 40 GB to 4,000 GB and can be scaled up only by a multiple of 10 GB. |
       |                                   |                                                                                                                                                                                                        |
@@ -188,4 +188,4 @@ Procedure
 
       For details, see :ref:`Changing a Database Port <rds_pg_change_database_port>`.
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png

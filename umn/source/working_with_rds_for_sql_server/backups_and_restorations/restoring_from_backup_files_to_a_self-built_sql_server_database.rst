@@ -37,13 +37,13 @@ Procedure
    b. Click **Add** to add the decompressed backup file (in the .bak format) and configure required information on the **Options** page.
 
 
-      .. figure:: /_static/images/en-us_image_0000001739815040.png
+      .. figure:: /_static/images/en-us_image_0000001145051704.png
          :alt: **Figure 1** Adding a backup file
 
          **Figure 1** Adding a backup file
 
 
-      .. figure:: /_static/images/en-us_image_0000001739815032.png
+      .. figure:: /_static/images/en-us_image_0000001191131381.png
          :alt: **Figure 2** Configuring required options
 
          **Figure 2** Configuring required options
@@ -52,6 +52,6 @@ Procedure
 
    |image3|
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854265.png
-.. |image2| image:: /_static/images/en-us_image_0000001786934057.png
-.. |image3| image:: /_static/images/en-us_image_0000001739815048.png
+.. |image1| image:: /_static/images/en-us_image_0000001191131383.png
+.. |image2| image:: /_static/images/en-us_image_0000001191131379.png
+.. |image3| image:: /_static/images/en-us_image_0000001191131385.png

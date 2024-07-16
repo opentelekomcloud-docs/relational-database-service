@@ -33,7 +33,7 @@ Disabling Access Control
 #. On the **Instances** page, click the target DB instance.
 #. On the **Database Proxy** page, in the **Proxy Instance Information** area, click |image4| in the **Access Control** field.
 
-.. |image1| image:: /_static/images/en-us_image_0000001786854381.png
-.. |image2| image:: /_static/images/en-us_image_0000001739974228.png
-.. |image3| image:: /_static/images/en-us_image_0000001786854381.png
-.. |image4| image:: /_static/images/en-us_image_0000001786934101.png
+.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image2| image:: /_static/images/en-us_image_0000001482124762.png
+.. |image3| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image4| image:: /_static/images/en-us_image_0000001481965146.png
