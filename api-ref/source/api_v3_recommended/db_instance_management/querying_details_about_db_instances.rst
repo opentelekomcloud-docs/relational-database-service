@@ -382,7 +382,7 @@ Response
               "vpc_id": "b21630c1-e7d3-450d-907d-39ef5f445ae7",
               "subnet_id": "45557a98-9e17-4600-8aec-999150bc4eef",
               "security_group_id": "38815c5c-482b-450a-80b6-0a301f2afd97",
-              "flavor_ref": "rds.mysql.s1.large",
+              "flavor_ref": "rds.mysql.n1.large",
               "switch_strategy": "",
               "backup_strategy": {
                   "start_time": "19:00-20:00",
@@ -431,7 +431,7 @@ Response
               "vpc_id": "b21630c1-e7d3-450d-907d-39ef5f445ae7",
               "subnet_id": "45557a98-9e17-4600-8aec-999150bc4eef",
               "security_group_id": "38815c5c-482b-450a-80b6-0a301f2afd97",
-              "flavor_ref": "rds.mysql.s1.large",
+              "flavor_ref": "rds.mysql.n1.large",
               "switch_strategy": "",
               "backup_strategy": {
                   "start_time": "19:00-20:00",
@@ -471,7 +471,7 @@ Response
               "vpc_id": "b21630c1-e7d3-450d-907d-39ef5f445ae7",
               "subnet_id": "45557a98-9e17-4600-8aec-999150bc4eef",
               "security_group_id": "38815c5c-482b-450a-80b6-0a301f2afd97",
-              "flavor_ref": "rds.mysql.s1.large",
+              "flavor_ref": "rds.mysql.n1.large",
               "switch_strategy": "",
               "backup_strategy": {
                   "start_time": "19:00-20:00",

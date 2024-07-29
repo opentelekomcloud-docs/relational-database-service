@@ -89,6 +89,8 @@ Response
       |                            |                       |                                                                                     |
       |                            |                       | -  **COMMON**: SATA storage.                                                        |
       |                            |                       | -  **ULTRAHIGH**: ultra-high I/O storage.                                           |
+      |                            |                       | -  **CLOUDSSD**: cloud SSD storage.                                                 |
+      |                            |                       | -  **ESSD**: extreme SSD storage.                                                   |
       +----------------------------+-----------------------+-------------------------------------------------------------------------------------+
       | az_status                  | Map<String, String>   | Indicates the specification status in an AZ. Its value can be any of the following: |
       |                            |                       |                                                                                     |
@@ -99,6 +101,8 @@ Response
       | support_compute_group_type | List<String>          | Indicates the performance specifications. Its value can be any of the following:    |
       |                            |                       |                                                                                     |
       |                            |                       | -  **normal**: general-enhanced                                                     |
+      |                            |                       | -  **general**: general-purpose                                                     |
+      |                            |                       | -  **dedicated**                                                                    |
       +----------------------------+-----------------------+-------------------------------------------------------------------------------------+
 
    .. _rds_04_0002__table1513533533518:
@@ -138,8 +142,8 @@ Response
                   },
                               "support_compute_group_type": [
                                       "normal",
-                                      "normal2",
-                                      "armFlavors"
+                                      "general",
+                                      "dedicated"
                               ]
               },
               {
@@ -150,8 +154,8 @@ Response
                   },
                               "support_compute_group_type": [
                                       "normal",
-                                      "normal2",
-                                      "armFlavors"
+                                      "general",
+                                      "dedicated"
                               ]
               }
           ]

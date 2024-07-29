@@ -86,9 +86,9 @@ Normal Response
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------+
       | specCode              | String                | Indicates the resource specification code.                                                                                          |
       |                       |                       |                                                                                                                                     |
-      |                       |                       | Use **rds.mysql.m1.xlarge** as an example.                                                                                          |
+      |                       |                       | Use **rds.mysql.n1.xlarge** as an example.                                                                                          |
       |                       |                       |                                                                                                                                     |
-      |                       |                       | **rds** indicates RDS, **mysql** indicates the DB engine, and **m1.xlarge** indicates the performance specification (large-memory). |
+      |                       |                       | **rds** indicates RDS, **mysql** indicates the DB engine, and **n1.xlarge** indicates the performance specification (large-memory). |
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------+
 
 -  Response example
@@ -101,13 +101,7 @@ Normal Response
                   "id": "bf07a6d4-844a-4023-a776-fc5c5fb71fb4",
                   "name": "OTC_MYHP_LARGE",
                   "ram": 4096,
-                  "specCode": "rds.mysql.c2.large"
-              },
-              {
-                  "id": "f7f51f85-cfcd-4409-ae91-b3eae186d0ea",
-                  "name": "OTC_MYLM_XLARGE",
-                  "ram": 32768,
-                  "specCode": "rds.mysql.m1.xlarge"
+                  "specCode": "rds.mysql.n1.large"
               }
           ]
       }
