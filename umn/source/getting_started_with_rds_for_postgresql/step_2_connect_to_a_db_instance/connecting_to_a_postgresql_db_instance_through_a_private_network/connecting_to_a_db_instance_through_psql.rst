@@ -36,7 +36,9 @@ Non-SSL Connection
 
 #. Run the following command to connect to the DB instance:
 
-   **psql --no-readline -U** <*user*> **-h** <*host*> **-p** <*port*> **-d** <*datastore*> **-W**
+   .. code-block:: text
+
+      psql --no-readline -U <user> -h <host> -p <port> -d <datastore> -W
 
    .. table:: **Table 1** Parameter description
 
@@ -58,7 +60,9 @@ Non-SSL Connection
 
    Run the following command as user **root** to connect to a DB instance:
 
-   **psql --no-readline -U root -h 192.168.0.44 -p 5432 -d postgres -W**
+   .. code-block:: text
+
+      psql --no-readline -U root -h 192.168.0.44 -p 5432 -d postgres -W
 
 SSL Connection
 --------------
@@ -77,7 +81,9 @@ SSL Connection
 
 #. Connect to an RDS DB instance. The Linux OS is used as an example.
 
-   **psql --no-readline -h** *<host>* **-p** *<port>* **"dbname=**\ *<database>* **user=**\ *<user>* **sslmode=verify-ca sslrootcert=**\ *<ca-file-directory>*\ **"**
+   .. code-block:: text
+
+      psql --no-readline -h <host> -p <port> "dbname=<database> user=<user> sslmode=verify-ca sslrootcert=<ca-file-directory>"
 
    .. table:: **Table 2** Parameter description
 
