@@ -10,7 +10,7 @@ Procedure
 
 #. Obtain the SQL Server Management Studio installation package.
 
-   Visit the `Microsoft website <https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms>`__ and download the installation package, for example, SQL Server Management Studio 18.0.
+   Visit the `Microsoft website <https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms>`__ and download the installation package, for example, SQL Server Management Studio 20.1.
 
 #. Upload the installation package to the ECS.
 

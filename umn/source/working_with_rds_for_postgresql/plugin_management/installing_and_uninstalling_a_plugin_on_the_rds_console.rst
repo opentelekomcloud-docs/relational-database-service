@@ -61,7 +61,7 @@ Installing and Uninstalling a Plugin
 
 #. Log in to the management console.
 #. Click |image3| in the upper left corner and select a region and a project.
-#. Click **Service List**. Under **Databases**, click **Relational Database Service**.
+#. Click **Service List**. Under **Database**, click **Relational Database Service**.
 #. On the **Instances** page, click the instance name.
 #. In the navigation pane, choose **Plugins**.
 #. In the **Database** drop-down list above the plugin list, select the database where the plugin is to be installed.

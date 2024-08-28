@@ -5,46 +5,28 @@
 How Can I Install the MySQL Client?
 ===================================
 
-MySQL provides client installation packages for different OSs on its official website. MySQL 5.6 is used as an example. Download the `MySQL 5.6 client installation package <http://dev.mysql.com/downloads/mysql/5.6.html#downloads>`__ or `other versions of the packages <http://downloads.mysql.com/archives/community/>`__. The following procedure illustrates how to obtain the required installation package and install the MySQL client into a Red Hat Linux system.
+MySQL provides client installation packages for different OSs on its official website. MySQL 8.0 is used as an example. You can download the `latest version <https://dev.mysql.com/downloads/mysql/8.0.html#downloads>`__ or `any other version <http://downloads.mysql.com/archives/community/>`__ for your project. The following procedure illustrates how to obtain the required installation package and install the MySQL client into a Red Hat Linux system.
 
 Procedure
 ---------
 
 #. Obtain the installation package.
 
-   Find the `link <http://dev.mysql.com/downloads/file/?id=463159>`__ to the required version on the download page. MySQL-client-5.6.31-1.el6.x86_64.rpm is used as an example in the following figure.
+   Find the `link <http://downloads.mysql.com/archives/community/>`__ to the required version on the download page. mysql-community-client-8.0.26-1.el8.x86_64.rpm is used as an example in the following figure.
 
 
-   .. figure:: /_static/images/en-us_image_0000001191131295.png
-      :alt: **Figure 1** Procedure
+   .. figure:: /_static/images/en-us_image_0000001934653410.png
+      :alt: **Figure 1** Download
 
-      **Figure 1** Procedure
-
-   .. note::
-
-      Click `URL <http://dev.mysql.com/get/Downloads/MySQL-5.6/MySQL-client-5.6.31-1.el6.x86_64.rpm>`__ to download the installation package.
+      **Figure 1** Download
 
 #. Upload the installation package to the ECS.
 
-   a. When you create an ECS, select an OS, such as Red Hat 6.6, and bind an EIP to it.
+   a. When you create an ECS, select an OS, such as Red Hat 8.8, and bind an EIP to it.
    b. Use a remote connection tool to connect to the ECS through the bound EIP and upload the installation package to the ECS.
 
 #. Run the following command to install the MySQL client:
 
-   .. code-block::
+   .. code-block:: text
 
-      Sudo rpm -ivh MySQL-client-5.6.31-1.el6.x86_64.rpm
-
-   .. note::
-
-      -  If there are any conflicts during the installation, add the **replacefiles** parameter to the command and try to install the client again. Example:
-
-         .. code-block::
-
-            rpm -ivh --replacefiles MySQL-client-5.6.31-1.el6.x86_64.rpm
-
-      -  If a message is displayed prompting you to install a dependency package, you can add the **nodeps** parameter to the command and install the client again. Example:
-
-         .. code-block::
-
-            rpm -ivh --nodeps MySQL-client-5.6.31-1.el6.x86_64.rpm
+      rpm -ivh --nodeps mysql-community-client-8.0.26-1.el8.x86_64.rpm
