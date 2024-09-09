@@ -19,11 +19,15 @@ You can download backup files by referring to :ref:`Downloading a Backup File <r
 Prerequisites
 -------------
 
-When you restore data from backup files to self-built MySQL databases, ensure that the target MySQL version is later than or equal to the original MySQL version.
+-  This section only covers restoring a full backup of an RDS for MySQL 5.6, 5.7 or 8.0 DB instance to an on-premises database of the corresponding version. Incremental backup restoration is not included.
 
-During data restoration, run the following command to view the restoration process:
+-  The minor version of the on-premises MySQL database must be the same as that of your RDS for MySQL DB instance.
 
-**ps -ef \| grep mysql**
+-  During the restoration, do not run other workloads on the on-premises database.
+
+-  During data restoration, run the following command to view the restoration process:
+
+   **ps -ef \| grep mysql**
 
 Procedure
 ---------
