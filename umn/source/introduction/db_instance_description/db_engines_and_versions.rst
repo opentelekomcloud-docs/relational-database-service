@@ -26,9 +26,6 @@ For new applications, you are advised to use the latest major version of the DB 
    |                      | -  13           | -  13           |                 |
    |                      | -  12           | -  12           |                 |
    |                      | -  11           | -  11           |                 |
-   |                      | -  10           | -  10           |                 |
-   |                      | -  9.6          | -  9.6          |                 |
-   |                      | -  9.5          | -  9.5          |                 |
    +----------------------+-----------------+-----------------+-----------------+
    | Microsoft SQL Server | -  2022 SE      | -  2022 SE      | -  2022 EE      |
    |                      | -  2019 SE      | -  2019 SE      | -  2019 EE      |
