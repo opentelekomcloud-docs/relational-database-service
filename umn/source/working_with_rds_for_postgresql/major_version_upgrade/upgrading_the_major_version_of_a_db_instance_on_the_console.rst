@@ -18,9 +18,6 @@ Constraints
 
 -  Major version upgrades are available to the following versions:
 
-   -  RDS for PostgreSQL 9.5: 9.5.25 or later
-   -  RDS for PostgreSQL 9.6: 9.6.24 or later
-   -  RDS for PostgreSQL 10: 10.21 or later
    -  RDS for PostgreSQL 12: 12.7 or later
    -  RDS for PostgreSQL 13: 13.3 or later
    -  RDS for PostgreSQL 14: 14.4 or later
