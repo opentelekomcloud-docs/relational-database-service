@@ -16,7 +16,7 @@ This API is used to query the storage autoscaling policy of a DB instance.
 Constraints
 -----------
 
--  This API is only available to RDS for MySQL instances whose storage type is cloud SSDs or extreme SSDs and storage space is at least 40 GB.
+-  This API is only available to RDS for MySQL, Microsoft SQL Server and RDS for PostgreSQL instances whose storage type is cloud SSDs or extreme SSDs and storage space is at least 40 GB.
 
 URI
 ---

@@ -12,6 +12,7 @@ API v3 (Recommended)
 -  :ref:`Database Security <rds_07_0000>`
 -  :ref:`Parameter Configuration <en-us_topic_0056887471>`
 -  :ref:`Backup and Restoration <en-us_topic_0032347777>`
+-  :ref:`Upgrading a Major Version <rds_19_0000>`
 -  :ref:`Log Information Queries <en-us_topic_0056887472>`
 -  :ref:`Recycling a DB Instance <rds_14_0000>`
 -  :ref:`Tag Management <rds_06_0036>`
@@ -28,6 +29,7 @@ API v3 (Recommended)
    database_security/index
    parameter_configuration/index
    backup_and_restoration/index
+   upgrading_a_major_version/index
    log_information_queries/index
    recycling_a_db_instance/index
    tag_management/index
