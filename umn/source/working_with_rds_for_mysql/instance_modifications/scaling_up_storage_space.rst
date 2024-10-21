@@ -10,13 +10,32 @@ Scenarios
 
 If the original storage space is insufficient as your services grow, scale up storage space of your DB instance.
 
-If your storage space usage reaches up to 95% for a disk less than 1 TB or the remaining space becomes 50 GB for a disk no less than 1 TB, the DB instance status becomes **Storage full** and data cannot be written to databases. In this case, scale up storage space to make the DB instance preserve at least 15% of its capacity to work properly.
-
 You are advised to set alarm rules for the storage space usage by referring to :ref:`Setting Alarm Rules <rds_06_0002>`.
 
-For details about the causes and solutions of insufficient storage space, see section :ref:`What Should I Do If My Data Exceeds the Available Storage of an RDS DB Instance? <rds_faq_0046>`
-
 RDS allows you to scale up storage space of DB instances but you cannot change the storage type. During the scale-up period, services are not interrupted.
+
+Instance Becomes Read-Only When Storage Is Full
+-----------------------------------------------
+
+For details about the causes and solutions of insufficient storage space, see :ref:`What Should I Do If My Data Exceeds the Available Storage of an RDS DB Instance? <rds_faq_0046>`
+
+.. table:: **Table 1** Conditions under which an instance becomes read-only if it is out of storage
+
+   +------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
+   | Storage Size                                   | Condition                                                                                                     |
+   +================================================+===============================================================================================================+
+   | Any storage size                               | If the available storage space is less than 5 GB, the instance becomes read-only.                             |
+   |                                                |                                                                                                               |
+   |                                                | .. note::                                                                                                     |
+   |                                                |                                                                                                               |
+   |                                                |    This rule takes precedence over other rules that can be used to set the instance read-only.                |
+   +------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
+   | Storage size is less than 1 TB.                | -  If the storage usage reaches 97%, the instance becomes read-only.                                          |
+   |                                                | -  If the storage usage decreases to 87%, the instance exits the read-only state.                             |
+   +------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
+   | Storage size is greater than or equal to 1 TB. | -  If the available storage space is less than 30 GB, the instance becomes read-only.                         |
+   |                                                | -  If the available storage space is greater than or equal to 150 GB, the instance exits the read-only state. |
+   +------------------------------------------------+---------------------------------------------------------------------------------------------------------------+
 
 Constraints
 -----------
