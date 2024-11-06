@@ -23,7 +23,7 @@ Procedure
 ---------
 
 #. Log in to the management console.
-#. Click |image1| in the upper left corner and select a region and a project.
+#. Click |image1| in the upper left corner and select a region.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**.
 #. On the **Instances** page, click the target DB instance or read replica (click |image2| in front of a DB instance to locate the read replica).
 #. In the **Storage Space** area, click **Configure Autoscaling**.
