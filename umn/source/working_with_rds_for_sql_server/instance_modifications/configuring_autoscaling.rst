@@ -20,7 +20,7 @@ Constraints
 -  For primary/standby DB instances, autoscaling the storage for the primary DB instance will also autoscale the storage for the standby DB instance.
 -  Storage autoscaling is unavailable when the DB instance is changing instance class or rebooting.
 -  Storage of RDS for SQL Server instances cannot be scaled down. Exercise caution when enabling autoscaling.
--  There is an upper limit on autoscaling. For example, if an instance scales out for multiple times within a short period of time due to a sharp increase of temporary databases or log files, to prevent the storage from getting full, you can shrink the databases or log files to reduce the storage usage.
+-  There is an upper limit on storage autoscaling. A maximum of two scale-ups are allowed within one hour and a maximum of five scale-ups within one day. If an instance scales up multiple times within a short period of time due to a sharp increase of temporary databases or log files, to reduce the storage usage, you can shrink the databases or log files.
 
 Procedure
 ---------
