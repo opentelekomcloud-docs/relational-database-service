@@ -20,7 +20,7 @@ Autoscaling up the storage of a read replica does not affect that of the primary
 Constraints
 -----------
 
--  This API is only available to RDS for MySQL instances whose storage type is cloud SSDs or extreme SSDs and storage space is at least 40 GB.
+-  This API is only available to RDS for MySQL, Microsoft SQL Server and RDS for PostgreSQL instances whose storage type is cloud SSDs or extreme SSDs and storage space is at least 40 GB.
 -  Storage autoscaling is unavailable when the instance is in any of the following statuses: changing instance class, upgrading a minor version, migrating the standby instance, and rebooting.
 -  The storage space can be autoscaled up only when your instance status is **Available** or **Storage full**. The maximum allowed storage is 4,000 GB.
 
