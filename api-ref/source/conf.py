@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'rds-api-ref.tex',
-     u'Relational Database Service - API Reference',
+    u'Relational Database Service - API Reference',
      u'OpenTelekomCloud', 'manual'),
 ]
 
