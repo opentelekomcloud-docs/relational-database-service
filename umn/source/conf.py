@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'rds-umn.tex',
-     u'Relational Database Service - User Guide',
+    u'Relational Database Service - User Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
 
