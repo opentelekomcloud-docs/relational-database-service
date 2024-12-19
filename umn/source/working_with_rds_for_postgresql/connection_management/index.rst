@@ -9,6 +9,7 @@ Connection Management
 -  :ref:`Binding and Unbinding an EIP <rds_pg_public_accessibility>`
 -  :ref:`Changing a Database Port <rds_pg_change_database_port>`
 -  :ref:`Connecting to a DB Instance Through pgAdmin <rds_pg_11_0005>`
+-  :ref:`Configuring SSL Encryption <rds_pg_11_0029>`
 
 .. toctree::
    :maxdepth: 1
@@ -18,3 +19,4 @@ Connection Management
    binding_and_unbinding_an_eip
    changing_a_database_port
    connecting_to_a_db_instance_through_pgadmin
+   configuring_ssl_encryption
