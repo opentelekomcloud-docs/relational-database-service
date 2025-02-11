@@ -12,6 +12,7 @@ Relational Database Service - User Guide
    working_with_rds_for_mysql/index
    working_with_rds_for_postgresql/index
    working_with_rds_for_sql_server/index
+   best_practices/index
    faqs/index
    change_history
    glossary
