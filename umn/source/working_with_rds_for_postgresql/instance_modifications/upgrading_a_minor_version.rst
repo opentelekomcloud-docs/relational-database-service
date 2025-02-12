@@ -28,10 +28,6 @@ Constraints
 -----------
 
 -  The minor version cannot be upgraded for instances with abnormal nodes.
--  The following minor versions cannot be upgraded:
-
-   -  Versions earlier than 11.2 for RDS for PostgreSQL 11
-
 -  The upgrade will be performed immediately upon the submission of your request. Delayed upgrade of minor versions is not supported.
 
 .. _rds_pg_05_0003__section14931659203611:

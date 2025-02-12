@@ -205,8 +205,8 @@ DB Instance Monitoring Metrics
 Dimension
 ---------
 
-=============== ====================
-Key             Value
-=============== ====================
-rds_instance_id MySQL DB instance ID
-=============== ====================
+============== ====================
+Key            Value
+============== ====================
+rds_cluster_id MySQL DB instance ID
+============== ====================

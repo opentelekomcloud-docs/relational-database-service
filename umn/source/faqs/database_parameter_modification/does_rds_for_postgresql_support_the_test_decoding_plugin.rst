@@ -5,7 +5,7 @@
 Does RDS for PostgreSQL Support the test_decoding Plugin?
 =========================================================
 
-PostgreSQL 10, PostgreSQL 11, PostgreSQL 12 and PostgreSQL 13 support test_decoding. For more information about test_decoding, see `test_decoding introduction <https://www.postgresql.org/docs/11/test-decoding.html>`__.
+PostgreSQL 12 and PostgreSQL 13 support test_decoding. For more information about test_decoding, see `test_decoding introduction <https://www.postgresql.org/docs/11/test-decoding.html>`__.
 
 To use test_decoding, set **wal_level** to **logical**.
 

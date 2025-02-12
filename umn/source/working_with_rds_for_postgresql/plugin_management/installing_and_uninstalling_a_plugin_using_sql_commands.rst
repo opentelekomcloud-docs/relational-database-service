@@ -18,7 +18,7 @@ RDS provides the PostgreSQL plugin management solution for user **root**. Except
 .. note::
 
    -  RDS for PostgreSQL plugins only take effect on the databases you created the plugins for. To use a plugin on databases, it has to be created separately for each database.
-   -  The latest minor versions of RDS for PostgreSQL 11, 12, 13, and 14 allow the **root** user to create plugins (create extension) or delete plugins (drop extension).
+   -  The latest minor versions of RDS for PostgreSQL 12, 13, and 14 allow the **root** user to create plugins (create extension) or delete plugins (drop extension).
 
 Creating a Plugin
 -----------------
