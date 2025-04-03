@@ -13,6 +13,11 @@ This API is used to query the latest 2000 database slow query logs.
 -  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
 
+Constraints
+-----------
+
+This API is available only to RDS for MySQL and RDS for PostgreSQL.
+
 URI
 ---
 

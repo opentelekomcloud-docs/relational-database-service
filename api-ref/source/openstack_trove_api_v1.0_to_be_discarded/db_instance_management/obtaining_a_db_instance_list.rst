@@ -197,7 +197,7 @@ Normal Response
               },
               "datastore": {
                 "type": "PostgreSQL",
-                "version": "PostgreSQL-11"
+                "version": "PostgreSQL-13"
               },
 
               "region": "eu-de",

@@ -18,7 +18,7 @@ URI
 
 -  URI format
 
-   GET https://{*Endpoint*}/v3/{project_id}/storage-type/{database_name}?version_name={version_name}
+   GET https://{*Endpoint*}/v3/{project_id}/storage-type/{database_name}?version_name={version_name}&ha_mode={ha_mode}
 
 -  Parameter description
 
@@ -39,9 +39,15 @@ URI
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | version_name          | Yes                   | Specifies the database version. For details about how to obtain the database version, see section :ref:`Querying Version Information About a DB Engine <rds_06_0001>`. |
       |                       |                       |                                                                                                                                                                        |
-      |                       |                       | -  MySQL databases support 5.6, 5.7, and 8.0.                                                                                                                          |
-      |                       |                       | -  PostgreSQL databases support 10, 11, 12, 13, 14, 15 and 16.                                                                                                         |
+      |                       |                       | -  MySQL databases support 5.7 and 8.0.                                                                                                                                |
+      |                       |                       | -  PostgreSQL databases support 12, 13, 14, 15 and 16.                                                                                                                 |
       |                       |                       | -  Microsoft SQL Server databases only support 2017_SE, 2017_EE, 2019_SE, 2019_EE, 2022_SE and 2022_EE.                                                                |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | ha_mode               | No                    | Specifies the HA mode. The value options are as follows:                                                                                                               |
+      |                       |                       |                                                                                                                                                                        |
+      |                       |                       | -  single                                                                                                                                                              |
+      |                       |                       | -  ha                                                                                                                                                                  |
+      |                       |                       | -  replica                                                                                                                                                             |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Request
@@ -62,72 +68,43 @@ Response
 
    .. table:: **Table 2** Parameter description
 
-      +-----------------------+-----------------------+--------------------------------------------------------------------+
-      | Name                  | Type                  | Description                                                        |
-      +=======================+=======================+====================================================================+
-      | storage_type          | Array of objects      | Indicates the DB instance specifications information list.         |
-      |                       |                       |                                                                    |
-      |                       |                       | For details, see :ref:`Table 3 <rds_04_0002__table66531170>`.      |
-      +-----------------------+-----------------------+--------------------------------------------------------------------+
-      | dsspool_info          | Array of objects      | Indicates the dsspool specifications information list.             |
-      |                       |                       |                                                                    |
-      |                       |                       | For details, see :ref:`Table 4 <rds_04_0002__table1513533533518>`. |
-      |                       |                       |                                                                    |
-      |                       |                       | .. note::                                                          |
-      |                       |                       |                                                                    |
-      |                       |                       |    Only Dedicated Cloud (DeC) users are supported.                 |
-      +-----------------------+-----------------------+--------------------------------------------------------------------+
+      +-----------------------+-----------------------+---------------------------------------------------------------+
+      | Name                  | Type                  | Description                                                   |
+      +=======================+=======================+===============================================================+
+      | storage_type          | Array of objects      | Indicates the DB instance specifications information list.    |
+      |                       |                       |                                                               |
+      |                       |                       | For details, see :ref:`Table 3 <rds_04_0002__table66531170>`. |
+      +-----------------------+-----------------------+---------------------------------------------------------------+
 
    .. _rds_04_0002__table66531170:
 
    .. table:: **Table 3** storage_type field data structure description
 
-      +----------------------------+-----------------------+-------------------------------------------------------------------------------------+
-      | Name                       | Type                  | Description                                                                         |
-      +============================+=======================+=====================================================================================+
-      | name                       | String                | Indicates the storage type. Its value can be any of the following:                  |
-      |                            |                       |                                                                                     |
-      |                            |                       | -  **COMMON**: SATA storage.                                                        |
-      |                            |                       | -  **ULTRAHIGH**: ultra-high I/O storage.                                           |
-      |                            |                       | -  **CLOUDSSD**: cloud SSD storage.                                                 |
-      |                            |                       | -  **ESSD**: extreme SSD storage.                                                   |
-      +----------------------------+-----------------------+-------------------------------------------------------------------------------------+
-      | az_status                  | Map<String, String>   | Indicates the specification status in an AZ. Its value can be any of the following: |
-      |                            |                       |                                                                                     |
-      |                            |                       | -  **normal**: indicates that the specifications in the AZ are available.           |
-      |                            |                       | -  **unsupported**: indicates that the specifications are not supported by the AZ.  |
-      |                            |                       | -  **sellout**: indicates that the specifications in the AZ are sold out.           |
-      +----------------------------+-----------------------+-------------------------------------------------------------------------------------+
-      | support_compute_group_type | List<String>          | Indicates the performance specifications. Its value can be any of the following:    |
-      |                            |                       |                                                                                     |
-      |                            |                       | -  **normal**: general-enhanced                                                     |
-      |                            |                       | -  **general**: general-purpose                                                     |
-      |                            |                       | -  **dedicated**                                                                    |
-      +----------------------------+-----------------------+-------------------------------------------------------------------------------------+
-
-   .. _rds_04_0002__table1513533533518:
-
-   .. table:: **Table 4** dsspool_info field data structure description
-
-      +-----------------------+-----------------------+----------------------------------------------------------------------+
-      | Name                  | Type                  | Description                                                          |
-      +=======================+=======================+======================================================================+
-      | az_name               | String                | Indicates the name of the AZ where dsspool is located.               |
-      +-----------------------+-----------------------+----------------------------------------------------------------------+
-      | free_capacity_gb      | String                | Indicates the available capacity of dsspool.                         |
-      +-----------------------+-----------------------+----------------------------------------------------------------------+
-      | dsspool_volume_type   | String                | Indicates the dsspool volume type.                                   |
-      +-----------------------+-----------------------+----------------------------------------------------------------------+
-      | dsspool_id            | String                | Indicates the dsspool ID.                                            |
-      +-----------------------+-----------------------+----------------------------------------------------------------------+
-      | dsspool_status        | String                | Indicates the dsspool status. Its value can be any of the following: |
-      |                       |                       |                                                                      |
-      |                       |                       | -  available                                                         |
-      |                       |                       | -  deploying                                                         |
-      |                       |                       | -  enlarging                                                         |
-      |                       |                       | -  frozen                                                            |
-      |                       |                       | -  sellout                                                           |
-      +-----------------------+-----------------------+----------------------------------------------------------------------+
+      +----------------------------+-----------------------+---------------------------------------------------------------------------------------------------+
+      | Name                       | Type                  | Description                                                                                       |
+      +============================+=======================+===================================================================================================+
+      | name                       | String                | Indicates the storage type. Its value can be any of the following:                                |
+      |                            |                       |                                                                                                   |
+      |                            |                       | -  **COMMON**: SATA storage.                                                                      |
+      |                            |                       | -  **ULTRAHIGH**: ultra-high I/O storage.                                                         |
+      |                            |                       | -  **CLOUDSSD**: cloud SSD storage.                                                               |
+      |                            |                       | -  **ESSD**: extreme SSD storage.                                                                 |
+      +----------------------------+-----------------------+---------------------------------------------------------------------------------------------------+
+      | az_status                  | Map<String, String>   | Indicates the specification status in an AZ. Its value can be any of the following:               |
+      |                            |                       |                                                                                                   |
+      |                            |                       | -  **normal**: indicates that the specifications in the AZ are available.                         |
+      |                            |                       | -  **unsupported**: indicates that the specifications are not supported by the AZ.                |
+      |                            |                       | -  **sellout**: indicates that the specifications in the AZ are sold out.                         |
+      +----------------------------+-----------------------+---------------------------------------------------------------------------------------------------+
+      | support_compute_group_type | List<String>          | Indicates the performance specifications. Its value can be any of the following:                  |
+      |                            |                       |                                                                                                   |
+      |                            |                       | -  **normal**: general-enhanced                                                                   |
+      |                            |                       | -  **general**: general-purpose                                                                   |
+      |                            |                       | -  **dedicated**:                                                                                 |
+      |                            |                       |                                                                                                   |
+      |                            |                       |    -  For the MySQL DB engine: dedicated                                                          |
+      |                            |                       |    -  For PostgreSQL and SQL Server DB engines: dedicated, which is only supported for cloud SSDs |
+      +----------------------------+-----------------------+---------------------------------------------------------------------------------------------------+
 
 -  Example normal response
 
@@ -159,7 +136,6 @@ Response
                               ]
               }
           ]
-              "dsspool_info": []
       }
 
 -  Abnormal response

@@ -152,7 +152,7 @@ Request
    +--------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | replica_of_id      | Yes             | String          | Specifies the DB instance ID, which is used to create a read replica.                                                                                                      |
    |                    |                 |                 |                                                                                                                                                                            |
-   |                    |                 |                 | For details, see **id** in :ref:`Table 3 <rds_01_0004__table2058713718267>` in section :ref:`Querying Details About DB Instances <rds_01_0004>`.                           |
+   |                    |                 |                 | For details, see **id** in :ref:`Table 3 <rds_01_0004__table2058713718267>` in section :ref:`Querying DB Instances <rds_01_0004>`.                                         |
    +--------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | disk_encryption_id | No              | String          | Specifies the key ID for disk encryption. The default value is empty.                                                                                                      |
    +--------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -192,8 +192,8 @@ Request
    +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------+
    | version         | Yes             | String          | Specifies the database version.                                                                                                 |
    |                 |                 |                 |                                                                                                                                 |
-   |                 |                 |                 | -  MySQL databases support 5.6, 5.7, and 8.0. Example value: 5.7                                                                |
-   |                 |                 |                 | -  PostgreSQL databases support 11, 12, 13, 14, 15 and 16. Example value: 11                                                    |
+   |                 |                 |                 | -  MySQL databases support 5.7 and 8.0. Example value: 5.7                                                                      |
+   |                 |                 |                 | -  PostgreSQL databases support 12, 13, 14, 15 and 16. Example value: 13                                                        |
    |                 |                 |                 | -  Microsoft SQL Server databases only support 2017_SE, 2017_EE, 2019_SE, 2019_EE, 2022_SE and 2022_EE. Example value: 2017_SE  |
    |                 |                 |                 |                                                                                                                                 |
    |                 |                 |                 | For details about supported database versions, see section :ref:`Querying Version Information About a DB Engine <rds_06_0001>`. |

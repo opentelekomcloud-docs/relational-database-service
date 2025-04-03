@@ -23,7 +23,6 @@ Constraints
    -  RDS for PostgreSQL 12: 12.7 or later
    -  RDS for PostgreSQL 13: 13.3 or later
    -  RDS for PostgreSQL 14: 14.4 or later
-   -  Major version upgrades are unavailable to RDS for PostgreSQL 11.
 
 -  Before a major version upgrade, perform an upgrade check. If there is no successful upgrade check in the validity period, a major version upgrade is not allowed.
 
