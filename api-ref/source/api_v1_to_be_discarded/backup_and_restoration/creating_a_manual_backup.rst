@@ -137,8 +137,6 @@ Normal Response
       |                       |                       | -  SQLServer                                            |
       +-----------------------+-----------------------+---------------------------------------------------------+
       | version               | String                | Indicates the database version.                         |
-      |                       |                       |                                                         |
-      |                       |                       | For example, 5.6.30.                                    |
       +-----------------------+-----------------------+---------------------------------------------------------+
       | version_id            | String                | Indicates the database version ID. Its value is unique. |
       +-----------------------+-----------------------+---------------------------------------------------------+
@@ -162,7 +160,7 @@ Normal Response
               "created": "2016-09-12T01:17:05",
               "dataStore": {
                   "type": "MySQL",
-                  "version": "5.6.30",
+                  "version": "5.7.31",
                   "version_id": "e8a8b8cc-63f8-4fb5-8d4a-24c502317a61"
               },
               "description": "123",

@@ -132,11 +132,11 @@ Normal Response
       {
         "configuration": {
           "id": "07fc12a8e0e94df7a3fcf53d0b5e1605pr01",
-          "name": "default-mysql-5.6",
+          "name": "default-mysql-5.7",
           "datastore_version_id": "",
-          "datastore_version_name": "5.6",
+          "datastore_version_name": "5.7",
           "datastore_name": "mysql",
-          "description": "Default parameter group for mysql 5.6",
+          "description": "Default parameter group for mysql 5.7",
           "instance_count": 0,
           "created": "2017-05-05T04:40:51",
           "updated": "2017-05-05T04:40:51",

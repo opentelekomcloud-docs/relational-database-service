@@ -24,9 +24,7 @@ The constraints on minor version upgrades for RDS for PostgreSQL are as follows:
 
 -  The following minor versions cannot be upgraded:
 
-   - Versions earlier than 11.2 for RDS for PostgreSQL 11
-
-   - The upgrade will be performed immediately upon the submission of your request. Delayed upgrade of minor versions is not supported.
+   The upgrade will be performed immediately upon the submission of your request. Delayed upgrade of minor versions is not supported.
 
 URI
 ---

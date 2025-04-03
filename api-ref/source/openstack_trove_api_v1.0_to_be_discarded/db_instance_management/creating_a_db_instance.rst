@@ -165,8 +165,8 @@ Request
       +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+
       | version         | Yes             | String          | Specifies the database version.                                                                                      |
       |                 |                 |                 |                                                                                                                      |
-      |                 |                 |                 | -  MySQL databases support 5.6, 5.7 and 8.0. Example value: 5.7                                                      |
-      |                 |                 |                 | -  PostgreSQL databases support 11, 12, 13, 14, 15 and 16. Example value: 11                                         |
+      |                 |                 |                 | -  MySQL databases support 5.7 and 8.0. Example value: 5.7                                                           |
+      |                 |                 |                 | -  PostgreSQL databases support 12, 13, 14, 15 and 16. Example value: 13                                             |
       |                 |                 |                 |                                                                                                                      |
       |                 |                 |                 | For details about supported database versions, see section :ref:`Database Version Queries <en-us_topic_0032347782>`. |
       +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+
@@ -405,7 +405,7 @@ Normal Response
       Name    Type   Description
       ======= ====== =====================================================
       type    String Indicates the DB engine.
-      version String Indicates the database version, such as MySQL-5.6.33.
+      version String Indicates the database version, such as MySQL-5.7.33.
       ======= ====== =====================================================
 
 -  Response example

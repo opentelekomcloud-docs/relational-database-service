@@ -84,42 +84,42 @@ Normal Response
         "dataStores": [
           {
             "id": "e8a8b8cc-63f8-4fb5-8d4a-24c502317a62",
-            "name": "5.6.33",
+            "name": "5.7.33",
             "datastore": "736270b9-27c7-4f03-823b-447d8245e1c2",
             "image": "36bdc308-0389-4830-8813-4a98d62b97de",
-            "packages": "MySQL-server-5.6.33",
+            "packages": "MySQL-server-5.7.33",
             "active": 1
           },
           {
             "id": "e8a8b8cc-63f8-4fb5-8d4a-24c502317a61",
-            "name": "5.6.30",
+            "name": "5.7.30",
             "datastore": "736270b9-27c7-4f03-823b-447d8245e1c2",
             "image": "36bdc308-0389-4830-8813-4a98d62b97de",
-            "packages": "MySQL-server-5.6.30",
+            "packages": "MySQL-server-5.7.30",
             "active": 1
           },
           {
             "id": "96cccede-bc51-11e6-bd4d-286ed488dd62",
-            "name": "5.6.34",
+            "name": "5.7.34",
             "datastore": "736270b9-27c7-4f03-823b-447d8245e1c2",
             "image": "36bdc308-0389-4830-8813-4a98d62b97de",
-            "packages": "MySQL-server-5.6.34",
+            "packages": "MySQL-server-5.7.34",
             "active": 1
           },
           {
             "id": "35a3d5ba-6f74-4b29-824d-6de20f1ac090",
-            "name": "5.6.35",
+            "name": "5.7.35",
             "datastore": "736270b9-27c7-4f03-823b-447d8245e1c2",
             "image": "36bdc308-0389-4830-8813-4a98d62b97de",
-            "packages": "MySQL-server-5.6.35",
+            "packages": "MySQL-server-5.7.35",
             "active": 1
           },
           {
             "id": "129a90a5-d4ef-4828-b3e3-4d3a1e91700d",
-            "name": "5.6.36",
+            "name": "5.7.36",
             "datastore": "736270b9-27c7-4f03-823b-447d8245e1c2",
             "image": "36bdc308-0389-4830-8813-4a98d62b97de",
-            "packages": "MySQL-server-5.6.36",
+            "packages": "MySQL-server-5.7.36",
             "active": 1
           },
           {
