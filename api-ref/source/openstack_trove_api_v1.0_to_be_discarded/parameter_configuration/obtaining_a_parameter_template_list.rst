@@ -106,10 +106,10 @@ Normal Response
         "configurations": [
           {
             "id": "07fc12a8e0e94df7a3fcf53d0b5e1605pr01",
-            "name": "default-mysql-5.6",
-            "description": "Default parameter group for mysql 5.6",
+            "name": "default-mysql-5.7",
+            "description": "Default parameter group for mysql 5.7",
             "datastore_version_id": "",
-            "datastore_version_name": "5.6",
+            "datastore_version_name": "5.7",
             "datastore_name": "mysql",
             "created": "2017-01-01T10:00:00",
             "updated": "2017-01-01T10:00:00",
@@ -118,10 +118,10 @@ Normal Response
       },
           {
             "id": "3bc1e9cc0d34404b9225ed7a58fb284epr01",
-            "name": "test-mysql-5.6",
-            "description": "test-mysql-5.6",
+            "name": "test-mysql-5.7",
+            "description": "test-mysql-5.7",
             "datastore_version_id": "",
-            "datastore_version_name": "5.6",
+            "datastore_version_name": "5.7",
             "datastore_name": "mysql",
             "created": "2017-02-01T10:00:00",
             "updated": "2017-02-01T10:00:00",

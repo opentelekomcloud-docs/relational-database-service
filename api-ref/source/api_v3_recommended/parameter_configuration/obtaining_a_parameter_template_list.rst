@@ -98,7 +98,7 @@ Response
                   "id": "887ea0d1bb0843c49e8d8e5a09a95652pr01",
                   "name": "configuration_test",
                   "description": "configuration_test",
-                  "datastore_version_name": "5.6",
+                  "datastore_version_name": "5.7",
                   "datastore_name": "mysql",
                   "created": "2019-05-15T11:53:34+0000",
                   "updated": "2019-05-15T11:53:34+0000",

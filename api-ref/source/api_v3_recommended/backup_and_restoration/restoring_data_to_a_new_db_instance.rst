@@ -506,7 +506,7 @@ Response
               "status": "BUILD",
               "datastore": {
                   "type": "MySQL",
-                  "version": "5.6.41"
+                  "version": "5.7.41"
               },
               "port": "3306",
               "volume": {

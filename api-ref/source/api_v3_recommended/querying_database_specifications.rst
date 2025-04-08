@@ -18,7 +18,7 @@ URI
 
 -  URI format
 
-   GET https://{*Endpoint*}/v3/{project_id}/flavors/{database_name}?version_name={version_name}
+   GET https://{*Endpoint*}/v3/{project_id}/flavors/{database_name}?version_name={version_name}&spec_code={spec_code}
 
 -  Parameter description
 
@@ -51,9 +51,9 @@ URI
       |                       |                       | -  *spec code* can be obtained from :ref:`DB Instance Classes <rds_10_0004>`.                                                                                                                                                                                      |
       |                       |                       | -  *instance mode* can be any of the following:                                                                                                                                                                                                                    |
       |                       |                       |                                                                                                                                                                                                                                                                    |
-      |                       |                       |    -  For single DB instances, the value is **null**. Example spe_code: rds.mysql.n1.xlarge                                                                                                                                                                        |
-      |                       |                       |    -  For primary/standby DB instances, the value is **.ha**. Example spe_code: rds.mysql.n1.xlarge.ha                                                                                                                                                             |
-      |                       |                       |    -  For read replicas, the value is **.rr**. Example spe_code: rds.mysql.n1.xlarge.rr                                                                                                                                                                            |
+      |                       |                       |    -  For single DB instances, the value is **null**. Example spe_code: rds.mysql.n1.xlarge.4                                                                                                                                                                      |
+      |                       |                       |    -  For primary/standby DB instances, the value is **.ha**. Example spe_code: rds.mysql.n1.xlarge.4.ha                                                                                                                                                           |
+      |                       |                       |    -  For read replicas, the value is **.rr**. Example spe_code: rds.mysql.n1.xlarge.4.rr                                                                                                                                                                          |
       +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Request
@@ -65,7 +65,7 @@ Request
 
 -  Example
 
-   GET https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/flavors/mysql?version_name=5.7
+   GET https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/flavors/mysql?version_name=5.7&spec_code=rds.mysql.n1.xlarge.4.rr
 
 Response
 --------
@@ -95,7 +95,7 @@ Response
       +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
       | id                    | String                | Indicates the specification ID, which is unique.                                                        |
       +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
-      | spec_code             | String                | Indicates the resource specification code. Use **rds.mysql.n1.xlarge.rr** as an example.                |
+      | spec_code             | String                | Indicates the resource specification code. Use **rds.mysql.n1.xlarge.4.rr** as an example.              |
       |                       |                       |                                                                                                         |
       |                       |                       | -  **rds**: indicates the RDS product.                                                                  |
       |                       |                       | -  **mysql**: indicates the DB engine.                                                                  |
@@ -104,11 +104,11 @@ Response
       +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
       | version_name          | Array                 | Indicates the database version.                                                                         |
       |                       |                       |                                                                                                         |
-      |                       |                       | -  MySQL databases support 5.6, 5.7, and 8.0.                                                           |
-      |                       |                       | -  PostgreSQL databases support 11, 12, 13, 14, 15 and 16.                                              |
+      |                       |                       | -  MySQL databases support 5.7 and 8.0.                                                                 |
+      |                       |                       | -  PostgreSQL databases support 12, 13, 14, 15 and 16.                                                  |
       |                       |                       | -  Microsoft SQL Server databases only support 2017_SE, 2017_EE, 2019_SE, 2019_EE, 2022_SE and 2022_EE. |
       |                       |                       |                                                                                                         |
-      |                       |                       | Example value for MySQL: ["5.6","5.7","8.0"]                                                            |
+      |                       |                       | Example value for MySQL: ["5.7","8.0"]                                                                  |
       +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
       | instance_mode         | String                | Indicates the DB instance type. Its value can be any of the following:                                  |
       |                       |                       |                                                                                                         |
@@ -128,7 +128,10 @@ Response
       |                       |                       |                                                                                                         |
       |                       |                       | -  **normal**: general-enhanced                                                                         |
       |                       |                       | -  **general**: general-purpose                                                                         |
-      |                       |                       | -  **dedicated**                                                                                        |
+      |                       |                       | -  **dedicated**:                                                                                       |
+      |                       |                       |                                                                                                         |
+      |                       |                       |    -  For the MySQL DB engine: dedicated                                                                |
+      |                       |                       |    -  For PostgreSQL and SQL Server DB engines: dedicated, which is only supported for cloud SSDs       |
       +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
 
 -  Example normal response
@@ -136,29 +139,13 @@ Response
    .. code-block:: text
 
       {
-          "flavors": [{
-                  "vcpus": "1",
-                  "ram": 2,
-                              "id":"2988b9cc-2aac-3a94-898c-14666702f129",
-                  "spec_code": "rds.mysql.n1.large.ha",
-                              "version_name": ["5.6","5.7","8.0"],
-                  "instance_mode": "ha",
-                  "az_status": {
-                      "az1": "normal",
-                      "az2": "normal"
-                  },
-                  "az_desc": {
-                      "az1": "az1",
-                      "az2": "az2"
-                  },
-                              "group_type": "normal"
-              },
+          "flavors": [
               {
                   "vcpus": "1",
                   "ram": 2,
                               "id":"2988b9cc-2aac-3a94-898c-14666702f130",
-                  "spec_code": "rds.mysql.n1.large.rr",
-                              "version_name": ["5.6","5.7","8.0"],
+                  "spec_code": "rds.mysql.n1.xlarge.4.rr",
+                              "version_name": ["5.7","8.0"],
                   "instance_mode": "replica",
                   "az_status": {
                       "az1": "normal",

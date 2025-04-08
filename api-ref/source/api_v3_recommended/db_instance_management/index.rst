@@ -16,7 +16,7 @@ DB Instance Management
 -  :ref:`Changing a Single DB Instance to Primary/Standby DB Instances <rds_01_0103>`
 -  :ref:`Rebooting a DB Instance <rds_06_0003>`
 -  :ref:`Deleting a DB Instance <rds_01_0003>`
--  :ref:`Querying Details About DB Instances <rds_01_0004>`
+-  :ref:`Querying DB Instances <rds_01_0004>`
 -  :ref:`Binding and Unbinding an EIP <rds_05_0009>`
 -  :ref:`Changing the Failover Priority <rds_05_0012>`
 -  :ref:`Manually Switching Primary/Standby DB Instances <rds_05_0013>`
@@ -41,7 +41,7 @@ DB Instance Management
    changing_a_single_db_instance_to_primary_standby_db_instances
    rebooting_a_db_instance
    deleting_a_db_instance
-   querying_details_about_db_instances
+   querying_db_instances
    binding_and_unbinding_an_eip
    changing_the_failover_priority
    manually_switching_primary_standby_db_instances

@@ -174,7 +174,7 @@ Response
           "configuration": {
               "id": "463b4b58-d0e8-4e2b-9560-5dea4552fde9",
               "name": "configuration_test",
-              "datastore_version_name": "5.6",
+              "datastore_version_name": "5.7",
               "datastore_name": "mysql",
               "description": "configuration_test",
               "created": "2017-04-09T08:27:56+0800",
