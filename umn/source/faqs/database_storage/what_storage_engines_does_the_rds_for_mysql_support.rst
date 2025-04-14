@@ -9,7 +9,7 @@ The database storage engine is a core service for **storing, processing, and pro
 
 For MySQL databases, only InnoDB supports backup and restoration functions and is therefore recommended.
 
-For versions later than MySQL 5.6.40 and 5.7.22, some storage engines are no longer supported.
+For versions later than MySQL 5.7.22, some storage engines are no longer supported.
 
 **RDS for MySQL does not currently support MyISAM** because:
 

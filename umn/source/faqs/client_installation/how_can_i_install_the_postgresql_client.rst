@@ -5,52 +5,45 @@
 How Can I Install the PostgreSQL Client?
 ========================================
 
-PostgreSQL provides `client installation methods <https://www.postgresql.org/download/>`__ for different OSs on its official website.
+The PostgreSQL community provides `client installation methods <https://www.postgresql.org/download/linux/>`__ for different OSs. You can download and install the client using the installation tool of the OS. This installation method is simple but has requirements on the ECS OS. It can be used only for the OSs supported by the PostgreSQL community.
 
-The following describes how to install a PostgreSQL 15 client in CentOS.
+The following describes how to install a PostgreSQL 15 client on Ubuntu.
 
 Procedure
 ---------
 
-#. Log in to an ECS.
+#. Log in to the target ECS.
 
-   a. When you create an ECS, select an OS like CentOS 7 and bind an EIP to it.
+   a. When you create an ECS, select an OS, such as Ubuntu, and bind an EIP to it.
    b. Use a remote connection tool to connect to the ECS through the EIP.
 
-#. Open the `client installation page <https://www.postgresql.org/download/linux/redhat/>`__.
+#. Open the `client installation <https://www.postgresql.org/download/linux/ubuntu/>`__ page.
 
-#. Select a DB engine version, OS, and OS architecture, and run the following commands on the ECS to install a PostgreSQL client.
+#. Run the following commands on the ECS to install a PostgreSQL client. If the version included in the Ubuntu version is not the one you want, you can use the PostgreSQL Apt repository.
 
    .. code-block::
 
-      sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+      # Import the repository signing key:
+      sudo apt install curl ca-certificates
+      sudo install -d /usr/share/postgresql-common/pgdg
+      sudo curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail https://www.postgresql.org/media/keys/ACCC4CF8.asc
 
+      # Create the repository configuration file:
+      sudo sh -c 'echo "deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
 
-   .. figure:: /_static/images/en-us_image_0000001961856677.png
-      :alt: **Figure 1** Installing a client
+      # Update the package lists:
+      sudo apt update
 
-      **Figure 1** Installing a client
+      # Install the latest version of PostgreSQL:
+      # If you want a specific version, use 'postgresql-15' or similar instead of 'postgresql'
+      sudo apt -y install postgresql-15
 
-   -  Select a DB engine version that is consistent with that of your RDS for PostgreSQL instance.
-   -  Select an OS that is consistent with that of the ECS.
-   -  Select an OS architecture that is consistent with that of the ECS.
+#. Run the following command to check whether the client is successfully installed. If the installation is successful, the following information is displayed:
 
+   .. code-block::
 
-   .. figure:: /_static/images/en-us_image_0000001489216109.png
-      :alt: **Figure 2** Installing the RPM package
+      psql -V
 
-      **Figure 2** Installing the RPM package
+   |image1|
 
-
-   .. figure:: /_static/images/en-us_image_0000001439337884.png
-      :alt: **Figure 3** Client installed
-
-      **Figure 3** Client installed
-
-#. Connect to the RDS for PostgreSQL instance.
-
-
-   .. figure:: /_static/images/en-us_image_0000001489297261.png
-      :alt: **Figure 4** Connection successful
-
-      **Figure 4** Connection successful
+.. |image1| image:: /_static/images/en-us_image_0000002218505054.png

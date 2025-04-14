@@ -12,7 +12,7 @@ You can migrate a standby DB instance to another AZ in the same region as the or
 
 .. note::
 
-   -  Primary/standby instances running MySQL 5.6, 5.7, or 8.0 support standby instance migration to another AZ.
+   -  Primary/standby instances running MySQL 5.7, or 8.0 support standby instance migration to another AZ.
    -  DDL operations and scheduled events will be suspended during migration. To prevent service interruptions, perform the migration during off-peak hours.
 
 Procedure
