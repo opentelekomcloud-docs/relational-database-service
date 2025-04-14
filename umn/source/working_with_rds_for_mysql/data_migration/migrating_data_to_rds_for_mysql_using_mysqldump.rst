@@ -67,10 +67,6 @@ Before migrating data to RDS, you need to export data first.
 
    **Enter password:**
 
-   .. note::
-
-      If you use mysqldump with a version earlier than 5.6, remove **--set-gtid-purged=OFF** before running this command.
-
    After this command is executed, a **dump-defs.sql** file will be generated as follows:
 
    .. code-block:: console
@@ -93,10 +89,6 @@ Before migrating data to RDS, you need to export data first.
    Example:
 
    **mysqldump --databases rdsdb --single-transaction --hex-blob --set-gtid-purged=OFF --no-create-info --skip-triggers -u root -p -h 192.168.151.18 -P 8635 -r dump-data.sql**
-
-   .. note::
-
-      If you use mysqldump with a version earlier than 5.6, remove **--set-gtid-purged=OFF** before running this command.
 
    After this command is executed, a **dump-data.sql** file will be generated as follows:
 

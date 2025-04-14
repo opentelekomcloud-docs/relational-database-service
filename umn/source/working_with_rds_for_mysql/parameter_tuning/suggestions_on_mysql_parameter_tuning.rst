@@ -45,21 +45,6 @@ The following parameters can result in system security and stability issues if s
 
    Impact: If this parameter is not set to **1**, data security is not guaranteed. If the system fails, data may be lost.
 
--  **innodb_large_prefix**
-
-   Default value: **OFF**
-
-   Function: Specifies the maximum length of a single-column index in an InnoDB table.
-
-   .. note::
-
-      This parameter is available only for MySQL 5.6.
-
-   Impact: Changing this parameter value during DDL execution may cause primary/standby replication exceptions. Exercise caution when performing this operation.
-
-   -  If you want to change this parameter value from **OFF** to **ON**, change it on read replicas first and then on the primary DB instance.
-   -  If you want to change this parameter value from **ON** to **OFF**, change it on the primary DB instance first and then on read replicas.
-
 Performance Parameters
 ----------------------
 
