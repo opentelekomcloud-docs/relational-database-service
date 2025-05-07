@@ -5,7 +5,8 @@
 Backups and Restorations
 ========================
 
--  :ref:`Working with Backups <en-us_topic_backup_restore>`
+-  :ref:`Introduction to Backups <rds_08_0024>`
+-  :ref:`Backup Types <en-us_topic_backup_restore>`
 -  :ref:`Configuring an Intra-Region Backup Policy <rds_08_0004>`
 -  :ref:`Creating a Manual Backup <rds_08_0005>`
 -  :ref:`Downloading a Backup File <rds_08_0006>`
@@ -20,7 +21,8 @@ Backups and Restorations
    :maxdepth: 1
    :hidden: 
 
-   working_with_backups
+   introduction_to_backups
+   backup_types
    configuring_an_intra-region_backup_policy
    creating_a_manual_backup
    downloading_a_backup_file

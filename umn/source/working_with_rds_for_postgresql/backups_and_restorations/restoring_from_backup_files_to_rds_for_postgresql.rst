@@ -52,7 +52,7 @@ Procedure
 
          -  If the target existing DB instance has been deleted, data cannot be restored to it.
          -  Restoring to an existing DB instance will overwrite data on it and cause the existing DB instance to be unavailable.
-         -  To restore backup data to an existing DB instance, the selected DB instance must be in the same VPC as the original DB instance and must have the same DB engine and the same or later version than the original DB instance.
+         -  To restore backup data to an existing DB instance, the selected DB instance must be in the same VPC as the original DB instance and must have the same DB engine and DB engine version as the original DB instance.
          -  Ensure that the storage space of the selected DB instance is greater than or equal to the storage space of the original DB instance. Otherwise, data will not be restored.
 
 #. View the restoration result. The result depends on which restoration method was selected:
