@@ -16,12 +16,10 @@ Currently, the TDE function supports single and primary/standby DB instances of 
    +-----------------------------------+-----------------------------------+
    | DB Instance Type                  | Editions Support for TDE          |
    +===================================+===================================+
-   | Primary/Standby (1/1)             | -  2017 SE                        |
-   |                                   | -  2019 SE                        |
+   | Primary/Standby (1/1)             | -  2019 SE                        |
    |                                   | -  2022 SE                        |
    +-----------------------------------+-----------------------------------+
-   | Single DB instances               | -  2017 SE                        |
-   |                                   | -  2019 SE                        |
+   | Single DB instances               | -  2019 SE                        |
    |                                   | -  2022 SE                        |
    +-----------------------------------+-----------------------------------+
    | Cluster                           | -  2017 EE                        |
