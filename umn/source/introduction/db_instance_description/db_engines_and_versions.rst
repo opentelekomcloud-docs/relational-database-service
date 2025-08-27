@@ -18,9 +18,9 @@ For new applications, you are advised to use the latest major version of the DB 
    +======================+=================+=================+=================+
    | MySQL                | -  8.0          | -  8.0          | Not supported   |
    |                      | -  5.7          | -  5.7          |                 |
-   |                      | -  5.6          | -  5.6          |                 |
    +----------------------+-----------------+-----------------+-----------------+
-   | PostgreSQL           | -  16           | -  16           | Not supported   |
+   | PostgreSQL           | -  17           | -  17           | Not supported   |
+   |                      | -  16           | -  16           |                 |
    |                      | -  15           | -  15           |                 |
    |                      | -  14           | -  14           |                 |
    |                      | -  13           | -  13           |                 |
