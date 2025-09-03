@@ -6,8 +6,8 @@
       - helpcenter-base-jobs
     vars:
       sphinx_pdf_files:
-        - rds-umn.pdf
         - rds-api-ref.pdf
+        - rds-umn.pdf
     check:
       jobs:
         - noop
