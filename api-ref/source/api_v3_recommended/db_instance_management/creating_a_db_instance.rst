@@ -130,6 +130,17 @@ Request
    |                    |                 |                 |                                                                                                                                                                                                                                                      |
    |                    |                 |                 | For details, see :ref:`Table 8 <rds_01_0002__table992615211258>`.                                                                                                                                                                                    |
    +--------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | time_zone          | No              | String          | Specifies the UTC time zone.                                                                                                                                                                                                                         |
+   |                    |                 |                 |                                                                                                                                                                                                                                                      |
+   |                    |                 |                 | -  If this parameter is not specified, the time zone of each engine is as follows:                                                                                                                                                                   |
+   |                    |                 |                 |                                                                                                                                                                                                                                                      |
+   |                    |                 |                 |    -  MySQL: uses UTC by default.                                                                                                                                                                                                                    |
+   |                    |                 |                 |    -  PostgreSQL: uses UTC by default.                                                                                                                                                                                                               |
+   |                    |                 |                 |    -  Microsoft SQL Server: uses UTC by default.                                                                                                                                                                                                     |
+   |                    |                 |                 |                                                                                                                                                                                                                                                      |
+   |                    |                 |                 | -  If this parameter is specified for MySQL or PostgreSQL, the value range is from UTC-12:00 to UTC+12:00 on the hour. For example, the parameter can be UTC+08:00 rather than UTC+08:30.                                                            |
+   |                    |                 |                 | -  If this parameter is specified, the value range is from UTC-12:00 to UTC+12:00 on the hour. For example, the parameter can be UTC+08:00 rather than UTC+08:30.                                                                                    |
+   +--------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | unchangeable_param | No              | Object          | Specifies the list of unchangeable parameters. The unchangeable parameters need to be specified before database initialization and cannot be modified after being specified.                                                                         |
    |                    |                 |                 |                                                                                                                                                                                                                                                      |
    |                    |                 |                 | For details, see :ref:`Table 9 <rds_01_0002__table951671018275>`.                                                                                                                                                                                    |
@@ -193,7 +204,7 @@ Request
    | version         | Yes             | String          | Specifies the database version.                                                                                                 |
    |                 |                 |                 |                                                                                                                                 |
    |                 |                 |                 | -  MySQL databases support 5.7 and 8.0. Example value: 5.7                                                                      |
-   |                 |                 |                 | -  PostgreSQL databases support 12, 13, 14, 15 and 16. Example value: 13                                                        |
+   |                 |                 |                 | -  PostgreSQL databases support 12, 13, 14, 15, 16 and 17. Example value: 13                                                    |
    |                 |                 |                 | -  Microsoft SQL Server databases only support 2017_SE, 2017_EE, 2019_SE, 2019_EE, 2022_SE and 2022_EE. Example value: 2017_SE  |
    |                 |                 |                 |                                                                                                                                 |
    |                 |                 |                 | For details about supported database versions, see section :ref:`Querying Version Information About a DB Engine <rds_06_0001>`. |
@@ -327,7 +338,7 @@ Request
           "name": "rds-instance-rep2",
           "datastore": {
               "type": "MySQL",
-              "version": "8.0"
+              "version": "5.7"
           },
           "flavor_ref": "rds.mysql.n1.large",
           "volume": {
@@ -348,11 +359,9 @@ Request
           "charge_info": {
               "charge_mode": "postPaid"
           },
-          "password": "Test@12345678",
+          "password": "****",
           "configuration_id": "452408-ef4b-44c5-94be-305145fg",
-          "unchangeable_param": {
-              "lower_case_table_names": "1"
-          }
+          "time_zone": "UTC+04:00"
       }
 
    Creating primary/standby DB instances:
@@ -363,7 +372,7 @@ Request
           "name": "rds-instance-rep2",
           "datastore": {
               "type": "MySQL",
-              "version": "8.0"
+              "version": "5.7"
           },
           "ha": {
               "mode": "ha",
@@ -388,8 +397,9 @@ Request
           "charge_info": {
               "charge_mode": "postPaid"
           },
-          "password": "Test@12345678",
-          "configuration_id": "452408-ef4b-44c5-94be-305145fg"
+          "password": "****",
+          "configuration_id": "452408-ef4b-44c5-94be-305145fg",
+          "time_zone": "UTC+04:00"
       }
 
    Creating a read replica:
@@ -600,7 +610,7 @@ Response
 
 -  Example normal response
 
-   Creating a single DB instance:
+   Single instance created.
 
    .. code-block:: text
 
@@ -611,7 +621,7 @@ Response
                       "status": "BUILD",
               "datastore": {
                   "type": "MySQL",
-                  "version": "8.0"
+                  "version": "5.7"
               },
               "flavor_ref": "rds.mysql.n1.large",
               "volume": {
@@ -632,12 +642,12 @@ Response
               "configuration_id": "452408-44c5-94be-305145fg",
               "charge_info": {
                   "charge_mode": "postPaid"
-              }
+              },
           },
           "job_id": "dff1d289-4d03-4942-8b9f-463ea07c000d"
       }
 
-   Creating primary/standby DB instances:
+   Primary/standby instance created.
 
    .. code-block:: text
 
@@ -648,7 +658,7 @@ Response
                  "status": "BUILD",
                  "datastore": {
                    "type": "MySQL",
-                   "version": "8.0"
+                   "version": "5.7"
                   },
                  "ha": {
                    "mode": "ha",
@@ -673,12 +683,12 @@ Response
                  "configuration_id": "452408-44c5-94be-305145fg",
                  "charge_info": {
                          "charge_mode": "postPaid"
-                                     },
+                  },
                },
         "job_id": "dff1d289-4d03-4942-8b9f-463ea07c000d"
       }
 
-   Creating a read replica:
+   Read replica created.
 
    .. code-block:: text
 
@@ -686,11 +696,6 @@ Response
         "instance":{
                   "id": "dsfae23fsfdsae3435in01",
                   "name": "trove-instance-rep2",
-                  "status": "BUILD",
-                  "datastore": {
-                      "type": "PostgreSQL",
-                      "version": 13
-                   },
                   "flavor_ref": "rds.mysql.n1.large.rr",
                    "volume": {
                      "type": "ULTRAHIGH",
@@ -703,10 +708,7 @@ Response
                  "subnet_id": "0e2eda62-1d42-4d64-a9d1-4e9aa9cd994f",
                  "security_group_id": "2a1f7fc8-3307-42a7-aa6f-42c8b9b8f8c5",
                  "port": "8635",
-                 "configuration_id": "452408-44c5-94be-305145fg",
-                 "charge_info": {
-                     "charge_mode": "postPaid"
-                 }
+                 "configuration_id": "452408-44c5-94be-305145fg"
                },
        "job_id": "dff1d289-4d03-4942-8b9f-463ea07c000d"
 
