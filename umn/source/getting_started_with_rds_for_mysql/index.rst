@@ -5,7 +5,7 @@
 Getting Started with RDS for MySQL
 ==================================
 
--  :ref:`Operation Guide <en-us_topic_0046585334>`
+-  :ref:`Operation Guide <rds_02_0119>`
 -  :ref:`Step 1: Create a DB Instance <rds_02_0008>`
 -  :ref:`Step 2: Connect to a DB Instance <rds_02_0006>`
 

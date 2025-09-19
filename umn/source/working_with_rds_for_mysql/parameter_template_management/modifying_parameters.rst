@@ -50,6 +50,8 @@ Modifying Parameter Template Parameters
    -  If you have modified parameters of a primary DB instance, you need to reboot the primary DB instance for the modifications to take effect. (For primary/standby DB instances, the parameter modifications are also applied to the standby DB instance.)
    -  If you have modified parameters of a read replica, you need to reboot the read replica for the modifications to take effect.
 
+.. _rds_configuration__section360115386520:
+
 Modifying Instance Parameters
 -----------------------------
 

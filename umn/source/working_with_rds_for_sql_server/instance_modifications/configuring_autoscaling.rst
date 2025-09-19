@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001990102985.html
+:original_name: rds_sqlserver_05_0029.html
 
-.. _en-us_topic_0000001990102985:
+.. _rds_sqlserver_05_0029:
 
 Configuring Autoscaling
 =======================

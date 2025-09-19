@@ -19,7 +19,7 @@ RDS supports the following DB engines:
 -  PostgreSQL
 -  Microsoft SQL Server
 
-For details about the supported versions, see :ref:`DB Engines and Versions <en-us_topic_0043898356>`.
+For details about the supported versions, see :ref:`DB Engines and Versions <rds_01_0021>`.
 
 DB Instance Types
 -----------------

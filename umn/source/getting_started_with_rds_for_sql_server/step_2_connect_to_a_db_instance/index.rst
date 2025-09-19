@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0053089697.html
+:original_name: rds_04_0062.html
 
-.. _en-us_topic_0053089697:
+.. _rds_04_0062:
 
 Step 2: Connect to a DB Instance
 ================================

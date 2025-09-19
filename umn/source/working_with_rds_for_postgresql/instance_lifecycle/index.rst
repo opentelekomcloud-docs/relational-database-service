@@ -6,8 +6,8 @@ Instance Lifecycle
 ==================
 
 -  :ref:`Creating a Same DB Instance as an Existing DB Instance <rds_pg_05_0055>`
--  :ref:`Stopping an Instance <rds_pg_stop>`
--  :ref:`Starting an Instance <rds_pg_start>`
+-  :ref:`Stopping a DB Instance <rds_pg_stop>`
+-  :ref:`Starting a DB Instance <rds_pg_start>`
 -  :ref:`Rebooting DB Instances or Read Replicas <rds_09_0024>`
 -  :ref:`Selecting Displayed Items <rds_pg_06_0022>`
 -  :ref:`Exporting DB Instance Information <rds_pg_05_0017>`
@@ -19,8 +19,8 @@ Instance Lifecycle
    :hidden: 
 
    creating_a_same_db_instance_as_an_existing_db_instance
-   stopping_an_instance
-   starting_an_instance
+   stopping_a_db_instance
+   starting_a_db_instance
    rebooting_db_instances_or_read_replicas
    selecting_displayed_items
    exporting_db_instance_information

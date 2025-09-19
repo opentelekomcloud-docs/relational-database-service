@@ -8,7 +8,7 @@ Stopping a DB Instance
 Scenarios
 ---------
 
-If you use DB instances only for routine development, you can temporarily stop pay-per-use DB instances to save money. You can stop a DB instance for up to seven days.
+If you use DB instances only for routine development, you can temporarily stop instances to save money. You can stop a DB instance for up to seven days.
 
 Constraints
 -----------
