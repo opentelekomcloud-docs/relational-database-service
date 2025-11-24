@@ -25,8 +25,8 @@ Procedure
 #. Log in to the management console.
 #. Click |image1| in the upper left corner and select a region.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**.
-#. On the **Instances** page, click the target DB instance or read replica (click |image2| in front of a DB instance to locate the read replica).
-#. In the **Storage Space** area, click **Configure Autoscaling**.
+#. On the **Instances** page, click the target DB instance or read replica name (click |image2| in front of a DB instance to locate the read replica) to go to the **Overview** page.
+#. In the **Storage & Backup** area, toggle on the **Storage Autoscaling** switch.
 #. In the displayed dialog box, set the following parameters:
 
    .. table:: **Table 1** Parameter description

@@ -34,7 +34,7 @@ Modifying an Automated Backup Policy
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 #. On the **Instances** page, click the target DB instance.
-#. On the **Backups & Restorations** page, click **Intra-Region Backup Policies**.
+#. On the **Backups & Restorations** page, in the upper right corner of the page, choose **Modify Backup Policy** > **Configure Same-Region Backup Policy**. On the displayed page, you can view the existing backup policy. If you want to modify the policy, adjust the values of the following parameters:
 
    -  **Retention Period** is the number of days that your automated backups are saved for. Increasing the retention period will improve data reliability.
    -  If you shorten the retention period, the new backup policy takes effect for all backup files. Any backup files that have expired, based on a newly configured retention period, will be deleted.

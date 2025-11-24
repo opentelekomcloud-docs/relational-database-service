@@ -6,10 +6,12 @@ Database Proxy (Read/Write Splitting)
 =====================================
 
 -  :ref:`Introducing Read/Write Splitting <rds_11_0035>`
+-  :ref:`Kernel Versions <rds_11_0027>`
 -  :ref:`Configuring Transaction Splitting <rds_11_0047>`
 -  :ref:`Enabling Read/Write Splitting <rds_11_0017>`
 -  :ref:`Configuring the Delay Threshold and Routing Policy <rds_11_0018>`
 -  :ref:`Changing the Read/Write Splitting Address <rds_11_0026>`
+-  :ref:`Applying for and Changing a Private Domain Name for a Database Proxy <rds_11_0066>`
 -  :ref:`Changing the Instance Class of a DB Proxy Instance <rds_11_0028>`
 -  :ref:`Changing the Number of Proxy Nodes <rds_11_0045>`
 -  :ref:`Upgrading the Kernel Version of Database Proxy <rds_11_0024>`
@@ -23,10 +25,12 @@ Database Proxy (Read/Write Splitting)
    :hidden: 
 
    introducing_read_write_splitting
+   kernel_versions
    configuring_transaction_splitting
    enabling_read_write_splitting
    configuring_the_delay_threshold_and_routing_policy
    changing_the_read_write_splitting_address
+   applying_for_and_changing_a_private_domain_name_for_a_database_proxy
    changing_the_instance_class_of_a_db_proxy_instance
    changing_the_number_of_proxy_nodes
    upgrading_the_kernel_version_of_database_proxy

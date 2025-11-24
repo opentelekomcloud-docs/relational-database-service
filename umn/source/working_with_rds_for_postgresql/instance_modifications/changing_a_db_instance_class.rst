@@ -29,13 +29,13 @@ Procedure
 
 #. On the **Instances** page, locate the target DB instance and choose **More** > **Change Instance Class** in the **Operation** column.
 
-   Alternatively, click the target DB instance to go to the **Basic Information** page. In the **DB Information** area, click **Change** in the **Instance Class** field.
+   Alternatively, click the target DB instance to go to the **Overview** page. Under **Instance Class**, click **Configure**.
 
 #. On the displayed page, specify the new instance class and click **Next**.
 
 #. View the DB instance class change result.
 
-   Changing the DB instance class takes 5-15 minutes. During this period, the status of the DB instance on the **Instances** page is **Changing instance class**. After a few minutes, click the DB instance and view the instance class on the displayed **Basic Information** page to check that the change is successful.
+   Changing the DB instance class takes 5-15 minutes. During this period, the status of the DB instance on the **Instances** page is **Changing instance class**. After a few minutes, click the DB instance and view the instance class on the displayed **Overview** page to check that the change is successful.
 
    .. important::
 

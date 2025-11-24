@@ -21,8 +21,8 @@ Procedure
 #. Log in to the management console.
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
-#. On the **Instances** page, click the target DB instance. In the **DB Information** area on the **Basic Information** page, click **Change** in the **Maintenance Window** field.
-#. In the displayed dialog box, select a maintenance window and click **OK**.
+#. On the **Instances** page, click the target DB instance name to go to the **Overview** page. Under **Maintenance Window**, click **Configure**.
+#. In the displayed dialog box, select an interval and a time range, and click **OK**.
 
    .. note::
 

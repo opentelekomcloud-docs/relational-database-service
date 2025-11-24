@@ -23,7 +23,7 @@ Procedure
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 #. On the **Instances** page, click the target DB instance.
-#. In the navigation pane on the left, choose **Backups & Restorations**. On the displayed page, click **Restore to Point in Time**.
+#. In the navigation pane on the left, choose **Backups & Restorations**. In the upper right corner of the page, choose **Restore to Point in Time** > **Restore Instance**.
 #. In the displayed dialog box, configure required information and click **OK**.
 
    a. Select the time range, select or enter a time point within the acceptable range.

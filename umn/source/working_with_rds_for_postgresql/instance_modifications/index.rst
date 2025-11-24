@@ -20,11 +20,13 @@ Instance Modifications
    :maxdepth: 1
    :hidden: 
 
+   introduction_to_instance_overview
    upgrading_a_minor_version
    changing_a_db_instance_name
    changing_the_failover_priority
    changing_a_db_instance_class
    scaling_up_storage_space
+   changing_a_storage_type
    storage_autoscaling
    changing_the_maintenance_window
    changing_a_db_instance_type_from_single_to_primary_standby

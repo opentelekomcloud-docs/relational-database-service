@@ -35,7 +35,7 @@ Contact customer service to disable or enable transaction splitting at any time 
 #. Log in to the management console.
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
-#. On the **Instances** page, click the primary instance name. The **Basic Information** page is displayed.
+#. On the **Instances** page, click the primary instance name. The **Overview** page is displayed.
 #. In the navigation pane on the left, click **Database Proxy**.
 #. On the displayed page, click |image2| next to **Transaction Splitting**.
 #. In the displayed dialog box, click **OK**.

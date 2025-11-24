@@ -34,11 +34,11 @@ Binding an EIP
 
 #. On the **Instances** page, click the target DB instance.
 
-#. In the navigation pane on the left, choose **EIPs**. On the displayed page, click **Bind EIP**.
+#. In the navigation pane on the left, choose **Connectivity & Security**. In the **Connection Information** area, click **Bind** next to the **EIP** field.
 
-#. In the displayed dialog box, all unbound EIPs are listed. Select the EIP to be bound and click **OK**. If no available EIPs are displayed, click **View EIP** to obtain one.
+#. In the displayed dialog box, all unbound EIPs are listed. Select the EIP to be bound and click **OK**. If no available EIPs are displayed, click **View EIP** to obtain an EIP.
 
-#. On the **EIPs** page, view the EIP that has been bound to the DB instance.
+#. On the **Connectivity & Security** page, check the EIP that has been bound to the DB instance.
 
    You can also view the progress and result of binding an EIP to a DB instance on the **Task Center** page.
 
@@ -57,9 +57,11 @@ Unbinding an EIP
 
 #. On the **Instances** page, click the DB instance that has an EIP bound.
 
-#. On the **EIPs** page, locate the target EIP to be unbound and click **Unbind**. In the displayed dialog box, click **Yes**.
+#. In the navigation pane on the left, choose **Connectivity & Security**. In the **Connection Information** area, click **Unbind** next to the **EIP** field.
 
-#. On the **EIPs** page, view the unbinding result.
+#. In the displayed dialog box, click **OK**.
+
+#. On the **Connectivity & Security** page, check the results.
 
    You can also view the progress and result of unbinding an EIP from a DB instance on the **Task Center** page.
 

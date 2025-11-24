@@ -23,7 +23,7 @@ Procedure
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. In the navigation pane on the left, choose **Backup Management**. On the displayed page, locate the target manual backup to be deleted and choose **More** > **Delete** in the **Operation** column.
+#. In the navigation pane on the left, choose **Backups**. On the displayed page, locate the target manual backup to be deleted and choose **More** > **Delete** in the **Operation** column.
 
    The following backups cannot be deleted:
 

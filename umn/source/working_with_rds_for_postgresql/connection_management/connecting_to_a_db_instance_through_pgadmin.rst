@@ -59,7 +59,7 @@ Procedure
 
    Parameter description:
 
-   -  **Host name/address**: indicates the IP address of the DB instance you want to connect to. If you connect to a DB instance through a floating IP address, enter the floating IP address displayed in the **Connection Information** area on the **Basic Information** page of your DB instance. If you connect to a DB instance through an EIP, enter the EIP of your DB instance.
+   -  **Host name/address**: indicates the IP address of the DB instance you want to connect to. If you connect to a DB instance through a floating IP address, enter the floating IP address displayed in the **Connectivity** area on the **Overview** page of your DB instance. If you connect to a DB instance through an EIP, enter the EIP of your DB instance.
    -  **Port**: indicates the database port. By default, the value is **5432**.
    -  **User name**: indicates the username. By default, the value is **root**.
    -  **Password**: indicates the password of the target database username.

@@ -166,8 +166,6 @@ Supported Plugins
    +------------------------------------------------------------------------+---------------+---------------+---------------+---------------+---------------+---------------+
    | plproxy                                                                | 2.11.0        | 2.11.0        | 2.11.0        | 2.11.0        | 2.11.0        | 2.11.0        |
    +------------------------------------------------------------------------+---------------+---------------+---------------+---------------+---------------+---------------+
-   | plv8                                                                   | 2.3.15        | 2.3.15        | ``-``         | ``-``         | ``-``         | ``-``         |
-   +------------------------------------------------------------------------+---------------+---------------+---------------+---------------+---------------+---------------+
    | **postgis**                                                            | 3.0.0         | 3.1.11        | 3.2.7         | 3.4.3         | 3.4.3         | 3.5.0         |
    |                                                                        |               |               |               |               |               |               |
    | For details, see :ref:`postgis <rds_09_0045__li1988055172110>`.        |               |               |               |               |               |               |
@@ -210,7 +208,7 @@ Supported Plugins
    +------------------------------------------------------------------------+---------------+---------------+---------------+---------------+---------------+---------------+
    | test_decoding                                                          | 2             | 2             | 2             | 2             | 2             | 2             |
    +------------------------------------------------------------------------+---------------+---------------+---------------+---------------+---------------+---------------+
-   | **timescaledb**                                                        | 1.7.0         | 2.1.0         | 2.7.0         | 2.11.1        | 2.14.2        | 2.17.2        |
+   | **TimescaleDB**                                                        | 1.7.0         | 2.1.0         | 2.7.0         | 2.11.1        | 2.14.2        | 2.17.2        |
    |                                                                        |               |               |               |               |               |               |
    | For details, see :ref:`timescaledb <rds_09_0045__li14592114102212>`.   |               |               |               |               |               |               |
    +------------------------------------------------------------------------+---------------+---------------+---------------+---------------+---------------+---------------+
@@ -274,9 +272,9 @@ Plugin Description
 
 -  .. _rds_09_0045__li14592114102212:
 
-   **timescaledb**
+   **TimescaleDB**
 
-   The timescaledb plugin does not support the TSL protocol. For more information, see :ref:`APIs Not Supported by the timescaledb Plugin <rds_09_0045__section12269181019348>`.
+   The TimescaleDB extension of RDS for PostgreSQL supports only the features of the Apache protocol. It does not support the features of the TSL protocol. For details, see `TimescaleDB Apache 2 and TimescaleDB Community Edition <https://docs.timescale.com/about/latest/timescaledb-editions/>`__.
 
 -  .. _rds_09_0045__li14836103131216:
 
@@ -291,25 +289,3 @@ Plugin Description
    After the statement is executed successfully, delete the slot to prevent stacked WAL logs.
 
    **select pg_drop_replication_slot('tst_wal2json');**
-
-.. _rds_09_0045__section12269181019348:
-
-APIs Not Supported by the timescaledb Plugin
---------------------------------------------
-
--  add_compress_chunks_policy
--  add_drop_chunks_policy
--  add_reorder_policy
--  alter_job_schedule
--  compress_chunk
--  decompress_chunk
--  drop_chunks
--  interpolate
--  locf
--  move_chunk
--  remove_compress_chunks_policy
--  remove_drop_chunks_policy
--  remove_reorder_policy
--  reorder_chunk
--  set_integer_now_func
--  time_bucket_gapfill

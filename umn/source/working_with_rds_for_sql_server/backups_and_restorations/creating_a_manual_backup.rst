@@ -35,7 +35,7 @@ Method 1
 
       System databases are backed up by default.
 
-#. After a manual backup has been created, you can view and manage it on the **Backup Management** page.
+#. After a manual backup has been created, you can view and manage it on the **Backups** page.
 
    Alternatively, click the target DB instance. On the **Backups & Restorations** page, you can view and manage the manual backups.
 
@@ -60,7 +60,7 @@ Method 2
 
       System databases are backed up by default.
 
-#. After a manual backup has been created, you can view and manage it on the **Backup Management** page.
+#. After a manual backup has been created, you can view and manage it on the **Backups** page.
 
    Alternatively, click the target DB instance. On the **Backups & Restorations** page, you can view and manage the manual backups.
 

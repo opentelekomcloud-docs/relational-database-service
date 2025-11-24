@@ -21,8 +21,6 @@ Prerequisites
 -  You can bind an EIP to a primary DB instance or a read replica only.
 -  If a DB instance has already been bound with an EIP, you must unbind the EIP from the DB instance first before binding a new EIP to it.
 
-.. _rds_pg_public_accessibility__en-us_topic_0192953725_section3199593620428:
-
 Binding an EIP
 --------------
 
@@ -34,17 +32,13 @@ Binding an EIP
 
 #. On the **Instances** page, click the target DB instance.
 
-#. On the **EIPs** page, click **Bind EIP**.
+#. In the navigation pane on the left, choose **Connectivity & Security**. In the **Connection Information** area, click **Bind** next to the **EIP** field.
 
-#. In the displayed dialog box, all unbound EIPs are listed. Select the EIP to be bound and click **OK**. If no available EIPs are displayed, click **View EIP** and obtain an EIP.
+#. In the displayed dialog box, all unbound EIPs are listed. Select the EIP to be bound and click **OK**. If no available EIPs are displayed, click **View EIP** to obtain an EIP.
 
-#. On the **EIPs** page of the RDS console, view the EIP that has been bound to the DB instance.
+#. On the **Connectivity & Security** page, check the EIP that has been bound to the DB instance.
 
    You can also view the progress and result of binding an EIP to a DB instance on the **Task Center** page.
-
-   To unbind the EIP from the DB instance, see :ref:`Unbinding an EIP <rds_pg_public_accessibility__en-us_topic_0192953725_section186511510267>`.
-
-.. _rds_pg_public_accessibility__en-us_topic_0192953725_section186511510267:
 
 Unbinding an EIP
 ----------------
@@ -57,13 +51,13 @@ Unbinding an EIP
 
 #. On the **Instances** page, click the DB instance that has an EIP bound.
 
-#. On the **EIPs** page, locate the target EIP to be unbound and click **Unbind**. In the displayed dialog box, click **Yes**.
+#. In the navigation pane on the left, choose **Connectivity & Security**. In the **Connection Information** area, click **Unbind** next to the **EIP** field.
 
-#. On the **EIPs** page, view the unbinding result.
+#. In the displayed dialog box, click **OK**.
+
+#. On the **Connectivity & Security** page, check the results.
 
    You can also view the progress and result of unbinding an EIP from a DB instance on the **Task Center** page.
 
-   To bind an EIP to the DB instance again, see :ref:`Binding an EIP <rds_pg_public_accessibility__en-us_topic_0192953725_section3199593620428>`.
-
-.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
-.. |image2| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image1| image:: /_static/images/en-us_image_0000002492743401.png
+.. |image2| image:: /_static/images/en-us_image_0000002492863365.png

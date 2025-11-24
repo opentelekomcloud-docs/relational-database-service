@@ -27,23 +27,20 @@ Procedure
 
 #. On the **Instances** page, click the target primary/standby DB instance.
 
-#. In the **DB Information** area on the displayed **Basic Information** page, click **Switch** in the **DB Instance Type** field.
-
-   Alternatively, click |image2| in the DB instance topology on the **Basic Information** page to perform a primary/standby switchover.
+#. In the **Configurations** area on the displayed **Overview** page, under **DB Instance Type**, click **Switch**.
 
    .. important::
 
       A primary/standby switchover may cause service interruptions for some seconds or minutes (depending on the replication delay). If the replication delay is too long, a small amount of data may be lost. To prevent traffic congestion, you are advised to perform a switchover during off-peak hours.
 
-#. In the **Switch Primary/Standby Instances** dialog box, click **Yes** to switch between the primary and standby DB instances.
+#. In the displayed dialog box, click **Yes** to switch between the primary and standby DB instances.
 
    If the replication status is **Available** and the replication delay is greater than 300s, the primary/standby switchover task cannot be delivered.
 
 #. After a switchover is successful, you can view and manage the DB instance on the **Instances** page.
 
    -  During the switchover process, the DB instance status is **Switchover in progress**.
-   -  In the upper right corner of the DB instance list, click |image3| to refresh the list. After the switchover is successful, the DB instance status will become **Available**.
+   -  In the upper right corner of the DB instance list, click |image2| to refresh the list. After the switchover is successful, the DB instance status will become **Available**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001191211679.png
-.. |image2| image:: /_static/images/en-us_image_0000001191211577.png
-.. |image3| image:: /_static/images/en-us_image_0000001191131421.png
+.. |image2| image:: /_static/images/en-us_image_0000001191131421.png

@@ -28,7 +28,7 @@ Procedure
 
 #. On the **Instances** page, locate the target DB instance, or click |image2| and then locate the target read replica. Choose **More** > **Reboot** in the **Operation** column.
 
-   Alternatively, click the target DB instance on the **Instances** page to go to the **Basic Information** page. In the upper right corner, click **Reboot**.
+   Alternatively, click the target DB instance on the **Instances** page to go to the **Overview** page. Click |image3| and choose **Reboot** in the upper right corner.
 
    For primary/standby DB instances, if you reboot the primary DB instance, the standby DB instance is also rebooted automatically.
 
@@ -37,4 +37,5 @@ Procedure
 #. Refresh the DB instance list and view the status of the DB instance. If its status is **Available**, it has rebooted successfully.
 
 .. |image1| image:: /_static/images/en-us_image_0000001191211679.png
-.. |image2| image:: /_static/images/en-us_image_0000001191131369.png
+.. |image2| image:: /_static/images/en-us_image_0000002492863369.png
+.. |image3| image:: /_static/images/en-us_image_0000002500427729.png

@@ -40,7 +40,7 @@ Method 1
    -  The description consists of a maximum of 256 characters and cannot contain carriage return characters or the following special characters: >!<"&'=
    -  The time required for creating a manual backup depends on the amount of data.
 
-#. After a manual backup has been created, you can view and manage it on the **Backup Management** page.
+#. After a manual backup has been created, you can view and manage it on the **Backups** page.
 
    Alternatively, click the target DB instance. On the **Backups & Restorations** page, you can view and manage the manual backups.
 
@@ -61,7 +61,7 @@ Method 2
    -  The description consists of a maximum of 256 characters and cannot contain carriage return characters or the following special characters: >!<"&'=
    -  The time required for creating a manual backup depends on the amount of data.
 
-#. After a manual backup has been created, you can view and manage it on the **Backup Management** page.
+#. After a manual backup has been created, you can view and manage it on the **Backups** page.
 
    Alternatively, click the target DB instance. On the **Backups & Restorations** page, you can view and manage the manual backups.
 
