@@ -80,31 +80,29 @@ Response
 
    .. table:: **Table 3** storage_type field data structure description
 
-      +----------------------------+-----------------------+---------------------------------------------------------------------------------------------------+
-      | Name                       | Type                  | Description                                                                                       |
-      +============================+=======================+===================================================================================================+
-      | name                       | String                | Indicates the storage type. Its value can be any of the following:                                |
-      |                            |                       |                                                                                                   |
-      |                            |                       | -  **COMMON**: SATA storage.                                                                      |
-      |                            |                       | -  **ULTRAHIGH**: ultra-high I/O storage.                                                         |
-      |                            |                       | -  **CLOUDSSD**: cloud SSD storage.                                                               |
-      |                            |                       | -  **ESSD**: extreme SSD storage.                                                                 |
-      +----------------------------+-----------------------+---------------------------------------------------------------------------------------------------+
-      | az_status                  | Map<String, String>   | Indicates the specification status in an AZ. Its value can be any of the following:               |
-      |                            |                       |                                                                                                   |
-      |                            |                       | -  **normal**: indicates that the specifications in the AZ are available.                         |
-      |                            |                       | -  **unsupported**: indicates that the specifications are not supported by the AZ.                |
-      |                            |                       | -  **sellout**: indicates that the specifications in the AZ are sold out.                         |
-      +----------------------------+-----------------------+---------------------------------------------------------------------------------------------------+
-      | support_compute_group_type | List<String>          | Indicates the performance specifications. Its value can be any of the following:                  |
-      |                            |                       |                                                                                                   |
-      |                            |                       | -  **normal**: general-enhanced                                                                   |
-      |                            |                       | -  **general**: general-purpose                                                                   |
-      |                            |                       | -  **dedicated**:                                                                                 |
-      |                            |                       |                                                                                                   |
-      |                            |                       |    -  For the MySQL DB engine: dedicated                                                          |
-      |                            |                       |    -  For PostgreSQL and SQL Server DB engines: dedicated, which is only supported for cloud SSDs |
-      +----------------------------+-----------------------+---------------------------------------------------------------------------------------------------+
+      +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+      | Name                       | Type                  | Description                                                                                                                               |
+      +============================+=======================+===========================================================================================================================================+
+      | name                       | String                | Indicates the storage type. Its value can be any of the following:                                                                        |
+      |                            |                       |                                                                                                                                           |
+      |                            |                       | -  **CLOUDSSD**: cloud SSD storage.                                                                                                       |
+      |                            |                       | -  **ESSD**: extreme SSD storage.                                                                                                         |
+      +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+      | az_status                  | Map<String, String>   | Indicates the specification status in an AZ. Its value can be any of the following:                                                       |
+      |                            |                       |                                                                                                                                           |
+      |                            |                       | -  **normal**: indicates that the specifications in the AZ are available.                                                                 |
+      |                            |                       | -  **unsupported**: indicates that the specifications are not supported by the AZ.                                                        |
+      |                            |                       | -  **sellout**: indicates that the specifications in the AZ are sold out.                                                                 |
+      +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+      | support_compute_group_type | List<String>          | Indicates the performance specifications. Its value can be any of the following:                                                          |
+      |                            |                       |                                                                                                                                           |
+      |                            |                       | -  **normal**: general-enhanced. Suitable for websites and web applications that require high database computing and network performance. |
+      |                            |                       | -  **general**: general-purpose. Suitable for scenarios that have high requirements on cost-effectiveness.                                |
+      |                            |                       | -  **dedicated**: Suitable for core database scenarios such as e-commerce, gaming, finance, government, and enterprise applications.      |
+      |                            |                       |                                                                                                                                           |
+      |                            |                       |    -  For the MySQL DB engine: dedicated                                                                                                  |
+      |                            |                       |    -  For PostgreSQL and SQL Server DB engines: dedicated, which is only supported for cloud SSDs                                         |
+      +----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
 
 -  Example normal response
 
@@ -112,7 +110,7 @@ Response
 
       {
           "storage_type": [{
-                  "name": "COMMON",
+                  "name": "CLOUDSSD",
                   "az_status": {
                       "az1": "normal",
                       "az2": "normal",
@@ -124,7 +122,7 @@ Response
                               ]
               },
               {
-                  "name": "ULTRAHIGH",
+                  "name": "ESSD",
                   "az_status": {
                       "az1": "normal",
                       "az2": "normal"

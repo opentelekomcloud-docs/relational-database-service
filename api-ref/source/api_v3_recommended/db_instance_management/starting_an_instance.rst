@@ -16,7 +16,6 @@ This API is used to start a DB instance. You can stop your instance temporarily 
 Constraints
 -----------
 
--  This API is supported for MySQL and PostgreSQL DB engines.
 -  If you start a primary instance, read replicas (if there are any) will also be started.
 -  Only instances in **Stopped** state can be started.
 

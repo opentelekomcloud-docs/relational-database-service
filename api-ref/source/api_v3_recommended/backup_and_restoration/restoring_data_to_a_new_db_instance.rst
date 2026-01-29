@@ -162,60 +162,51 @@ Request
 
    .. table:: **Table 4** backup_strategy field data structure description
 
-      +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Name            | Mandatory       | Type            | Description                                                                                                                                                                                                                                     |
-      +=================+=================+=================+=================================================================================================================================================================================================================================================+
-      | start_time      | Yes             | String          | Specifies the backup time window. Automated backups will be triggered during the backup time window.                                                                                                                                            |
-      |                 |                 |                 |                                                                                                                                                                                                                                                 |
-      |                 |                 |                 | The value cannot be empty. It must be a valid value in the "hh:mm-HH:MM" format. The current time is in the UTC format.                                                                                                                         |
-      |                 |                 |                 |                                                                                                                                                                                                                                                 |
-      |                 |                 |                 | -  The **HH** value must be 1 greater than the **hh** value.                                                                                                                                                                                    |
-      |                 |                 |                 | -  The values of **mm** and **MM** must be the same and must be set to any of the following: **00**, **15**, **30**, or **45**.                                                                                                                 |
-      |                 |                 |                 |                                                                                                                                                                                                                                                 |
-      |                 |                 |                 | Example value:                                                                                                                                                                                                                                  |
-      |                 |                 |                 |                                                                                                                                                                                                                                                 |
-      |                 |                 |                 | -  08:15-09:15                                                                                                                                                                                                                                  |
-      |                 |                 |                 | -  23:00-00:00                                                                                                                                                                                                                                  |
-      +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | keep_days       | No              | Integer         | Specifies the retention days for specific backup files.                                                                                                                                                                                         |
-      |                 |                 |                 |                                                                                                                                                                                                                                                 |
-      |                 |                 |                 | The value range is from 0 to 732. If this parameter is not specified or set to **0**, the automated backup policy is disabled. To extend the retention period, contact customer service. Automated backups can be retained for up to 2562 days. |
-      |                 |                 |                 |                                                                                                                                                                                                                                                 |
-      |                 |                 |                 | .. note::                                                                                                                                                                                                                                       |
-      |                 |                 |                 |                                                                                                                                                                                                                                                 |
-      |                 |                 |                 |    For SQL Server Primary/Standby and Cluster instance parameter "keep_days" cannot be set to 0.                                                                                                                                                |
-      +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------+
+      | Name            | Mandatory       | Type            | Description                                                                                                                     |
+      +=================+=================+=================+=================================================================================================================================+
+      | start_time      | Yes             | String          | Specifies the backup time window. Automated backups will be triggered during the backup time window.                            |
+      |                 |                 |                 |                                                                                                                                 |
+      |                 |                 |                 | The value cannot be empty. It must be a valid value in the "hh:mm-HH:MM" format. The current time is in the UTC format.         |
+      |                 |                 |                 |                                                                                                                                 |
+      |                 |                 |                 | -  The **HH** value must be 1 greater than the **hh** value.                                                                    |
+      |                 |                 |                 | -  The values of **mm** and **MM** must be the same and must be set to any of the following: **00**, **15**, **30**, or **45**. |
+      |                 |                 |                 |                                                                                                                                 |
+      |                 |                 |                 | Example value:                                                                                                                  |
+      |                 |                 |                 |                                                                                                                                 |
+      |                 |                 |                 | -  08:15-09:15                                                                                                                  |
+      |                 |                 |                 | -  23:00-00:00                                                                                                                  |
+      +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------+
+      | keep_days       | No              | Integer         | Specifies the retention days for specific backup files.                                                                         |
+      |                 |                 |                 |                                                                                                                                 |
+      |                 |                 |                 | The value range is from 1 to 732.                                                                                               |
+      |                 |                 |                 |                                                                                                                                 |
+      |                 |                 |                 | To extend the retention period, contact customer service. Automated backups can be retained for up to 2562 days.                |
+      +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------+
 
    .. _rds_09_0008__table10656503:
 
    .. table:: **Table 5** volume field data structure description
 
-      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Name            | Mandatory       | Type            | Description                                                                                                                                                                            |
-      +=================+=================+=================+========================================================================================================================================================================================+
-      | type            | Yes             | String          | Specifies the volume type.                                                                                                                                                             |
-      |                 |                 |                 |                                                                                                                                                                                        |
-      |                 |                 |                 | Its value can be any of the following and is case-sensitive:                                                                                                                           |
-      |                 |                 |                 |                                                                                                                                                                                        |
-      |                 |                 |                 | -  **COMMON**: SATA storage.                                                                                                                                                           |
-      |                 |                 |                 | -  **ULTRAHIGH**: ultra-high I/O storage.                                                                                                                                              |
-      |                 |                 |                 | -  **CLOUDSSD**: cloud SSD storage.                                                                                                                                                    |
-      |                 |                 |                 | -  **ESSD**: extreme SSD storage.                                                                                                                                                      |
-      |                 |                 |                 |                                                                                                                                                                                        |
-      |                 |                 |                 | .. note::                                                                                                                                                                              |
-      |                 |                 |                 |                                                                                                                                                                                        |
-      |                 |                 |                 |    -  The MySQL and PostgreSQL DB engines support the following volume types: **CLOUDSSD** and **ESSD**. **ESSD** is not supported for Single instance types for MySQL and PostgreSQL. |
-      |                 |                 |                 |    -  The SQL Server engine supports the following volume types: **COMMON**, **ULTRAHIGH**, and **ESSD**.                                                                              |
-      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | size            | Yes             | Integer         | Specifies the volume size.                                                                                                                                                             |
-      |                 |                 |                 |                                                                                                                                                                                        |
-      |                 |                 |                 | Its value range is from 40 GB to 4000 GB. The value must be a multiple of 10.                                                                                                          |
-      |                 |                 |                 |                                                                                                                                                                                        |
-      |                 |                 |                 | .. important::                                                                                                                                                                         |
-      |                 |                 |                 |                                                                                                                                                                                        |
-      |                 |                 |                 |    NOTICE:                                                                                                                                                                             |
-      |                 |                 |                 |    The volume size of the new DB instance must be greater than or equal to that of the original DB instance.                                                                           |
-      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+
+      | Name            | Mandatory       | Type            | Description                                                                                                  |
+      +=================+=================+=================+==============================================================================================================+
+      | type            | Yes             | String          | Specifies the volume type.                                                                                   |
+      |                 |                 |                 |                                                                                                              |
+      |                 |                 |                 | Its value can be any of the following and is case-sensitive:                                                 |
+      |                 |                 |                 |                                                                                                              |
+      |                 |                 |                 | -  **CLOUDSSD**: cloud SSD storage.                                                                          |
+      |                 |                 |                 | -  **ESSD**: extreme SSD storage.                                                                            |
+      +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+
+      | size            | Yes             | Integer         | Specifies the volume size.                                                                                   |
+      |                 |                 |                 |                                                                                                              |
+      |                 |                 |                 | Its value range is from 40 GB to 4000 GB. The value must be a multiple of 10.                                |
+      |                 |                 |                 |                                                                                                              |
+      |                 |                 |                 | .. important::                                                                                               |
+      |                 |                 |                 |                                                                                                              |
+      |                 |                 |                 |    NOTICE:                                                                                                   |
+      |                 |                 |                 |    The volume size of the new DB instance must be greater than or equal to that of the original DB instance. |
+      +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+
 
    .. _rds_09_0008__table15343138128:
 
@@ -265,7 +256,7 @@ Request
           },
           "flavor_ref": "rds.mysql.n1.large",
           "volume": {
-              "type": "ULTRAHIGH",
+              "type": "CLOUDSSD",
               "size": 40
           },
           "disk_encryption_id": "2gfdsh-844a-4023-a776-fc5c5fb71fb4",
@@ -298,7 +289,7 @@ Request
           },
           "flavor_ref": "rds.mysql.n1.large",
           "volume": {
-              "type": "ULTRAHIGH",
+              "type": "CLOUDSSD",
               "size": 40
           },
           "disk_encryption_id": "2gfdsh-844a-4023-a776-fc5c5fb71fb4",
@@ -454,25 +445,25 @@ Response
 
    .. table:: **Table 11** backupStrategy field data structure description
 
-      +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Name            | Mandatory       | Type            | Description                                                                                                                                                                                                                                     |
-      +=================+=================+=================+=================================================================================================================================================================================================================================================+
-      | start_time      | Yes             | String          | Indicates the backup time window. Automated backups will be triggered during the backup time window.                                                                                                                                            |
-      |                 |                 |                 |                                                                                                                                                                                                                                                 |
-      |                 |                 |                 | The value cannot be empty. It must be a valid value in the "hh:mm-HH:MM" format. The current time is in the UTC format.                                                                                                                         |
-      |                 |                 |                 |                                                                                                                                                                                                                                                 |
-      |                 |                 |                 | -  The **HH** value must be 1 greater than the **hh** value.                                                                                                                                                                                    |
-      |                 |                 |                 | -  The values of **mm** and **MM** must be the same and must be set to any of the following: **00**, **15**, **30**, or **45**.                                                                                                                 |
-      |                 |                 |                 |                                                                                                                                                                                                                                                 |
-      |                 |                 |                 | Example value:                                                                                                                                                                                                                                  |
-      |                 |                 |                 |                                                                                                                                                                                                                                                 |
-      |                 |                 |                 | -  08:15-09:15                                                                                                                                                                                                                                  |
-      |                 |                 |                 | -  23:00-00:00                                                                                                                                                                                                                                  |
-      +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | keep_days       | No              | Integer         | Indicates the retention days for specific backup files.                                                                                                                                                                                         |
-      |                 |                 |                 |                                                                                                                                                                                                                                                 |
-      |                 |                 |                 | The value range is from 0 to 732. If this parameter is not specified or set to **0**, the automated backup policy is disabled. To extend the retention period, contact customer service. Automated backups can be retained for up to 2562 days. |
-      +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Name            | Mandatory       | Type            | Description                                                                                                                                        |
+      +=================+=================+=================+====================================================================================================================================================+
+      | start_time      | Yes             | String          | Indicates the backup time window. Automated backups will be triggered during the backup time window.                                               |
+      |                 |                 |                 |                                                                                                                                                    |
+      |                 |                 |                 | The value cannot be empty. It must be a valid value in the "hh:mm-HH:MM" format. The current time is in the UTC format.                            |
+      |                 |                 |                 |                                                                                                                                                    |
+      |                 |                 |                 | -  The **HH** value must be 1 greater than the **hh** value.                                                                                       |
+      |                 |                 |                 | -  The values of **mm** and **MM** must be the same and must be set to any of the following: **00**, **15**, **30**, or **45**.                    |
+      |                 |                 |                 |                                                                                                                                                    |
+      |                 |                 |                 | Example value:                                                                                                                                     |
+      |                 |                 |                 |                                                                                                                                                    |
+      |                 |                 |                 | -  08:15-09:15                                                                                                                                     |
+      |                 |                 |                 | -  23:00-00:00                                                                                                                                     |
+      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+      | keep_days       | No              | Integer         | Indicates the retention days for specific backup files.                                                                                            |
+      |                 |                 |                 |                                                                                                                                                    |
+      |                 |                 |                 | The value range is from 1 to 732. To extend the retention period, contact customer service. Automated backups can be retained for up to 2562 days. |
+      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _rds_09_0008__table5324165817272:
 
@@ -485,8 +476,6 @@ Response
       |                 |                 |                 |                                                                               |
       |                 |                 |                 | Its value can be any of the following and is case-sensitive:                  |
       |                 |                 |                 |                                                                               |
-      |                 |                 |                 | -  **COMMON**: SATA storage.                                                  |
-      |                 |                 |                 | -  **ULTRAHIGH**: ultra-high I/O storage.                                     |
       |                 |                 |                 | -  **CLOUDSSD**: cloud SSD storage.                                           |
       |                 |                 |                 | -  **ESSD**: extreme SSD storage.                                             |
       +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------+
@@ -510,7 +499,7 @@ Response
               },
               "port": "3306",
               "volume": {
-                  "type": "ULTRAHIGH",
+                  "type": "CLOUDSSD",
                   "size": "40"
               },
               "region": "eu-de",

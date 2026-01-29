@@ -2,8 +2,8 @@
 
 .. _rds_19_0000:
 
-Upgrading a Major Version
-=========================
+Upgrading a Major Version (RDS for PostgreSQL)
+==============================================
 
 -  :ref:`Querying the Target Version to Which a DB Instance Can Be Upgraded (RDS for PostgreSQL) <rds_19_0001>`
 -  :ref:`Performing a Major Version Upgrade Pre-Check for a DB Instance (RDS for PostgreSQL) <rds_19_0002>`
