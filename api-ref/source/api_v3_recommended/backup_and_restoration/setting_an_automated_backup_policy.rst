@@ -13,11 +13,6 @@ This API is used to set an automated backup policy.
 -  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
 
-Constraints
------------
-
-Disabling Automated Backup Policy is not allowed for RDS for MySQL and RDS for SQL Server.
-
 URI
 ---
 
@@ -63,14 +58,7 @@ Request
       +=================+=================+=================+==================================================================================================================================================================================================+
       | keep_days       | Yes             | Integer         | Specifies the number of days to retain the generated backup files.                                                                                                                               |
       |                 |                 |                 |                                                                                                                                                                                                  |
-      |                 |                 |                 | The value range is from 0 to 732. The value **0** indicates that the automated backup policy is disabled.                                                                                        |
-      |                 |                 |                 |                                                                                                                                                                                                  |
-      |                 |                 |                 | .. important::                                                                                                                                                                                   |
-      |                 |                 |                 |                                                                                                                                                                                                  |
-      |                 |                 |                 |    NOTICE:                                                                                                                                                                                       |
-      |                 |                 |                 |                                                                                                                                                                                                  |
-      |                 |                 |                 |    -  RDS for MySQL and RDS for SQL Server: The automated backup policy cannot be disabled and keep_days cannot be set to 0.                                                                     |
-      |                 |                 |                 |    -  RDS for PostgreSQL: The automated backup policy can be disabled and keep_days can be set to 0.                                                                                             |
+      |                 |                 |                 | The value range is from 1 to 732.                                                                                                                                                                |
       +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | start_time      | No              | String          | Specifies the backup time window. Automated backups will be triggered during the backup time window. This parameter is mandatory except that the automated backup policy is disabled.            |
       |                 |                 |                 |                                                                                                                                                                                                  |

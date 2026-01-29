@@ -9,6 +9,7 @@ Relational Database Service - API Reference
    api_overview
    calling_apis/index
    obtaining_an_api_version/index
+   api_v3.1_recommended/index
    api_v3_recommended/index
    api_v1_to_be_discarded/index
    openstack_trove_api_v1.0_to_be_discarded/index

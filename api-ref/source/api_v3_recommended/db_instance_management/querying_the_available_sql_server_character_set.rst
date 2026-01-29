@@ -41,7 +41,9 @@ Request
 
 -  Example
 
-   GET https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances/dsfae23fsfdsae3435in01/collations
+   .. code-block:: text
+
+      GET https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances/dsfae23fsfdsae3435in01/collations
 
 Response
 --------
@@ -58,7 +60,7 @@ Response
 
 -  Example normal response
 
-   .. code-block:: text
+   .. code-block::
 
       {
           "charSets": ["Chinese_PRC_CI_AS", "SQL_Latin1_General_CP1_CI_AS", "French_BIN", "Chinese_PRC_Stroke_BIN", "Chinese_PRC_CI_AI"]

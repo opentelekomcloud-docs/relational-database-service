@@ -59,20 +59,20 @@ Request
       |                          |                 |                 | If this parameter is left blank, the retention period is 7 days by default. |
       +--------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+
 
--  Example
+Example Request
+---------------
+
+Set the retention period of instances in the recycle bin to one day.
+
+.. code-block:: text
 
    PUT https://rds.eu-de.otc.t-systems.com/v3/054ea741f700d4a32f1bc00f5c80dd4c/instances/recycle-policy
 
--  Request example
-
-   .. code-block:: text
-
-      {
-           "recycle_policy":
-                    {
-                       "retention_period_in_days":"1"
-                     }
-      }
+   {
+        "recycle_policy":{
+                    "retention_period_in_days":"1"
+                  }
+   }
 
 Response
 --------
@@ -89,7 +89,7 @@ Response
 
 -  Example normal response
 
-   .. code-block:: text
+   .. code-block::
 
       {
           "result": "success"

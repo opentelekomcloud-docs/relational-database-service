@@ -1,0 +1,130 @@
+:original_name: rds_20_0005.html
+
+.. _rds_20_0005:
+
+Enabling or Disabling a SQL Throttling Rule or Disabling All SQL Throttling Rules
+=================================================================================
+
+Function
+--------
+
+This API is used to enable or disable a SQL throttling rule or disable all SQL throttling rules.
+
+-  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
+-  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
+
+Constraints
+-----------
+
+Before enabling SQL throttling, you must set the RDS for PostgreSQL kernel parameter **rds_pg_sql_ccl.enable_ccl** to **ON**. For details, see :ref:`Modifying a Parameter Template <rds_09_0303>`.
+
+By default, the kernel parameter **rds_pg_sql_ccl.enable_ccl** is set to **OFF**.
+
+URI
+---
+
+-  URI format
+
+   PUT https://{*Endpoint*}/v3/{project_id}/instances/{instance_id}/sql-limit/switch
+
+-  Parameter description
+
+   .. table:: **Table 1** Parameters
+
+      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------+
+      | Parameter             | Mandatory             | Description                                                                                      |
+      +=======================+=======================+==================================================================================================+
+      | project_id            | Yes                   | Specifies the project ID of a tenant in a region.                                                |
+      |                       |                       |                                                                                                  |
+      |                       |                       | For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <rds_03_0002>`. |
+      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------+
+      | instance_id           | Yes                   | Instance ID.                                                                                     |
+      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------+
+
+Request
+-------
+
+.. table:: **Table 2** Request header parameters
+
+   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                                         |
+   +=================+=================+=================+=====================================================================================================================================================+
+   | Content-Type    | Yes             | String          | The content type.                                                                                                                                   |
+   |                 |                 |                 |                                                                                                                                                     |
+   |                 |                 |                 | The default value is **application/json**.                                                                                                          |
+   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | X-Auth-Token    | Yes             | String          | Specifies the user token.                                                                                                                           |
+   |                 |                 |                 |                                                                                                                                                     |
+   |                 |                 |                 | The user token is a response to the API used to `obtain a user token <https://docs.otc.t-systems.com/en-us/api/iam/en-us_topic_0057845583.html>`__. |
+   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. table:: **Table 3** Parameters
+
+   +-----------------+-----------------+-----------------+-------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                           |
+   +=================+=================+=================+=======================================================+
+   | db_name         | Yes             | String          | Database name. For example: "**postgres**".           |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------+
+   | id              | Yes             | String          | SQL throttling rule ID.                               |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------+
+   | action          | Yes             | String          | Action applied to the SQL throttling rule.            |
+   |                 |                 |                 |                                                       |
+   |                 |                 |                 | -  **open**: Enable the SQL throttling rule.          |
+   |                 |                 |                 | -  **close**: Disable the SQL throttling rule.        |
+   |                 |                 |                 | -  **disable_all**: Disable all SQL throttling rules. |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------+
+
+Example Request
+---------------
+
+Enable a SQL throttling rule.
+
+.. code-block:: text
+
+   PUT https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances/ 49b9dd1d6f464ba4bc91df5cbd2e52ebin03/sql-limit/switch
+   {
+      "db_name" : "postgres",
+      "id" : "1",
+      "action" : "open"
+    }
+
+Response
+--------
+
+-  Normal response
+
+   .. table:: **Table 4** Parameters
+
+      ========= ====== ====================================================
+      Parameter Type   Description
+      ========= ====== ====================================================
+      resp      String Returns **successful** if the calling is successful.
+      ========= ====== ====================================================
+
+-  Example normal response
+
+   .. code-block::
+
+      {
+         "resp" : "successful"
+       }
+
+-  Abnormal response
+
+   For details, see :ref:`Abnormal Request Results <en-us_topic_0032488197>`.
+
+Status Code
+-----------
+
+-  Normal
+
+   200
+
+-  Abnormal
+
+   For details, see :ref:`Status Codes <en-us_topic_0032488240>`.
+
+Error Code
+----------
+
+For details, see :ref:`Error Codes <en-us_topic_0032488241>`.

@@ -187,8 +187,8 @@ Request
       |                 |                 |                 |                                                                                                                             |
       |                 |                 |                 | Its value can be any of the following and is case-sensitive:                                                                |
       |                 |                 |                 |                                                                                                                             |
-      |                 |                 |                 | -  **COMMON**: indicates the SATA type.                                                                                     |
-      |                 |                 |                 | -  **ULTRAHIGH**: indicates the SSD type.                                                                                   |
+      |                 |                 |                 | -  **CLOUDSSD**: cloud SSD storage.                                                                                         |
+      |                 |                 |                 | -  **ESSD**: extreme SSD storage.                                                                                           |
       +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
       | size            | Yes             | Int             | Specifies the volume size.                                                                                                  |
       |                 |                 |                 |                                                                                                                             |
@@ -286,7 +286,7 @@ Request
               },
               "flavorRef": "bf07a6d4-844a-4023-a776-fc5c5fb71fb4",
               "volume": {
-                  "type": "ULTRAHIGH",
+                  "type": "CLOUDSSD",
                   "size": 100
               },
               "region": "eu-de",
@@ -320,7 +320,7 @@ Request
               },
               "flavorRef": "bf07a6d4-844a-4023-a776-fc5c5fb71fb4",
               "volume": {
-                  "type": "ULTRAHIGH",
+                  "type": "CLOUDSSD",
                   "size": 100
               },
               "region": "eu-de",
@@ -539,7 +539,7 @@ Normal Response
               },
               "dbPort": 3306,
               "volume": {
-                  "type": "ULTRAHIGH",
+                  "type": "CLOUDSSD",
                   "size": 100
               },
               "dataStoreInfo": null,
@@ -583,7 +583,7 @@ Normal Response
                   "id": "bf07a6d4-844a-4023-a776-fc5c5fb71fb4"
               },
               "volume": {
-                  "type": "ULTRAHIGH",
+                  "type": "CLOUDSSD",
                   "size": 100
               },
               "dbPort": 3306,
@@ -635,7 +635,7 @@ Normal Response
                   "id": "bf07a6d4-844a-4023-a776-fc5c5fb71fb4"
               },
               "volume": {
-                  "type": "ULTRAHIGH",
+                  "type": "CLOUDSSD",
                   "size": 100
               },
               "dbPort": 3306,

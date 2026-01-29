@@ -11,6 +11,7 @@ Backup and Restoration
 -  :ref:`Obtaining Details About Backups <rds_09_0005>`
 -  :ref:`Obtaining the Link for Downloading a Backup File <rds_09_0006>`
 -  :ref:`Deleting a Manual Backup <rds_09_0007>`
+-  :ref:`Deleting Manual Backups in Batches (RDS for SQL Server) <rds_09_0018>`
 -  :ref:`Querying the Restoration Time Range <rds_09_0011>`
 -  :ref:`Restoring Data to a New DB Instance <rds_09_0008>`
 -  :ref:`Restoring Data to an Existing or Original DB Instance <rds_09_0009>`
@@ -25,6 +26,7 @@ Backup and Restoration
    obtaining_details_about_backups
    obtaining_the_link_for_downloading_a_backup_file
    deleting_a_manual_backup
+   deleting_manual_backups_in_batches_rds_for_sql_server
    querying_the_restoration_time_range
    restoring_data_to_a_new_db_instance
    restoring_data_to_an_existing_or_original_db_instance

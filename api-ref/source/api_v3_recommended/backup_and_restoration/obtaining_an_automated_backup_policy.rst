@@ -81,18 +81,6 @@ Response
 
 -  Example normal response
 
-   When the automated backup policy is disabled:
-
-   .. code-block:: text
-
-      {
-          "backup_policy": {
-              "keep_days": 0
-          }
-      }
-
-   When the automated backup policy is enabled:
-
    .. code-block:: text
 
       {

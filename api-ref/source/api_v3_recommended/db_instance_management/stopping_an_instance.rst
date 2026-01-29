@@ -16,13 +16,9 @@ This API is used to stop a pay-per-use DB instance. The instance can be stopped 
 Constraints
 -----------
 
--  This API is supported for MySQL and PostgreSQL DB engines.
-
 -  If you stop a primary instance, read replicas (if there are any) will also be stopped. They are stopped for up to seven days. You cannot stop a read replica without stopping the primary instance.
 
--  A stopped MySQL DB instance will not be moved to the recycle bin after being deleted.
-
--  A stopped PostgreSQL DB instance cannot be deleted.
+-  A stopped instance will not be moved to the recycle bin after being deleted.
 
 -  If you do not manually start your stopped DB instance after seven days, your DB instance is automatically started during the next maintenance window.
 

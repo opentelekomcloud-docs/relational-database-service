@@ -86,53 +86,55 @@ Response
 
    .. table:: **Table 3** flavors field data structure description
 
-      +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
-      | Name                  | Type                  | Description                                                                                             |
-      +=======================+=======================+=========================================================================================================+
-      | vcpus                 | String                | Indicates the CPU size. For example, the value **1** indicates 1 vCPU.                                  |
-      +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
-      | ram                   | Integer               | Indicates the memory size in GB.                                                                        |
-      +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
-      | id                    | String                | Indicates the specification ID, which is unique.                                                        |
-      +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
-      | spec_code             | String                | Indicates the resource specification code. Use **rds.mysql.n1.xlarge.4.rr** as an example.              |
-      |                       |                       |                                                                                                         |
-      |                       |                       | -  **rds**: indicates the RDS product.                                                                  |
-      |                       |                       | -  **mysql**: indicates the DB engine.                                                                  |
-      |                       |                       | -  **n1.xlarge**: indicates the high memory performance specifications.                                 |
-      |                       |                       | -  **rr**: indicates the read replica (**.ha** indicates primary/standby DB instances).                 |
-      +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
-      | version_name          | Array                 | Indicates the database version.                                                                         |
-      |                       |                       |                                                                                                         |
-      |                       |                       | -  MySQL databases support 5.7 and 8.0.                                                                 |
-      |                       |                       | -  PostgreSQL databases support 12, 13, 14, 15, 16 and 17.                                              |
-      |                       |                       | -  Microsoft SQL Server databases only support 2017_SE, 2017_EE, 2019_SE, 2019_EE, 2022_SE and 2022_EE. |
-      |                       |                       |                                                                                                         |
-      |                       |                       | Example value for MySQL: ["5.7","8.0"]                                                                  |
-      +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
-      | instance_mode         | String                | Indicates the DB instance type. Its value can be any of the following:                                  |
-      |                       |                       |                                                                                                         |
-      |                       |                       | -  **ha**: indicates primary/standby DB instances.                                                      |
-      |                       |                       | -  **replica**: indicates read replicas.                                                                |
-      |                       |                       | -  **single**: indicates single DB instances.                                                           |
-      +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
-      | az_status             | Map<String, String>   | Indicates the specification status in an AZ. Its value can be any of the following:                     |
-      |                       |                       |                                                                                                         |
-      |                       |                       | -  **normal**: indicates that the specifications in the AZ are available.                               |
-      |                       |                       | -  **unsupported**: indicates that the specifications are not supported by the AZ.                      |
-      |                       |                       | -  **sellout**: indicates that the specifications in the AZ are sold out.                               |
-      +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
-      | az_desc               | Map<String, String>   | Indicates the description of the AZ to which the specifications belong.                                 |
-      +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
-      | group_type            | String                | Indicates the performance specifications. Its value can be any of the following:                        |
-      |                       |                       |                                                                                                         |
-      |                       |                       | -  **normal**: general-enhanced                                                                         |
-      |                       |                       | -  **general**: general-purpose                                                                         |
-      |                       |                       | -  **dedicated**:                                                                                       |
-      |                       |                       |                                                                                                         |
-      |                       |                       |    -  For the MySQL DB engine: dedicated                                                                |
-      |                       |                       |    -  For PostgreSQL and SQL Server DB engines: dedicated, which is only supported for cloud SSDs       |
-      +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------+
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+      | Name                  | Type                  | Description                                                                                                                               |
+      +=======================+=======================+===========================================================================================================================================+
+      | vcpus                 | String                | Indicates the CPU size. For example, the value **1** indicates 1 vCPU.                                                                    |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+      | ram                   | Integer               | Indicates the memory size in GB.                                                                                                          |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+      | id                    | String                | Indicates the specification ID, which is unique.                                                                                          |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+      | spec_code             | String                | Indicates the resource specification code. Use **rds.mysql.n1.xlarge.4.rr** as an example.                                                |
+      |                       |                       |                                                                                                                                           |
+      |                       |                       | -  **rds**: indicates the RDS product.                                                                                                    |
+      |                       |                       | -  **mysql**: indicates the DB engine.                                                                                                    |
+      |                       |                       | -  **n1.xlarge**: indicates the high memory performance specifications.                                                                   |
+      |                       |                       | -  **rr**: indicates the read replica (**.ha** indicates primary/standby DB instances).                                                   |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+      | version_name          | Array                 | Indicates the database version.                                                                                                           |
+      |                       |                       |                                                                                                                                           |
+      |                       |                       | -  MySQL databases support 5.7 and 8.0.                                                                                                   |
+      |                       |                       | -  PostgreSQL databases support 12, 13, 14, 15, 16 and 17.                                                                                |
+      |                       |                       | -  Microsoft SQL Server databases only support 2017_SE, 2017_EE, 2019_SE, 2019_EE, 2022_SE and 2022_EE.                                   |
+      |                       |                       |                                                                                                                                           |
+      |                       |                       | Example value for MySQL: ["5.7","8.0"]                                                                                                    |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+      | instance_mode         | String                | Indicates the DB instance type. Its value can be any of the following:                                                                    |
+      |                       |                       |                                                                                                                                           |
+      |                       |                       | -  **ha**: indicates primary/standby DB instances.                                                                                        |
+      |                       |                       | -  **replica**: indicates read replicas.                                                                                                  |
+      |                       |                       | -  **single**: indicates single DB instances.                                                                                             |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+      | az_status             | Map<String, String>   | Indicates the specification status in an AZ. Its value can be any of the following:                                                       |
+      |                       |                       |                                                                                                                                           |
+      |                       |                       | -  **normal**: indicates that the specifications in the AZ are available.                                                                 |
+      |                       |                       | -  **unsupported**: indicates that the specifications are not supported by the AZ.                                                        |
+      |                       |                       | -  **sellout**: indicates that the specifications in the AZ are sold out.                                                                 |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+      | az_desc               | Map<String, String>   | Indicates the description of the AZ to which the specifications belong.                                                                   |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+      | group_type            | String                | Indicates the performance specifications. Its value can be any of the following:                                                          |
+      |                       |                       |                                                                                                                                           |
+      |                       |                       | -  **normal**: general-enhanced. Suitable for websites and web applications that require high database computing and network performance. |
+      |                       |                       | -  **general**: general-purpose. Suitable for scenarios that have high requirements on cost-effectiveness.                                |
+      |                       |                       | -  **dedicated**: Suitable for core database scenarios such as e-commerce, gaming, finance, government, and enterprise applications.      |
+      |                       |                       |                                                                                                                                           |
+      |                       |                       |    -  For the MySQL DB engine: dedicated                                                                                                  |
+      |                       |                       |    -  For PostgreSQL and SQL Server DB engines: dedicated, which is only supported for cloud SSDs                                         |
+      |                       |                       |                                                                                                                                           |
+      |                       |                       | For details, see :ref:`DB Instance Classes <rds_10_0004>`.                                                                                |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
 
 -  Example normal response
 

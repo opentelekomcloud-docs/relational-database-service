@@ -13,6 +13,66 @@ This API is used to restore a database to an existing or the original DB instanc
 -  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
 
+Constraints
+-----------
+
+-  When data is restored to an existing DB instance, the API has the following constraints:
+
+   -  The DB engine of the original DB instance must be the same as that of the target DB instance. For example, if the original DB instance is running MySQL, the target DB instance must also run MySQL.
+   -  For RDS for MySQL, the DB engine version of the target DB instance must be at least equal to that of the original DB instance, for example, from MySQL 5.7.25 to 5.7.27.
+   -  For RDS for PostgreSQL, the DB engine version of the target DB instance must be the same as that of the original DB instance.
+   -  For RDS for SQL Server, the time zone of the target DB instance must be the same as that of the original DB instance. Otherwise, data inconsistency may occur.
+   -  For version constraints of RDS for SQL Server, see :ref:`Table 1 <rds_09_0009__table1334944713437>`.
+   -  The total storage space of the target DB instance must be at least equal to that of the original DB instance for RDS for MySQL.
+   -  Cross-region restoration is not supported.
+   -  For RDS for MySQL DB instances, when data is restored to an existing DB instance, the case sensitivity setting of the existing DB instance must be the same as that of the original DB instance. Otherwise, the restoration may fail.
+
+-  When data is restored to an original DB instance:
+
+   This API is supported only for MySQL and Microsoft SQL Server DB engines.
+
+   .. _rds_09_0009__table1334944713437:
+
+   .. table:: **Table 1** Restoring to specific DB engine versions
+
+      +-----------------------------------+-----------------------------------+
+      | Original DB Engine Version        | Restore To                        |
+      +===================================+===================================+
+      | 2017 Standard Edition             | 2017 Standard Edition             |
+      |                                   |                                   |
+      |                                   | 2017 Enterprise Edition           |
+      |                                   |                                   |
+      |                                   | 2019 Standard Edition             |
+      |                                   |                                   |
+      |                                   | 2019 Enterprise Edition           |
+      +-----------------------------------+-----------------------------------+
+      | 2017 Enterprise Edition           | 2017 Enterprise Edition           |
+      |                                   |                                   |
+      |                                   | 2019 Enterprise Edition           |
+      +-----------------------------------+-----------------------------------+
+      | 2019 Standard Edition             | 2019 Standard Edition             |
+      |                                   |                                   |
+      |                                   | 2019 Enterprise Edition           |
+      |                                   |                                   |
+      |                                   | 2022 Standard Edition             |
+      |                                   |                                   |
+      |                                   | 2022 Enterprise Edition           |
+      +-----------------------------------+-----------------------------------+
+      | 2019 Enterprise Edition           | 2019 Standard Edition             |
+      |                                   |                                   |
+      |                                   | 2019 Enterprise Edition           |
+      |                                   |                                   |
+      |                                   | 2022 Enterprise Edition           |
+      +-----------------------------------+-----------------------------------+
+      | 2022 Standard Edition             | 2022 Standard Edition             |
+      |                                   |                                   |
+      |                                   | 2022 Enterprise Edition           |
+      +-----------------------------------+-----------------------------------+
+      | 2022 Enterprise Edition           | 2022 Standard Edition             |
+      |                                   |                                   |
+      |                                   | 2022 Enterprise Edition           |
+      +-----------------------------------+-----------------------------------+
+
 URI
 ---
 
@@ -22,7 +82,7 @@ URI
 
 -  Parameter description
 
-   .. table:: **Table 1** Parameter description
+   .. table:: **Table 2** Parameter description
 
       +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------+
       | Name                  | Mandatory             | Description                                                                                      |
@@ -37,23 +97,23 @@ Request
 
 -  Parameter description
 
-   .. table:: **Table 2** Parameter description
+   .. table:: **Table 3** Parameter description
 
       +-----------------+-----------------+-----------------+---------------------------------------------------------------------+
       | Name            | Mandatory       | Type            | Description                                                         |
       +=================+=================+=================+=====================================================================+
       | source          | Yes             | Object          | Specifies the restoration information.                              |
       |                 |                 |                 |                                                                     |
-      |                 |                 |                 | For details, see :ref:`Table 3 <rds_09_0009__table15343138128>`.    |
+      |                 |                 |                 | For details, see :ref:`Table 4 <rds_09_0009__table15343138128>`.    |
       +-----------------+-----------------+-----------------+---------------------------------------------------------------------+
       | target          | Yes             | Object          | Specifies the restoration target.                                   |
       |                 |                 |                 |                                                                     |
-      |                 |                 |                 | For details, see :ref:`Table 4 <rds_09_0009__table13185192412159>`. |
+      |                 |                 |                 | For details, see :ref:`Table 5 <rds_09_0009__table13185192412159>`. |
       +-----------------+-----------------+-----------------+---------------------------------------------------------------------+
 
    .. _rds_09_0009__table15343138128:
 
-   .. table:: **Table 3** source field data structure description
+   .. table:: **Table 4** source field data structure description
 
       +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------+
       | Name            | Mandatory       | Type            | Description                                                                                                                               |
@@ -72,7 +132,7 @@ Request
 
    .. _rds_09_0009__table13185192412159:
 
-   .. table:: **Table 4** target field data structure description
+   .. table:: **Table 5** target field data structure description
 
       +-------------+-----------+--------+--------------------------------------------------------+
       | Name        | Mandatory | Type   | Description                                            |
@@ -121,7 +181,7 @@ Response
 
 -  Normal response
 
-   .. table:: **Table 5** Parameter description
+   .. table:: **Table 6** Parameter description
 
       ====== ====== ======================
       Name   Type   Description
