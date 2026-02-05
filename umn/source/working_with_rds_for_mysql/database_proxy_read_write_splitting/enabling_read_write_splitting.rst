@@ -5,7 +5,15 @@
 Enabling Read/Write Splitting
 =============================
 
-Read/write splitting enables read and write requests to be automatically routed through a read/write splitting address. This section describes how to enable read/write splitting.
+You can enable database proxy for your RDS for MySQL instance to automatically forward read and write requests through a proxy address. To reduce read pressure of the primary instance, write requests are forwarded to the primary instance and read requests to read replicas based on the routing policy of the database proxy.
+
+Precautions
+-----------
+
+Keep in mind the following notes on database proxies:
+
+-  Before enabling database proxy, ensure that you have purchased an RDS for MySQL instance.
+-  Both the primary instance and read replicas must be available.
 
 Enabling a Single Proxy
 -----------------------
