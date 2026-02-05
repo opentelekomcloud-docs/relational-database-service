@@ -16,5 +16,6 @@ DB Instance Description
 
    db_instance_types
    db_instance_classes
+   db_instance_storage_types
    db_engines_and_versions
    db_instance_statuses
