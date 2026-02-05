@@ -182,6 +182,8 @@ Procedure
 
    -  During the creation process, the DB instance status is **Creating**. When the creation process is complete, the instance status will change to **Available**.
 
+   -  During the creation process, do not delete the selected VPC or subnet.
+
    -  The automated backup policy is enabled by default. An automated full backup is immediately triggered after a DB instance is created.
 
    -  The default database port number is **1433**. After a DB instance is created, you can change its port number.

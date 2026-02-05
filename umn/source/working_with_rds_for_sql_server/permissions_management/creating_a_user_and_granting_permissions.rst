@@ -9,7 +9,7 @@ This chapter describes how to use `Identity and Access Management (IAM) <https:/
 
 -  Create IAM users for employees based on your enterprise's organizational structure. Each IAM user will have their own security credentials for accessing RDS resources.
 -  Grant only the permissions required for users to perform a specific task.
--  Entrust a account or cloud service to perform efficient O&M on your RDS resources.
+-  Entrust an account or cloud service to perform efficient O&M on your RDS resources.
 
 If your account does not require individual IAM users, skip this chapter.
 
