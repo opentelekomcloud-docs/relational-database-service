@@ -104,11 +104,11 @@ Response
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
       | version_name          | Array                 | Indicates the database version.                                                                                                           |
       |                       |                       |                                                                                                                                           |
-      |                       |                       | -  MySQL databases support 5.7 and 8.0.                                                                                                   |
+      |                       |                       | -  MySQL databases support 5.7, 8.0 and 8.4.                                                                                              |
       |                       |                       | -  PostgreSQL databases support 12, 13, 14, 15, 16 and 17.                                                                                |
       |                       |                       | -  Microsoft SQL Server databases only support 2017_SE, 2017_EE, 2019_SE, 2019_EE, 2022_SE and 2022_EE.                                   |
       |                       |                       |                                                                                                                                           |
-      |                       |                       | Example value for MySQL: ["5.7","8.0"]                                                                                                    |
+      |                       |                       | Example value for MySQL: ["5.7","8.0","8.4"]                                                                                              |
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
       | instance_mode         | String                | Indicates the DB instance type. Its value can be any of the following:                                                                    |
       |                       |                       |                                                                                                                                           |
@@ -147,7 +147,7 @@ Response
                   "ram": 2,
                               "id":"2988b9cc-2aac-3a94-898c-14666702f130",
                   "spec_code": "rds.mysql.n1.xlarge.4.rr",
-                              "version_name": ["5.7","8.0"],
+                              "version_name": ["5.7","8.0","8.4"],
                   "instance_mode": "replica",
                   "az_status": {
                       "az1": "normal",
