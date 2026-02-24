@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000002023864553.html
+:original_name: rds_01_0089.html
 
-.. _en-us_topic_0000002023864553:
+.. _rds_01_0089:
 
 RDS for PostgreSQL Versioning Policy
 ====================================

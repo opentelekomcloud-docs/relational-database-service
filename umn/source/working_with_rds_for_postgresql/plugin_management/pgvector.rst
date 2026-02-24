@@ -2,8 +2,8 @@
 
 .. _rds_09_0062:
 
-Using pgvector
-==============
+pgvector
+========
 
 Introduction
 ------------

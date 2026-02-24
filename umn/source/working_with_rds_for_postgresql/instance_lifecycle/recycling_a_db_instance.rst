@@ -13,8 +13,12 @@ Deleted DB instances can be moved to the recycle bin. You can rebuild DB instanc
 Constraints
 -----------
 
+-  The recycle bin is free for use.
+
 -  Read replicas cannot be moved to the recycle bin.
+-  A stopped instance will not be moved to the recycle bin after being deleted.
 -  The recycle bin is enabled by default and cannot be disabled.
+-  After you submit a deletion request for your DB instance, a full backup will be performed. You can rebuild the DB instance only after the full backup is complete.
 
 Modifying Recycling Policy
 --------------------------

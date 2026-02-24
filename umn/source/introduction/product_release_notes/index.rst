@@ -1,12 +1,12 @@
-:original_name: en-us_topic_0000001987302910.html
+:original_name: rds_01_0088.html
 
-.. _en-us_topic_0000001987302910:
+.. _rds_01_0088:
 
 Product Release Notes
 =====================
 
--  :ref:`RDS for MySQL Versioning Policy <en-us_topic_0000002067671672>`
--  :ref:`RDS for PostgreSQL Versioning Policy <en-us_topic_0000002023864553>`
+-  :ref:`RDS for MySQL Versioning Policy <rds_01_0087>`
+-  :ref:`RDS for PostgreSQL Versioning Policy <rds_01_0089>`
 
 .. toctree::
    :maxdepth: 1

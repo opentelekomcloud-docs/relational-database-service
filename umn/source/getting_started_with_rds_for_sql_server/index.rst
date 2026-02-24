@@ -7,7 +7,7 @@ Getting Started with RDS for SQL Server
 
 -  :ref:`Operation Guide <rds_03_0010>`
 -  :ref:`Step 1: Create a DB Instance <rds_04_0061>`
--  :ref:`Step 2: Connect to a DB Instance <en-us_topic_0053089697>`
+-  :ref:`Step 2: Connect to a DB Instance <rds_04_0062>`
 
 .. toctree::
    :maxdepth: 1

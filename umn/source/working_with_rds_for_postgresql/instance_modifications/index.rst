@@ -10,7 +10,7 @@ Instance Modifications
 -  :ref:`Changing the Failover Priority <rds_pg_modify_availability>`
 -  :ref:`Changing a DB Instance Class <rds_pg_scale_rds>`
 -  :ref:`Scaling up Storage Space <rds_pg_scale_cluster>`
--  :ref:`Storage Autoscaling <en-us_topic_0000001989983141>`
+-  :ref:`Storage Autoscaling <rds_pg_05_0039>`
 -  :ref:`Changing the Maintenance Window <rds_pg_05_0038>`
 -  :ref:`Changing a DB Instance Type from Single to Primary/Standby <rds_pg_05_0023>`
 -  :ref:`Manually Switching Between Primary and Standby DB Instances <rds_pg_switch_ha>`

@@ -13,6 +13,7 @@ You can change the instance class (CPU or memory) of a DB instance as required. 
 Constraints
 -----------
 
+-  You can change the DB instance class or the DB instance storage.
 -  A DB instance cannot be deleted when its instance class is being changed.
 
 -  After you change instance classes, the DB instances will be rebooted and service will be interrupted. Therefore, you are advised to change instance classes during off-peak hours.

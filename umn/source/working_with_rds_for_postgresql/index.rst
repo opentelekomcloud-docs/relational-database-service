@@ -16,6 +16,7 @@ Working with RDS for PostgreSQL
 -  :ref:`Connection Management <rds_pg_05_0005>`
 -  :ref:`Plugin Management <rds_09_0046>`
 -  :ref:`Tablespace Management <rds_09_0044>`
+-  :ref:`Problem Diagnosis and SQL Analysis <rds_pg_08_0024>`
 -  :ref:`Data Security <rds_pg_05_0006>`
 -  :ref:`Metrics and Alarms <rds_09_0041>`
 -  :ref:`Interconnection with CTS <rds_09_0042>`
@@ -39,6 +40,7 @@ Working with RDS for PostgreSQL
    connection_management/index
    plugin_management/index
    tablespace_management
+   problem_diagnosis_and_sql_analysis/index
    data_security/index
    metrics_and_alarms/index
    interconnection_with_cts/index

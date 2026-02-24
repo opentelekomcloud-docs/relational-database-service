@@ -15,7 +15,7 @@ Introduction
 -  :ref:`Constraints <rds_01_0026>`
 -  :ref:`DB Engine <rds_01_0031>`
 -  :ref:`Related Services <rds_01_0027>`
--  :ref:`Product Release Notes <en-us_topic_0000001987302910>`
+-  :ref:`Product Release Notes <rds_01_0088>`
 
 .. toctree::
    :maxdepth: 1

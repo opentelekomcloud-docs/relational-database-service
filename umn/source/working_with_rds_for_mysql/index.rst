@@ -15,6 +15,7 @@ Working with RDS for MySQL
 -  :ref:`Parameter Template Management <rds_08_0011>`
 -  :ref:`Connection Management <rds_05_0005>`
 -  :ref:`Database Proxy (Read/Write Splitting) <rds_11_0050>`
+-  :ref:`Problem Diagnosis and SQL Analysis <rds_22_0024>`
 -  :ref:`Data Security <rds_05_0006>`
 -  :ref:`Metrics and Alarms <rds_08_0019>`
 -  :ref:`Interconnection with CTS <rds_08_0020>`
@@ -36,6 +37,7 @@ Working with RDS for MySQL
    parameter_template_management/index
    connection_management/index
    database_proxy_read_write_splitting/index
+   problem_diagnosis_and_sql_analysis/index
    data_security/index
    metrics_and_alarms/index
    interconnection_with_cts/index

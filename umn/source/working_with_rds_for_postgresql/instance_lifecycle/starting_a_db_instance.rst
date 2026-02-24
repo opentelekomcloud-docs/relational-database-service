@@ -2,8 +2,8 @@
 
 .. _rds_pg_start:
 
-Starting an Instance
-====================
+Starting a DB Instance
+======================
 
 Scenarios
 ---------

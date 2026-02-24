@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000002067671672.html
+:original_name: rds_01_0087.html
 
-.. _en-us_topic_0000002067671672:
+.. _rds_01_0087:
 
 RDS for MySQL Versioning Policy
 ===============================

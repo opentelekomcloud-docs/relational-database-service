@@ -24,7 +24,7 @@ MySQL is one of the world's most popular open-source relational databases. It wo
 -  A web-based console provides comprehensive monitoring information, making your operations easy and visual.
 -  You can flexibly scale resources based on your service requirements and pay for only what you use.
 
-For details about the versions supported by RDS for MySQL, see :ref:`DB Engines and Versions <en-us_topic_0043898356>`.
+For details about the versions supported by RDS for MySQL, see :ref:`DB Engines and Versions <rds_01_0021>`.
 
 .. _en-us_topic_dashboard__section6000215215257:
 
@@ -36,7 +36,7 @@ PostgreSQL is an open-source object-relational database management system that f
 -  RDS for PostgreSQL supports the postgis plugin and provides excellent spatial performance.
 -  RDS for PostgreSQL is a good cost-effective solution for many different scenarios. You can flexibly scale resources based on your service requirements and pay for only what you use.
 
-For details about the versions supported by RDS for PostgreSQL, see :ref:`DB Engines and Versions <en-us_topic_0043898356>`.
+For details about the versions supported by RDS for PostgreSQL, see :ref:`DB Engines and Versions <rds_01_0021>`.
 
 .. _en-us_topic_dashboard__section66932261152517:
 
@@ -47,4 +47,4 @@ Microsoft SQL Server is a well-established commercial database with a mature ent
 
 RDS for SQL Server is reliable, scalable, inexpensive, and easy to manage. It uses a high availability (HA) architecture, guarantees data security, and recovers from faults within seconds.
 
-For details about the versions supported by RDS for SQL Server, see :ref:`DB Engines and Versions <en-us_topic_0043898356>`.
+For details about the versions supported by RDS for SQL Server, see :ref:`DB Engines and Versions <rds_01_0021>`.

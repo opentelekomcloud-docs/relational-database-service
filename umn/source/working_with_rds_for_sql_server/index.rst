@@ -19,6 +19,7 @@ Working with RDS for SQL Server
 -  :ref:`Metrics and Alarms <rds_sqlserver_06_0000>`
 -  :ref:`Interconnection with CTS <rds_sqlserver_01_0000>`
 -  :ref:`Log Management <rds_sqlserver_log>`
+-  :ref:`DBA Assistant <rds_sqlserver_dba>`
 -  :ref:`Task Center <rds_sqlserver_05_0007>`
 -  :ref:`Usage of Stored Procedures <rds_09_0001>`
 -  :ref:`Managing Tags <rds_sqlserver_tag>`
@@ -41,6 +42,7 @@ Working with RDS for SQL Server
    metrics_and_alarms/index
    interconnection_with_cts/index
    log_management/index
+   dba_assistant/index
    task_center/index
    usage_of_stored_procedures/index
    managing_tags

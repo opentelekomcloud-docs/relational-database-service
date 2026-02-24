@@ -2,20 +2,20 @@
 
 .. _rds_pg_stop:
 
-Stopping an Instance
-====================
+Stopping a DB Instance
+======================
 
 Scenarios
 ---------
 
-If you use DB instances only for routine development, you can temporarily stop pay-per-use instances to save money. You can stop an instance for up to seven days.
+If you use DB instances only for routine development, you can temporarily stop instances to save money. You can stop an instance for up to seven days.
 
 Constraints
 -----------
 
 -  If you stop a primary instance, read replicas (if there are any) will also be stopped. They are stopped for up to seven days. You cannot stop a read replica without stopping the primary instance.
 -  A stopped instance cannot be deleted through the console.
--  If you do not manually start your stopped DB instance after seven days, your DB instance is automatically started during the next maintenance window. For details about the maintenance window, see :ref:`Changing the Maintenance Window <rds_pg_05_0038>`. To start a DB instance, see :ref:`Starting an Instance <rds_pg_start>`.
+-  If you do not manually start your stopped DB instance after seven days, your DB instance is automatically started during the next maintenance window. For details about the maintenance window, see :ref:`Changing the Maintenance Window <rds_pg_05_0038>`. To start a DB instance, see :ref:`Starting a DB Instance <rds_pg_start>`.
 -  After a DB instance is stopped, billing for instance usage duration will stop.
 
 Procedure

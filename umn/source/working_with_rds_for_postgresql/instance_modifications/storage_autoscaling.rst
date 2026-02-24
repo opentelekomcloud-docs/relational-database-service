@@ -1,6 +1,6 @@
-:original_name: en-us_topic_0000001989983141.html
+:original_name: rds_pg_05_0039.html
 
-.. _en-us_topic_0000001989983141:
+.. _rds_pg_05_0039:
 
 Storage Autoscaling
 ===================
