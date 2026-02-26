@@ -15,13 +15,13 @@ To prevent highly concurrent SQL statements that consume too many resources from
 
 This extension provides two concurrency control methods:
 
--  Method 1: It limits the number of SQL statements that can be executed at the same time. This number is specified by the **rds_pg_sql_ccl.max_concurrent_sql** parameter. The default value is **-1**, indicating that the number is not limited.
+-  Method 1: It limits the number of SQL statements that can be executed at the same time. This number is specified by the **rds_pg_sql_ccl.max_concurrent_sql** parameter. If the parameter value is less than or equal to 0, the number is not limited.
 -  Method 2: It limits the number of a certain type of SQL statements (with the same query ID) that can be executed at the same time. This number is specified by concurrency control rules. For details about concurrency control rules, see below.
 
 Supported Versions
 ------------------
 
-This extension is available to the latest minor versions of RDS for PostgreSQL 11.20, 12.15, 13.11, 14.8, 15.4, 16.2, and above. You can run the following SQL statement to check whether your DB instance supports this extension:
+This extension is available to the latest minor versions of RDS for PostgreSQL 12.15, 13.11, 14.8, 15.4, 16.2, and above. You can run the following SQL statement to check whether your DB instance supports this extension:
 
 .. code-block::
 
@@ -126,15 +126,15 @@ Parameters
 
 .. table:: **Table 1** Parameter description
 
-   +-----------------------------------+-----------+---------------+---------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter                         | Data Type | Default Value | Maximum Value | Minimum Value | Description                                                                                                                                                                                               |
-   +===================================+===========+===============+===============+===============+===========================================================================================================================================================================================================+
-   | rds_pg_sql_ccl.enable_ccl         | bool      | false         | ``-``         | ``-``         | Whether to enable a concurrency control rule.                                                                                                                                                             |
-   +-----------------------------------+-----------+---------------+---------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | rds_pg_sql_ccl.max_enabled_rules  | int       | 5000          | 500000        | 0             | The number of rules that take effect at the same time.                                                                                                                                                    |
-   +-----------------------------------+-----------+---------------+---------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | rds_pg_sql_ccl.max_concurrent_sql | int       | -1            | 50000         | -1            | The number of SQL statements that can be concurrently executed (its priority is higher than that of concurrency control rules). If the value is less than 0, the number of SQL statements is not limited. |
-   +-----------------------------------+-----------+---------------+---------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------------------+-----------+---------------+---------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter                         | Data Type | Default Value | Maximum Value | Minimum Value | Description                                                                                                                                                                                                           |
+   +===================================+===========+===============+===============+===============+=======================================================================================================================================================================================================================+
+   | rds_pg_sql_ccl.enable_ccl         | bool      | false         | ``-``         | ``-``         | Whether to enable a concurrency control rule.                                                                                                                                                                         |
+   +-----------------------------------+-----------+---------------+---------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | rds_pg_sql_ccl.max_enabled_rules  | int       | 5000          | 500000        | 0             | The number of rules that take effect at the same time.                                                                                                                                                                |
+   +-----------------------------------+-----------+---------------+---------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | rds_pg_sql_ccl.max_concurrent_sql | int       | -1            | 50000         | -1            | The number of SQL statements that can be concurrently executed (its priority is higher than that of concurrency control rules). If the value is less than or equal to 0, the number of SQL statements is not limited. |
+   +-----------------------------------+-----------+---------------+---------------+---------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Function Interface Description
 ------------------------------

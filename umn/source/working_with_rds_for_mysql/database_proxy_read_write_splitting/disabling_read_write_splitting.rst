@@ -13,7 +13,7 @@ Procedure
 #. Log in to the management console.
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
-#. On the **Instances** page, click the target DB instance. The **Basic Information** page is displayed.
+#. On the **Instances** page, click the target DB instance. The **Overview** page is displayed.
 #. In the navigation pane on the left, choose **Database Proxy**.
 #. In the proxy instance area, click **Delete Proxy**. In the displayed dialog box, click **OK**.
 

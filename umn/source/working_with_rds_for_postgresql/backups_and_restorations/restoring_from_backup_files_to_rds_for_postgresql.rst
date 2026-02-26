@@ -19,7 +19,7 @@ Procedure
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. On the **Backup Management** page, select the backup to be restored and click **Restore** in the **Operation** column.
+#. On the **Backups** page, select the backup to be restored and click **Restore** in the **Operation** column.
 
    Alternatively, click the target DB instance on the **Instances** page. On the displayed page, choose **Backups & Restorations**. On the displayed page, select the target backup to be restored and click **Restore** in the **Operation** column.
 

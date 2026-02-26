@@ -21,29 +21,36 @@ Procedure
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. On the **Instances** page, locate the target DB instance and click **Create Read Replica** in the **Operation** column.
+#. On the **Instances** page, locate the target DB instance and choose **More** > **Create Read Replica** in the **Operation** column.
 
-   Alternatively, click the target DB instance. In the DB instance topology, click |image2| under the primary DB instance to create read replicas.
+#. On the displayed page, configure required parameters and click **Create Now**.
 
-#. On the displayed page, configure information about the DB instance and click **Next**.
+   .. table:: **Table 1** Basic Settings
 
-   .. table:: **Table 1** Basic information
+      +-----------+------------------------------------------------------------------------------+
+      | Parameter | Description                                                                  |
+      +===========+==============================================================================+
+      | Region    | By default, read replicas are in the same region as the primary DB instance. |
+      +-----------+------------------------------------------------------------------------------+
 
-      +-------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter         | Description                                                                                                                                                     |
-      +===================+=================================================================================================================================================================+
-      | Region            | By default, read replicas are in the same region as the primary DB instance.                                                                                    |
-      +-------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | DB Instance Name  | Must start with a letter and consist of 4 to 64 characters. It can contain only uppercase letters, lowercase letters, digits, hyphens (-), and underscores (_). |
-      +-------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | DB Engine         | Same as the DB engine of the primary DB instance by default and cannot be changed.                                                                              |
-      +-------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | DB Engine Version | Same as the DB engine version of the primary DB instance by default and cannot be changed.                                                                      |
-      +-------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | AZ                | RDS allows you to deploy primary DB instances and read replicas in a single AZ or across AZs to improve reliability.                                            |
-      +-------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   .. table:: **Table 2** Engine Options
 
-   .. table:: **Table 2** Instance specifications
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter                         | Description                                                                                                                                       |
+      +===================================+===================================================================================================================================================+
+      | DB Engine                         | Same as the DB engine of the primary DB instance by default and cannot be changed.                                                                |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+      | DB Engine Version                 | Same as the DB engine version of the primary DB instance by default and cannot be changed.                                                        |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Storage Type                      | Determines the DB instance read/write speed. The higher the maximum throughput is, the higher the DB instance read/write speed can be.            |
+      |                                   |                                                                                                                                                   |
+      |                                   | -  **Cloud SSD**: cloud drives used to decouple storage from compute. The maximum throughput is 350 MB/s.                                         |
+      |                                   | -  **Extreme SSD**: uses 25GE network and RDMA technologies to provide you with up to 1,000 MB/s throughput per disk and sub-millisecond latency. |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+      | AZ                                | RDS allows you to deploy primary DB instances and read replicas in a single AZ or across AZs to improve reliability.                              |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+
+   .. table:: **Table 3** Instance Configuration
 
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter                         | Description                                                                                                                                                               |
@@ -54,29 +61,30 @@ Procedure
       |                                   |                                                                                                                                                                           |
       |                                   | After a DB instance is created, you can change its instance class (CPU and memory). For details, see section :ref:`Changing a DB Instance Class <en-us_topic_scale_rds>`. |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Storage Type                      | Determines the DB instance read/write speed. The higher the maximum throughput is, the higher the DB instance read/write speed can be.                                    |
-      |                                   |                                                                                                                                                                           |
-      |                                   | -  **Common I/O**: uses the SATA disk type that supports a maximum throughput of 90 MB/s.                                                                                 |
-      |                                   | -  **Ultra-high I/O**: uses the SSD disk type that supports a maximum throughput of 350 MB/s.                                                                             |
-      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Storage Space                     | Contains the file system overhead required for inode, reserved block, and database operation.                                                                             |
       |                                   |                                                                                                                                                                           |
       |                                   | By default, storage space of a read replica is the same as that of the primary DB instance.                                                                               |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Disk Encryption                   | -  **Disable**: indicates the encryption function is disabled.                                                                                                            |
+      | Disk Encryption                   | Enabling disk encryption enhances data security but reduces the database's read and write performance by 5%.                                                              |
       |                                   |                                                                                                                                                                           |
-      |                                   | -  **Enable**: indicates the encryption function is enabled. Security is improved but system performance is affected.                                                     |
+      |                                   | **Key Name**: indicates the tenant key. Select one from the drop-down list.                                                                                               |
       |                                   |                                                                                                                                                                           |
-      |                                   |    **Key Name**: indicates the tenant key. You can select an existing key or create a new one.                                                                            |
+      |                                   | After disk encryption is enabled, the following restrictions apply:                                                                                                       |
       |                                   |                                                                                                                                                                           |
-      |                                   |    .. note::                                                                                                                                                              |
-      |                                   |                                                                                                                                                                           |
-      |                                   |       -  Once the DB instance is created, you cannot modify the disk encryption status or change the key. The backup data stored in OBS is not encrypted.                 |
-      |                                   |       -  After an RDS DB instance is created, do not disable or delete a key that is currently in use. Otherwise, RDS will be unavailable and data cannot be restored.    |
-      |                                   |       -  For details about how to create a key, see the "Creating a CMK" section in the *Key Management Service User Guide*.                                              |
+      |                                   | -  If you enable disk encryption during instance creation, the disk encryption status and the key cannot be changed later.                                                |
+      |                                   | -  Enabling disk encryption will not encrypt backup data stored in Object Storage Service (OBS).                                                                          |
+      |                                   | -  Keep the key secure. Once the key is disabled, deleted, or frozen, your instance will be inaccessible and its data may not be restored.                                |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-   .. table:: **Table 3** Network
+   .. table:: **Table 4** Basic Settings
+
+      +------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter        | Description                                                                                                                                                     |
+      +==================+=================================================================================================================================================================+
+      | DB Instance Name | Must start with a letter and consist of 4 to 64 characters. It can contain only uppercase letters, lowercase letters, digits, hyphens (-), and underscores (_). |
+      +------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+   .. table:: **Table 5** Connectivity
 
       +----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter      | Description                                                                                                                                                                                                                                                                     |
@@ -87,6 +95,16 @@ Procedure
       +----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Security Group | Same as the primary DB instance's VPC.                                                                                                                                                                                                                                          |
       +----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+   .. table:: **Table 6** Additional Options
+
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter                         | Description                                                                                                                                                                                             |
+      +===================================+=========================================================================================================================================================================================================+
+      | Tag                               | Tags an RDS DB instance. This configuration is optional. Adding tags to RDS DB instances helps you better identify and manage the DB instances. A maximum of 20 tags can be added for each DB instance. |
+      |                                   |                                                                                                                                                                                                         |
+      |                                   | After a DB instance is created, you can click it and view its details on the **Tags** page. For details, see section :ref:`Managing Tags <rds_tag>`.                                                    |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 #. Confirm specifications.
 
@@ -105,4 +123,3 @@ Follow-up Operations
 :ref:`Managing a Read Replica <rds_11_0015>`
 
 .. |image1| image:: /_static/images/en-us_image_0000001191211679.png
-.. |image2| image:: /_static/images/en-us_image_0000001191131343.png

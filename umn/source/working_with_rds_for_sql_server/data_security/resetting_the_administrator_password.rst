@@ -53,7 +53,9 @@ Method 2
 
 #. On the **Instances** page, click the target DB instance.
 
-#. In the **DB Information** area on the **Basic Information** page, click **Reset Password** in the **Administrator** field. In the displayed dialog box, enter and confirm a new password.
+#. On the **Overview** page, find **Administrator** and click **Reset Password** under it.
+
+#. In the displayed dialog box, enter and confirm a new password.
 
    .. important::
 

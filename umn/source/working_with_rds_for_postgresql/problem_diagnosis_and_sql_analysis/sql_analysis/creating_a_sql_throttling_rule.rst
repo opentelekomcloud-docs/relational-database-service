@@ -26,11 +26,11 @@ SQL throttling is available in the following versions:
 -  RDS for PostgreSQL 14: 14.8 and later
 -  RDS for PostgreSQL 13: 13.11 and later
 -  RDS for PostgreSQL 12: 12.15 and later
--  RDS for PostgreSQL 11: 11.20 and later
 
 Constraints
 -----------
 
+-  The kernel does not record the SQL statements specified in SQL throttling rules you create using query IDs.
 -  SQL statements executed by built-in users (rdsAdmin, rdsMetric, rdsRepl, and rdsBackup) are not affected by SQL throttling rules.
 -  To use SQL throttling, the rds_pg_sql_ccl extension must be installed. For details, see :ref:`Installing and Uninstalling a Plugin on the RDS Console <rds_09_0070>`.
 

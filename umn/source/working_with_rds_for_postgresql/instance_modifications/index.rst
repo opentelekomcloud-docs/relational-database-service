@@ -5,11 +5,13 @@
 Instance Modifications
 ======================
 
+-  :ref:`Introduction to Instance Overview <rds_pg_08_0025>`
 -  :ref:`Upgrading a Minor Version <rds_pg_05_0003>`
 -  :ref:`Changing a DB Instance Name <rds_pg_modify_instance_name>`
 -  :ref:`Changing the Failover Priority <rds_pg_modify_availability>`
 -  :ref:`Changing a DB Instance Class <rds_pg_scale_rds>`
 -  :ref:`Scaling up Storage Space <rds_pg_scale_cluster>`
+-  :ref:`Changing a Storage Type <rds_pg_05_0084>`
 -  :ref:`Storage Autoscaling <rds_pg_05_0039>`
 -  :ref:`Changing the Maintenance Window <rds_pg_05_0038>`
 -  :ref:`Changing a DB Instance Type from Single to Primary/Standby <rds_pg_05_0023>`
@@ -20,11 +22,13 @@ Instance Modifications
    :maxdepth: 1
    :hidden: 
 
+   introduction_to_instance_overview
    upgrading_a_minor_version
    changing_a_db_instance_name
    changing_the_failover_priority
    changing_a_db_instance_class
    scaling_up_storage_space
+   changing_a_storage_type
    storage_autoscaling
    changing_the_maintenance_window
    changing_a_db_instance_type_from_single_to_primary_standby

@@ -26,7 +26,7 @@ Method 1: Using OBS Browser+
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. On the **Backup Management** page, locate the target backup to be downloaded and click **Download** in the **Operation** column.
+#. On the **Backups** page, locate the target backup to be downloaded and click **Download** in the **Operation** column.
 
    Alternatively, click the target DB instance. In the navigation pane on the left, choose **Backups & Restorations**. On the **Full Backups** page, locate the target backup to be downloaded and click **Download** in the **Operation** column.
 
@@ -71,7 +71,7 @@ Method 2: Using Current Browser
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. On the **Backup Management** page, locate the target backup to be downloaded and click **Download** in the **Operation** column.
+#. On the **Backups** page, locate the target backup to be downloaded and click **Download** in the **Operation** column.
 
    Alternatively, click the target DB instance. In the navigation pane on the left, choose **Backups & Restorations**. On the **Full Backups** page, locate the target backup to be downloaded and click **Download** in the **Operation** column.
 
@@ -88,7 +88,7 @@ Method 3: Using Download URL
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. On the **Backup Management** page, locate the target backup to be downloaded and click **Download** in the **Operation** column.
+#. On the **Backups** page, locate the target backup to be downloaded and click **Download** in the **Operation** column.
 
    Alternatively, click the target DB instance. In the navigation pane on the left, choose **Backups & Restorations**. On the **Full Backups** page, locate the target backup to be downloaded and click **Download** in the **Operation** column.
 

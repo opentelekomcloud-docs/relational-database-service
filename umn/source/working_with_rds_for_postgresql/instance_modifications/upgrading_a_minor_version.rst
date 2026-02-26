@@ -19,10 +19,6 @@ Precautions
 -  A minor version upgrade cannot be rolled back after the upgrade is complete. If the upgrade fails, the DB instance will be automatically rolled back to the source version.
 -  You are advised to perform a full backup before upgrading a minor version.
 -  You need to re-establish a DR relationship after upgrading the minor version of a DR instance.
--  Before upgrading minor versions earlier than RDS for PostgreSQL 12.6, you need to stop all logical replications and delete all logical replication slots. Otherwise, the upgrade will fail.
-
-   -  Querying a replication slot: **select \* from pg_replication_slots;**
-   -  Deleting a replication slot: **select pg_drop_replication_slot('SLOT_NAME');**
 
 Constraints
 -----------
@@ -41,9 +37,9 @@ Procedure
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. On the **Instances** page, click the primary instance name.
+#. On the **Instances** page, click the primary instance name to go to the **Overview** page.
 
-#. In the **DB Information** area on the **Basic Information** page, click **Upgrade Minor Version** next to the **DB Engine Version** field.
+#. Under **DB Engine Version**, click **Upgrade Minor Version**.
 
 #. In the displayed dialog box, click **OK**.
 

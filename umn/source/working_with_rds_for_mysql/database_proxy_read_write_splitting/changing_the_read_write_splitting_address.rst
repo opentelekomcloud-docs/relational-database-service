@@ -33,7 +33,7 @@ You can change the read/write splitting address for DB instances with read/write
 
 #. On the **Instances** page, click the target DB instance.
 
-#. In the **Connection Information** area on the **Basic Information** page, click **Modify** next to the **Read/Write Splitting Address** field.
+#. In the **Connectivity** area on the **Overview** page, click **Modify** next to the **Read/Write Splitting Address** field.
 
    Alternatively, click **Database Proxy** in the navigation pane on the left. On the displayed page, click **Modify** next to the **Read/Write Splitting Address** field.
 

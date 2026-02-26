@@ -21,14 +21,14 @@ Procedure
 
 #. On the **Instances** page, locate the target DB instance and click |image2| next to it to edit the DB instance name. Then, click **OK**.
 
-   Alternatively, click the target DB instance to go to the **Basic Information** page. In the **DB Instance Name** field in the **DB Information** area, click |image3| to edit the DB instance name.
+   Alternatively, click the target DB instance to go to the **Overview** page. Under **DB Instance Name**, click |image3| to edit the DB instance name.
 
    The DB instance name must start with a letter and consist of 4 to 64 characters. Only uppercase letters, lowercase letters, digits, hyphens (-), and underscores (_) are allowed.
 
    -  To submit the change, click |image4|.
    -  To cancel the change, click |image5|.
 
-#. View the results on the **Basic Information** page.
+#. View the results on the **Overview** page.
 
 .. |image1| image:: /_static/images/en-us_image_0000001191211679.png
 .. |image2| image:: /_static/images/en-us_image_0000001191211385.png

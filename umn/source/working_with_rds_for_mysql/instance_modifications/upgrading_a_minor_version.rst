@@ -32,8 +32,8 @@ Procedure
 #. Log in to the management console.
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
-#. On the **Instances** page, click the target primary/standby DB instances.
-#. In the **DB Information** area on the **Basic Information** page, click **Upgrade** in the **DB Engine Version** field.
+#. On the **Instances** page, click the instance name to go to the **Overview** page.
+#. Under **DB Engine Version**, click **Upgrade Minor Version**.
 #. In the displayed dialog box, select a scheduled time and click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001191211679.png
