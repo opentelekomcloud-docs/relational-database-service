@@ -5,7 +5,7 @@
 Suggestions on MySQL Parameter Tuning
 =====================================
 
-Parameters are key configuration items in a database system. Improper parameter settings may adversely affect the stable running of databases. This section describes some important parameters for your reference. For details, visit the `MySQL official website <http://dev.mysql.com/doc/refman/5.6/en/server-system-variables.html>`__.
+Parameters are key configuration items in a database system. Improper parameter settings may adversely affect the stable running of databases. This section describes some important parameters for your reference. For details, visit the `MySQL official website <https://dev.mysql.com/doc/refman/5.6/en/server-system-variables.html>`__.
 
 For details on how to modify MySQL parameters on the console, see :ref:`Modifying Parameters <rds_configuration>`.
 
