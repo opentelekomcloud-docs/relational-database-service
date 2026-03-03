@@ -169,7 +169,7 @@ Request
       +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------+
       | version         | Yes             | String          | Specifies the database version.                                                                                           |
       |                 |                 |                 |                                                                                                                           |
-      |                 |                 |                 | -  MySQL databases support 5.7 and 8.0. Example value: 5.7                                                                |
+      |                 |                 |                 | -  MySQL databases support 5.7, 8.0 and 8.4. Example value: 5.7                                                           |
       |                 |                 |                 | -  PostgreSQL databases support 12, 13, 14, 15, 16 and 17. Example value: 13                                              |
       |                 |                 |                 | -  Microsoft SQL Server databases support 2017_SE, 2017_EE, 2019_SE, 2019_EE, 2022_SE and 2022_EE. Example value: 2017_SE |
       |                 |                 |                 |                                                                                                                           |

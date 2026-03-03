@@ -227,7 +227,7 @@ Request
       |                 |                 |                 | .. important::                                                                                                                      |
       |                 |                 |                 |                                                                                                                                     |
       |                 |                 |                 |    NOTICE:                                                                                                                          |
-      |                 |                 |                 |    When **type** is **backup**, **backup_id** is mandatory.                                                                         |
+      |                 |                 |                 |    When **type** is backup, **backup_id** is mandatory.                                                                             |
       +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------+
       | restore_time    | No              | Integer         | Specifies the time point of data restoration in the UNIX timestamp. The unit is millisecond and the time zone is UTC.               |
       |                 |                 |                 |                                                                                                                                     |
