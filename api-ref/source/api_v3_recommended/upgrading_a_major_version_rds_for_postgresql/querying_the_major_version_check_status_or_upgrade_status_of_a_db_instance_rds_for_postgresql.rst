@@ -19,7 +19,6 @@ Constraints
 -  This API is available to RDS for PostgreSQL only.
 -  Major version upgrades are available to the following versions:
 
-   -  RDS for PostgreSQL 12: 12.7 or later
    -  RDS for PostgreSQL 13: 13.3 or later
    -  RDS for PostgreSQL 14: 14.4 or later
 

@@ -20,7 +20,6 @@ Constraints
 -  This operation cannot be performed when the DB instance is in any of the following statuses: creating, changing instance specifications, changing port, frozen, or abnormal.
 -  Major version upgrades are available to the following versions:
 
-   -  RDS for PostgreSQL 12: 12.7 or later
    -  RDS for PostgreSQL 13: 13.3 or later
    -  RDS for PostgreSQL 14: 14.4 or later
 
