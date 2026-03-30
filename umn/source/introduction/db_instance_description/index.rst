@@ -7,6 +7,7 @@ DB Instance Description
 
 -  :ref:`DB Instance Types <rds_01_0016>`
 -  :ref:`DB Instance Classes <rds_01_0029>`
+-  :ref:`DB Instance Storage Types <rds_01_0020>`
 -  :ref:`DB Engines and Versions <rds_01_0021>`
 -  :ref:`DB Instance Statuses <rds_01_0023>`
 
@@ -16,5 +17,6 @@ DB Instance Description
 
    db_instance_types
    db_instance_classes
+   db_instance_storage_types
    db_engines_and_versions
    db_instance_statuses

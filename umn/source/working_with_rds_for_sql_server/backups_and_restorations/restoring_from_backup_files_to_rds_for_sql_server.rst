@@ -32,7 +32,53 @@ Procedure
          The **Create New Instance** page is displayed.
 
          -  The DB engine of the new DB instance is the same as that of the original DB instance and cannot be changed.
+
+         -  The original DB instance can be restored to the same or a later DB engine version, as shown in :ref:`Table 1 <rds_11_0023__table1334944713437>`.
+
+            .. _rds_11_0023__table1334944713437:
+
+            .. table:: **Table 1** Restoring to specific DB engine versions
+
+               +-----------------------------------+-----------------------------------+
+               | Original DB Engine Version        | Restore To                        |
+               +===================================+===================================+
+               | 2017 Standard Edition             | 2017 Standard Edition             |
+               |                                   |                                   |
+               |                                   | 2017 Enterprise Edition           |
+               |                                   |                                   |
+               |                                   | 2019 Standard Edition             |
+               |                                   |                                   |
+               |                                   | 2019 Enterprise Edition           |
+               +-----------------------------------+-----------------------------------+
+               | 2017 Enterprise Edition           | 2017 Enterprise Edition           |
+               |                                   |                                   |
+               |                                   | 2019 Enterprise Edition           |
+               +-----------------------------------+-----------------------------------+
+               | 2019 Standard Edition             | 2019 Standard Edition             |
+               |                                   |                                   |
+               |                                   | 2019 Enterprise Edition           |
+               |                                   |                                   |
+               |                                   | 2022 Standard Edition             |
+               |                                   |                                   |
+               |                                   | 2022 Enterprise Edition           |
+               +-----------------------------------+-----------------------------------+
+               | 2019 Enterprise Edition           | 2019 Standard Edition             |
+               |                                   |                                   |
+               |                                   | 2019 Enterprise Edition           |
+               |                                   |                                   |
+               |                                   | 2022 Enterprise Edition           |
+               +-----------------------------------+-----------------------------------+
+               | 2022 Standard Edition             | 2022 Standard Edition             |
+               |                                   |                                   |
+               |                                   | 2022 Enterprise Edition           |
+               +-----------------------------------+-----------------------------------+
+               | 2022 Enterprise Edition           | 2022 Standard Edition             |
+               |                                   |                                   |
+               |                                   | 2022 Enterprise Edition           |
+               +-----------------------------------+-----------------------------------+
+
          -  Storage space of the new DB instance is the same as that of the original DB instance by default and the new instance must be at least as large as the original DB instance.
+
          -  Other settings are the same as those of the original DB instance by default and can be modified. For details, see :ref:`Step 1: Create a DB Instance <rds_04_0061>`.
 
       -  Restore to Original

@@ -16,7 +16,7 @@ Exporting Information About All DB Instances
 #. Log in to the management console.
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
-#. On the **Instances** page, click |image2| in the upper right corner of the page. By default, information about all DB instances are exported. In the displayed dialog box, you can select the items to be exported and click **Export**.
+#. On the **Instances** page, click |image2| in the upper right corner of the page. By default, information about all DB instances is exported. In the displayed dialog box, you can select the items to be exported and click **Export**.
 #. Find a .csv file locally after the export task is completed.
 
 Exporting Information About Selected DB Instances

@@ -8,7 +8,7 @@ Viewing Top SQL Statements of a DB Instance
 Scenarios
 ---------
 
-Top SQL shows the SQL queries that have been contribued at most to database load. You can sort them by multiple dimensions.
+Top SQL shows the SQL queries that have been contributed at most to database load. You can sort them by multiple dimensions.
 
 Procedure
 ---------
