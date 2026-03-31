@@ -21,7 +21,6 @@ Constraints
 -  Before an upgrade, ensure that a valid upgrade check report is available. In the check report, the source version is the current instance version, the target version is the one contained in the request body, the check is performed within seven days, and the check result is successful.
 -  Major version upgrades are available to the following versions:
 
-   -  RDS for PostgreSQL 12: 12.7 or later
    -  RDS for PostgreSQL 13: 13.3 or later
    -  RDS for PostgreSQL 14: 14.4 or later
 
