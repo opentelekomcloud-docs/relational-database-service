@@ -14,7 +14,7 @@ Procedure
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 #. On the **Instances** page, click the DB instance name.
-#. In the navigation pane, choose **DBA Assistant** > **Real-Time Diagnosis**.
-#. Click the **Performance** tab to view historical performance for each metric of your instance within the same time range on different days.
+#. In the navigation pane, choose **Performance** under **DBA Assistant**.
+#. Check metric changes of your instance within the same time range on different days.
 
 .. |image1| image:: /_static/images/en-us_image_0000001191211679.png

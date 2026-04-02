@@ -2,7 +2,7 @@
 
 .. _rds_sqlserver_scale_cluster:
 
-Scaling up Storage Space
+Scaling Up Storage Space
 ========================
 
 Scenarios
@@ -12,7 +12,7 @@ If the original storage space is insufficient as your services grow, scale up st
 
 You are advised to set alarm rules for the storage space usage by referring to :ref:`Setting Alarm Rules <rds_sqlserver_06_0002>`.
 
-RDS allows you to scale up storage space of DB instances but you cannot change the storage type. During the scale-up period, services are not interrupted.
+**Services are not interrupted during storage scale-up.**\ If you need to change the storage type, refer to :ref:`Changing a Storage Type <rds_sqlserver_05_0050>`.
 
 Instance Becomes Read-Only When Storage Is Full
 -----------------------------------------------
@@ -60,7 +60,7 @@ Procedure
 
    You can also perform the following operations to scale up storage space:
 
-   -  Click the target DB instance to enter the **Overview** page. In the **Storage & Backup** area, click **Scale Storage Space**.
+   -  Click the target DB instance to enter the **Summary** page. In the **Storage & Backup** area, click **Scale Storage Space**.
 
 #. On the displayed page, specify the new storage space and click **Next**.
 
@@ -73,6 +73,6 @@ Procedure
 
 #. View the scale-up result.
 
-   Scaling up storage space takes 3-5 minutes. During this time, the status of the DB instance on the **Instances** page will be **Scaling up**. Click the DB instance and view the utilization on the displayed **Overview** page to verify that the scale-up is successful.
+   Scaling up storage space takes 3-5 minutes. During this time, the status of the DB instance on the **Instances** page will be **Scaling up**. Click the DB instance and view the utilization on the displayed **Summary** page to verify that the scale-up is successful.
 
 .. |image1| image:: /_static/images/en-us_image_0000001191211679.png

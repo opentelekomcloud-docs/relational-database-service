@@ -23,7 +23,7 @@ Also called a planned handover. When a DB instance is running properly, you can 
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. On the **Instances** page, click the target DB instance name to go to the **Overview** page.
+#. On the **Instances** page, click the target DB instance name to go to the **Summary** page.
 
 #. Under **DB Instance Type**, click **Switch**.
 

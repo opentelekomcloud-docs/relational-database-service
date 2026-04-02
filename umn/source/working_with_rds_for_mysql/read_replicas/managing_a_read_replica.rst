@@ -11,7 +11,7 @@ Entering the Management Interface Through a Read Replica
 #. Log in to the management console.
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
-#. In the DB instance list, click |image2| to expand the DB instance details and click the target read replica to go to the **Overview** page.
+#. In the DB instance list, click |image2| to expand the DB instance details and click the target read replica to go to the **Summary** page.
 
 Deleting a Read Replica
 -----------------------

@@ -63,8 +63,8 @@ Non-SSL Connection
 
    -  **Server name**: indicates the IP address and port of the DB instance. Use a comma (,) to separate them. For example: x.x.x.x,8080.
 
-      -  The IP address is the floating IP address in the **Connectivity** area on the **Overview** page of the DB instance.
-      -  The port is the database port in the **Connectivity** area on the **Overview** page of the DB instance.
+      -  The IP address is the floating IP address in the **Connectivity** area on the **Summary** page of the DB instance.
+      -  The port is the database port in the **Connectivity** area on the **Summary** page of the DB instance.
 
    -  **Authentication**: indicates the authentication mode. Select **SQL Server Authentication**.
    -  **Login**: indicates the RDS database username. The default administrator is **rdsuser**.
@@ -81,7 +81,7 @@ SSL Connection
 
 #. Download the SSL root certificate and then upload it.
 
-   a. On the **Instances** page, click the target DB instance. In the **Basic Information** area on the **Overview** page, click **Download** in the **SSL**\ field to download the root certificate or certificate bundle.
+   a. On the **Instances** page, click the target DB instance. Click **Download** under **SSL** to download the Certificate Download package, and extract the root certificate ca.pem and bundle ca-bundle.pem from the package.
    b. Upload the root certificate to the ECS or save it to the device to be connected to the DB instance.
    c. Import the root certificate into the Windows OS on the ECS. For details, see :ref:`How Can I Import the Root Certificate to a Windows or Linux OS? <rds_faq_0052>`
 
@@ -102,8 +102,8 @@ SSL Connection
 
    -  **Server name**: indicates the IP address and port of the DB instance. Use a comma (,) to separate them. For example: x.x.x.x,8080.
 
-      -  The IP address is the floating IP address in the **Connectivity** area on the **Overview** page of the DB instance.
-      -  The port is the database port in the **Connectivity** area on the **Overview** page of the DB instance.
+      -  The IP address is the floating IP address in the **Connectivity** area on the **Summary** page of the DB instance.
+      -  The port is the database port in the **Connectivity** area on the **Summary** page of the DB instance.
 
    -  **Authentication**: indicates the authentication mode. Select **SQL Server Authentication**.
    -  **Login**: indicates the RDS database username. The default administrator is **rdsuser**.

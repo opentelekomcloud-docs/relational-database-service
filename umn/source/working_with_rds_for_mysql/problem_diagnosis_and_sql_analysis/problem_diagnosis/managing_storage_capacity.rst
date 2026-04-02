@@ -37,9 +37,9 @@ Viewing the Storage Overview
 
 #. On the **Instances** page, click the target DB instance name.
 
-#. In the navigation pane, choose **DBA Assistant** > **Real-Time Diagnosis**.
+#. In the navigation pane, choose **Storage Analysis** under **DBA Assistant**.
 
-#. Click the **Storage Analysis** tab to view storage usage. If your storage is insufficient, scale it up. Or you can :ref:`enable storage autoscaling <rds_05_0039>`.
+#. Check your storage usage. If the storage is insufficient, scale it up. Or you can :ref:`enable storage autoscaling <rds_05_0039>`.
 
    If the average daily increase in last week is 0 GB, the estimated available days of storage are unlimited and are not displayed.
 
@@ -48,13 +48,13 @@ Viewing the Storage Overview
 Tablespaces
 -----------
 
-This function counts tables with abnormal tablespace growth, tables without primary keys, and tables without indexes. To use this function, subscribe to Intelligent O&M first.
+This function counts tables with abnormal tablespace growth, tables without primary keys, and tables without indexes. To use this function, upgrade DBA Assistant first.
 
 #. Click the **Storage Analysis** tab to view abnormal tables.
 
-#. Click **Subscribe**. In the displayed dialog box, you can learn about Intelligent O&M functions and pricing.
+#. Click **Upgrade DBA Assistant**. In the displayed dialog box, you can learn about the enhanced features and billing rules.
 
-#. After subscribing to Intelligent O&M, view the table diagnosis results of your instance.
+#. After the upgrade is complete, view the table diagnosis results of your instance.
 
 #. Click |image2| next to **Auto Diagnosis**. In the displayed dialog box, configure the daily tablespace increase limit and click **OK**.
 
