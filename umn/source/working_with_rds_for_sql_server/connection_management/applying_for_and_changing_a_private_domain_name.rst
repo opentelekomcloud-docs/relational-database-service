@@ -21,7 +21,7 @@ Applying for a Private Domain Name
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. On the **Instances** page, click the DB instance name to go to the **Overview** page.
+#. On the **Instances** page, click the DB instance name to go to the **Summary** page.
 
 #. Under **Private Domain Name**, click **Apply**.
 
@@ -35,7 +35,7 @@ Changing a Private Domain Name
 #. Log in to the management console.
 #. Click |image2| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
-#. On the **Instances** page, click the DB instance name to go to the **Overview** page.
+#. On the **Instances** page, click the DB instance name to go to the **Summary** page.
 #. Under **Private Domain Name**, click **Configure**.
 #. In the displayed dialog box, enter a new private domain name. Click **OK**.
 

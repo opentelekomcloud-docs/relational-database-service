@@ -26,7 +26,7 @@ After the DB instance is created, you can change the private domain name as need
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. On the **Instances** page, click the target DB instance name to go to the **Overview** page.
+#. On the **Instances** page, click the target DB instance name to go to the **Summary** page.
 
 #. Under **Private Domain Name**, click **Configure**.
 

@@ -5,12 +5,12 @@
 Introduction to Instance Overview
 =================================
 
-On the **Overview** page, you can get knowledge of the overall status of your RDS for MySQL instance, including alarms, intelligent anomaly diagnosis, and key performance metrics. Intelligent anomaly diagnosis uses operational data analytics and intelligent algorithms to access instance health, and provides you with solutions and suggestions for handling detected exceptions.
+On the **Summary** page, you can get knowledge of the overall status of your RDS for MySQL instance, including alarms, intelligent anomaly diagnosis, and key performance metrics. Intelligent anomaly diagnosis uses operational data analytics and intelligent algorithms to access instance health, and provides you with solutions and suggestions for handling detected exceptions.
 
 Functions
 ---------
 
-:ref:`Table 1 <rds_08_0025__table29401349134416>` lists the functions provided on the **Overview** page.
+:ref:`Table 1 <rds_08_0025__table29401349134416>` lists the functions provided on the **Summary** page.
 
 .. _rds_08_0025__table29401349134416:
 
@@ -48,7 +48,7 @@ Instance Information
 #. Log in to the management console.
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
-#. On the **Instances** page, click the target instance name to go to the **Overview** page.
+#. On the **Instances** page, click the target instance name to go to the **Summary** page.
 #. In the **Instance Information** area, check the instance information and modify the instance as required.
 
 Alarms
@@ -159,7 +159,7 @@ In the **Storage & Backup** area, you can check the storage space usage and back
 
    If you enable disk encryption when purchasing an instance, the new storage space after scale-up still uses the original encryption key. Keep the key secure. Once the key is disabled, deleted, or frozen, your instance will become inaccessible.
 
--  As workload data increases, the storage capacity of your instance may be insufficient. To scale up the storage space, see :ref:`Scaling up Storage Space <en-us_topic_scale_cluster>`.
+-  As workload data increases, the storage capacity of your instance may be insufficient. To scale up the storage space, see :ref:`Scaling Up Storage Space <en-us_topic_scale_cluster>`.
 
 -  Backups are stored as packages in OBS and occupy the backup space. If the free space RDS provides is used up, the additional space required will be billed.
 

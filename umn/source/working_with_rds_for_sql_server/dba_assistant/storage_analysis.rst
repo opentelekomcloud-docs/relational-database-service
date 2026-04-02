@@ -17,8 +17,8 @@ Overview
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 #. On the **Instances** page, click the DB instance name.
-#. In the navigation pane, choose **DBA Assistant** > **Real-Time Diagnosis**.
-#. On the **Storage Analysis** tab page, view storage usage. If your storage is insufficient, scale it up.
+#. In the navigation pane, choose **Storage Analysis** under **DBA Assistant**.
+#. On the **Storage Analysis** page, view storage usage. If your storage is insufficient, scale it up.
 
    .. table:: **Table 1** Parameter description
 

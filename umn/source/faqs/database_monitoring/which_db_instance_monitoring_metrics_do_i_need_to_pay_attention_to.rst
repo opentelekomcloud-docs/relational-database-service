@@ -31,4 +31,4 @@ You can configure the system to report alarms based on service requirements and 
 
    -  Scale up the storage space.
 
-      For details, see :ref:`Scaling up Storage Space <en-us_topic_scale_cluster>`.
+      For details, see :ref:`Scaling Up Storage Space <en-us_topic_scale_cluster>`.

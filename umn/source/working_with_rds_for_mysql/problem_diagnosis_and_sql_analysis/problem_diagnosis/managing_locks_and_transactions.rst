@@ -48,9 +48,9 @@ Procedure
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 #. On the **Instances** page, click the DB instance name.
-#. In the navigation pane, choose **DBA Assistant** > **Real-Time Diagnosis**.
-#. Click the **Locks & Transactions** tab and enter the administrator password to log in to the database.
-#. On the **Locks & Transactions** tab page, perform the following operations:
+#. In the navigation pane, choose **Locks & Transactions** under **DBA Assistant**.
+#. On the displayed page, enter the administrator password to log in to the database.
+#. On the **Locks** tab page, perform the following operations:
 
    -  Click the **Metadata Locks** tab, create a lock analysis task and check whether the instance has metadata locks.
 

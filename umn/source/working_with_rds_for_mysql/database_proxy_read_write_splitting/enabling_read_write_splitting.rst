@@ -24,11 +24,11 @@ Enabling a Single Proxy
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. On the **Instances** page, click the target DB instance. The **Overview** page is displayed.
+#. On the **Instances** page, click the target DB instance. The **Summary** page is displayed.
 
 #. In the navigation pane on the left, choose **Database Proxy**.
 
-   Alternatively, in the **Connectivity** area on the **Overview** page, click **Configure** in the **Read/Write Splitting Address** field.
+   Alternatively, in the **Connectivity** area on the **Summary** page, click **Configure** in the **Read/Write Splitting Address** field.
 
 #. On the displayed page, click **Create Database Proxy**.
 
@@ -76,7 +76,7 @@ Enabling a Single Proxy
 
 #. View and manage the proxy on the **Database Proxy** page.
 
-   You can view the read/write splitting address on the **Overview** page. Read and write requests can be split through the read/write splitting address.
+   You can view the read/write splitting address on the **Summary** page. Read and write requests can be split through the read/write splitting address.
 
    The read/write splitting address and the floating IP address of the DB instance are in the same VPC and subnet and are independent from each other.
 

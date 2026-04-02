@@ -31,7 +31,7 @@ You can change the floating IP address of an existing DB instance.
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. On the **Instances** page, click the target DB instance name to go to the **Overview** page.
+#. On the **Instances** page, click the target DB instance name to go to the **Summary** page.
 
 #. Under **Floating IP Address**, click **Configure**.
 

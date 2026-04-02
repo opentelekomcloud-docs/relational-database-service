@@ -26,9 +26,8 @@ Procedure
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 #. On the **Instances** page, click the target instance name.
-#. In the navigation pane, choose **DBA Assistant** > **Historical Diagnosis**.
+#. In the navigation pane, choose **Locks & Transactions** under **DBA Assistant**.
 #. Click the **Historical Transactions** tab.
-#. In the upper part of the page, click **Log Settings**, enable **Collect Slow Query Logs** or **Collect All SQL Statements**, and click **OK**.
 #. Enable **Collect Historical Transactions** and view historical transactions.
 
 .. |image1| image:: /_static/images/en-us_image_0000001191211679.png
