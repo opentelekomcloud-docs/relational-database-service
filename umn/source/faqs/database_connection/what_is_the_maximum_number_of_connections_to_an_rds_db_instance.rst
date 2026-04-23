@@ -10,8 +10,6 @@ RDS does not have constraints on the number of connections. This number is deter
 Changing the Maximum Number of Connections
 ------------------------------------------
 
-.
-
 You can change the maximum number of connections using commands.
 
 #. Query the maximum number of connections.
