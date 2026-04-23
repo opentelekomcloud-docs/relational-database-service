@@ -119,7 +119,9 @@ SSL Connection
 
 #. Connect to the RDS DB instance. The Linux OS is used as an example.
 
-   **mysql -h** <*host*> **-P** *<port>* **-u** <*userName*> **-p** **--ssl-ca=**\ <*caDIR*>
+   .. code-block:: text
+
+      mysql -h <host> -P <port> -u <userName> -p --ssl-ca=<caDIR>
 
    .. table:: **Table 2** Parameter description
 
@@ -137,7 +139,9 @@ SSL Connection
 
    For example, to connect to a DB instance through an SSL connection as user **root**, run the following command:
 
-   **mysql -h 172.16.0.31 -P 3306 -u root -p --ssl-ca=ca.pem**
+   .. code-block:: text
+
+      mysql -h 172.16.0.31 -P 3306 -u root -p --ssl-ca=ca.pem
 
    Enter the password of the database account if the following information is displayed:
 

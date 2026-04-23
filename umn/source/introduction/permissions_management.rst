@@ -76,6 +76,16 @@ You can grant users permissions by using roles and policies.
    |                                                             |                                     | vpc:securityGroups:get                                                                                                                                                                |
    |                                                             |                                     |                                                                                                                                                                                       |
    |                                                             |                                     | To create an encrypted instance, configure the KMS Administrator permission for the project.                                                                                          |
+   |                                                             |                                     |                                                                                                                                                                                       |
+   |                                                             |                                     | If storage autoscaling is required, you need to :ref:`create an agency <rds_01_0017__section971814217815>` and grant the IAM user the following actions:                              |
+   |                                                             |                                     |                                                                                                                                                                                       |
+   |                                                             |                                     | -  iam:agencies:listAgencies                                                                                                                                                          |
+   |                                                             |                                     | -  iam:agencies:createAgency                                                                                                                                                          |
+   |                                                             |                                     | -  iam:permissions:listRolesForAgencyOnProject                                                                                                                                        |
+   |                                                             |                                     | -  iam:permissions:grantRoleToGroupOnProject                                                                                                                                          |
+   |                                                             |                                     | -  iam:permissions:grantRoleToAgencyOnProject                                                                                                                                         |
+   |                                                             |                                     | -  iam:roles:listRoles                                                                                                                                                                |
+   |                                                             |                                     | -  iam:roles:createRole                                                                                                                                                               |
    +-------------------------------------------------------------+-------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Changing DB instance specifications                         | rds:instance:modifySpec             | N/A                                                                                                                                                                                   |
    +-------------------------------------------------------------+-------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -266,3 +276,25 @@ You can grant users permissions by using roles and policies.
    +-------------------------------------------------------------+-------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Starting an instance                                        | rds:instance:start                  | N/A                                                                                                                                                                                   |
    +-------------------------------------------------------------+-------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. _rds_01_0017__section971814217815:
+
+Creating an Agency
+------------------
+
+#. Log in to the IAM console.
+
+#. Click **Agencies**. On the displayed page, click **Create Agency**.
+
+   **If storage autoscaling and autoscaling of vCPUs and memory are required, perform the following operations:**
+
+   a. On the displayed page, set the following parameters and click **OK**. Then, click **Authorize** in the displayed dialog box.
+
+      -  **Agency Name**: Enter **RDSAccessProjectResource**.
+      -  **Agency Type**: Select **Cloud service**.
+      -  **Cloud Service**: Select **Database Service (DBS)**.
+      -  **Validity Period**: Select **Unlimited**.
+      -  **Description**: Enter **RDSAccessProjectResource allows RDS to access user's project resource**.
+
+   b. Enter **DBS** in the search box to start a search, select **DBS AgencyPolicy**, and click **Next**.
+   c. By default, the permissions apply to all resources. Click **OK**.
