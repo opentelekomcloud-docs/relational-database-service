@@ -37,7 +37,7 @@ Procedure
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. On the **Instances** page, click the primary instance name to go to the **Overview** page.
+#. On the **Instances** page, click the primary instance name to go to the **Summary** page.
 
 #. Under **DB Engine Version**, click **Upgrade Minor Version**.
 

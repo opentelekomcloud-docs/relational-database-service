@@ -34,13 +34,13 @@ Procedure
 
 #. On the **Instances** page, click the DB instance name.
 
-#. In the navigation pane, choose **DBA Assistant** > **Historical Diagnosis**.
+#. In the navigation pane, choose **SQL Analysis and Tuning** under **DBA Assistant**.
 
-#. Click **SQL Explorer** and then **SQL Insights**.
+#. Click the **SQL Insights** tab.
 
 #. Click |image2| next to **Collect All SQL Statements**.
 
-   To disable this function, click **Log Settings** in the upper right corner, toggle off the **Collect All SQL Statements** switch, and click **OK**.
+   To disable this function, click **Log Settings** in the upper right corner, toggle off the switch, and click **OK**.
 
    .. note::
 

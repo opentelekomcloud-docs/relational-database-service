@@ -10,7 +10,7 @@ Instance Modifications
 -  :ref:`Changing the Failover Priority <rds_sqlserver_modify_availability>`
 -  :ref:`Changing a DB Instance Class <rds_sqlserver_scale_rds>`
 -  :ref:`Changing a Storage Type <rds_sqlserver_05_0050>`
--  :ref:`Scaling up Storage Space <rds_sqlserver_scale_cluster>`
+-  :ref:`Scaling Up Storage Space <rds_sqlserver_scale_cluster>`
 -  :ref:`Configuring Autoscaling <rds_sqlserver_05_0029>`
 -  :ref:`Changing the Maintenance Window <rds_sqlserver_05_0038>`
 -  :ref:`Changing a DB Instance Type from Single to Primary/Standby <rds_sqlserver_05_0023>`

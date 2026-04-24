@@ -17,15 +17,15 @@ Procedure
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 #. On the **Instances** page, click the DB instance name.
-#. In the navigation pane, choose **DBA Assistant** > **Historical Diagnosis**.
-#. Choose **SQL Explorer** > **Top SQL**.
+#. In the navigation pane, choose **SQL Analysis and Tuning** under **DBA Assistant**.
+#. Click the **Top SQL** tab.
 
    .. note::
 
-      Top SQL needs to be purchased separately. To use this function, subscribe to Intelligent O&M first.
+      Top SQL needs to be purchased separately. To use this function, upgrade DBA Assistant first.
 
-#. Click **Subscribe**. In the displayed dialog box, learn about Intelligent O&M functions and pricing.
-#. After subscribing to Intelligent O&M, view top SQL statements of your instance.
-#. You can view execution durations of the top SQL statements in the last 1 hour, last 3 hours, last 12 hours, or a custom time period (spanning no more than one day).
+#. Click **Upgrade DBA Assistant**. In the displayed dialog box, you can learn about the enhanced features and billing rules.
+#. After the upgrade is complete, view top SQL statements of your instance.
+#. View execution durations of the top SQL statements in the last 1 hour, last 3 hours, last 6 hours, last 12 hours, or a custom time range (spanning no more than one day).
 
 .. |image1| image:: /_static/images/en-us_image_0000001191211679.png

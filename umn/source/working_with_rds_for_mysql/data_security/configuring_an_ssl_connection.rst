@@ -36,13 +36,13 @@ Enabling SSL
 
 #. On the **Instances** page, click the target DB instance.
 
-#. On the **Overview** page, find **SSL** and click **Enable**.
+#. On the **Summary** page, find **SSL** and click **Enable**.
 
    Alternatively, in the navigation pane on the left, choose **Connectivity & Security**. In the **Connection Information** area, click |image2| in the **SSL** field.
 
 #. In the displayed dialog box, click **OK**.
 
-#. After a while, check the SSL status on the **Overview** page. It is enabled.
+#. After a while, check the SSL status on the **Summary** page. It is enabled.
 
 Disabling SSL
 -------------
@@ -55,13 +55,13 @@ Disabling SSL
 
 #. On the **Instances** page, click the target DB instance.
 
-#. On the **Overview** page, find **SSL** and click **Disable**.
+#. On the **Summary** page, find **SSL** and click **Disable**.
 
    Alternatively, in the navigation pane on the left, choose **Connectivity & Security**. In the **Connection Information** area, click |image4| in the **SSL** field.
 
 #. In the displayed dialog box, click **OK**.
 
-#. After a while, check the SSL status on the **Overview** page. It is disabled.
+#. After a while, check the SSL status on the **Summary** page. It is disabled.
 
 .. |image1| image:: /_static/images/en-us_image_0000001191211679.png
 .. |image2| image:: /_static/images/en-us_image_0000002492045012.png

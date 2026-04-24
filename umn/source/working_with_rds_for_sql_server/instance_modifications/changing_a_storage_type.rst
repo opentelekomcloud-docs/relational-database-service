@@ -10,6 +10,8 @@ Scenarios
 
 If the storage type of your DB instance does not match your workloads, you can change it as needed.
 
+For details about storage types, see :ref:`DB Instance Storage Types <rds_01_0020>`.
+
 Constraints
 -----------
 
@@ -25,13 +27,13 @@ Supported Storage Types
 
 .. table:: **Table 1** Storage types
 
-   ===================== ========================
+   ===================== ===========================
    Original Storage Type Target Storage Type
-   ===================== ========================
-   Ultra-high I/O        Cloud SSD or extreme SSD
-   Cloud SSD             Extreme SSD
-   Extreme SSD           Cloud SSD
-   ===================== ========================
+   ===================== ===========================
+   Cloud SSD             Extreme SSD or Flexible SSD
+   Extreme SSD           Cloud SSD or Flexible SSD
+   Flexible SSD          Cloud SSD or Extreme SSD
+   ===================== ===========================
 
 Procedure
 ---------
@@ -44,14 +46,24 @@ Procedure
 
 #. On the **Instances** page, locate the target DB instance and choose **More** > **Change Instance Class** in the **Operation** column.
 
-   Alternatively, click the target DB instance to go to the **Overview** page. Under **Instance Class**, click **Configure**.
+   Alternatively, click the target DB instance to go to the **Summary** page. Under **Instance Class**, click **Configure**.
 
-#. On the displayed page, select a new storage type and click **Next**.
+#. On the displayed page, select a target Storage Type, for example, **Extreme SSD** for **Storage Type** and click **Next**.
 
-#. Confirm the new storage type. Click **Submit**.
+   If the target storage type is **Flexible SSD**, click **Disk QoS** under **Change Type** and enter the IOPS and throughput.
+
+   -  IOPS: Flexible SSD decouples capacity from performance and allows for tailored IOPS for your business requirements with fixed capacity.
+
+      This parameter is available only for Flexible SSD. The value range is from 3000 to 128000. The IOPS is limited by the disk size and must be no greater than 500 times the disk capacity.
+
+   -  Throughput: Flexible SSD decouples capacity from performance and allows for tailored throughput for your business requirements with fixed capacity.
+
+      This parameter is available only for Flexible SSD. The value ranges from 125 to 1000 (in MiB/s) and must also be no greater than the IOPS divided by 4.
+
+#. Confirm the configurations and Click **Submit**.
 
 #. Check the results.
 
-   Return to the **Instances** page. A few minutes later, click the instance name and check the new storage type on the displayed **Overview** page.
+   Return to the **Instances** page. A few minutes later, click the instance name and check the new storage type on the displayed **Summary** page.
 
 .. |image1| image:: /_static/images/en-us_image_0000001191211679.png
