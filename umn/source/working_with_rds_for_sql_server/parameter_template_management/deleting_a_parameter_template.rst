@@ -21,7 +21,7 @@ Procedure
 #. Log in to the management console.
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
-#. On the **Parameter Template Management** page, click **Custom Templates**. Locate the target parameter template to be deleted and choose **More** > **Delete** in the **Operation** column.
+#. On the **Parameter Templates** page, click **Custom Templates**. Locate the target parameter template to be deleted and choose **More** > **Delete** in the **Operation** column.
 #. In the displayed dialog box, click **Yes**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001191211679.png

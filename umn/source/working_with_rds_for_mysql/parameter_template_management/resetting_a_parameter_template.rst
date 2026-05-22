@@ -19,7 +19,7 @@ Procedure
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. On the **Parameter Template Management** page, click **Custom Templates**. Locate the target parameter template and choose **More** > **Reset** in the **Operation** column.
+#. On the **Parameter Templates** page, click **Custom Templates**. Locate the target parameter template and choose **More** > **Reset** in the **Operation** column.
 
 #. Click **Yes**.
 

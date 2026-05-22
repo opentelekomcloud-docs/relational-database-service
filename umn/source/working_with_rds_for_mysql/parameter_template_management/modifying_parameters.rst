@@ -17,8 +17,8 @@ The RDS console displays the statuses of DB instances that the parameter templat
 
    RDS has default parameter templates whose parameter values cannot be changed. You can view these parameter values by clicking the default parameter templates. If a custom parameter template is set incorrectly, the database startup may fail. If this happens, you can re-configure the custom parameter template based on the settings of the default parameter template.
 
-Modifying Parameter Template Parameters
----------------------------------------
+Modifying a Custom Parameter Template and Applying It to a DB Instance
+----------------------------------------------------------------------
 
 #. Log in to the management console.
 
@@ -26,7 +26,7 @@ Modifying Parameter Template Parameters
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. Choose **Parameter Template Management** in the navigation pane on the left. On the **Custom Templates** page, click the target parameter template.
+#. Choose **Parameter Templates** in the navigation pane on the left. On the **Custom Templates** page, click the target parameter template.
 
 #. On the **Parameters** page, modify parameters as required.
 
@@ -38,7 +38,7 @@ Modifying Parameter Template Parameters
    -  To cancel the modifications, click **Cancel**.
    -  To preview the modifications, click **Preview**.
 
-#. After the parameter values are modified, you can click **View Change History** to view the details.
+#. After the parameter values are modified, you can click **Change History** to view the details.
 
 #. The modifications do not take effect until you apply the parameter template to your DB instances. For details, see :ref:`Applying a Parameter Template <rds_05_0018>`.
 
@@ -82,5 +82,32 @@ Modifying Instance Parameters
 
    After parameters are modified, you can click **Change History** to view parameter modification details.
 
+Modifying Parameters of Multiple DB Instances at a Time
+-------------------------------------------------------
+
+#. Log in to the management console.
+
+#. Click |image3| in the upper left corner and select a region and a project.
+
+#. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
+
+#. On the **Instances** page, select the DB instances with the same DB engine of the same version and choose **Modify Parameters** above the DB instance list.
+
+#. On the **Modify Parameters** page, select the parameters you want to modify, change the parameter values, and click **Apply**.
+
+   A maximum of 30 parameters can be modified at a time. Only selected parameters will be applied to your DB instances. The modified parameters are automatically selected. You can also deselect them.
+
+#. In the displayed dialog box, click **OK**.
+
+#. After the parameters are modified, choose whether to reboot the instance based on the information in the **Effective upon Reboot** column.
+
+   -  If the value is **Yes** and the DB instance status on the **Instances** page is **Parameter change. Pending reboot**, a reboot is required for the modifications to take effect.
+
+      -  If you have modified parameters of a primary DB instance, you need to reboot the primary DB instance for the modifications to take effect. (For primary/standby DB instances, the parameter modifications are also applied to the standby DB instance.)
+      -  If you have modified parameters of a read replica, you need to reboot the read replica for the modifications to take effect.
+
+   -  If the value is **No**, the modifications take effect immediately.
+
 .. |image1| image:: /_static/images/en-us_image_0000001191211679.png
 .. |image2| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image3| image:: /_static/images/en-us_image_0000001191211679.png

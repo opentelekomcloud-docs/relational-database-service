@@ -42,12 +42,12 @@ Procedure
 
    **rpm -ivh** *qpress-11-1.el7.x86_64.rpm*
 
-#. Download `XtraBackup <https://www.percona.com/downloads/Percona-XtraBackup-2.4/LATEST/>`__ from the website, for example, percona-xtrabackup-24-2.4.9-1.el7.x86_64.rpm.
+#. Download `XtraBackup <https://www.percona.com/downloads/>`__ from the website, for example, percona-xtrabackup-24-2.4.9-1.el7.x86_64.rpm.
 
    .. important::
 
-      -  For MySQL 5.7, download `XtraBackup 2.4.9 <https://www.percona.com/downloads/Percona-XtraBackup-2.4/LATEST/>`__ or later versions.
-      -  For MySQL 8.0, download `XtraBackup 8.0 <https://www.percona.com/downloads/Percona-XtraBackup-8.0/LATEST/>`__ or later versions.
+      -  For MySQL 5.7, download `XtraBackup 2.4.9 <https://docs.percona.com/percona-xtrabackup/2.4/installation.html>`__ or later versions.
+      -  For MySQL 8.0, download `XtraBackup 8.0 <https://docs.percona.com/percona-xtrabackup/8.0/installation.html>`__ or later versions.
 
 #. Upload XtraBackup to the ECS.
 

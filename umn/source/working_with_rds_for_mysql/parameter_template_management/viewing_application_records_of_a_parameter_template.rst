@@ -19,7 +19,7 @@ Procedure
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. Choose **Parameter Template Management** in the navigation pane on the left.
+#. Choose **Parameter Templates** in the navigation pane on the left.
 
 #. On the **Default Templates** page, locate the target parameter template and click **View Application Record** in the **Operation** column. Alternatively, on the **Custom Templates** page, choose **More** > **View Application Record** in the **Operation** column.
 
