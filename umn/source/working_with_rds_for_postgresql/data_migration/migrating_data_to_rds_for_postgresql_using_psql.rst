@@ -48,7 +48,9 @@ Before migrating an existing PostgreSQL database to RDS, you need to export the 
 
 #. Use the pg_dump tool to export the source database into an SQL file.
 
-   **pg_dump** **--username=**\ *<DB_USER>* **--host=**\ *<DB_ADDRESS>* **--port=**\ *<DB_PORT>* **--format=plain --file=**\ *<BACKUP_FILE>* *<DB_NAME>*
+   .. code-block::
+
+      pg_dump --username=<DB_USER> --host=<DB_ADDRESS> --port=<DB_PORT> --format=plain --file=<BACKUP_FILE> <DB_NAME>
 
    -  **DB_USER** indicates the database username.
    -  **DB_ADDRESS** indicates the database address.
@@ -60,9 +62,13 @@ Before migrating an existing PostgreSQL database to RDS, you need to export the 
 
    Example:
 
-   **$ pg_dump --username=root --host=192.168.151.18 --port=\ 5432 --format=plain --file=backup.sql my_db**
+   .. code-block::
 
-   **Password for user root:**
+      pg_dump --username=root --host=192.168.151.18 --port=5432 --format=plain --file=backup.sql my_db
+
+   .. code-block::
+
+      Password for user root:
 
    After this command is executed, a **backup.sql** file will be generated as follows:
 
@@ -81,7 +87,9 @@ Importing Data
 
    If the destination database does not exist, run the following command to create a database:
 
-   **# psql --host=**\ *<RDS_ADDRESS>* **--port=**\ <*DB_PORT*> **--username=**\ *root* **--dbname=postgres** **-c** "**create database** *<DB_NAME>*;"
+   .. code-block::
+
+      # psql --host=<RDS_ADDRESS> --port=<DB_PORT> --username=root --dbname=postgres -c "create database <DB_NAME>;"
 
    -  **RDS_ADDRESS** indicates the IP address of the RDS DB instance.
    -  **DB_PORT** indicates the RDS DB instance port.
@@ -89,7 +97,9 @@ Importing Data
 
 #. Import the exported file to RDS.
 
-   **# psql --host=**\ *<RDS_ADDRESS>* **--port=**\ <*DB_PORT*> **--username=**\ *root* **--dbname=**\ *<DB_NAME>* **--file=**\ *<BACKUP_DIR>*/backup.sql
+   .. code-block::
+
+      # psql --host=<RDS_ADDRESS> --port=<DB_PORT> --username=root --dbname=<DB_NAME> --file=<BACKUP_DIR>/backup.sql
 
    -  **RDS_ADDRESS** indicates the IP address of the RDS DB instance.
    -  **DB_PORT** indicates the RDS DB instance port.
@@ -100,13 +110,19 @@ Importing Data
 
    Example:
 
-   **# psql --host=172.16.66.198 --port=\ 5432 --username=root --dbname=my_db --file=backup.sql**
+   .. code-block::
 
-   **Password for user root:**
+      # psql --host=172.16.66.198 --port=5432 --username=root --dbname=my_db --file=backup.sql
+
+   .. code-block::
+
+      Password for user root:
 
 #. View the import result.
 
-   **my_db=> \\l my_db**
+   .. code-block::
+
+      \l my_db
 
    In this example, the database named **my_db** has been imported.
 
