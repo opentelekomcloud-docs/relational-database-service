@@ -85,7 +85,9 @@ Method 2: Using Download URL
 
    -  You can also run the following command to download backup files:
 
-      **wget -O** *FILE_NAME* **--no-check-certificate** **"**\ *DOWNLOAD_URL*\ **"**
+      .. code-block::
+
+         wget -O FILE_NAME --no-check-certificate "DOWNLOAD_URL"
 
       Variables in the commands are as follows:
 

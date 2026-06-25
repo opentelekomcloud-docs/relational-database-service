@@ -27,7 +27,9 @@ Prerequisites
 
 -  During data restoration, run the following command to view the restoration process:
 
-   **ps -ef \| grep mysql**
+   .. code-block::
+
+      ps -ef | grep mysql
 
 Procedure
 ---------
@@ -53,76 +55,122 @@ Procedure
 
 #. Install XtraBackup on the ECS.
 
-   **rpm -ivh** *percona-xtrabackup-24-2.4.9-1.el7.x86_64.rpm* **--nodeps --force**
+   .. code-block::
+
+      rpm -ivh percona-xtrabackup-24-2.4.9-1.el7.x86_64.rpm --nodeps --force
 
 #. On the ECS, decompress the full backup file that has been downloaded.
 
    a. Create a temporary directory **backupdir**.
 
-      **mkdir** *backupdir*
+      .. code-block::
+
+         mkdir backupdir
 
    b. Decompress the package.
 
-      **xbstream -x** **-p 4** **<** **./**\ *Full backup file*\ **.qp** **-C** **./backupdir/**
+      -  MySQL 5.7:
 
-      -  For MySQL 5.7, run **innobackupex --parallel 4 --decompress** **./backupdir**.
-      -  For MySQL 8.0, run **xtrabackup --parallel 4 --decompress --target-dir=\ ./backupdir**.
+         .. code-block::
 
-      **find** *./backupdir/* **-name** ``'*.qp'`` **\|** *xargs* **rm -f**
+            xbstream  -x --parallel 4 < ./full_backup.qp -C ./backupdir/
+            innobackupex --parallel 4 --decompress ./backupdir
+
+      -  MySQL 8.0:
+
+         .. code-block::
+
+            xbstream  -x --parallel 4 < ./full_backup.qp -C ./backupdir/
+            xtrabackup --parallel 4 --decompress --target-dir=./backupdir
+
+#. Delete the .qp file.
+
+   .. code-block::
+
+      find ./backupdir/  -name '*.qp' | xargs rm -f
 
 #. Apply the log.
 
-   -  For MySQL 5.7, run **innobackupex --apply-log** **./backupdir**.
-   -  For MySQL 8.0, run **xtrabackup --prepare --target-dir=./backupdir**.
+   -  MySQL 5.7:
+
+      .. code-block::
+
+         innobackupex --apply-log ./backupdir
+
+   -  MySQL 8.0:
+
+      .. code-block::
+
+         xtrabackup --prepare --target-dir=./backupdir
 
 #. Back up data.
 
    a. Stop MySQL database services.
 
-      **service** *mysql* **stop**
+      .. code-block::
+
+         service mysql stop
 
       .. note::
 
          For MySQL 5.7, run the following command to stop MySQL database services:
 
-         **/bin/systemctl stop mysqld.service**
+         .. code-block::
+
+            /bin/systemctl stop mysqld.service
 
    b. Back up the original database directory.
 
-      **mv** /var/lib/mysql/data /var/lib/mysql\ */data_bak*
+      .. code-block::
+
+         mv /usr/local/mysql/data  /usr/local/mysql/data_bak
+         mkdir /usr/local/mysql/data
 
    c. Create a new database directory and change the permissions.
 
-      **mkdir** */var/lib/mysql/data*
+      .. code-block::
 
-      **chown** *mysql:mysql* */var/lib/mysql/data*
+         chown mysql:mysql /usr/local/mysql/data
 
 #. Copy the full backup file and modify the directory permissions.
 
-   -  For MySQL 5.7, run **innobackupex --defaults-file=/etc/my.cnf --copy-back** **./backupdir**.
-   -  For MySQL 8.0, run **xtrabackup --defaults-file=/etc/my.cnf --copy-back --target-dir=./backupdir**.
+   -  MySQL 5.7:
 
-   **chown -R** *mysql:mysql /var/lib/mysql/data*
+      .. code-block::
+
+         innobackupex --defaults-file=/etc/my.cnf --copy-back ./backupdir
+         chown -R mysql:mysql /usr/local/mysql/data
+
+   -  MySQL 8.0:
+
+      .. code-block::
+
+         xtrabackup --defaults-file=/etc/my.cnf --copy-back --target-dir=./backupdir
+         chown -R mysql:mysql /usr/local/mysql/data
 
    .. note::
 
-      Clear the content in the *var/lib/mysql/data* directory in advance.
+      Clear the content in the *usr/local/mysql/data* directory in advance.
 
 #. Start the database.
 
-   **service** *mysql* **start**
+   .. code-block::
+
+      service mysql start
 
    .. note::
 
-      For MySQL 5.7, run the following command to start the database:
+      For MySQL 5.7, run the following command:
 
-      **/bin/systemctl start mysqld.service**
+      .. code-block::
+
+         /bin/systemctl start mysqld.service
 
 #. Log in to the database and view the restoration result.
 
-   **mysql -u -root**
+   .. code-block::
 
-   **show databases**
+      show databases
 
 
    .. figure:: /_static/images/en-us_image_0000001426447917.png

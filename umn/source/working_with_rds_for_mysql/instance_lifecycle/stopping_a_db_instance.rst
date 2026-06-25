@@ -25,7 +25,7 @@ Procedure
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 #. On the **Instances** page, locate the primary DB instance that you want to stop and choose **More** > **Stop** in the **Operation** column.
-#. In the displayed dialog box, click **Yes**.
+#. In the displayed dialog box, enter **YES** and click **OK**.
 #. Refresh the DB instance list and view the status of the DB instance. If the status is **Stopped**, the DB instance is stopped successfully.
 
 .. |image1| image:: /_static/images/en-us_image_0000001191211679.png

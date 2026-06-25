@@ -61,7 +61,9 @@ Viewing Slow Query Logs
 
 #. After the DB instance is connected, run the following command to view slow query log details:
 
-   **select \* from ::fn_trace_gettable('D:\\SQLTrace\\audit\\**\ *XXX*\ **', default)**
+   .. code-block::
+
+      select * from ::fn_trace_gettable('D:\SQLTrace\audit\XXX', default)
 
    .. note::
 
@@ -69,7 +71,9 @@ Viewing Slow Query Logs
 
    Example:
 
-   **select \* from ::fn_trace_gettable('D:\\SQLTrace\\audit\\SQLTrace.trc', default)**
+   .. code-block::
+
+      select * from ::fn_trace_gettable('D:\SQLTrace\audit\SQLTrace.trc', default)
 
    The result is shown in :ref:`Figure 1 <slow_query_log-sqlserver__en-us_topic_0171818656_fig19196129142415>`.
 
@@ -115,7 +119,9 @@ Downloading a Log
 
          After downloading slow query logs to a local PC, you can use SSMS to connect to the local database and run the following SQL statement to view the slow query log details:
 
-         **select \* from ::fn_trace_gettable('XXX', default)**
+         .. code-block::
+
+            select * from ::fn_trace_gettable('XXX', default)
 
          In the preceding command, *XXX* indicates the local path for storing slow query logs.
 
