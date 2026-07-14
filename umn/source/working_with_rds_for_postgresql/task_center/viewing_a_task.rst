@@ -7,19 +7,62 @@ Viewing a Task
 
 You can view the detailed progress and result of the task on the **Task Center** page.
 
-.. note::
+Supported Tasks
+---------------
 
-   You can view and manage the following tasks:
+.. table:: **Table 1** Supported tasks
 
-   -  Creating DB instances
-   -  Creating read replicas
-   -  Changing single DB instances to primary/standby
-   -  Scaling up storage space
-   -  Binding EIPs to DB instances
-   -  Unbinding EIPs from DB instances
-   -  Switching primary/standby DB instances
-   -  Rebooting DB instances
-   -  Restoring data to new DB instances
+   +-----------------------------------+-----------------------------------------------------------------------------------+
+   | Category                          | Task Name                                                                         |
+   +===================================+===================================================================================+
+   | Instance creation                 | Creating a PostgreSQL DB instance                                                 |
+   |                                   |                                                                                   |
+   |                                   | Creating a PostgreSQL read replica                                                |
+   |                                   |                                                                                   |
+   |                                   | Creating a PostgreSQL read replica from a snapshot                                |
+   +-----------------------------------+-----------------------------------------------------------------------------------+
+   | Instance lifecycle                | Rebooting a PostgreSQL DB instance                                                |
+   |                                   |                                                                                   |
+   |                                   | Stop PostgreSQL instance                                                          |
+   |                                   |                                                                                   |
+   |                                   | Delete PostgreSQL instance                                                        |
+   +-----------------------------------+-----------------------------------------------------------------------------------+
+   | Instance modifications            | Applying for a PostgreSQL private domain name                                     |
+   |                                   |                                                                                   |
+   |                                   | Changing a PostgreSQL private domain name                                         |
+   |                                   |                                                                                   |
+   |                                   | Forcing a PostgreSQL instance failover                                            |
+   |                                   |                                                                                   |
+   |                                   | Switching PostgreSQL primary/standby DB instances                                 |
+   |                                   |                                                                                   |
+   |                                   | Changing a PostgreSQL DB instance class                                           |
+   |                                   |                                                                                   |
+   |                                   | PostgreSQL instance disk encryption                                               |
+   |                                   |                                                                                   |
+   |                                   | Changing the PostgreSQL instance type from single to primary/standby              |
+   |                                   |                                                                                   |
+   |                                   | Scaling a PostgreSQL DB instance                                                  |
+   |                                   |                                                                                   |
+   |                                   | Enabling public accessibility for a PostgreSQL DB instance                        |
+   |                                   |                                                                                   |
+   |                                   | Disabling public accessibility for a PostgreSQL DB instance                       |
+   +-----------------------------------+-----------------------------------------------------------------------------------+
+   | Version upgrade                   | PostgreSQL major version upgrade                                                  |
+   |                                   |                                                                                   |
+   |                                   | PostgreSQL instance version upgrade                                               |
+   +-----------------------------------+-----------------------------------------------------------------------------------+
+   | Backup and restoration            | Restoring to a new PostgreSQL DB instance                                         |
+   |                                   |                                                                                   |
+   |                                   | Restoring PostgreSQL data to an existing instance                                 |
+   |                                   |                                                                                   |
+   |                                   | RDS for PostgreSQL table-level restoration                                        |
+   |                                   |                                                                                   |
+   |                                   | RDS for PostgreSQL database-level restoration                                     |
+   |                                   |                                                                                   |
+   |                                   | Restoring data from a PostgreSQL read replica with delayed replication to primary |
+   +-----------------------------------+-----------------------------------------------------------------------------------+
+   | Parameter configuration           | PostgreSQL parameter template modification                                        |
+   +-----------------------------------+-----------------------------------------------------------------------------------+
 
 Viewing an Instant Task
 -----------------------
