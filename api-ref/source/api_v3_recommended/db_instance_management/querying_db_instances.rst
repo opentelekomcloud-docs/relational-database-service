@@ -408,7 +408,7 @@ Response
               "created": "2018-08-20T02:33:49+0800",
               "updated": "2018-08-20T02:33:50+0800",
               "volume": {
-                  "type": "ULTRAHIGH",
+                  "type": "CLOUDSSD",
                   "size": 100
               },
               "nodes": [{
@@ -461,7 +461,7 @@ Response
               "created": "2018-08-20T02:33:49+0800",
               "updated": "2018-08-20T02:33:50+0800",
               "volume": {
-                  "type": "ULTRAHIGH",
+                  "type": "CLOUDSSD",
                   "size": 100
               },
               "nodes": [{
@@ -501,7 +501,7 @@ Response
               "created": "2019-08-20T02:33:49+0800",
               "updated": "2019-08-20T02:33:50+0800",
               "volume": {
-                  "type": "ULTRAHIGH",
+                  "type": "CLOUDSSD",
                   "size": 100
               },
               "nodes": [{

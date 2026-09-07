@@ -330,7 +330,7 @@ Request
           },
           "flavor_ref": "rds.mysql.n1.large",
           "volume": {
-              "type": "ULTRAHIGH",
+              "type": "CLOUDSSD",
               "size": 100
           },
           "disk_encryption_id": "2gfdsh-844a-4023-a776-fc5c5fb71fb4",
@@ -368,7 +368,7 @@ Request
           },
           "flavor_ref": "rds.mysql.n1.large.ha",
           "volume": {
-              "type": "ULTRAHIGH",
+              "type": "CLOUDSSD",
               "size": 100
           },
           "disk_encryption_id": "2gfdsh-844a-4023-a776-fc5c5fb71fb4",
@@ -399,7 +399,7 @@ Request
           "replica_of_id": "afdsad-fds-fdsagin01",
           "flavor_ref": "rds.mysql.n1.large.rr",
           "volume": {
-              "type": "ULTRAHIGH",
+              "type": "CLOUDSSD",
               "size": 100
           },
           "disk_encryption_id": "2gfdsh-844a-4023-a776-fc5c5fb71fb4",
@@ -611,7 +611,7 @@ Response
               },
               "flavor_ref": "rds.mysql.n1.large",
               "volume": {
-                  "type": "ULTRAHIGH",
+                  "type": "CLOUDSSD",
                   "size": 100
               },
               "disk_encryption_id": "2gfdsh-844a-4023-a776-fc5c5fb71fb4",
@@ -652,7 +652,7 @@ Response
                  },
                  "flavor_ref": "rds.mysql.n1.large.ha",
                  "volume": {
-                     "type": "ULTRAHIGH",
+                     "type": "CLOUDSSD",
                      "size": 100
                    },
                  "disk_encryption_id":  "2gfdsh-844a-4023-a776-fc5c5fb71fb4",
@@ -684,7 +684,7 @@ Response
                   "name": "trove-instance-rep2",
                   "flavor_ref": "rds.mysql.n1.large.rr",
                    "volume": {
-                     "type": "ULTRAHIGH",
+                     "type": "CLOUDSSD",
                      "size": 100
                    },
                  "disk_encryption_id":  "2gfdsh-844a-4023-a776-fc5c5fb71fb4",

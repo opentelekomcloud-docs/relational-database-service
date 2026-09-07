@@ -19,6 +19,7 @@ Constraints
 -  The storage type of an instance can be changed only when the instance is in the **Available** state.
 -  Changing the storage type may affect storage performance, so the storage type should be changed during off-peak hours.
 -  If the storage type of a read replica is different from that of its associated DB instance, the data synchronization may be affected. To change the storage type of a DB instance, change that of its read replica (if any) first to ensure that the storage type of the read replica is the same as that of the DB instance.
+-  If the target storage type is Flexible SSD, you must manually enter the values of **iops** and **throughput**. In later versions, **iops** and **throughput** will be optimized as optional parameters.
 
 URI
 ---

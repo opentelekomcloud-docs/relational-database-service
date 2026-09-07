@@ -237,7 +237,7 @@ Normal Response
                   "id": "bf07a6d4-844a-4023-a776-fc5c5fb71fb4"
               },
               "volume": {
-                  "type": "ULTRAHIGH",
+                  "type": "CLOUDSSD",
                   "size": 100
               },
               "dataStoreInfo": {
@@ -280,7 +280,7 @@ Normal Response
                   "id": "bf07a6d4-844a-4023-a776-fc5c5fb71fb4"
               },
               "volume": {
-                  "type": "ULTRAHIGH",
+                  "type": "CLOUDSSD",
                   "size": 100
               },
               "dataStoreInfo": {
@@ -327,7 +327,7 @@ Normal Response
                   "id": "bf07a6d4-844a-4023-a776-fc5c5fb71fb4"
               },
               "volume": {
-                  "type": "ULTRAHIGH",
+                  "type": "CLOUDSSD",
                   "size": 100
               },
               "dataStoreInfo": {
