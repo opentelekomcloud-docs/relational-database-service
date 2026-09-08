@@ -262,24 +262,43 @@ Request
 
 .. table:: **Table 7** volume field data structure description
 
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
-   | Name            | Mandatory       | Type            | Description                                                                                                                 |
-   +=================+=================+=================+=============================================================================================================================+
-   | type            | Yes             | String          | Specifies the volume type.                                                                                                  |
-   |                 |                 |                 |                                                                                                                             |
-   |                 |                 |                 | Its value can be any of the following and is case-sensitive:                                                                |
-   |                 |                 |                 |                                                                                                                             |
-   |                 |                 |                 | -  **CLOUDSSD**: cloud SSD storage.                                                                                         |
-   |                 |                 |                 | -  **ESSD**: extreme SSD storage.                                                                                           |
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
-   | size            | Yes             | Integer         | Specifies the volume size.                                                                                                  |
-   |                 |                 |                 |                                                                                                                             |
-   |                 |                 |                 | Its value must be a multiple of 10 and the value range is from 40 GB to 4000 GB.                                            |
-   |                 |                 |                 |                                                                                                                             |
-   |                 |                 |                 | .. note::                                                                                                                   |
-   |                 |                 |                 |                                                                                                                             |
-   |                 |                 |                 |    For read replicas, this parameter is invalid. The volume size is the same as that of the primary DB instance by default. |
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Name            | Mandatory       | Type            | Description                                                                                                                                                                                        |
+   +=================+=================+=================+====================================================================================================================================================================================================+
+   | type            | Yes             | String          | Specifies the volume type.                                                                                                                                                                         |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | Its value can be any of the following and is case-sensitive:                                                                                                                                       |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | -  **CLOUDSSD**: cloud SSD storage.                                                                                                                                                                |
+   |                 |                 |                 | -  **ESSD**: extreme SSD storage.                                                                                                                                                                  |
+   |                 |                 |                 | -  **GPSSD2**: flexible SSD storage (general-purpose SSD V2). This storage type is supported only with general-purpose and dedicated DB instances.                                                 |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | size            | Yes             | Integer         | Specifies the volume size.                                                                                                                                                                         |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | Its value must be a multiple of 10 and the value range is from 40 GB to 4000 GB.                                                                                                                   |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | .. note::                                                                                                                                                                                          |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |    For read replicas, this parameter is invalid. The volume size is the same as that of the primary DB instance by default.                                                                        |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | iops            | No              | Integer         | IOPS of the disk. General-purpose SSD V2 decouples capacity from performance and allows for tailored IOPS for your business requirements with fixed capacity.                                      |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | This parameter is available only for General-purpose SSD V2. The value range is from 3000 to 128000. The IOPS is limited by the disk size and must be no greater than 500 times the disk capacity. |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | .. caution::                                                                                                                                                                                       |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |    CAUTION:                                                                                                                                                                                        |
+   |                 |                 |                 |    If the target storage type is Flexible SSD, you must manually set this parameter. In later versions, this parameter will be optimized as an optional parameter.                                 |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | throughput      | No              | Integer         | Throughput of the disk. General-purpose SSD V2 decouples capacity from performance and allows for tailored throughput for your business requirements with fixed capacity.                          |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | This parameter is available only for General-purpose SSD V2. The value ranges from 125 to 1000 (in MiB/s) and must also be no greater than the IOPS divided by 4.                                  |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | .. caution::                                                                                                                                                                                       |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |    CAUTION:                                                                                                                                                                                        |
+   |                 |                 |                 |    If the target storage type is Flexible SSD, you must manually set this parameter. In later versions, this parameter will be optimized as an optional parameter.                                 |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _rds_01_0002__table992615211258:
 
@@ -569,20 +588,29 @@ Response
 
    .. table:: **Table 15** volume field data structure description
 
-      +-----------------------+-----------------------+-------------------------------------------------------------------------------+
-      | Name                  | Type                  | Description                                                                   |
-      +=======================+=======================+===============================================================================+
-      | type                  | String                | Indicates the volume type.                                                    |
-      |                       |                       |                                                                               |
-      |                       |                       | Its value can be any of the following and is case-sensitive:                  |
-      |                       |                       |                                                                               |
-      |                       |                       | -  **CLOUDSSD**: cloud SSD storage.                                           |
-      |                       |                       | -  **ESSD**: extreme SSD storage.                                             |
-      +-----------------------+-----------------------+-------------------------------------------------------------------------------+
-      | size                  | Integer               | Indicates the volume size.                                                    |
-      |                       |                       |                                                                               |
-      |                       |                       | Its value range is from 40 GB to 4000 GB. The value must be a multiple of 10. |
-      +-----------------------+-----------------------+-------------------------------------------------------------------------------+
+      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Name                  | Type                  | Description                                                                                                                                                                                        |
+      +=======================+=======================+====================================================================================================================================================================================================+
+      | type                  | String                | Indicates the volume type.                                                                                                                                                                         |
+      |                       |                       |                                                                                                                                                                                                    |
+      |                       |                       | Its value can be any of the following and is case-sensitive:                                                                                                                                       |
+      |                       |                       |                                                                                                                                                                                                    |
+      |                       |                       | -  **CLOUDSSD**: cloud SSD storage.                                                                                                                                                                |
+      |                       |                       | -  **ESSD**: extreme SSD storage.                                                                                                                                                                  |
+      |                       |                       | -  **GPSSD2**: flexible SSD storage (general-purpose SSD V2). This storage type is supported only with general-purpose and dedicated DB instances.                                                 |
+      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | size                  | Integer               | Indicates the volume size.                                                                                                                                                                         |
+      |                       |                       |                                                                                                                                                                                                    |
+      |                       |                       | Its value range is from 40 GB to 4000 GB. The value must be a multiple of 10.                                                                                                                      |
+      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | iops                  | No                    | IOPS of the disk. General-purpose SSD V2 decouples capacity from performance and allows for tailored IOPS for your business requirements with fixed capacity.                                      |
+      |                       |                       |                                                                                                                                                                                                    |
+      |                       |                       | This parameter is available only for General-purpose SSD V2. The value range is from 3000 to 128000. The IOPS is limited by the disk size and must be no greater than 500 times the disk capacity. |
+      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | throughput            | No                    | Throughput of the disk. General-purpose SSD V2 decouples capacity from performance and allows for tailored throughput for your business requirements with fixed capacity.                          |
+      |                       |                       |                                                                                                                                                                                                    |
+      |                       |                       | This parameter is available only for General-purpose SSD V2. The value ranges from 125 to 1000 (in MiB/s) and must also be no greater than the IOPS divided by 4.                                  |
+      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _rds_01_0002__table207147873611:
 

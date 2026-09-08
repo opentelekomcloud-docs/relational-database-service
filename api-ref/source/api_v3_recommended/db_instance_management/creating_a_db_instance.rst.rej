@@ -1,0 +1,64 @@
+diff a/api-ref/source/api_v3_recommended/db_instance_management/creating_a_db_instance.rst b/api-ref/source/api_v3_recommended/db_instance_management/creating_a_db_instance.rst	(rejected hunks)
+@@ -204,7 +204,7 @@ Request
+    | version         | Yes             | String          | Specifies the database version.                                                                                                 |
+    |                 |                 |                 |                                                                                                                                 |
+    |                 |                 |                 | -  MySQL databases support 5.7, 8.0 and 8.4. Example value: 5.7                                                                 |
+-   |                 |                 |                 | -  PostgreSQL databases support 12, 13, 14, 15, 16 and 17. Example value: 13                                                    |
++   |                 |                 |                 | -  PostgreSQL databases support 13, 14, 15, 16, 17 and 18. Example value: 13                                                    |
+    |                 |                 |                 | -  Microsoft SQL Server databases only support 2017_SE, 2017_EE, 2019_SE, 2019_EE, 2022_SE and 2022_EE. Example value: 2017_SE  |
+    |                 |                 |                 |                                                                                                                                 |
+    |                 |                 |                 | For details about supported database versions, see section :ref:`Querying Version Information About a DB Engine <rds_06_0001>`. |
+@@ -330,7 +349,7 @@ Request
+           },
+           "flavor_ref": "rds.mysql.n1.large",
+           "volume": {
+-              "type": "ULTRAHIGH",
++              "type": "CLOUDSSD",
+               "size": 100
+           },
+           "disk_encryption_id": "2gfdsh-844a-4023-a776-fc5c5fb71fb4",
+@@ -368,7 +387,7 @@ Request
+           },
+           "flavor_ref": "rds.mysql.n1.large.ha",
+           "volume": {
+-              "type": "ULTRAHIGH",
++              "type": "CLOUDSSD",
+               "size": 100
+           },
+           "disk_encryption_id": "2gfdsh-844a-4023-a776-fc5c5fb71fb4",
+@@ -399,7 +418,7 @@ Request
+           "replica_of_id": "afdsad-fds-fdsagin01",
+           "flavor_ref": "rds.mysql.n1.large.rr",
+           "volume": {
+-              "type": "ULTRAHIGH",
++              "type": "CLOUDSSD",
+               "size": 100
+           },
+           "disk_encryption_id": "2gfdsh-844a-4023-a776-fc5c5fb71fb4",
+@@ -611,7 +639,7 @@ Response
+               },
+               "flavor_ref": "rds.mysql.n1.large",
+               "volume": {
+-                  "type": "ULTRAHIGH",
++                  "type": "CLOUDSSD",
+                   "size": 100
+               },
+               "disk_encryption_id": "2gfdsh-844a-4023-a776-fc5c5fb71fb4",
+@@ -652,7 +680,7 @@ Response
+                  },
+                  "flavor_ref": "rds.mysql.n1.large.ha",
+                  "volume": {
+-                     "type": "ULTRAHIGH",
++                     "type": "CLOUDSSD",
+                      "size": 100
+                    },
+                  "disk_encryption_id":  "2gfdsh-844a-4023-a776-fc5c5fb71fb4",
+@@ -684,7 +712,7 @@ Response
+                   "name": "trove-instance-rep2",
+                   "flavor_ref": "rds.mysql.n1.large.rr",
+                    "volume": {
+-                     "type": "ULTRAHIGH",
++                     "type": "CLOUDSSD",
+                      "size": 100
+                    },
+                  "disk_encryption_id":  "2gfdsh-844a-4023-a776-fc5c5fb71fb4",

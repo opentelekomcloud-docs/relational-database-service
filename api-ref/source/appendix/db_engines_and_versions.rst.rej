@@ -1,0 +1,16 @@
+diff a/api-ref/source/appendix/db_engines_and_versions.rst b/api-ref/source/appendix/db_engines_and_versions.rst	(rejected hunks)
+@@ -20,12 +20,12 @@ For new applications, you are advised to use the latest major version of the DB
+    |                      | -  8.0          | -  8.0          |                 |
+    |                      | -  5.7          | -  5.7          |                 |
+    +----------------------+-----------------+-----------------+-----------------+
+-   | PostgreSQL           | -  17           | -  17           | Not supported   |
++   | PostgreSQL           | -  18           | -  18           | Not supported   |
++   |                      | -  17           | -  17           |                 |
+    |                      | -  16           | -  16           |                 |
+    |                      | -  15           | -  15           |                 |
+    |                      | -  14           | -  14           |                 |
+    |                      | -  13           | -  13           |                 |
+-   |                      | -  12           | -  12           |                 |
+    +----------------------+-----------------+-----------------+-----------------+
+    | Microsoft SQL Server | -  2022 SE      | -  2022 SE      | -  2022 EE      |
+    |                      | -  2019 SE      | -  2019 SE      | -  2019 EE      |

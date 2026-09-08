@@ -1,0 +1,14 @@
+diff a/api-ref/source/api_v3_recommended/querying_database_specifications.rst b/api-ref/source/api_v3_recommended/querying_database_specifications.rst	(rejected hunks)
+@@ -104,9 +104,9 @@ Response
+       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+       | version_name          | Array                 | Indicates the database version.                                                                                                           |
+       |                       |                       |                                                                                                                                           |
+-      |                       |                       | -  MySQL databases support 5.7, 8.0 and 8.4.                                                                                              |
+-      |                       |                       | -  PostgreSQL databases support 12, 13, 14, 15, 16 and 17.                                                                                |
+-      |                       |                       | -  Microsoft SQL Server databases only support 2017_SE, 2017_EE, 2019_SE, 2019_EE, 2022_SE and 2022_EE.                                   |
++      |                       |                       | -  MySQL databases support 5.7, 8.0 and 8.4. Example value: 5.7                                                                           |
++      |                       |                       | -  PostgreSQL databases support 13, 14, 15, 16, 17 and 18. Example value: 13                                                              |
++      |                       |                       | -  Microsoft SQL Server databases only support 2017_SE, 2017_EE, 2019_SE, 2019_EE, 2022_SE and 2022_EE. Example value: 2017_SE            |
+       |                       |                       |                                                                                                                                           |
+       |                       |                       | Example value for MySQL: ["5.7","8.0","8.4"]                                                                                              |
+       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------+

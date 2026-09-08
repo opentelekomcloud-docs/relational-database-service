@@ -1,9 +1,9 @@
-:original_name: rds_11_0019.html
+:original_name: rds_20_0002.html
 
-.. _rds_11_0019:
+.. _rds_20_0002:
 
-Deleting a SQL Throttling Rule
-==============================
+Deleting a SQL Throttling Rule (RDS for PostgreSQL)
+===================================================
 
 Function
 --------
@@ -18,7 +18,7 @@ URI
 
 -  URI format
 
-   DELETE https://{*Endpoint*}/v3/{project_id}/instances/{instance_id}/sql-limit/delete?db_name={db_name}&id={id}
+   DELETE https://{*Endpoint*}/v3/{project_id}/instances/{instance_id}/sql-limit
 
 -  Parameter description
 
@@ -33,10 +33,6 @@ URI
       +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------+
       | instance_id           | Yes                   | Instance ID.                                                                                     |
       +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------+
-      | db_name               | Yes                   | Database name. For example: "**postgres**".                                                      |
-      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------+
-      | id                    | Yes                   | SQL throttling rule ID.                                                                          |
-      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------+
 
 Request
 -------
@@ -46,24 +42,41 @@ Request
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter       | Mandatory       | Type            | Description                                                                                                                                         |
    +=================+=================+=================+=====================================================================================================================================================+
+   | Content-Type    | Yes             | String          | The content type.                                                                                                                                   |
+   |                 |                 |                 |                                                                                                                                                     |
+   |                 |                 |                 | The default value is **application/json**.                                                                                                          |
+   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
    | X-Auth-Token    | Yes             | String          | Specifies the user token.                                                                                                                           |
    |                 |                 |                 |                                                                                                                                                     |
    |                 |                 |                 | The user token is a response to the API used to `obtain a user token <https://docs.otc.t-systems.com/en-us/api/iam/en-us_topic_0057845583.html>`__. |
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. table:: **Table 3** Parameters
+
+   ========= ========= ====== ===========================================
+   Parameter Mandatory Type   Description
+   ========= ========= ====== ===========================================
+   db_name   Yes       String Database name. For example: "**postgres**".
+   id        Yes       String SQL throttling rule ID.
+   ========= ========= ====== ===========================================
 
 Example Request
 ---------------
 
 .. code-block:: text
 
-   DELETE https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances/49b9dd1d6f464ba4bc91df5cbd2e52ebin03/sql-limit/delete?db_name=postgres&id=1
+   DELETE https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances/49b9dd1d6f464ba4bc91df5cbd2e52ebin03/sql-limit
+   {
+      "db_name" : "postgres",
+      "id" : "1"
+    }
 
 Response
 --------
 
 -  Normal response
 
-   .. table:: **Table 3** Parameters
+   .. table:: **Table 4** Parameters
 
       ========= ====== ====================================================
       Parameter Type   Description

@@ -1,6 +1,6 @@
-:original_name: rds_11_0018.html
+:original_name: rds_05_0023.html
 
-.. _rds_11_0018:
+.. _rds_05_0023:
 
 Modifying a Private Domain Name
 ===============================
@@ -18,7 +18,7 @@ URI
 
 -  URI format
 
-   PUT /v3/{project_id}/instances/{instance_id}/update-dns
+   PUT /v3/{project_id}/instances/{instance_id}/modify-dns
 
 -  Parameter description
 
@@ -68,8 +68,7 @@ Modify the private domain name of a DB Instance.
 
 .. code-block:: text
 
-   PUT https://rds.eu-de.otc.t-systems.com/v3/054ea741f700d4a32f1bc00f5c80dd4c/instances/5b409baece064984a1b3eef6addae50cin01/update-dns
-
+   PUT https://rds.eu-de.otc.t-systems.com/v3/054ea741f700d4a32f1bc00f5c80dd4c/instances/5b409baece064984a1b3eef6addae50cin01/modify-dns
    {
         "dns_name": "testModifyDnsNewName"
    }
@@ -104,7 +103,7 @@ Status Code
 
 -  Normal
 
-   202
+   200
 
 -  Abnormal
 

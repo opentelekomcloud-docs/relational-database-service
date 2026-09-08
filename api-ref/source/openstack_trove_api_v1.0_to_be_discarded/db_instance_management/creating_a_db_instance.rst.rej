@@ -1,0 +1,10 @@
+diff a/api-ref/source/openstack_trove_api_v1.0_to_be_discarded/db_instance_management/creating_a_db_instance.rst b/api-ref/source/openstack_trove_api_v1.0_to_be_discarded/db_instance_management/creating_a_db_instance.rst	(rejected hunks)
+@@ -166,7 +166,7 @@ Request
+       | version         | Yes             | String          | Specifies the database version.                                                                                      |
+       |                 |                 |                 |                                                                                                                      |
+       |                 |                 |                 | -  MySQL databases support 5.7, 8.0 and 8.4. Example value: 5.7                                                      |
+-      |                 |                 |                 | -  PostgreSQL databases support 12, 13, 14, 15, 16 and 17. Example value: 13                                         |
++      |                 |                 |                 | -  PostgreSQL databases support 12, 13, 14, 15, 16, 17 and 18. Example value: 13                                     |
+       |                 |                 |                 |                                                                                                                      |
+       |                 |                 |                 | For details about supported database versions, see section :ref:`Database Version Queries <en-us_topic_0032347782>`. |
+       +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+

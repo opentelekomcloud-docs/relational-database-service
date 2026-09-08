@@ -1,0 +1,10 @@
+diff a/api-ref/source/api_v1_to_be_discarded/backup_and_restoration/restoring_data_to_a_new_db_instance.rst b/api-ref/source/api_v1_to_be_discarded/backup_and_restoration/restoring_data_to_a_new_db_instance.rst	(rejected hunks)
+@@ -319,7 +319,7 @@ Normal Response
+                   "id": "0d922098-553c-4124-80df-e627a1d41a0d"
+               },
+               "volume": {
+-                  "type": "ULTRAHIGH",
++                  "type": "CLOUDSSD",
+                   "size": 100
+               },
+               "dataStoreInfo": null,

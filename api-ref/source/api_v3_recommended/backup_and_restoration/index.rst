@@ -14,7 +14,7 @@ Backup and Restoration
 -  :ref:`Deleting Manual Backups in Batches (RDS for SQL Server) <rds_09_0018>`
 -  :ref:`Querying the Restoration Time Range <rds_09_0011>`
 -  :ref:`Restoring Data to a New DB Instance <rds_09_0008>`
--  :ref:`Restoring Data to an Existing or Original DB Instance <rds_09_0009>`
+-  :ref:`Restoring Data to an Existing or Original DB Instance <rds_07_0004>`
 
 .. toctree::
    :maxdepth: 1

@@ -1,14 +1,14 @@
-:original_name: rds_11_0018.html
+:original_name: rds_05_0022.html
 
-.. _rds_11_0018:
+.. _rds_05_0022:
 
-Modifying a Private Domain Name
-===============================
+Applying for a Private Domain Name
+==================================
 
 Function
 --------
 
-This API is used to modify a private domain name.
+This API is used to bind a private domain name to a specified DB instance.
 
 -  Before calling an API, you need to understand the API in :ref:`Authentication <rds_03_0001>`.
 -  Before calling this API, obtain the required `region and endpoint <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
@@ -18,7 +18,7 @@ URI
 
 -  URI format
 
-   PUT /v3/{project_id}/instances/{instance_id}/update-dns
+   POST /v3/{project_id}/instances/{instance_id}/create-dns
 
 -  Parameter description
 
@@ -53,25 +53,22 @@ Request
 
 .. table:: **Table 3** Request body parameters
 
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                               |
-   +=================+=================+=================+===========================================================================================================+
-   | dns_name        | Yes             | String          | Specifies the prefix of the new domain name.                                                              |
-   |                 |                 |                 |                                                                                                           |
-   |                 |                 |                 | The value contains 8 to 63 characters. Only uppercase letters, lowercase letters, and digits are allowed. |
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------+
+   +-----------+-----------+--------+---------------------------------------------------------------------------+
+   | Parameter | Mandatory | Type   | Description                                                               |
+   +===========+===========+========+===========================================================================+
+   | dns_type  | Yes       | String | Specifies the domain name type. Currently, only **private** is supported. |
+   +-----------+-----------+--------+---------------------------------------------------------------------------+
 
 Example Request
 ---------------
 
-Modify the private domain name of a DB Instance.
+Apply for a private domain name.
 
 .. code-block:: text
 
-   PUT https://rds.eu-de.otc.t-systems.com/v3/054ea741f700d4a32f1bc00f5c80dd4c/instances/5b409baece064984a1b3eef6addae50cin01/update-dns
-
+   POST https://rds.eu-de.otc.t-systems.com/v3/054ea741f700d4a32f1bc00f5c80dd4c/instances/5b409baece064984a1b3eef6addae50cin01/create-dns
    {
-        "dns_name": "testModifyDnsNewName"
+        "dns_type": "private"
    }
 
 Response
@@ -81,11 +78,11 @@ Response
 
    .. table:: **Table 4** Response body parameters
 
-      +-----------+--------+-------------------------------------------------------------------+
-      | Parameter | Type   | Description                                                       |
-      +===========+========+===================================================================+
-      | job_id    | String | Indicates the ID of the task for modifying a private domain name. |
-      +-----------+--------+-------------------------------------------------------------------+
+      +-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter | Type   | Description                                                                                                                                                                                       |
+      +===========+========+===================================================================================================================================================================================================+
+      | job_id    | String | Indicates the ID of the task for applying for a private domain name. To query actual status of the running task, see :ref:`Obtaining Information About a Task with a Specified ID <rds_13_0003>`. |
+      +-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 -  Normal response
 
@@ -104,7 +101,7 @@ Status Code
 
 -  Normal
 
-   202
+   200
 
 -  Abnormal
 
