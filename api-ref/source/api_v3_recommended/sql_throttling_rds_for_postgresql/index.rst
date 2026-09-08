@@ -6,7 +6,7 @@ SQL Throttling (RDS for PostgreSQL)
 ===================================
 
 -  :ref:`Adding a SQL Throttling Rule for a Database <rds_20_0001>`
--  :ref:`Deleting a SQL Throttling Rule <rds_20_0002>`
+-  :ref:`Deleting a SQL Throttling Rule <rds_11_0019>`
 -  :ref:`Modifying a SQL Throttling Rule <rds_20_0003>`
 -  :ref:`Querying SQL Throttling Rule <rds_20_0004>`
 -  :ref:`Enabling or Disabling a SQL Throttling Rule or Disabling All SQL Throttling Rules <rds_20_0005>`

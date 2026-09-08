@@ -1,6 +1,6 @@
-:original_name: rds_05_0024.html
+:original_name: rds_05_0030.html
 
-.. _rds_05_0024:
+.. _rds_05_0030:
 
 Upgrading the Minor Version of a DB Instance
 ============================================
@@ -26,7 +26,7 @@ URI
 
 -  URI format
 
-   POST /v3/{project_id}/instances/{instance_id}/database-upgrade
+   POST /v3/{project_id}/instances/{instance_id}/db-upgrade
 
 -  Parameter description
 
@@ -77,7 +77,7 @@ Upgrade the minor version of a DB instance.
 
 .. code-block:: text
 
-   POST https://rds.eu-de.otc.t-systems.com/v3/054ea741f700d4a32f1bc00f5c80dd4c/instances/5b409baece064984a1b3eef6addae50cin01/database-upgrade
+   POST https://rds.eu-de.otc.t-systems.com/v3/054ea741f700d4a32f1bc00f5c80dd4c/instances/5b409baece064984a1b3eef6addae50cin01/db-upgrade
 
    {
       "is_delayed" : false
@@ -113,7 +113,7 @@ Status Code
 
 -  Normal
 
-   202
+   200
 
 -  Abnormal
 

@@ -188,25 +188,44 @@ Request
 
    .. table:: **Table 5** volume field data structure description
 
-      +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+
-      | Name            | Mandatory       | Type            | Description                                                                                                  |
-      +=================+=================+=================+==============================================================================================================+
-      | type            | Yes             | String          | Specifies the volume type.                                                                                   |
-      |                 |                 |                 |                                                                                                              |
-      |                 |                 |                 | Its value can be any of the following and is case-sensitive:                                                 |
-      |                 |                 |                 |                                                                                                              |
-      |                 |                 |                 | -  **CLOUDSSD**: cloud SSD storage.                                                                          |
-      |                 |                 |                 | -  **ESSD**: extreme SSD storage.                                                                            |
-      +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+
-      | size            | Yes             | Integer         | Specifies the volume size.                                                                                   |
-      |                 |                 |                 |                                                                                                              |
-      |                 |                 |                 | Its value range is from 40 GB to 4000 GB. The value must be a multiple of 10.                                |
-      |                 |                 |                 |                                                                                                              |
-      |                 |                 |                 | .. important::                                                                                               |
-      |                 |                 |                 |                                                                                                              |
-      |                 |                 |                 |    NOTICE:                                                                                                   |
-      |                 |                 |                 |    The volume size of the new DB instance must be greater than or equal to that of the original DB instance. |
-      +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+
+      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Name            | Mandatory       | Type            | Description                                                                                                                                                                                        |
+      +=================+=================+=================+====================================================================================================================================================================================================+
+      | type            | Yes             | String          | Specifies the volume type.                                                                                                                                                                         |
+      |                 |                 |                 |                                                                                                                                                                                                    |
+      |                 |                 |                 | Its value can be any of the following and is case-sensitive:                                                                                                                                       |
+      |                 |                 |                 |                                                                                                                                                                                                    |
+      |                 |                 |                 | -  **CLOUDSSD**: cloud SSD storage.                                                                                                                                                                |
+      |                 |                 |                 | -  **ESSD**: extreme SSD storage.                                                                                                                                                                  |
+      |                 |                 |                 | -  **GPSSD2**: flexible SSD storage (general-purpose SSD V2). This storage type is supported only with general-purpose and dedicated DB instances.                                                 |
+      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | size            | Yes             | Integer         | Specifies the volume size.                                                                                                                                                                         |
+      |                 |                 |                 |                                                                                                                                                                                                    |
+      |                 |                 |                 | Its value range is from 40 GB to 4000 GB. The value must be a multiple of 10.                                                                                                                      |
+      |                 |                 |                 |                                                                                                                                                                                                    |
+      |                 |                 |                 | .. important::                                                                                                                                                                                     |
+      |                 |                 |                 |                                                                                                                                                                                                    |
+      |                 |                 |                 |    NOTICE:                                                                                                                                                                                         |
+      |                 |                 |                 |    The volume size of the new DB instance must be greater than or equal to that of the original DB instance.                                                                                       |
+      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | iops            | No              | Integer         | IOPS of the disk. General-purpose SSD V2 decouples capacity from performance and allows for tailored IOPS for your business requirements with fixed capacity.                                      |
+      |                 |                 |                 |                                                                                                                                                                                                    |
+      |                 |                 |                 | This parameter is available only for General-purpose SSD V2. The value range is from 3000 to 128000. The IOPS is limited by the disk size and must be no greater than 500 times the disk capacity. |
+      |                 |                 |                 |                                                                                                                                                                                                    |
+      |                 |                 |                 | .. caution::                                                                                                                                                                                       |
+      |                 |                 |                 |                                                                                                                                                                                                    |
+      |                 |                 |                 |    CAUTION:                                                                                                                                                                                        |
+      |                 |                 |                 |    If the target storage type is Flexible SSD, you must manually set this parameter. In later versions, this parameter will be optimized as an optional parameter.                                 |
+      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | throughput      | No              | Integer         | Throughput of the disk. General-purpose SSD V2 decouples capacity from performance and allows for tailored throughput for your business requirements with fixed capacity.                          |
+      |                 |                 |                 |                                                                                                                                                                                                    |
+      |                 |                 |                 | This parameter is available only for General-purpose SSD V2. The value ranges from 125 to 1000 (in MiB/s) and must also be no greater than the IOPS divided by 4.                                  |
+      |                 |                 |                 |                                                                                                                                                                                                    |
+      |                 |                 |                 | .. caution::                                                                                                                                                                                       |
+      |                 |                 |                 |                                                                                                                                                                                                    |
+      |                 |                 |                 |    CAUTION:                                                                                                                                                                                        |
+      |                 |                 |                 |    If the target storage type is Flexible SSD, you must manually set this parameter. In later versions, this parameter will be optimized as an optional parameter.                                 |
+      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _rds_09_0008__table15343138128:
 
@@ -403,19 +422,19 @@ Response
 
    .. table:: **Table 9** datastore field data structure description
 
-      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+
-      | Name            | Mandatory       | Type            | Description                                                                                                          |
-      +=================+=================+=================+======================================================================================================================+
-      | type            | Yes             | String          | Indicates the DB engine. Its value can be any of the following and is case-insensitive:                              |
-      |                 |                 |                 |                                                                                                                      |
-      |                 |                 |                 | -  MySQL                                                                                                             |
-      |                 |                 |                 | -  PostgreSQL                                                                                                        |
-      |                 |                 |                 | -  SQLServer                                                                                                         |
-      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+
-      | version         | Yes             | String          | Indicates the database version.                                                                                      |
-      |                 |                 |                 |                                                                                                                      |
-      |                 |                 |                 | For details about supported database versions, see section :ref:`Database Version Queries <en-us_topic_0032347782>`. |
-      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------+
+      +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------+
+      | Name            | Mandatory       | Type            | Description                                                                                                                     |
+      +=================+=================+=================+=================================================================================================================================+
+      | type            | Yes             | String          | Indicates the DB engine. Its value can be any of the following and is case-insensitive:                                         |
+      |                 |                 |                 |                                                                                                                                 |
+      |                 |                 |                 | -  MySQL                                                                                                                        |
+      |                 |                 |                 | -  PostgreSQL                                                                                                                   |
+      |                 |                 |                 | -  SQLServer                                                                                                                    |
+      +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------+
+      | version         | Yes             | String          | Indicates the database version.                                                                                                 |
+      |                 |                 |                 |                                                                                                                                 |
+      |                 |                 |                 | For details about supported database versions, see section :ref:`Querying Version Information About a DB Engine <rds_06_0001>`. |
+      +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------+
 
    .. _rds_09_0008__table15899105722713:
 
@@ -469,20 +488,29 @@ Response
 
    .. table:: **Table 12** volume field data structure description
 
-      +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------+
-      | Name            | Mandatory       | Type            | Description                                                                   |
-      +=================+=================+=================+===============================================================================+
-      | type            | Yes             | String          | Indicates the volume type.                                                    |
-      |                 |                 |                 |                                                                               |
-      |                 |                 |                 | Its value can be any of the following and is case-sensitive:                  |
-      |                 |                 |                 |                                                                               |
-      |                 |                 |                 | -  **CLOUDSSD**: cloud SSD storage.                                           |
-      |                 |                 |                 | -  **ESSD**: extreme SSD storage.                                             |
-      +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------+
-      | size            | Yes             | Integer         | Indicates the volume size.                                                    |
-      |                 |                 |                 |                                                                               |
-      |                 |                 |                 | Its value range is from 40 GB to 4000 GB. The value must be a multiple of 10. |
-      +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------+
+      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Name            | Mandatory       | Type            | Description                                                                                                                                                                                        |
+      +=================+=================+=================+====================================================================================================================================================================================================+
+      | type            | Yes             | String          | Indicates the volume type.                                                                                                                                                                         |
+      |                 |                 |                 |                                                                                                                                                                                                    |
+      |                 |                 |                 | Its value can be any of the following and is case-sensitive:                                                                                                                                       |
+      |                 |                 |                 |                                                                                                                                                                                                    |
+      |                 |                 |                 | -  **CLOUDSSD**: cloud SSD storage.                                                                                                                                                                |
+      |                 |                 |                 | -  **ESSD**: extreme SSD storage.                                                                                                                                                                  |
+      |                 |                 |                 | -  **GPSSD2**: flexible SSD storage (general-purpose SSD V2). This storage type is supported only with general-purpose and dedicated DB instances.                                                 |
+      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | size            | Yes             | Integer         | Indicates the volume size.                                                                                                                                                                         |
+      |                 |                 |                 |                                                                                                                                                                                                    |
+      |                 |                 |                 | Its value range is from 40 GB to 4000 GB. The value must be a multiple of 10.                                                                                                                      |
+      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | iops            | No              | Integer         | IOPS of the disk. General-purpose SSD V2 decouples capacity from performance and allows for tailored IOPS for your business requirements with fixed capacity.                                      |
+      |                 |                 |                 |                                                                                                                                                                                                    |
+      |                 |                 |                 | This parameter is available only for General-purpose SSD V2. The value range is from 3000 to 128000. The IOPS is limited by the disk size and must be no greater than 500 times the disk capacity. |
+      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | throughput      | No              | Integer         | Throughput of the disk. General-purpose SSD V2 decouples capacity from performance and allows for tailored throughput for your business requirements with fixed capacity.                          |
+      |                 |                 |                 |                                                                                                                                                                                                    |
+      |                 |                 |                 | This parameter is available only for General-purpose SSD V2. The value ranges from 125 to 1000 (in MiB/s) and must also be no greater than the IOPS divided by 4.                                  |
+      +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 -  Example normal response
 

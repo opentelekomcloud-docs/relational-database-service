@@ -16,7 +16,11 @@ This API is used to set a policy for SQL audit logs.
 Constraints
 -----------
 
-This API is available only to RDS for MySQL.
+Only the versions listed below support SQL audit.
+
+-  RDS for MySQL 5.6: 5.6.43 and later
+-  RDS for MySQL 5.7: 5.7.23 and later
+-  RDS for MySQL 8.0: 8.0.x and later
 
 URI
 ---

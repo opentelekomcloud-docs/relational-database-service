@@ -1,6 +1,6 @@
-:original_name: rds_05_0022.html
+:original_name: rds_11_0017.html
 
-.. _rds_05_0022:
+.. _rds_11_0017:
 
 Applying for a Private Domain Name
 ==================================
@@ -18,7 +18,7 @@ URI
 
 -  URI format
 
-   POST /v3/{project_id}/instances/{instance_id}/create-dns
+   POST /v3/{project_id}/instances/{instance_id}/apply-dns
 
 -  Parameter description
 
@@ -66,7 +66,7 @@ Apply for a private domain name.
 
 .. code-block:: text
 
-   POST https://rds.eu-de.otc.t-systems.com/v3/054ea741f700d4a32f1bc00f5c80dd4c/instances/5b409baece064984a1b3eef6addae50cin01/create-dns
+   POST https://rds.eu-de.otc.t-systems.com/v3/054ea741f700d4a32f1bc00f5c80dd4c/instances/5b409baece064984a1b3eef6addae50cin01/apply-dns
    {
         "dns_type": "private"
    }
