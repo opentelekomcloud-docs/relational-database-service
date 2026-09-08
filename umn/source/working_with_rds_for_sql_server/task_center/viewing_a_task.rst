@@ -7,19 +7,60 @@ Viewing a Task
 
 You can view the progress and results of tasks on the **Task Center** page.
 
-.. note::
+Supported Tasks
+---------------
 
-   You can view and manage the following tasks:
+.. table:: **Table 1** Supported tasks
 
-   -  Creating DB instances
-   -  Creating read replicas
-   -  Changing single DB instances to primary/standby
-   -  Scaling up storage space
-   -  Binding EIPs to DB instances
-   -  Unbinding EIPs from DB instances
-   -  Switching primary/standby DB instances
-   -  Rebooting DB instances
-   -  Restoring data to new DB instances
+   +-----------------------------------+------------------------------------------------------------------------+
+   | Category                          | Task Name                                                              |
+   +===================================+========================================================================+
+   | Instance creation                 | Creating a Microsoft SQL Server DB instance                            |
+   |                                   |                                                                        |
+   |                                   | Creating a Microsoft SQL Server read replica                           |
+   +-----------------------------------+------------------------------------------------------------------------+
+   | Instance lifecycle                | Rebooting a Microsoft SQL Server DB instance                           |
+   |                                   |                                                                        |
+   |                                   | Stop Microsoft SQL Server instance                                     |
+   |                                   |                                                                        |
+   |                                   | Start Microsoft SQL Server instance                                    |
+   |                                   |                                                                        |
+   |                                   | Delete Microsoft SQL Server instance                                   |
+   +-----------------------------------+------------------------------------------------------------------------+
+   | Instance modifications            | Scaling a Microsoft SQL Server DB instance                             |
+   |                                   |                                                                        |
+   |                                   | Switching Microsoft SQL Server primary/standby DB instances            |
+   |                                   |                                                                        |
+   |                                   | Microsoft SQL Server time zone change                                  |
+   |                                   |                                                                        |
+   |                                   | Clone Microsoft SQL Server instance                                    |
+   |                                   |                                                                        |
+   |                                   | Change storage type of Microsoft SQL Server                            |
+   |                                   |                                                                        |
+   |                                   | Change instance class of Microsoft SQL Server                          |
+   +-----------------------------------+------------------------------------------------------------------------+
+   | Connection management             | Update SSL certificate for Microsoft SQL Server                        |
+   |                                   |                                                                        |
+   |                                   | Enabling public accessibility for a Microsoft SQL Server DB instance   |
+   |                                   |                                                                        |
+   |                                   | Disabling public accessibility for a Microsoft SQL Server DB instance  |
+   |                                   |                                                                        |
+   |                                   | Create public zone for Microsoft SQL Server                            |
+   |                                   |                                                                        |
+   |                                   | Change private zone for Microsoft SQL Server                           |
+   |                                   |                                                                        |
+   |                                   | Change public zone for Microsoft SQL Server                            |
+   |                                   |                                                                        |
+   |                                   | Create private zone for Microsoft SQL Server                           |
+   +-----------------------------------+------------------------------------------------------------------------+
+   | Backup and restoration            | Restoring to a new Microsoft SQL Server DB instance                    |
+   |                                   |                                                                        |
+   |                                   | Restoring data to an existing RDS for Microsoft SQL Server DB instance |
+   +-----------------------------------+------------------------------------------------------------------------+
+   | Security and encryption           | Enable TDE for Microsoft SQL Server                                    |
+   |                                   |                                                                        |
+   |                                   | Rotate TDE certificate for Microsoft SQL Server                        |
+   +-----------------------------------+------------------------------------------------------------------------+
 
 Viewing an Instant Task
 -----------------------

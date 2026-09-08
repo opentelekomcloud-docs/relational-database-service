@@ -7,27 +7,58 @@ Viewing a Task
 
 You can view the progress and results of scheduled and instant tasks on the **Task Center** page.
 
-.. note::
+Supported Tasks
+---------------
 
-   RDS allows you to view and manage the following instant tasks:
+.. table:: **Table 1** Supported tasks
 
-   -  Creating DB instances
-   -  Creating read replicas
-   -  Scaling up storage space
-   -  Changing single DB instances to primary/standby
-   -  Switching primary/standby DB instances
-   -  Rebooting DB instances
-   -  Binding EIPs to DB instances
-   -  Unbinding EIPs from DB instances
-   -  Restoring data to new DB instances
-   -  Migrating a standby MySQL DB instance
-   -  Upgrading minor versions of MySQL DB instances
-   -  Restoring MySQL data to existing DB instances
-
-   RDS allows you to view and manage the following scheduled tasks:
-
-   -  Changing MySQL DB instance classes
-   -  Upgrading minor versions of MySQL DB instances
+   +-----------------------------------+-----------------------------------------------------------------+
+   | Category                          | Task Name                                                       |
+   +===================================+=================================================================+
+   | Instance creation                 | Creating a MySQL DB instance                                    |
+   |                                   |                                                                 |
+   |                                   | Creating a MySQL read replica                                   |
+   +-----------------------------------+-----------------------------------------------------------------+
+   | Instance lifecycle                | Rebooting a MySQL DB instance                                   |
+   +-----------------------------------+-----------------------------------------------------------------+
+   | Instance modifications            | Scaling up the storage space of a MySQL DB instance             |
+   |                                   |                                                                 |
+   |                                   | Scale down MySQL instance                                       |
+   |                                   |                                                                 |
+   |                                   | Changing the MySQL instance type from single to primary/standby |
+   |                                   |                                                                 |
+   |                                   | Switching MySQL primary/standby DB instances                    |
+   |                                   |                                                                 |
+   |                                   | Applying for a MySQL private domain name                        |
+   |                                   |                                                                 |
+   |                                   | Changing a MySQL instance class                                 |
+   |                                   |                                                                 |
+   |                                   | Configure delayed replication for MySQL                         |
+   |                                   |                                                                 |
+   |                                   | MySQL flashback                                                 |
+   |                                   |                                                                 |
+   |                                   | MySQL workload replay                                           |
+   +-----------------------------------+-----------------------------------------------------------------+
+   | Version upgrade                   | Upgrading a MySQL DB instance engine version                    |
+   |                                   |                                                                 |
+   |                                   | Upgrade Proxy Instance Version                                  |
+   |                                   |                                                                 |
+   |                                   | Confirmation after a successful MySQL minor version upgrade     |
+   |                                   |                                                                 |
+   |                                   | Rollback after a successful MySQL minor version upgrade         |
+   +-----------------------------------+-----------------------------------------------------------------+
+   | Backup and restoration            | MySQL database-level PITR                                       |
+   |                                   |                                                                 |
+   |                                   | Restoring to a new MySQL DB instance                            |
+   |                                   |                                                                 |
+   |                                   | Restoring to an existing MySQL DB instance                      |
+   |                                   |                                                                 |
+   |                                   | Restoring a MySQL DB Instance to the Current DB Instance        |
+   +-----------------------------------+-----------------------------------------------------------------+
+   | DBA Assistant                     | Clearing MySQL table fragments                                  |
+   +-----------------------------------+-----------------------------------------------------------------+
+   | Security and encryption           | MySQL instance disk encryption                                  |
+   +-----------------------------------+-----------------------------------------------------------------+
 
 Viewing an Instant Task
 -----------------------
