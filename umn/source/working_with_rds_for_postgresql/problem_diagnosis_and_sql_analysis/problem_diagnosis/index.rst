@@ -5,12 +5,12 @@
 Problem Diagnosis
 =================
 
--  :ref:`Killing Sessions <rds_pg_08_0039>`
 -  :ref:`Managing Real-Time Sessions <rds_pg_08_0026>`
+-  :ref:`Managing Historical Sessions <rds_pg_08_0057>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   killing_sessions
    managing_real-time_sessions
+   managing_historical_sessions

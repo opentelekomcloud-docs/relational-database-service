@@ -17,15 +17,15 @@ Procedure
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 #. On the **Instances** page, click the target instance name.
-#. In the navigation pane, choose **DBA Assistant** > **Historical Diagnosis**.
+#. In the navigation pane, choose **SQL Analysis and Tuning** under **DBA Assistant**.
 #. Click the **Slow Query Log** tab.
 
    .. note::
 
-      Slow SQL Analysis needs to be purchased separately. To use this function, subscribe to Intelligent O&M first.
+      Slow SQL Analysis needs to be purchased separately. To use this function, upgrade DBA Assistant first.
 
-#. Click **Subscribe**. In the displayed dialog box, you can learn about Intelligent O&M functions and pricing.
-#. After subscribing to Intelligent O&M, view slow queries over time of your instance.
+#. Click **Upgrade DBA Assistant**. In the displayed dialog box, you can learn about the enhanced features and billing rules.
+#. After the upgrade is complete, view slow queries over time of your instance.
 #. You can view slow queries over time and you can see the slow log archive history for the last 1 hour, last 3 hours, last 12 hours, or a custom time period (spanning no more than one day).
 #. View slow query log details and template statistics.
 

@@ -26,7 +26,7 @@ Procedure
 
    -  During the migration process, the DB instance status is **Migrating standby DB instance**. You can view the progress on the **Task Center** page. For details, see :ref:`Task Center <rds_pg_05_0007>`.
    -  In the upper right corner of the DB instance list, click |image2| to refresh the list. After the migration is complete, the DB instance status will become **Available**.
-   -  On the **Overview** page, find **AZ** and check the AZ hosting the standby DB instance.
+   -  On the **Summary** page, find **AZ** and check the AZ hosting the standby DB instance.
 
 .. |image1| image:: /_static/images/en-us_image_0000001539289437.png
 .. |image2| image:: /_static/images/en-us_image_0000001488529446.png

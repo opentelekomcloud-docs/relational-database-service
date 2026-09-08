@@ -22,8 +22,7 @@ Starting a Diagnosis
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 #. On the **Instances** page, click the DB instance name.
-#. In the navigation pane, choose **DBA Assistant** > **Historical Diagnosis**.
-#. Click the **Daily Reports** tab.
+#. In the navigation pane, choose **Daily Reports** under **DBA Assistant**.
 #. Click **Start Diagnosis**. Select a time range for the diagnosis. The time span is within one day.
 
    .. note::
@@ -43,17 +42,9 @@ Subscribing to Diagnosis Reports
 
 #. On the **Instances** page, click the DB instance name.
 
-#. In the navigation pane, choose **DBA Assistant** > **Historical Diagnosis**.
+#. In the navigation pane, choose **Daily Reports** under **DBA Assistant**.
 
-#. Click the **Daily Reports** tab.
-
-#. In the upper right corner of the page, click **Subscribe** and set subscription parameters. For details about the parameters, see :ref:`Table 1 <rds_08_0035__table15405957124920>`.
-
-
-   .. figure:: /_static/images/en-us_image_0000002378668778.png
-      :alt: **Figure 1** Subscribe to Daily Report
-
-      **Figure 1** Subscribe to Daily Report
+#. In the upper right corner of the page, click **Subscribe to Daily Reports** and set subscription parameters. For details about the parameters, see :ref:`Table 1 <rds_08_0035__table15405957124920>`.
 
    .. _rds_08_0035__table15405957124920:
 

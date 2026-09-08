@@ -10,7 +10,7 @@ Instance Modifications
 -  :ref:`Changing a DB Instance Name <rds_modify_instance_name>`
 -  :ref:`Changing the Failover Priority <rds_modify_availability>`
 -  :ref:`Changing a DB Instance Class <en-us_topic_scale_rds>`
--  :ref:`Scaling up Storage Space <en-us_topic_scale_cluster>`
+-  :ref:`Scaling Up Storage Space <en-us_topic_scale_cluster>`
 -  :ref:`Storage Autoscaling <rds_05_0039>`
 -  :ref:`Changing a Storage Type <rds_05_0140>`
 -  :ref:`Changing the Maintenance Window <rds_05_0038>`

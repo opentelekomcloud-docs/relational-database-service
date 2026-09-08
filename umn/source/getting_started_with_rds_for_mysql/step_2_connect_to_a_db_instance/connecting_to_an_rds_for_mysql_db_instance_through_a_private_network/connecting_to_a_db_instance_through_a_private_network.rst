@@ -74,7 +74,7 @@ Using MySQL-Front to Connect to a DB Instance
       |                                   |                                                                                                                                                                 |
       |                                   | a. Log in to the RDS console.                                                                                                                                   |
       |                                   | b. Select the region in which the DB instance is located.                                                                                                       |
-      |                                   | c. Click the target DB instance to enter the **Overview** page.                                                                                                 |
+      |                                   | c. Click the target DB instance to enter the **Summary** page.                                                                                                  |
       |                                   | d. In the navigation pane on the left, choose **Connectivity & Security**. In the **Connection Information** area, view the floating IP address.                |
       +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Port                              | Indicates the private network port of the DB instance.                                                                                                          |
@@ -105,7 +105,7 @@ SSL Connection
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. On the **Instances** page, click the target DB instance. In the **Basic Information** area on the **Overview** page, click **Download** in the **SSL** field to download the root certificate or certificate bundle.
+#. On the **Instances** page, click the target DB instance. Click **Download** under **SSL** to download the Certificate Download package, and extract the root certificate ca.pem and bundle ca-bundle.pem from the package.
 
 #. Import the root certificate to the Linux OS on the ECS. For details, see :ref:`How Can I Import the Root Certificate to a Windows or Linux OS? <rds_faq_0052>`
 
@@ -123,17 +123,17 @@ SSL Connection
 
    .. table:: **Table 2** Parameter description
 
-      +--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter    | Description                                                                                                                                                                                                                                                        |
-      +==============+====================================================================================================================================================================================================================================================================+
-      | <*host*>     | Floating IP address. To obtain this parameter, go to the **Overview** page of the DB instance. In the navigation pane on the left, choose **Connectivity & Security**. View the floating IP address in the **Connection Information** area,                        |
-      +--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | *<port>*     | Database port. By default, the value is **3306**. To obtain this parameter, go to the **Overview** page of the DB instance. In the navigation pane on the left, choose **Connectivity & Security**. View the database port in the **Connection Information** area. |
-      +--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | <*userName*> | Username of the RDS database account. The default administrator is **root**.                                                                                                                                                                                       |
-      +--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | <*caDIR*>    | Directory of the CA certificate. The certificate should be stored in the directory where the command is executed.                                                                                                                                                  |
-      +--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter    | Description                                                                                                                                                                                                                                                       |
+      +==============+===================================================================================================================================================================================================================================================================+
+      | <*host*>     | Floating IP address. To obtain this parameter, go to the **Summary** page of the DB instance. In the navigation pane on the left, choose **Connectivity & Security**. View the floating IP address in the **Connection Information** area,                        |
+      +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | *<port>*     | Database port. By default, the value is **3306**. To obtain this parameter, go to the **Summary** page of the DB instance. In the navigation pane on the left, choose **Connectivity & Security**. View the database port in the **Connection Information** area. |
+      +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | <*userName*> | Username of the RDS database account. The default administrator is **root**.                                                                                                                                                                                      |
+      +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | <*caDIR*>    | Directory of the CA certificate. The certificate should be stored in the directory where the command is executed.                                                                                                                                                 |
+      +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    For example, to connect to a DB instance through an SSL connection as user **root**, run the following command:
 

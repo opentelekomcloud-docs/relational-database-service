@@ -5,12 +5,12 @@
 Introduction to Instance Overview
 =================================
 
-On the **Overview** page, you can get knowledge of the overall status of your RDS for PostgreSQL instance, including alarms, intelligent anomaly diagnosis, and key performance metrics. DBA Assistant diagnoses instance health using operational data analytics and intelligent algorithms, and provides you with solutions and suggestions for handling detected exceptions.
+On the **Summary** page, you can get knowledge of the overall status of your RDS for PostgreSQL instance, including alarms, intelligent anomaly diagnosis, and key performance metrics. DBA Assistant diagnoses instance health using operational data analytics and intelligent algorithms, and provides you with solutions and suggestions for handling detected exceptions.
 
 Functions
 ---------
 
-:ref:`Table 1 <rds_pg_08_0025__table29401349134416>` lists the functions provided on the **Overview** page.
+:ref:`Table 1 <rds_pg_08_0025__table29401349134416>` lists the functions provided on the **Summary** page.
 
 .. _rds_pg_08_0025__table29401349134416:
 
@@ -48,7 +48,7 @@ Instance Information
 #. Log in to the management console.
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
-#. On the **Instances** page, click the target instance name to go to the **Overview** page.
+#. On the **Instances** page, click the target instance name to go to the **Summary** page.
 #. In the **Instance Information** area, check the instance information and modify the instance as required.
 
 Alarms

@@ -27,7 +27,7 @@ Procedure
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 #. On the **Instances** page, click the target DB instance or click |image2| first and then click the target read replica.
-#. On the **Overview** page, find **Database Port** and click **Configure** under it.
+#. On the **Summary** page, find **Database Port** and click **Configure** under it.
 
    .. note::
 
@@ -40,7 +40,7 @@ Procedure
 
    -  In the dialog box, click **No** to cancel the modification.
 
-#. View the results on the **Overview** page.
+#. View the results on the **Summary** page.
 
 .. |image1| image:: /_static/images/en-us_image_0000001191211679.png
 .. |image2| image:: /_static/images/en-us_image_0000002492831361.png

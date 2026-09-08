@@ -31,7 +31,7 @@ Solution
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 #. On the **Instances** page, click the target DB instance. On the **Connectivity & Security** and **Backups & Restorations** pages, check connection and backup information.
-#. On the **Overview** page, check the administrator.
+#. On the **Summary** page, check the administrator.
 #. Download an SQL Server Management Studio installation package and install it on an ECS.
 #. Connect to the RDS DB instance through an ECS.
 
