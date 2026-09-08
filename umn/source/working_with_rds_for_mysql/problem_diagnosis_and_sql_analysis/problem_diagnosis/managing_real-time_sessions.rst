@@ -18,7 +18,7 @@ Setting Slow Session Threshold
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 #. On the **Instances** page, click the DB instance name.
 #. In the navigation pane, choose **Sessions** under **DBA Assistant**.
-#. On the **Sessions** page. You can perform the following operations on this tab page:
+#. On the **Sessions** page, you can perform the following operations on this tab page:
 
    -  Viewing session statistics
 

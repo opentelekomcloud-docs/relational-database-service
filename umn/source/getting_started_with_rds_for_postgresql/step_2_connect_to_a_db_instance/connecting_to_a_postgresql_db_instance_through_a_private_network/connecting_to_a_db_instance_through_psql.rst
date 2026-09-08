@@ -109,9 +109,10 @@ SSL Connection
 
    For example, to connect to a DB instance through an SSL connection as user **root**, run the following command:
 
-   **psql --no-readline -h 192.168.0.44 -p 5432 "dbname=postgres user=root sslmode=verify-ca sslrootcert=/root/ca.pem"**
+   .. code-block:: text
 
-   **Password:**
+      psql --no-readline -h 192.168.0.44 -p 5432 "dbname=postgres user=root  sslmode=verify-ca sslrootcert=/root/ca.pem"
+      Password:
 
 #. The SSL connection is established if information similar to the following is displayed after you log in to the database:
 
