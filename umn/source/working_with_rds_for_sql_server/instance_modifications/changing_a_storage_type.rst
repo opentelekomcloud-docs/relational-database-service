@@ -48,17 +48,20 @@ Procedure
 
    Alternatively, click the target DB instance to go to the **Summary** page. Under **Instance Class**, click **Configure**.
 
-#. On the displayed page, select a target Storage Type, for example, **Extreme SSD** for **Storage Type** and click **Next**.
+#. On the **Change Instance Class** page, select a new storage type.
 
-   If the target storage type is **Flexible SSD**, click **Disk QoS** under **Change Type** and enter the IOPS and throughput.
+   If you select **Flexible SSD**, select **Instance Specifications** or **Disk QoS** for **Change Type** as needed.
 
-   -  IOPS: Flexible SSD decouples capacity from performance and allows for tailored IOPS for your business requirements with fixed capacity.
+   -  To change instance specifications, click **Instance Specifications** under **Change Type** and select the new specifications.
+   -  To change disk QoS, click **Disk QoS** under **Change Type** and enter the new IOPS and throughput.
 
-      This parameter is available only for Flexible SSD. The value range is from 3000 to 128000. The IOPS is limited by the disk size and must be no greater than 500 times the disk capacity.
+      -  **IOPS**: The value range is from 3000 to 128000. The IOPS is limited by the disk size and must be no greater than 500 times the disk capacity.
+      -  **Throughput**: The value range is from 125 to 1000 (in MiB/s) and must also be no greater than the IOPS divided by 4.
 
-   -  Throughput: Flexible SSD decouples capacity from performance and allows for tailored throughput for your business requirements with fixed capacity.
+#. Specify **Scheduled Time** and click **Next**.
 
-      This parameter is available only for Flexible SSD. The value ranges from 125 to 1000 (in MiB/s) and must also be no greater than the IOPS divided by 4.
+   -  **Immediate**: The change is applied immediately after the request is submitted.
+   -  **During maintenance window**: If you select this option, set the maintenance window to off-peak hours.
 
 #. Confirm the configurations and Click **Submit**.
 
