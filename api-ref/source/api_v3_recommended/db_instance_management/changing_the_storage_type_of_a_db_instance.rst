@@ -19,6 +19,7 @@ Constraints
 -  The storage type of an instance can be changed only when the instance is in the **Available** state.
 -  Changing the storage type may affect storage performance, so the storage type should be changed during off-peak hours.
 -  If the storage type of a read replica is different from that of its associated DB instance, the data synchronization may be affected. To change the storage type of a DB instance, change that of its read replica (if any) first to ensure that the storage type of the read replica is the same as that of the DB instance.
+-  If the target storage type is Flexible SSD, you must manually enter the values of **iops** and **throughput**. In later versions, **iops** and **throughput** will be optimized as optional parameters.
 
 URI
 ---
@@ -72,51 +73,87 @@ Request
 
 .. table:: **Table 4** change_volume field data structure description
 
-   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                              |
-   +=================+=================+=================+==========================================================================================================+
-   | volume_code     | Yes             | Integer         | Specification code of the target storage type.                                                           |
-   |                 |                 |                 |                                                                                                          |
-   |                 |                 |                 | -  Values for RDS for MySQL:                                                                             |
-   |                 |                 |                 |                                                                                                          |
-   |                 |                 |                 |    -  If the target storage type is ESSD:                                                                |
-   |                 |                 |                 |                                                                                                          |
-   |                 |                 |                 |       -  **rds.mysql.volume.essd.ha**: ESSD specification code for primary/standby DB instances          |
-   |                 |                 |                 |       -  **rds.mysql.volume.essd.rr**: ESSD specification code for read replicas                         |
-   |                 |                 |                 |                                                                                                          |
-   |                 |                 |                 |    -  If the target storage type is cloud SSD:                                                           |
-   |                 |                 |                 |                                                                                                          |
-   |                 |                 |                 |       -  **rds.mysql.volume.cloudssd.ha**: cloud SSD specification code for primary/standby DB instances |
-   |                 |                 |                 |       -  **rds.mysql.volume.cloudssd.rr**: cloud SSD specification code for read replicas                |
-   |                 |                 |                 |       -  **rds.mysql.volume.cloudssd**: cloud SSD specification code for single-node DB instances        |
-   |                 |                 |                 |                                                                                                          |
-   |                 |                 |                 | -  Values for RDS for PostgreSQL:                                                                        |
-   |                 |                 |                 |                                                                                                          |
-   |                 |                 |                 |    -  If the target storage type is ESSD:                                                                |
-   |                 |                 |                 |                                                                                                          |
-   |                 |                 |                 |       -  **rds.pg.volume.essd.ha**: ESSD specification code for primary/standby DB instances             |
-   |                 |                 |                 |       -  **rds.pg.volume.essd.rr**: ESSD specification code for read replicas                            |
-   |                 |                 |                 |                                                                                                          |
-   |                 |                 |                 |    -  If the target storage type is cloud SSD:                                                           |
-   |                 |                 |                 |                                                                                                          |
-   |                 |                 |                 |       -  **rds.pg.volume.cloudssd.ha**: cloud SSD specification code for primary/standby DB instances    |
-   |                 |                 |                 |       -  **rds.pg.volume.cloudssd.rr**: cloud SSD specification code for read replicas                   |
-   |                 |                 |                 |       -  **rds.pg.volume.cloudssd**: cloud SSD specification code for single-node DB instances           |
-   |                 |                 |                 |                                                                                                          |
-   |                 |                 |                 | -  Values for RDS for SQL Server:                                                                        |
-   |                 |                 |                 |                                                                                                          |
-   |                 |                 |                 |    -  If the target storage type is ESSD:                                                                |
-   |                 |                 |                 |                                                                                                          |
-   |                 |                 |                 |       -  **rds.mssql.volume.essd.ha**: ESSD specification code for primary/standby DB instances          |
-   |                 |                 |                 |       -  **rds.mssql.volume.essd.rr**: ESSD specification code for read replicas                         |
-   |                 |                 |                 |       -  **rds.mssql.volume.essd**: ESSD specification code for single-node DB instances                 |
-   |                 |                 |                 |                                                                                                          |
-   |                 |                 |                 |    -  If the target storage type is cloud SSD:                                                           |
-   |                 |                 |                 |                                                                                                          |
-   |                 |                 |                 |       -  **rds.mssql.volume.cloudssd.ha**: cloud SSD specification code for primary/standby DB instances |
-   |                 |                 |                 |       -  **rds.mssql.volume.cloudssd.rr**: cloud SSD specification code for read replicas                |
-   |                 |                 |                 |       -  **rds.mssql.volume.cloudssd**: cloud SSD specification code for single-node DB instances        |
-   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                                                                                        |
+   +=================+=================+=================+====================================================================================================================================================================================================+
+   | volume_code     | Yes             | Integer         | Specification code of the target storage type.                                                                                                                                                     |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | -  Values for RDS for MySQL:                                                                                                                                                                       |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |    -  If the target storage type is **ESSD**:                                                                                                                                                      |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |       -  **rds.mysql.volume.essd.ha**: ESSD specification code for primary/standby DB instances                                                                                                    |
+   |                 |                 |                 |       -  **rds.mysql.volume.essd.rr**: ESSD specification code for read replicas                                                                                                                   |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |    -  If the target storage type is **CLOUDSSD**:                                                                                                                                                  |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |       -  **rds.mysql.volume.cloudssd.ha**: cloud SSD specification code for primary/standby DB instances                                                                                           |
+   |                 |                 |                 |       -  **rds.mysql.volume.cloudssd.rr**: cloud SSD specification code for read replicas                                                                                                          |
+   |                 |                 |                 |       -  **rds.mysql.volume.cloudssd**: cloud SSD specification code for single-node DB instances                                                                                                  |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |    -  If the target storage type is **GPSSD2**:                                                                                                                                                    |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |       -  **rds.mysql.volume.gpssd2.ha**: GPSSD2 specification code for primary/standby DB instances                                                                                                |
+   |                 |                 |                 |       -  **rds.mysql.volume.gpssd2.rr**: GPSSD2 specification code for read replicas                                                                                                               |
+   |                 |                 |                 |       -  **rds.mysql.volume.gpssd2**: GPSSD2 specification code for single-node DB instances                                                                                                       |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | -  Values for RDS for PostgreSQL:                                                                                                                                                                  |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |    -  If the target storage type is **ESSD**:                                                                                                                                                      |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |       -  **rds.pg.volume.essd.ha**: ESSD specification code for primary/standby DB instances                                                                                                       |
+   |                 |                 |                 |       -  **rds.pg.volume.essd.rr**: ESSD specification code for read replicas                                                                                                                      |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |    -  If the target storage type is **CLOUDSSD**:                                                                                                                                                  |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |       -  **rds.pg.volume.cloudssd.ha**: cloud SSD specification code for primary/standby DB instances                                                                                              |
+   |                 |                 |                 |       -  **rds.pg.volume.cloudssd.rr**: cloud SSD specification code for read replicas                                                                                                             |
+   |                 |                 |                 |       -  **rds.pg.volume.cloudssd**: cloud SSD specification code for single-node DB instances                                                                                                     |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |    -  If the target storage type is **GPSSD2**:                                                                                                                                                    |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |       -  **rds.pg.volume.gpssd2.ha**: GPSSD2 specification code for primary/standby DB instances                                                                                                   |
+   |                 |                 |                 |       -  **rds.pg.volume.gpssd2.rr**: GPSSD2 specification code for read replicas                                                                                                                  |
+   |                 |                 |                 |       -  **rds.pg.volume.gpssd2**: GPSSD2 specification code for single-node DB instances                                                                                                          |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | -  Values for RDS for SQL Server:                                                                                                                                                                  |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |    -  If the target storage type is **ESSD**:                                                                                                                                                      |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |       -  **rds.mssql.volume.essd.ha**: ESSD specification code for primary/standby DB instances                                                                                                    |
+   |                 |                 |                 |       -  **rds.mssql.volume.essd.rr**: ESSD specification code for read replicas                                                                                                                   |
+   |                 |                 |                 |       -  **rds.mssql.volume.essd**: ESSD specification code for single-node DB instances                                                                                                           |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |    -  If the target storage type is **CLOUDSSD**:                                                                                                                                                  |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |       -  **rds.mssql.volume.cloudssd.ha**: cloud SSD specification code for primary/standby DB instances                                                                                           |
+   |                 |                 |                 |       -  **rds.mssql.volume.cloudssd.rr**: cloud SSD specification code for read replicas                                                                                                          |
+   |                 |                 |                 |       -  **rds.mssql.volume.cloudssd**: cloud SSD specification code for single-node DB instances                                                                                                  |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |    -  If the target storage type is **GPSSD2**:                                                                                                                                                    |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |       -  **rds.mssql.volume.gpssd2.ha**: GPSSD2 specification code for primary/standby DB instances                                                                                                |
+   |                 |                 |                 |       -  **rds.mssql.volume.gpssd2.rr**: GPSSD2 specification code for read replicas                                                                                                               |
+   |                 |                 |                 |       -  **rds.mssql.volume.gpssd2**: GPSSD2 specification code for single-node DB instances                                                                                                       |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | iops            | No              | Integer         | IOPS of the disk. General-purpose SSD V2 decouples capacity from performance and allows for tailored IOPS for your business requirements with fixed capacity.                                      |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | This parameter is available only for General-purpose SSD V2. The value range is from 3000 to 128000. The IOPS is limited by the disk size and must be no greater than 500 times the disk capacity. |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | .. caution::                                                                                                                                                                                       |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |    CAUTION:                                                                                                                                                                                        |
+   |                 |                 |                 |    If the target storage type is Flexible SSD, you must manually set this parameter. In later versions, this parameter will be optimized as an optional parameter.                                 |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | throughput      | No              | Integer         | Throughput of the disk. General-purpose SSD V2 decouples capacity from performance and allows for tailored throughput for your business requirements with fixed capacity.                          |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | This parameter is available only for General-purpose SSD V2. The value ranges from 125 to 1000 (in MiB/s) and must also be no greater than the IOPS divided by 4.                                  |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 | .. caution::                                                                                                                                                                                       |
+   |                 |                 |                 |                                                                                                                                                                                                    |
+   |                 |                 |                 |    CAUTION:                                                                                                                                                                                        |
+   |                 |                 |                 |    If the target storage type is Flexible SSD, you must manually set this parameter. In later versions, this parameter will be optimized as an optional parameter.                                 |
+   +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Example Request
 ---------------
@@ -130,6 +167,20 @@ Change the storage type of an RDS for MySQL primary/standby DB instance to ESSD.
    {
        "change_volume": {
            "volume_code": "rds.mysql.volume.essd.ha"
+       }
+   }
+
+Change the storage type of an RDS for MySQL primary/standby DB instance to GPSSD2.
+
+.. code-block:: text
+
+   POST https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances/dsfae23fsfdsae3435in01/action
+
+   {
+       "change_volume": {
+           "volume_code": "rds.mysql.volume.gpssd2.ha",
+           "iops": 3000,
+           "throughput":125
        }
    }
 

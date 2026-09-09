@@ -12,8 +12,8 @@ DB Instance Management
 -  :ref:`Changing the Description of a DB Instance <rds_05_0029>`
 -  :ref:`Changing DB Instance Specifications <rds_01_0101>`
 -  :ref:`Changing the Storage Type of a DB Instance <rds_01_0151>`
--  :ref:`Applying for a Private Domain Name <rds_05_0022>`
--  :ref:`Modifying a Private Domain Name <rds_05_0023>`
+-  :ref:`Applying for a Private Domain Name <rds_11_0017>`
+-  :ref:`Modifying a Private Domain Name <rds_11_0018>`
 -  :ref:`Querying the Domain Name of a DB Instance <rds_05_0031>`
 -  :ref:`Obtaining the Replication Status of a DB Instance <rds_05_0033>`
 -  :ref:`Querying Available Instance Classes for a DB Instance <rds_05_0032>`

@@ -8,8 +8,8 @@ Extension Management (RDS for PostgreSQL)
 -  :ref:`Creating an Extension <rds_11_0012>`
 -  :ref:`Querying Extensions <rds_11_0010>`
 -  :ref:`Updating an Extension <rds_11_0026>`
--  :ref:`Deleting an Extension <rds_11_0011>`
--  :ref:`Modifying the Value of a Specified Parameter for an Instance <rds_11_0013>`
+-  :ref:`Deleting an Extension <rds_11_0020>`
+-  :ref:`Modifying the Value of a Specified Parameter for an Instance <rds_11_0021>`
 -  :ref:`Obtaining the Value of a Specified Parameter for an Instance <rds_11_0014>`
 
 .. toctree::

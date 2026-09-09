@@ -1,6 +1,6 @@
-:original_name: rds_11_0011.html
+:original_name: rds_11_0020.html
 
-.. _rds_11_0011:
+.. _rds_11_0020:
 
 Deleting an Extension
 =====================
@@ -23,21 +23,25 @@ URI
 
 -  URI format
 
-   DELETE https://{*Endpoint*}/v3/{project_id}/instances/{instance_id}/extensions
+   DELETE https://{*Endpoint*}/v3/{project_id}/instances/{instance_id}/delete-extensions?database_name={database_name}&extension_name={extension_name}
 
 -  Parameter description
 
    .. table:: **Table 1** URI parameters
 
-      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------+
-      | Parameter             | Mandatory             | Description                                                                                      |
-      +=======================+=======================+==================================================================================================+
-      | project_id            | Yes                   | Specifies the project ID of a tenant in a region.                                                |
-      |                       |                       |                                                                                                  |
-      |                       |                       | For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <rds_03_0002>`. |
-      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------+
-      | instance_id           | Yes                   | Specifies the DB instance ID.                                                                    |
-      +-----------------------+-----------------------+--------------------------------------------------------------------------------------------------+
+      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter             | Mandatory             | Description                                                                                                                            |
+      +=======================+=======================+========================================================================================================================================+
+      | project_id            | Yes                   | Specifies the project ID of a tenant in a region.                                                                                      |
+      |                       |                       |                                                                                                                                        |
+      |                       |                       | For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <rds_03_0002>`.                                       |
+      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+      | instance_id           | Yes                   | Specifies the DB instance ID.                                                                                                          |
+      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+      | database_name         | Yes                   | The name of the specific database created inside the RDS instance. This is the logical database name, not the RDS instance identifier. |
+      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+      | extension_name        | Yes                   | Extension name.                                                                                                                        |
+      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------+
 
 Request
 -------
@@ -52,27 +56,12 @@ Request
    |                 |                 |                 | The user token is a response to the API used to `obtain a user token <https://docs.otc.t-systems.com/en-us/api/iam/en-us_topic_0057845583.html>`__. |
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 
-.. table:: **Table 3** Request body parameters
-
-   +----------------+-----------+--------+----------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter      | Mandatory | Type   | Description                                                                                                                            |
-   +================+===========+========+========================================================================================================================================+
-   | database_name  | Yes       | String | The name of the specific database created inside the RDS instance. This is the logical database name, not the RDS instance identifier. |
-   +----------------+-----------+--------+----------------------------------------------------------------------------------------------------------------------------------------+
-   | extension_name | Yes       | String | Extension name.                                                                                                                        |
-   +----------------+-----------+--------+----------------------------------------------------------------------------------------------------------------------------------------+
-
 Example Request
 ---------------
 
 .. code-block:: text
 
-   DELETE https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances/f569f1358436479dbcba8603c32cc4aein03/extensions
-
-   {
-     "database_name" : "db1",
-     "extension_name" : "pg_stat_statements"
-   }
+   DELETE https://rds.eu-de.otc.t-systems.com/v3/0483b6b16e954cb88930a360d2c4e663/instances/f569f1358436479dbcba8603c32cc4aein03/delete-extensions?database_name=db1&extension_name=pg_stat_statements
 
 Response
 --------

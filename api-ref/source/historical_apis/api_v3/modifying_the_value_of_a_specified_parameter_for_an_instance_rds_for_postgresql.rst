@@ -1,9 +1,9 @@
-:original_name: rds_11_0021.html
+:original_name: rds_11_0013.html
 
-.. _rds_11_0021:
+.. _rds_11_0013:
 
-Modifying the Value of a Specified Parameter for an Instance
-============================================================
+Modifying the Value of a Specified Parameter for an Instance (RDS for PostgreSQL)
+=================================================================================
 
 Function
 --------
@@ -25,7 +25,7 @@ URI
 
 -  URI format
 
-   PUT https://{*Endpoint*}/v3/{project_id}/instances/{instance_id}/parameter/{name}/update
+   PUT https://{*Endpoint*}/v3/{project_id}/instances/{instance_id}/parameter/{name}
 
 -  Parameter description
 
@@ -81,10 +81,9 @@ Change the value of **shared_preload_libraries** for a DB instance.
 
 .. code-block:: text
 
-   PUT https://rds.eu-de.otc.t-systems.com/v3/054e292c9880d4992f02c0196d3ea468/instances/f569f1358436479dbcba8603c32cc4aein03/parameter/shared_preload_libraries/update
-
+   PUT https://rds.eu-de.otc.t-systems.com/v3/054e292c9880d4992f02c0196d3ea468/instances/f569f1358436479dbcba8603c32cc4aein03/parameter/shared_preload_libraries
    {
-     "value" : "passwordcheck.so,pg_stat_statements,pg_sql_history,pgaudit"
+     "value" : "passwordcheck.so,pg_stat_statements,pg_sql_history,pgaudit,pg_cron"
    }
 
 Response
@@ -123,7 +122,7 @@ Status Code
 
 -  Normal
 
-   202
+   200
 
 -  Abnormal
 

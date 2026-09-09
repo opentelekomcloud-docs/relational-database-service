@@ -319,7 +319,7 @@ Normal Response
                   "id": "0d922098-553c-4124-80df-e627a1d41a0d"
               },
               "volume": {
-                  "type": "ULTRAHIGH",
+                  "type": "CLOUDSSD",
                   "size": 100
               },
               "dataStoreInfo": null,

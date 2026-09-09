@@ -2,8 +2,8 @@
 
 .. _rds_09_0306:
 
-Obtaining the Parameter Template of a Specified DB Instance
-===========================================================
+Obtaining the Parameters of a Specified DB Instance
+===================================================
 
 Function
 --------

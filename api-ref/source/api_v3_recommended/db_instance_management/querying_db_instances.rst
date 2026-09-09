@@ -221,6 +221,8 @@ Response
       |                             |                       |                                                                                                                                                                                                                                                          |
       |                             |                       | For details, see :ref:`Table 8 <rds_01_0004__table1179987152611>`.                                                                                                                                                                                       |
       +-----------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | availability_zone           | String                | AZ of the instance. If there are multiple AZs, such as primary/standby AZs, use commas (,) to separate them.                                                                                                                                             |
+      +-----------------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | related_instance            | Array of objects      | Indicates the list of associated DB instances.                                                                                                                                                                                                           |
       |                             |                       |                                                                                                                                                                                                                                                          |
       |                             |                       | For details, see :ref:`Table 9 <rds_01_0004__table15816167142613>`.                                                                                                                                                                                      |
@@ -408,7 +410,7 @@ Response
               "created": "2018-08-20T02:33:49+0800",
               "updated": "2018-08-20T02:33:50+0800",
               "volume": {
-                  "type": "ULTRAHIGH",
+                  "type": "CLOUDSSD",
                   "size": 100
               },
               "nodes": [{
@@ -418,6 +420,7 @@ Response
                   "status": "ACTIVE",
                   "availability_zone": "eu-de-01"
               }],
+              "availability_zone": "eu-de-01",
                       "tags": [],
               "private_ips": ["192.168.0.142"],
                       "private_dns_names": [],
@@ -461,7 +464,7 @@ Response
               "created": "2018-08-20T02:33:49+0800",
               "updated": "2018-08-20T02:33:50+0800",
               "volume": {
-                  "type": "ULTRAHIGH",
+                  "type": "CLOUDSSD",
                   "size": 100
               },
               "nodes": [{
@@ -471,6 +474,7 @@ Response
                   "status": "ACTIVE",
                   "availability_zone": "eu-de-01"
               }],
+              "availability_zone": "eu-de-01",
               "private_ips": ["192.168.0.142"],
               "public_ips": ["10.154.219.187", "10.154.219.186"],
               "db_user_name": "root",
@@ -501,7 +505,7 @@ Response
               "created": "2019-08-20T02:33:49+0800",
               "updated": "2019-08-20T02:33:50+0800",
               "volume": {
-                  "type": "ULTRAHIGH",
+                  "type": "CLOUDSSD",
                   "size": 100
               },
               "nodes": [{
@@ -511,6 +515,7 @@ Response
                   "status": "ACTIVE",
                   "availability_zone": "eu-de-01"
               }],
+              "availability_zone": "eu-de-01",
               "private_ips": ["192.168.0.142"],
               "public_ips": ["10.154.219.187", "10.154.219.186"],
               "db_user_name": "root",
