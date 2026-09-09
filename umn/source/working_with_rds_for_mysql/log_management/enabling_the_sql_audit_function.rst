@@ -19,8 +19,9 @@ Constraints
 
 Only the versions listed below support SQL audit.
 
--  MySQL 5.7.23 and later versions for DB instances using cloud disks, MySQL 5.7.29.3 and later versions for DB instances using local disks
--  MySQL 8.0
+-  RDS for MySQL 5.6: 5.6.43 and later
+-  RDS for MySQL 5.7: 5.7.23 and later
+-  RDS for MySQL 8.0: 8.0.x and later
 
 Procedure
 ---------

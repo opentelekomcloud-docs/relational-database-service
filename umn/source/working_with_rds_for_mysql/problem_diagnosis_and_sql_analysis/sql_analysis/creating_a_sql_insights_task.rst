@@ -13,6 +13,8 @@ SQL Insights allows you to not only query all executed SQL statements, but also 
 Constraints
 -----------
 
+-  SQL Insights tasks cannot be created for MySQL 8.4 instances.
+
 -  You need to enable **Collect All SQL Statements** before using SQL Insights.
 
 -  After **Collect All SQL Statements** is disabled, new SQL statements will not be collected anymore and the collected SQL data will be deleted.
@@ -21,7 +23,7 @@ Constraints
 
 -  Any SQL statement that exceeds 4,096 bytes will not be recorded by default.
 
-   In RDS for MySQL 5.7.33.3 and later minor versions, you can set the **rds_sql_tracer_reserve_big_records** parameter to **ON** (which indicates that SQL statements containing more than 4,096 bytes are still recorded) on the **Parameters** page to remove this constraint. For details, see :ref:`Modifying Parameters <rds_configuration>`. RDS for MySQL 5.6 and 8.0 do not support this parameter.
+   In RDS for MySQL 5.7.33.3 and later minor versions, you can set the **rds_sql_tracer_reserve_big_records** parameter to **ON** (which indicates that SQL statements containing more than 4,096 bytes are still recorded) on the **Parameters** page to remove this constraint. For details, see :ref:`Modifying Parameters <rds_configuration>`. RDS for MySQL 5.6, 8.0 and 8.4 do not support this parameter.
 
 Procedure
 ---------
