@@ -108,7 +108,7 @@ Using SSL to Connect to a DB Instance
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. On the **Instances** page, click the target DB instance. In the **Basic Information** area on the **Overview** page, click **Download** in the **SSL** field to download the root certificate or certificate bundle.
+#. On the **Instances** page, click the target DB instance. Click **Download** under **SSL** to download the Certificate Download package, and extract the root certificate ca.pem and bundle ca-bundle.pem from the package.
 
 #. Import the root certificate to the Linux OS on the ECS. For details, see :ref:`How Can I Import the Root Certificate to a Windows or Linux OS? <rds_faq_0052>`
 

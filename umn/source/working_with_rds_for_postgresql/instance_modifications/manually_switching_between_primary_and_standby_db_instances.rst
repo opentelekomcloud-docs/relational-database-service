@@ -27,7 +27,7 @@ Procedure
 
 #. On the **Instances** page, click the target primary/standby DB instance.
 
-#. In the **Configurations** area on the displayed **Overview** page, under **DB Instance Type**, click **Switch**.
+#. In the **Configurations** area on the displayed **Summary** page, under **DB Instance Type**, click **Switch**.
 
    .. important::
 

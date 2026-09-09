@@ -17,8 +17,8 @@ Procedure
 #. Click |image1| in the upper left corner and select a region and a project.
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 #. On the **Instances** page, click the target instance name.
-#. In the navigation pane, choose **DBA Assistant** > **Real-Time Diagnosis**.
-#. Click the **Performance** tab. You can perform the following operations on this tab page:
+#. In the navigation pane, choose **Performance** under **DBA Assistant**.
+#. On the displayed page, perform the following operations:
 
    -  Click **View Details** to view metric changes of your instance in the same period on different days.
 

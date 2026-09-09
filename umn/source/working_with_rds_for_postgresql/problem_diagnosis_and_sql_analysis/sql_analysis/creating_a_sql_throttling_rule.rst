@@ -45,9 +45,9 @@ Procedure
 
 #. On the **Instances** page, click the target DB instance name.
 
-#. In the navigation pane, choose **DBA Assistant** > **Historical Diagnosis**.
+#. In the navigation pane, choose **SQL Analysis and Tuning** under **DBA Assistant**.
 
-#. Choose **SQL Explorer** > **SQL Throttling**.
+#. Click the **SQL Throttling** tab.
 
 #. Toggle on the SQL throttling switch |image2|.
 
@@ -76,7 +76,7 @@ Procedure
       |                                   |                                                                                                                                              |
       |                                   |    In any given database, each rule must have a unique query ID, but rules in different databases can have the same query ID.                |
       +-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
-      | Max. Concurrency                  | The maximum allowed number of concurrent SQL statements that match the rule. SQL statements exceeding this upper limit will not be executed. |
+      | Max. Concurrency Requests         | The maximum allowed number of concurrent SQL statements that match the rule. SQL statements exceeding this upper limit will not be executed. |
       |                                   |                                                                                                                                              |
       |                                   | The value ranges from 0 to 50000. **0** indicates that the concurrency of SQL statements is not limited.                                     |
       +-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+

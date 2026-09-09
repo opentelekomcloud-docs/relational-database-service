@@ -12,7 +12,7 @@ You can migrate a standby DB instance to another AZ in the same region as the or
 
 .. note::
 
-   -  Primary/standby instances running MySQL 5.7, or 8.0 support standby instance migration to another AZ.
+   -  Primary/standby instances running MySQL 5.7 or 8.0 support standby instance migration to another AZ.
    -  DDL operations and scheduled events will be suspended during migration. To prevent service interruptions, perform the migration during off-peak hours.
 
 Procedure
@@ -27,7 +27,7 @@ Procedure
 
    -  During the migration process, the DB instance status is **Migrating standby DB instance**. You can view the progress on the **Task Center** page. For details, see section :ref:`Task Center <rds_05_0007>`.
    -  In the upper right corner of the DB instance list, click |image2| to refresh the list. After the migration is complete, the DB instance status will become **Available**.
-   -  On the **Overview** page, find **AZ** and check the AZ hosting the standby DB instance.
+   -  On the **Summary** page, find **AZ** and check the AZ hosting the standby DB instance.
 
 .. |image1| image:: /_static/images/en-us_image_0000001191211679.png
 .. |image2| image:: /_static/images/en-us_image_0000001191211495.png
