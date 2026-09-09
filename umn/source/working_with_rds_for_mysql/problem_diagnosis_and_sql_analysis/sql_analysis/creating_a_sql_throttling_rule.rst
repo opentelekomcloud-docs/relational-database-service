@@ -35,6 +35,8 @@ SQL throttling is available to only the versions listed in :ref:`Table 1 <rds_08
    +---------------+----------------------------------+------------------------------+--------------------------------------------+
    | 8.0           | >= 8.0.25.1                      | >= 8.0.25.1                  | Not supported                              |
    +---------------+----------------------------------+------------------------------+--------------------------------------------+
+   | 8.4           | >= 8.4.7.251200                  | >= 8.4.7.251200              | Not supported                              |
+   +---------------+----------------------------------+------------------------------+--------------------------------------------+
 
 :ref:`Table 2 <rds_08_0033__table1165619452319>` lists the version constraints on built-in users and user **root**.
 
@@ -45,6 +47,8 @@ SQL throttling is available to only the versions listed in :ref:`Table 1 <rds_08
    +---------------+-------------------------------------+----------------------------------+----------------------------------+
    | Major Version | Minor Version                       | Built-in User                    | Root User                        |
    +===============+=====================================+==================================+==================================+
+   | 8.4           | ``-``                               | Not affected by throttling rules | Subject to throttling rules      |
+   +---------------+-------------------------------------+----------------------------------+----------------------------------+
    | 8.0           | >= 8.0.28.231000                    | Not affected by throttling rules | Subject to throttling rules      |
    +---------------+-------------------------------------+----------------------------------+----------------------------------+
    |               | 8.0.25.1 <= Version < 8.0.28.231000 | Not affected by throttling rules | Not affected by throttling rules |
@@ -70,7 +74,7 @@ Constraints
 -  A maximum of 100 SQL throttling rules can be configured.
 -  Only SELECT, UPDATE, DELETE, and INSERT statements are supported for SQL throttling.
 
--  INSERT statements are only supported for RDS for MySQL 5.7 (5.7.44.240100 or later) and 8.0 (8.0.32.240100 or later) for SQL throttling. To use this function, contact customer service to apply for required permissions.
+-  INSERT statements are only supported for RDS for MySQL 5.7 (5.7.44.240100 or later), 8.0 (8.0.32.240100 or later) and 8.4 (8.4.7.251200 or later) for SQL throttling. To use this function, contact customer service to apply for required permissions.
 -  If a SQL statement matches multiple SQL throttling rules, only the most recently added rule is applied.
 -  SQL statements that have been executed before a SQL throttling rule is added are not counted.
 -  If the replication delay is too long, adding or deleting a SQL throttling rule for a read replica does not take effect immediately.
