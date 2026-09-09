@@ -119,7 +119,7 @@ SSL Connection
 
 #. Connect to the RDS DB instance. The Linux OS is used as an example.
 
-   .. code-block:: text
+   .. code-block::
 
       mysql -h <host> -P <port> -u <userName> -p --ssl-ca=<caDIR>
 
@@ -139,7 +139,7 @@ SSL Connection
 
    For example, to connect to a DB instance through an SSL connection as user **root**, run the following command:
 
-   .. code-block:: text
+   .. code-block::
 
       mysql -h 172.16.0.31 -P 3306 -u root -p --ssl-ca=ca.pem
 

@@ -13,13 +13,13 @@ When you create a DB instance, RDS will automatically allocate a default databas
 
    Not all of the DB engine parameters in a custom parameter template can be changed.
 
-If you want to use a custom parameter template, you simply create a parameter template and select it when you create a DB instance or apply it to an existing DB instance following the instructions provided in section :ref:`Applying a Parameter Template <rds_05_0018>`.
+If you want to use a custom parameter template, you simply create a parameter template and select it when you create a DB instance or apply it to an existing DB instance following the instructions provided in section :ref:`Applying a Parameter Template <rds_sqlserver_05_0018>`.
 
-When you have already created a parameter template and want to include most of the custom parameters and values from that template in a new parameter template, you can replicate that parameter template following the instructions provided in section :ref:`Replicating a Parameter Template <rds_08_0014>`.
+When you have already created a parameter template and want to include most of the custom parameters and values from that template in a new parameter template, you can replicate that parameter template following the instructions provided in section :ref:`Replicating a Parameter Template <rds_10_0104>`.
 
 The following are the key points you should know when using parameters in a parameter template:
 
--  The changes to parameter values in a custom parameter template take effect only after you apply the template to DB instances. For details, see :ref:`Applying a Parameter Template <rds_05_0018>`.
+-  The changes to parameter values in a custom parameter template take effect only after you apply the template to DB instances. For details, see :ref:`Applying a Parameter Template <rds_sqlserver_05_0018>`.
 -  Improper parameter settings may have unintended consequences, including reduced performance and system instability. Exercise caution when modifying database parameters and you need to back up data before modifying parameters in a parameter template. Before applying parameter template changes to a production DB instance, you should try out these changes on a test DB instance.
 
 .. note::

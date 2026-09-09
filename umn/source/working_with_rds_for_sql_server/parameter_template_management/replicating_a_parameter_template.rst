@@ -23,7 +23,7 @@ Procedure
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. On the **Parameter Template Management** page, click **Custom Templates**. Locate the target parameter template and click **Replicate** in the **Operation** column.
+#. On the **Parameter Templates** page, click **Custom Templates**. Locate the target parameter template and click **Replicate** in the **Operation** column.
 
    Alternatively, click the target DB instance on the **Instances** page. On the **Parameters** page, click **Export** to generate a new parameter template for future use.
 
@@ -32,6 +32,6 @@ Procedure
    -  The template name must consist of 1 to 64 characters. It can contain only uppercase letters, lowercase letters, digits, hyphens (-), underscores (_), and periods (.).
    -  The description consists of a maximum of 256 characters and cannot contain carriage return characters or the following special characters: >!<"&'=
 
-   After the parameter template is replicated, a new template is generated in the list on the **Parameter Template Management** page.
+   After the parameter template is replicated, a new template is generated in the list on the **Parameter Templates** page.
 
 .. |image1| image:: /_static/images/en-us_image_0000001191211679.png

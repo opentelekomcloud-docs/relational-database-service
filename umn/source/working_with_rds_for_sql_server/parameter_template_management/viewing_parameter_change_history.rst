@@ -29,7 +29,7 @@ Viewing Change History of a DB Instance
 
    You can view the parameter name, original parameter value, new parameter value, modification status, modification time, application status, and application time.
 
-   You can apply the parameter template to DB instances as required by referring to section :ref:`Applying a Parameter Template <rds_05_0018>`.
+   You can apply the parameter template to DB instances as required by referring to section :ref:`Applying a Parameter Template <rds_sqlserver_05_0018>`.
 
 Viewing Change History of a Parameter Template
 ----------------------------------------------
@@ -40,11 +40,11 @@ Viewing Change History of a Parameter Template
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. Choose **Parameter Template Management** in the navigation pane on the left. On the **Custom Templates** page, click the target parameter template.
+#. Choose **Parameter Templates** in the navigation pane on the left. On the **Custom Templates** page, click the target parameter template.
 
 #. On the displayed page, choose **Change History** in the navigation pane on the left.
 
    You can view the parameter name, original parameter value, new parameter value, modification status, and modification time.
 
-.. |image1| image:: /_static/images/en-us_image_0000001191211679.png
+.. |image1| image:: /_static/images/en-us_image_0000002578044348.png
 .. |image2| image:: /_static/images/en-us_image_0000001191211679.png

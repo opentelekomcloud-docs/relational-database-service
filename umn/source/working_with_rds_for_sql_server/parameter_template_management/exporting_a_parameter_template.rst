@@ -29,7 +29,7 @@ Procedure
          -  The template name must consist of 1 to 64 characters. It can contain only uppercase letters, lowercase letters, digits, hyphens (-), underscores (_), and periods (.).
          -  The description consists of a maximum of 256 characters and cannot contain carriage return characters or the following special characters: >!<"&'=
 
-      After the parameter template is exported, a new template is generated in the list on the **Parameter Template Management** page.
+      After the parameter template is exported, a new template is generated in the list on the **Parameter Templates** page.
 
    -  Exporting to a file
 

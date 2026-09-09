@@ -19,7 +19,7 @@ Procedure
 
 #. Click **Service List**. Under **Database**, click **Relational Database Service**. The RDS console is displayed.
 
-#. On the **Parameter Template Management** page, perform the following operations based on the type of the parameter template to be applied:
+#. On the **Parameter Templates** page, perform the following operations based on the type of the parameter template to be applied:
 
    -  If you intend to apply a default parameter template to DB instances, click **Default Templates**, locate the target parameter template, and click **Apply** in the **Operation** column.
    -  If you intend to apply a custom parameter template to DB instances, click **Custom Templates**, locate the target parameter template, and choose **More** > **Apply** in the **Operation** column.

@@ -16,13 +16,13 @@ RDS for PostgreSQL allows you to upgrade the major version of your DB instance i
 Constraints
 -----------
 
--  Major version upgrades are available to the following versions:
+-  Major version upgrades are available to the following source versions:
 
+   -  RDS for PostgreSQL 12: 12.7 or later
    -  RDS for PostgreSQL 13: 13.3 or later
    -  RDS for PostgreSQL 14: 14.4 or later
    -  RDS for PostgreSQL 15: 15.4 or later
    -  RDS for PostgreSQL 16
-   -  RDS for PostgreSQL 17
 
 -  Due to OS restrictions, some instances do not support major version upgrades. To learn which versions your instance can be upgraded to, see the list of available versions on the **Major Version Upgrade** page.
 -  DR instances do not support major version upgrades.
