@@ -15,7 +15,9 @@ Creating a Tablespace
 
 #. Connect to the database as user **root** and create a tablespace.
 
-   **# psql --host=**\ *<RDS_ADDRESS>* **--port=**\ <*DB_PORT*> **--dbname=**\ *<DB_NAME>* **--username=root -c** "**select control_tablespace** (**'create'**, '*<TABLESPACE_NAME>*');"
+   .. code-block::
+
+      # psql --host=<RDS_ADDRESS> --port=<DB_PORT> --dbname=<DB_NAME> --username=root -c "select control_tablespace ('create', '<TABLESPACE_NAME>');"
 
    .. table:: **Table 1** Parameter description
 
@@ -32,7 +34,9 @@ Creating a Tablespace
 
    Log in to the **my_db** database and create the **tbspc1** tablespace. Example:
 
-   **# psql --host=192.168.6.141 --port=\ 5432 --dbname=my_db --username=root -c "select control_tablespace('create', 'tbspc1');"**
+   .. code-block::
+
+      # psql --host=192.168.6.141 --port=5432 --dbname=my_db --username=root -c "select control_tablespace('create', 'tbspc1');"
 
    .. code-block::
 
@@ -53,7 +57,9 @@ Deleting a Tablespace
 
 #. Connect to a database as user **root** and delete a tablespace.
 
-   **# psql --host=**\ *<RDS_ADDRESS>* **--port=**\ <*DB_PORT*> **--username=root** **--dbname=**\ *<DB_NAME>* **-c** "**select control_tablespace**\ (**'drop',** '*<TABLESPACE \_NAME>*');"
+   .. code-block::
+
+      # psql --host=<RDS_ADDRESS> --port=<DB_PORT> --username=root --dbname=<DB_NAME> -c "select control_tablespace('drop', '<TABLESPACE _NAME>');"
 
    .. table:: **Table 2** Parameter description
 
@@ -70,7 +76,9 @@ Deleting a Tablespace
 
    Example:
 
-   **# psql --host=192.168.6.141 --port=8635 --dbname=my_db --username=root -c "select control_tablespace('drop', 'tbspc1');"**
+   .. code-block::
+
+      # psql --host=192.168.6.141 --port=8635 --dbname=my_db --username=root -c "select control_tablespace('drop', 'tbspc1');"
 
    .. code-block::
 

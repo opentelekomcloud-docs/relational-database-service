@@ -32,7 +32,7 @@ Procedure
 
    For primary/standby DB instances, if you reboot the primary DB instance, the standby DB instance is also rebooted automatically.
 
-#. In the displayed dialog box, click **Yes**.
+#. In the displayed dialog box, select the check box and click **OK**.
 
 #. Refresh the DB instance list and view the status of the DB instance. If its status is **Available**, it has rebooted successfully.
 

@@ -51,7 +51,9 @@ Before migrating data to RDS, you need to export data first.
 
       The MySQL database is required for RDS management. When exporting metadata, do not specify **--all-database**. Otherwise, the MySQL database will be unavailable.
 
-   **mysqldump** **--databases** <*DB_NAME*> **--single-transaction --order-by-primary --hex-blob --no-data --routines --events --set-gtid-purged=OFF** -u <*DB_USER*> **-p -h** <*DB_ADDRESS*> **-P** <*DB_PORT*> **\|sed -e 's/DEFINER[ ]*=[ ]*[^*]*\\*/\\*/' -e 's/DEFINER[ ]*=.*FUNCTION/FUNCTION/' -e 's/DEFINER[ ]*=.*PROCEDURE/PROCEDURE/' -e 's/DEFINER[ ]*=.*TRIGGER/TRIGGER/' -e 's/DEFINER[ ]*=.*EVENT/EVENT/' >** *<BACKUP_FILE>*
+   .. code-block::
+
+      mysqldump --databases <DB_NAME> --single-transaction --order-by-primary --hex-blob --no-data --routines --events --set-gtid-purged=OFF -u <DB_USER> -p -h <DB_ADDRESS> -P <DB_PORT> |sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' -e 's/DEFINER[ ]*=.*FUNCTION/FUNCTION/' -e 's/DEFINER[ ]*=.*PROCEDURE/PROCEDURE/' -e 's/DEFINER[ ]*=.*TRIGGER/TRIGGER/' -e 's/DEFINER[ ]*=.*EVENT/EVENT/' > <BACKUP_FILE>
 
    -  *DB_NAME* indicates the name of the database to be migrated.
    -  *DB_USER* indicates the database username.
@@ -63,9 +65,13 @@ Before migrating data to RDS, you need to export data first.
 
    Example:
 
-   **mysqldump --databases rdsdb --single-transaction --order-by-primary --hex-blob --no-data --routines --events --set-gtid-purged=OFF -u root -p -h 192.168.151.18 -P 3306 \|sed -e 's/DEFINER[ ]*=[ ]*[^*]*\\*/\\*/' -e 's/DEFINER[ ]*=.*FUNCTION/FUNCTION/' -e 's/DEFINER[ ]*=.*PROCEDURE/PROCEDURE/' -e 's/DEFINER[ ]*=.*TRIGGER/TRIGGER/' -e 's/DEFINER[ ]*=.*EVENT/EVENT/' > dump-defs.sql**
+   .. code-block::
 
-   **Enter password:**
+      mysqldump --databases rdsdb --single-transaction --order-by-primary --hex-blob --no-data --routines --events --set-gtid-purged=OFF -u root -p -h 192.168.151.18 -P 3306 |sed -e 's/DEFINER[ ]*=[ ]*[^*]*\*/\*/' -e 's/DEFINER[ ]*=.*FUNCTION/FUNCTION/' -e 's/DEFINER[ ]*=.*PROCEDURE/PROCEDURE/' -e 's/DEFINER[ ]*=.*TRIGGER/TRIGGER/' -e 's/DEFINER[ ]*=.*EVENT/EVENT/' > dump-defs.sql
+
+   .. code-block::
+
+      Enter password:
 
    After this command is executed, a **dump-defs.sql** file will be generated as follows:
 
@@ -80,7 +86,9 @@ Before migrating data to RDS, you need to export data first.
 
       The MySQL database is required for RDS management. When exporting metadata, do not specify **--all-database**. Otherwise, the MySQL database will be unavailable.
 
-   **mysqldump --databases** <*DB_NAME*> **--single-transaction --hex-blob --set-gtid-purged=OFF --no-create-info --skip-triggers** **-u** <*DB_USER*> **-p** **-h** <*DB_ADDRESS*> **-P** <*DB_PORT*> **-r** <*BACKUP_FILE*>
+   .. code-block::
+
+      mysqldump --databases <DB_NAME> --single-transaction --hex-blob --set-gtid-purged=OFF --no-create-info --skip-triggers -u <DB_USER> -p -h <DB_ADDRESS> -P <DB_PORT> -r <BACKUP_FILE>
 
    For details on the parameters in the preceding command, see :ref:`2 <rds_migration_mysql__li16251172911136>`.
 
@@ -88,7 +96,9 @@ Before migrating data to RDS, you need to export data first.
 
    Example:
 
-   **mysqldump --databases rdsdb --single-transaction --hex-blob --set-gtid-purged=OFF --no-create-info --skip-triggers -u root -p -h 192.168.151.18 -P 8635 -r dump-data.sql**
+   .. code-block::
+
+      mysqldump --databases rdsdb --single-transaction --hex-blob --set-gtid-purged=OFF --no-create-info --skip-triggers -u root -p -h 192.168.151.18 -P 8635 -r dump-data.sql
 
    After this command is executed, a **dump-data.sql** file will be generated as follows:
 
@@ -110,7 +120,9 @@ You can connect your client to RDS and import exported SQL files into RDS.
 
 #. Import metadata into RDS.
 
-   # **mysql -f -h** *<RDS_ADDRESS>* **-P** <*DB_PORT*> **-u** root **-p <** *<BACKUP_DIR>*\ **/dump-defs.sql**
+   .. code-block::
+
+      # mysql -f -h <RDS_ADDRESS> -P <DB_PORT> -u root -p < <BACKUP_DIR>/dump-defs.sql
 
    -  *RDS_ADDRESS*: indicates the IP address of the RDS DB instance.
    -  *DB_PORT* indicates the RDS DB instance port.
@@ -118,21 +130,31 @@ You can connect your client to RDS and import exported SQL files into RDS.
 
    Example:
 
-   **# mysql -f -h 172.16.66.198 -P 3306 -u root -p < dump-defs.sql**
+   .. code-block::
 
-   **Enter password:**
+      # mysql -f -h 172.16.66.198 -P 3306 -u root -p < dump-defs.sql
+
+   .. code-block::
+
+      Enter password:
 
    .. note::
 
       If you intend to import SQL statements of a table to RDS, you are advised to specify a database. Otherwise, the error message "No database selected" may be displayed. For example, if you intend to import SQL statements of a table to database **mydb**, run the following command:
 
-      **# mysql -f -h 172.16.66.198 -P 3306 -u root -p mydb < dump-defs.sql**
+      .. code-block::
 
-      **Enter password:**
+         # mysql -f -h 172.16.66.198 -P 3306 -u root -p mydb < dump-defs.sql
+
+      .. code-block::
+
+         Enter password:
 
 #. Import data into RDS.
 
-   # **mysql -f -h** *<RDS_ADDRESS>* **-P** <*DB_PORT*> **-u** root **-p** **<** *<BACKUP_DIR>*\ **/dump-data.sql**
+   .. code-block::
+
+      # mysql -f -h <RDS_ADDRESS> -P <DB_PORT> -u root -p < <BACKUP_DIR>/dump-data.sql
 
    -  *RDS_ADDRESS*: indicates the IP address of the RDS DB instance.
    -  *DB_PORT* indicates the RDS DB instance port.
@@ -140,21 +162,31 @@ You can connect your client to RDS and import exported SQL files into RDS.
 
    Example:
 
-   **# mysql -f -h 172.16.66.198 -P 3306 -u root -p < dump-data.sql**
+   .. code-block::
 
-   **Enter password:**
+      # mysql -f -h 172.16.66.198 -P 3306 -u root -p < dump-data.sql
+
+   .. code-block::
+
+      Enter password:
 
    .. note::
 
       If you intend to import SQL statements of a table to RDS, you are advised to specify a database. Otherwise, the error message "No database selected" may be displayed. For example, if you intend to import SQL statements of a table to database **mydb**, run the following command:
 
-      **# mysql -f -h 172.16.66.198 -P 3306 -u root -p mydb < dump-defs.sql**
+      .. code-block::
 
-      **Enter password:**
+         # mysql -f -h 172.16.66.198 -P 3306 -u root -p mydb < dump-data.sql
+
+      .. code-block::
+
+         Enter password:
 
 #. View the import result.
 
-   **mysql> show databases;**
+   .. code-block::
+
+      show databases;
 
    The following result indicates that database **rdsdb** has been imported.
 
