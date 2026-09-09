@@ -10,6 +10,11 @@ Scenarios
 
 Top SQL shows the SQL queries that have been contributed at most to database load. You can sort them by multiple dimensions.
 
+Constraints
+-----------
+
+Top SQL statements of MySQL 8.4 instances cannot be viewed.
+
 Procedure
 ---------
 
