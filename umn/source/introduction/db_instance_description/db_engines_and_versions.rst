@@ -16,10 +16,12 @@ For new applications, you are advised to use the latest major version of the DB 
    +----------------------+-----------------+-----------------+-----------------+
    | DB Engine            | Single          | Primary/Standby | Cluster         |
    +======================+=================+=================+=================+
-   | MySQL                | -  8.0          | -  8.0          | Not supported   |
+   | MySQL                | -  8.4          | -  8.4          | Not supported   |
+   |                      | -  8.0          | -  8.0          |                 |
    |                      | -  5.7          | -  5.7          |                 |
    +----------------------+-----------------+-----------------+-----------------+
-   | PostgreSQL           | -  17           | -  17           | Not supported   |
+   | PostgreSQL           | -  18           | -  18           | Not supported   |
+   |                      | -  17           | -  17           |                 |
    |                      | -  16           | -  16           |                 |
    |                      | -  15           | -  15           |                 |
    |                      | -  14           | -  14           |                 |

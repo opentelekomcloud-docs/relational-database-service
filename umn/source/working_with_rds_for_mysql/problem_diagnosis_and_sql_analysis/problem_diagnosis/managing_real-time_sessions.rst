@@ -10,6 +10,12 @@ Scenarios
 
 You can view current session statistics of your instance, identify abnormal sessions, and kill the sessions.
 
+Precautions
+-----------
+
+-  Killing a session may cause service disconnection. Your applications should be able to reconnect to the instance.
+-  This feature is not supported in MySQL 8.4.
+
 Setting Slow Session Threshold
 ------------------------------
 

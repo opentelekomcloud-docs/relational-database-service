@@ -10,6 +10,11 @@ Scenarios
 
 DBA Assistant allows you to check whether your DB instance has metadata locks and InnoDB locks. You can also check the recent deadlock analysis and full deadlock analysis.
 
+Constraints
+-----------
+
+This feature is not supported in MySQL 8.4.
+
 Introduction
 ------------
 
@@ -24,7 +29,7 @@ Introduction
 
 -  InnoDB lock waits generated before DML operations are displayed in real time. You can quickly locate the session waits and any blocks that happened when multiple sessions update the same piece of data at the same time, and can terminate the source session that holds locks to restore blocked operations.
 -  DDL locks, also called metadata locks, are not included. You can view and analyze them on the **Metadata Locks** page.
--  To view lock information of RDS for MySQL 8.0 instances, set **performance_schema** to **ON**. You can run the **SHOW GLOBAL VARIABLES LIKE "performance_schema"** command or refer to :ref:`Modifying Instance Parameters <rds_configuration__section360115386520>` to check the **performance_schema** settings.
+-  To view lock information of RDS for MySQL 8.0 and 8.4 instances, set **performance_schema** to **ON**. You can run the **SHOW GLOBAL VARIABLES LIKE "performance_schema"** command or refer to :ref:`Modifying Instance Parameters <rds_configuration__section360115386520>` to check the **performance_schema** settings.
 
 **Deadlock Analysis**
 
