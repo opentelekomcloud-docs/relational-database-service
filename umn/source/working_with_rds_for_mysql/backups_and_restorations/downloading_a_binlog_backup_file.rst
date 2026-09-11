@@ -81,7 +81,9 @@ Downloading a Merged Binlog
 
       -  You can also run the following command to download the merged binlog:
 
-         **wget -O** *FILE_NAME* **--no-check-certificate** **"**\ *DOWNLOAD_URL*\ **"**
+         .. code-block::
+
+            wget -O FILE_NAME --no-check-certificate "DOWNLOAD_URL"
 
          Variables in the commands are as follows:
 

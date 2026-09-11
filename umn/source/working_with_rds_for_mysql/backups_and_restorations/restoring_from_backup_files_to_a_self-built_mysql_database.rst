@@ -42,7 +42,9 @@ Procedure
 
 #. Install qpress on the ECS.
 
-   **rpm -ivh** *qpress-11-1.el7.x86_64.rpm*
+   .. code-block::
+
+      rpm -ivh qpress-11-1.el7.x86_64.rpm
 
 #. Download `XtraBackup <https://www.percona.com/downloads/>`__ from the website, for example, percona-xtrabackup-24-2.4.9-1.el7.x86_64.rpm.
 
