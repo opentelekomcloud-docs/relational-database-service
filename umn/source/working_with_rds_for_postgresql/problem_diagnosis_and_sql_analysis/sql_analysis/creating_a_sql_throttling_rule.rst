@@ -20,9 +20,10 @@ Supported Versions
 
 SQL throttling is available in the following versions:
 
--  RDS for PostgreSQL 17
--  RDS for PostgreSQL 16
--  RDS for PostgreSQL 15: 15.4 and later
+-  RDS for PostgreSQL 18: 18.x or later
+-  RDS for PostgreSQL 17: 17.x or later
+-  RDS for PostgreSQL 16: 16.x or later
+-  RDS for PostgreSQL 15: 15.x or later
 -  RDS for PostgreSQL 14: 14.8 and later
 -  RDS for PostgreSQL 13: 13.11 and later
 -  RDS for PostgreSQL 12: 12.15 and later

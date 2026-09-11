@@ -22,7 +22,7 @@ The following parameters can result in system security and stability issues if s
 
    .. note::
 
-      MySQL 8.0 does not support this parameter.
+      MySQL 8.0 and 8.4 does not support this parameter.
 
    Impact: Changing this parameter value may cause primary/standby replication exceptions. Exercise caution when performing this operation.
 
