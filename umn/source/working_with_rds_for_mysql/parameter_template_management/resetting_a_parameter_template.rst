@@ -21,7 +21,7 @@ Procedure
 
 #. On the **Parameter Templates** page, click **Custom Templates**. Locate the target parameter template and choose **More** > **Reset** in the **Operation** column.
 
-#. Click **Yes**.
+#. Click **OK**.
 
 #. The modifications take effect only after you apply the parameter template to DB instances. For details, see :ref:`Applying a Parameter Template <rds_05_0018>`.
 

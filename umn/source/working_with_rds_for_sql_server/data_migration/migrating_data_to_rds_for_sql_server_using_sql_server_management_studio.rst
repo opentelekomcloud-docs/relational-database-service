@@ -66,7 +66,9 @@ Before migrating an existing Microsoft SQL Server database to RDS, you need to e
 
    Download and install the `bcp <https://docs.microsoft.com/en-us/sql/tools/bcp-utility?view=sql-server-2017>`__ first. The command for exporting data is as follows:
 
-   **>bcp** *dbname.schema_name.table_name* **out** *C:\\test\\table_name.txt* **-n** **-S** localhost **-U** *username* **-b** *2000*
+   .. code-block::
+
+      >bcp dbname.schema_name.table_name out C:\test\table_name.txt -n -S localhost -U username -b 2000
 
    -  **out** indicates the directory from which the data is imported.
    -  **-n** indicates that the native (database) data types are used for performing bulk-copy operations.
@@ -107,7 +109,9 @@ This section describes how to use an ECS or a device that can access RDS to conn
 
    The Microsoft SQL Server database or client provides sqlcmd.
 
-   >\ **sqlcmd -S** "*server*" **-d** *database* **-U** *login_id* **-i** *inputfile*
+   .. code-block::
+
+      >sqlcmd -S "server" -d database  -U login_id -i inputfile
 
    -  **-S** indicates the IP address and port of the RDS DB instance.
    -  **-d** indicates the name of the database to be imported.
@@ -125,7 +129,9 @@ This section describes how to use an ECS or a device that can access RDS to conn
 
    Method 2: Use bcp to import data.
 
-   >\ **bcp** *dbname.schema_name.table_name* **in** *C:\\test\\table_name.txt* **-n -S** *Server* **-U** *username* **-b** *2000*
+   .. code-block::
+
+      >bcp dbname.schema_name.table_name in C:\test\table_name.txt -n -S Server -U username -b 2000
 
    -  **in** indicates the directory which the data is imported to.
    -  **-n** indicates that the native (database) data types are used for performing bulk-copy operations.
@@ -144,7 +150,7 @@ This section describes how to use an ECS or a device that can access RDS to conn
 
 #. Check the data import result.
 
-   .. code-block:: text
+   .. code-block::
 
       select * from sys.databases;
 
