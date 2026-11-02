@@ -57,7 +57,9 @@ Modifying an Automated Backup Policy
 
    -  **Automatic deletion policy for binlog backups:**
 
-      To ensure data integrity, the system keeps the binlog backup of the previous day when the full backup is deleted. This ensures that data within the retention period can still be restored.
+      Binlog backups are deleted along with full backups. To ensure data integrity, RDS for MySQL retains the most recent full backup beyond the specified retention period and all binlog backups generated from 24 hours before this full backup starts to the current time. This ensures that data within the retention period can be restored.
+
+      Binlog backups refer to backup files stored in OBS buckets, whereas local binlog retention policies govern the binlog files stored on disks. Please make sure to distinguish between them.
 
    -  **Time Window**: Set it to a one-hour period the backup will be scheduled, such as 01:00-02:00 or 12:00-13:00. It indicates when the backup starts, not the duration of the entire backup task. The backup duration depends on the data volume of your instance.
 
